@@ -36,7 +36,7 @@ public class Blacksmith : Collidable
             HideInteractionText();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerNearby)
+        if (Input.GetKeyDown(KeyCode.E) && playerNearby && !DialogueManager.instance.dialogueIsPlaying)
         {
             OnActivation();
         }

@@ -29,7 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     private const string ACTION_TAG = "action";
 
-    Tag tag1;
+    public ShopUI shopUI;
 
     private void Awake()
     {
@@ -158,6 +158,13 @@ public class DialogueManager : MonoBehaviour
 
     private void OpenShop()
     {
-        Debug.Log("otwarto sklep");
+        dialoguePanel.SetActive(false);
+        shopUI.gameObject.SetActive(true);
+    }
+
+    public void CloseShop()
+    {
+        dialoguePanel.SetActive(true);
+        shopUI.gameObject.SetActive(false);
     }
 }

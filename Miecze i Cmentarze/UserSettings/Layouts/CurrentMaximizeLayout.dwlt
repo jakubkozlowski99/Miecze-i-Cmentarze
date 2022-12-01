@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 118
+  controlID: 6196
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 71
+  controlID: 6197
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 60
+  controlID: 6198
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,10 +232,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 135.6}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 24fbffff
+      m_ExpandedIDs: 24fbffff9e4e00005c5000008c500000e050000000510000c05100001657000090580000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.5748812, y: 1.0094639, z: -0.044991918}
+    m_Target: {x: 534.5042, y: 284.02612, z: -2.3777404}
     speed: 2
-    m_Value: {x: -1.5748812, y: 1.0094639, z: -0.044991918}
+    m_Value: {x: 534.5042, y: 284.02612, z: -2.3777404}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -621,9 +621,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 6.0185905
+    m_Target: 285.12546
     speed: 2
-    m_Value: 6.0185905
+    m_Value: 285.12546
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -710,6 +710,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: -4144564038060336365, guid: b3edc0e0c89f7c24ab24a3811a06d32a, type: 2}
     - {fileID: 6530406865958343447, guid: e7966ac66b7809d40a70b6e98b406a92, type: 2}
+    - {fileID: 5107553828932228253, guid: dc16306938111c24f952d3f65cdbf7b6, type: 2}
     m_ValueSerializationHelper:
     - e00: 1
       e01: 0
@@ -743,11 +744,27 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: e7966ac66b7809d40a70b6e98b406a92,
+  m_AnimatorController: {fileID: 9100000, guid: dc16306938111c24f952d3f65cdbf7b6,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 6530406865958343447, guid: e7966ac66b7809d40a70b6e98b406a92,
+  - m_Target: {fileID: 5107553828932228253, guid: dc16306938111c24f952d3f65cdbf7b6,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -830,37 +847,37 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Artwork/Graphics
+    - Assets/Scripts/UI
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Artwork/Graphics
+  - Assets/Scripts/UI
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Windows\Documents\GitHub\Miecze-i-Cmentarze\Miecze
     i Cmentarze
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 72.600006}
-    m_SelectedIDs: 4c630000
-    m_LastClickedID: 25420
-    m_ExpandedIDs: 00000000085d00002c5d0000325d0000345d0000385d00003c5d000030630000326300003463000036630000386300003a6300003c6300003e630000406300004263000044630000486300004a6300004e630000506300005263000068630000ee63000000ca9a3b
+    scrollPos: {x: 0, y: 252.6}
+    m_SelectedIDs: 388d0000
+    m_LastClickedID: 36152
+    m_ExpandedIDs: 00000000085d00002c5d0000325d0000345d0000385d00003c5d000030630000326300003463000036630000386300003a6300003c6300003e630000406300004263000044630000486300004a6300004e63000050630000526300006863000074630000ee63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: EPIC RPG World Pack - Grass Land V. 1.4.3
-      m_OriginalName: EPIC RPG World Pack - Grass Land V. 1.4.3
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 25414
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_SearchString: 
@@ -874,7 +891,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000085d00002c5d0000325d0000345d0000385d00003c5d000030630000326300003463000036630000386300003a6300003c6300003e63000040630000426300004463000046630000486300004a6300004c6300004e6300005063000052630000
+    m_ExpandedIDs: 00000000085d00002c5d0000325d0000345d0000385d00003c5d000030630000326300003463000036630000386300003a6300003c6300003e630000406300004263000044630000486300004a6300004e630000506300005263000068630000ee63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -899,8 +916,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 74580000
-    m_LastClickedInstanceID: 22644
+    m_SelectedInstanceIDs: 16570000
+    m_LastClickedInstanceID: 22294
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000fa7a0000066300001e6a000070540000d4790000a44e0000c6680000cc4e0000907b0000f4510000f2510000425a00005e5d02006055000000000000c83505005272000014550000725400001e5800007c540000705f0000ca5f0000da530000406000003e600000825400001c640000ec720000767e0000185c0000425d0000
     m_RenameOverlay:
@@ -983,7 +1000,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 119
+  controlID: 6316
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1045,7 +1062,7 @@ MonoBehaviour:
     m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 22644
+  m_LastInspectedObjectInstanceID: 22294
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
