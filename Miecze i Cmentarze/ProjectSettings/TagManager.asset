@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Fighter
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Blocking
+  - 
+  - Actor
+  - Enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Terrain
+    uniqueID: 1457545659
+    locked: 0
+  - name: Blendings
+    uniqueID: 954048823
+    locked: 0
+  - name: Decorations1
+    uniqueID: 1452433847
+    locked: 0
+  - name: Decorations2
+    uniqueID: 609768747
+    locked: 0
+  - name: Buildings
+    uniqueID: 1772570527
+    locked: 0
+  - name: ActorBehind
+    uniqueID: 1146447463
+    locked: 0
+  - name: Decorations3
+    uniqueID: 630589263
+    locked: 0
+  - name: Actor
+    uniqueID: 3657219813
+    locked: 0
+  - name: Player
+    uniqueID: 2957776533
+    locked: 0
+  - name: ActorInFrontOfPlayer
+    uniqueID: 3619376617
+    locked: 0
+  - name: ActorInFront
+    uniqueID: 3186672625
+    locked: 0
+  - name: Roofs
+    uniqueID: 3180679669
+    locked: 0
+  - name: Decorations4
+    uniqueID: 1317833479
+    locked: 0
+  - name: InteractionText
+    uniqueID: 2920469257
+    locked: 0
