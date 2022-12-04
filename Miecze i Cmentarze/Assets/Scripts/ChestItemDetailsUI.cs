@@ -4,18 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class ChestItemDetailsUI : MonoBehaviour
+public class ChestItemDetailsUI : ItemDetailsUI
 {
     public GameObject chestItemDetailsUI;
     public ChestUI chestUI;
 
-    public Text itemName;
-    public TextMeshProUGUI itemDescription;
-    public Image itemIcon;
-
-    Item item;
-
-    public void ShowDetails(Item newItem)
+    public override void ShowDetails(Item newItem)
     {
         item = newItem;
 
@@ -32,12 +26,12 @@ public class ChestItemDetailsUI : MonoBehaviour
         }
     }
 
-    public void HideDetails()
+    public override void HideDetails()
     {
         chestItemDetailsUI.SetActive(false);
     }
 
-    public void GenerateDescription()
+    public override void GenerateDescription()
     {
         Debug.Log('\u015B');
         itemDescription.text = "";

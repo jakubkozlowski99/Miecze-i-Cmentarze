@@ -13,9 +13,9 @@ public class ItemDetailsUI : MonoBehaviour
     public TextMeshProUGUI itemDescription;
     public Image itemIcon;
 
-    Item item;
+    public Item item;
 
-    public void ShowDetails(Item newItem)
+    public virtual void ShowDetails(Item newItem)
     {
         item = newItem;
 
@@ -32,12 +32,12 @@ public class ItemDetailsUI : MonoBehaviour
         }
     }
 
-    public void HideDetails()
+    public virtual void HideDetails()
     {
         itemDetailsUI.SetActive(false);
     }
 
-    public void UseItem()
+    public virtual void UseItem()
     {
         if (item.type == "weapon")
         {
@@ -108,7 +108,6 @@ public class ItemDetailsUI : MonoBehaviour
         {
             if (inventoryUI.boots.item != null)
             {
-                //Inventory.instance.Add(inventoryUI.boots.item);
                 inventoryUI.boots.OnUnEquip();
             }
 
@@ -170,7 +169,7 @@ public class ItemDetailsUI : MonoBehaviour
         else Debug.Log("Nie ma miejsca w ekwipunku");
     }
 
-    public void GenerateDescription()
+    public virtual void GenerateDescription()
     {
         Debug.Log('\u015B');
         itemDescription.text = "";

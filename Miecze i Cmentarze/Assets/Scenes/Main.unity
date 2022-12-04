@@ -643,6 +643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1297944898}
   highlightImage: {fileID: 1947433358}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &33679004
 GameObject:
@@ -1340,6 +1341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 983228943}
   highlightImage: {fileID: 1039872805}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &57394783
 GameObject:
@@ -1587,6 +1589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 495404398}
   highlightImage: {fileID: 725344960}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &84702471
@@ -1795,6 +1798,7 @@ MonoBehaviour:
   interactionTextOffset: 0.3
   inkJSON: {fileID: 4900000, guid: acca3e06bfa8d25428c5468d484b6b65, type: 3}
   interactionTextManager: {fileID: 1139858392}
+  shop: {fileID: 0}
 --- !u!61 &89802478
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2022,6 +2026,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 41661253}
   highlightImage: {fileID: 1429947363}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &115301621
@@ -2448,6 +2453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 505167535}
   highlightImage: {fileID: 958558303}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &155045135
 GameObject:
@@ -2640,6 +2646,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 175902532}
   m_CullTransparentMesh: 1
+--- !u!1 &179606314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 179606315}
+  - component: {fileID: 179606317}
+  - component: {fileID: 179606316}
+  - component: {fileID: 179606318}
+  m_Layer: 5
+  m_Name: Slot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &179606315
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179606314}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1070256546}
+  - {fileID: 1118478634}
+  m_Father: {fileID: 435376241}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &179606316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179606314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -498994869, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &179606317
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179606314}
+  m_CullTransparentMesh: 1
+--- !u!114 &179606318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179606314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e339b91658ff7a47a93db89f07d8380, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  icon: {fileID: 0}
+  highlightImage: {fileID: 0}
+  item: {fileID: 0}
+  shopUI: {fileID: 0}
 --- !u!1 &184232835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2676,7 +2777,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 372.5417, y: 0.00085449}
+  m_AnchoredPosition: {x: 372.5417, y: 0}
   m_SizeDelta: {x: 410.186, y: 541.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &184232837
@@ -3221,6 +3322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1553368336}
   highlightImage: {fileID: 961626084}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &248364124
 GameObject:
@@ -3372,6 +3474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1721498486}
   highlightImage: {fileID: 1443197051}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &252181453
 GameObject:
@@ -3467,6 +3570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 474114700}
   highlightImage: {fileID: 1358330847}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &252181458
@@ -4155,6 +4259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1258960317}
   highlightImage: {fileID: 1472615014}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &303415546
 GameObject:
@@ -4306,6 +4411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 69799693}
   highlightImage: {fileID: 1983510993}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &317589409
 GameObject:
@@ -5284,6 +5390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1655203516}
   highlightImage: {fileID: 158013743}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &368483634
@@ -5861,6 +5968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1638311010}
   highlightImage: {fileID: 1328325390}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &431525524
 GameObject:
@@ -6122,6 +6230,68 @@ Transform:
   m_Father: {fileID: 1007374517}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &435376240
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 435376241}
+  - component: {fileID: 435376242}
+  m_Layer: 5
+  m_Name: ShopSlots
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &435376241
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435376240}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 179606315}
+  m_Father: {fileID: 558418341}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 273.008, y: 468.3289}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &435376242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 435376240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 75, y: 75}
+  m_Spacing: {x: 15, y: 15}
+  m_Constraint: 0
+  m_ConstraintCount: 2
 --- !u!1 &438257559
 GameObject:
   m_ObjectHideFlags: 0
@@ -7534,6 +7704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 995670947}
   highlightImage: {fileID: 1989676213}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &527585168
 GameObject:
@@ -7629,6 +7800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2033226195}
   highlightImage: {fileID: 934114344}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &527585173
@@ -8100,6 +8272,7 @@ RectTransform:
   m_Children:
   - {fileID: 778151325}
   - {fileID: 278743130}
+  - {fileID: 435376241}
   m_Father: {fileID: 1561064582}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8296,6 +8469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 354984570}
   highlightImage: {fileID: 1330304735}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &579524031
 GameObject:
@@ -9321,6 +9495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1083103150}
   highlightImage: {fileID: 904741239}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &590744608
@@ -10598,6 +10773,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 744975765}
   highlightImage: {fileID: 947704880}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &668778188
 GameObject:
@@ -10721,7 +10897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -22}
+  m_AnchoredPosition: {x: 0, y: -13}
   m_SizeDelta: {x: 273.008, y: 468.3289}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &671056573
@@ -10898,6 +11074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1574775789}
   highlightImage: {fileID: 1515195659}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &694287465
 GameObject:
@@ -11125,6 +11302,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 476020766}
   highlightImage: {fileID: 1330045119}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &709949356
 GameObject:
@@ -11276,6 +11454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1203236831}
   highlightImage: {fileID: 590455477}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &717745097
 GameObject:
@@ -11371,6 +11550,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 503207604}
   highlightImage: {fileID: 2102178970}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &717745102
@@ -12224,6 +12404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1192858916}
   highlightImage: {fileID: 230893957}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &778151324
 GameObject:
@@ -13803,6 +13984,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 554884710}
   highlightImage: {fileID: 2025271893}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &811283713
 GameObject:
@@ -13898,6 +14080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 229567076}
   highlightImage: {fileID: 1334850793}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &811283718
@@ -15255,6 +15438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1690202425}
   highlightImage: {fileID: 1746530310}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &902874236
 GameObject:
@@ -15705,6 +15889,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1359779889}
   highlightImage: {fileID: 2086007788}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &915154958
 GameObject:
@@ -15800,6 +15985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1254675837}
   highlightImage: {fileID: 1326340267}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &915154963
@@ -15952,6 +16138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 389027285}
   highlightImage: {fileID: 742282262}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &915336690
@@ -16679,7 +16866,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000034809, y: -11}
+  m_AnchoredPosition: {x: 0.000034809, y: -13}
   m_SizeDelta: {x: 384.1187, y: 483.8095}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &968616942
@@ -16932,6 +17119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1282322992}
   highlightImage: {fileID: 505624739}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &979469642
 GameObject:
@@ -17159,6 +17347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1348557148}
   highlightImage: {fileID: 1605926156}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &983228941
 GameObject:
@@ -17251,6 +17440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 983228943}
   highlightImage: {fileID: 1039872805}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &989659593
 GameObject:
@@ -17422,6 +17612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2062751907}
   highlightImage: {fileID: 1919346951}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &995324828
@@ -18274,6 +18465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 175902534}
   highlightImage: {fileID: 1259899360}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1026254095
 GameObject:
@@ -18601,6 +18793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 826087833}
   highlightImage: {fileID: 1170767386}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1049940227
@@ -18829,6 +19022,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 861600042}
   highlightImage: {fileID: 2078479881}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1054424609
@@ -19214,6 +19408,82 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7965355, y: 0.7108662}
   m_EdgeRadius: 0
+--- !u!1 &1070256545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1070256546}
+  - component: {fileID: 1070256548}
+  - component: {fileID: 1070256547}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1070256546
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070256545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179606315}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 50, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1070256547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070256545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1070256548
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070256545}
+  m_CullTransparentMesh: 1
 --- !u!1 &1073423215
 GameObject:
   m_ObjectHideFlags: 0
@@ -19364,6 +19634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 625372563}
   highlightImage: {fileID: 1089884827}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1078552777
 GameObject:
@@ -19515,6 +19786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1051875599}
   highlightImage: {fileID: 150544695}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1079811862
 GameObject:
@@ -20034,6 +20306,82 @@ MonoBehaviour:
   anim: {fileID: 0}
   collected: 0
   collectedShrine: {fileID: 21300000, guid: 4d73a6bfba7943f44952e6b6e92b08fa, type: 3}
+--- !u!1 &1118478633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1118478634}
+  - component: {fileID: 1118478636}
+  - component: {fileID: 1118478635}
+  m_Layer: 5
+  m_Name: Highlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1118478634
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118478633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179606315}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 90, y: 90}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1118478635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118478633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 500720410, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1118478636
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118478633}
+  m_CullTransparentMesh: 1
 --- !u!1 &1139858390
 GameObject:
   m_ObjectHideFlags: 0
@@ -20350,6 +20698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2012355583}
   highlightImage: {fileID: 646174198}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1152323028
@@ -21531,6 +21880,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 508161732}
   highlightImage: {fileID: 886513561}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1254675835
 GameObject:
@@ -21702,6 +22052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2058777396}
   highlightImage: {fileID: 1564008796}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1256138303
@@ -21910,6 +22261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 718172454}
   highlightImage: {fileID: 1391796433}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1258960315
 GameObject:
@@ -23027,6 +23379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1212056578}
   highlightImage: {fileID: 263791451}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1318672184
@@ -23796,11 +24149,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6b6784468dd0c4089677bd20e266ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestItemDetailsUI: {fileID: 1357187950}
-  chestUI: {fileID: 1914452664}
+  itemDetailsUI: {fileID: 0}
+  inventoryUI: {fileID: 0}
   itemName: {fileID: 34521542}
   itemDescription: {fileID: 1517765245}
   itemIcon: {fileID: 605159115}
+  item: {fileID: 0}
+  chestItemDetailsUI: {fileID: 1357187950}
+  chestUI: {fileID: 1914452664}
 --- !u!1 &1358330846
 GameObject:
   m_ObjectHideFlags: 0
@@ -66553,6 +66909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1935876841}
   highlightImage: {fileID: 654155174}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1500530744
 GameObject:
@@ -67529,7 +67886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1561064582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -67563,6 +67920,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45157a38dc20c7b4e879fcf2fdb4768c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: {fileID: 0}
+  shop: {fileID: 0}
+  shopPanel: {fileID: 0}
 --- !u!1 &1563962013
 GameObject:
   m_ObjectHideFlags: 0
@@ -67623,6 +67983,7 @@ MonoBehaviour:
   itemName: {fileID: 1055933347}
   itemDescription: {fileID: 1079811864}
   itemIcon: {fileID: 2122236539}
+  item: {fileID: 0}
 --- !u!114 &1563962016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67907,6 +68268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1657191343}
   highlightImage: {fileID: 831782075}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1589314388
@@ -69057,6 +69419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 491943169}
   highlightImage: {fileID: 1451360176}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1657191341
 GameObject:
@@ -70294,6 +70657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 989659595}
   highlightImage: {fileID: 588826443}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1791222730
 GameObject:
@@ -70603,7 +70967,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1805739652
 RectTransform:
   m_ObjectHideFlags: 0
@@ -70891,6 +71255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 322078103}
   highlightImage: {fileID: 968407657}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1826384463
 GameObject:
@@ -71062,6 +71427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 979469644}
   highlightImage: {fileID: 588588580}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1836713557
@@ -72099,6 +72465,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1385108925}
   highlightImage: {fileID: 350724049}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1927285691
@@ -72479,6 +72846,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1621321563}
   highlightImage: {fileID: 33679005}
+  item: {fileID: 0}
   inventoryUI: {fileID: 534367252}
   slotNumber: 0
 --- !u!114 &1966035244
@@ -72636,6 +73004,7 @@ MonoBehaviour:
   itemName: {fileID: 1026254097}
   itemDescription: {fileID: 40907796}
   itemIcon: {fileID: 629771262}
+  item: {fileID: 0}
 --- !u!1 &1983510991
 GameObject:
   m_ObjectHideFlags: 0
@@ -72938,6 +73307,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1749578022}
   highlightImage: {fileID: 894177518}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &1998431137
 GameObject:
@@ -73247,6 +73617,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1381944671}
   highlightImage: {fileID: 1039015031}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &2001851113
 GameObject:
@@ -73398,6 +73769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1535607463}
   highlightImage: {fileID: 439806049}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &2011163553
 GameObject:
@@ -74357,6 +74729,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 2147233753}
   highlightImage: {fileID: 57394785}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &2025271891
 GameObject:
@@ -75331,6 +75704,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1809038158}
   highlightImage: {fileID: 902874238}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &2086007786
 GameObject:
@@ -75501,11 +75875,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b6b6784468dd0c4089677bd20e266ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestItemDetailsUI: {fileID: 2089089099}
-  chestUI: {fileID: 1914452664}
+  itemDetailsUI: {fileID: 0}
+  inventoryUI: {fileID: 0}
   itemName: {fileID: 1474135637}
   itemDescription: {fileID: 1719339316}
   itemIcon: {fileID: 1613308881}
+  item: {fileID: 0}
+  chestItemDetailsUI: {fileID: 2089089099}
+  chestUI: {fileID: 1914452664}
 --- !u!1 &2102178969
 GameObject:
   m_ObjectHideFlags: 0
@@ -75817,6 +76194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   icon: {fileID: 1142310835}
   highlightImage: {fileID: 971861583}
+  item: {fileID: 0}
   chestUI: {fileID: 1914452664}
 --- !u!1 &2117883860
 GameObject:
