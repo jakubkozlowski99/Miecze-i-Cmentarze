@@ -17,6 +17,9 @@ public class Blacksmith : Collidable
 
     public InteractionTextManager interactionTextManager;
 
+    [Header("Shop")]
+    public Shop shop;
+
     protected override void Start()
     {
         base.Start();

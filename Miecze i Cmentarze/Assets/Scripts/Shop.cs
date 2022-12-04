@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Shop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public List<Item> items;
+
+    public void SellItem(Item newItem)
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BuyItem(Item newItem)
     {
-        
+
     }
 }

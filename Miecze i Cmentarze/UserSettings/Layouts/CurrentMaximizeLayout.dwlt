@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 6196
+  controlID: 8348
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 6197
+  controlID: 8239
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 6198
+  controlID: 8179
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -232,10 +232,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 135.6}
+      scrollPos: {x: 0, y: 147.6}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 24fbffff9e4e00005c5000008c500000e050000000510000c05100001657000090580000
+      m_ExpandedIDs: 24fbffff9e4e00005c5000008c500000e050000000510000c0510000c851000090580000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 534.5042, y: 284.02612, z: -2.3777404}
+    m_Target: {x: 469.78122, y: 263.829, z: -1.0527679}
     speed: 2
-    m_Value: {x: 534.5042, y: 284.02612, z: -2.3777404}
+    m_Value: {x: 469.78122, y: 263.829, z: -1.0527679}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -621,9 +621,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 285.12546
+    m_Target: 152.62842
     speed: 2
-    m_Value: 285.12546
+    m_Value: 152.62842
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -847,23 +847,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/UI
+    - Assets/Dialogue
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/UI
+  - Assets/Dialogue
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Windows\Documents\GitHub\Miecze-i-Cmentarze\Miecze
     i Cmentarze
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 252.6}
-    m_SelectedIDs: 388d0000
-    m_LastClickedID: 36152
-    m_ExpandedIDs: 00000000085d00002c5d0000325d0000345d0000385d00003c5d000030630000326300003463000036630000386300003a6300003c6300003e630000406300004263000044630000486300004a6300004e63000050630000526300006863000074630000ee63000000ca9a3b
+    scrollPos: {x: 0, y: 132.6}
+    m_SelectedIDs: 6a630000
+    m_LastClickedID: 25450
+    m_ExpandedIDs: 00000000085d00002c5d0000325d0000345d0000385d00003c5d000030630000326300003463000036630000386300003a6300003c6300003e630000406300004263000044630000486300004a6300004e630000506300005263000068630000ee63000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -916,8 +916,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 16570000
-    m_LastClickedInstanceID: 22294
+    m_SelectedInstanceIDs: e2510000
+    m_LastClickedInstanceID: 20962
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000fa7a0000066300001e6a000070540000d4790000a44e0000c6680000cc4e0000907b0000f4510000f2510000425a00005e5d02006055000000000000c83505005272000014550000725400001e5800007c540000705f0000ca5f0000da530000406000003e600000825400001c640000ec720000767e0000185c0000425d0000
     m_RenameOverlay:
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 6316
+  controlID: 8349
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1062,8 +1062,8 @@ MonoBehaviour:
     m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 22294
-  m_LastVerticalScrollValue: 0
+  m_LastInspectedObjectInstanceID: 20962
+  m_LastVerticalScrollValue: 856
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

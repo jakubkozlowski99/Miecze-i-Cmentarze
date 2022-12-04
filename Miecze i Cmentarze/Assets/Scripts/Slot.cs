@@ -1,11 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Slot : MonoBehaviour
 {
-    public void Click()
+    public Image icon;
+
+    public Image highlightImage;
+
+    public Item item;
+
+    public void AddItem(Item newItem)
     {
-        Debug.Log("siemex");
+        item = newItem;
+
+        icon.sprite = item.icon;
+        icon.enabled = true;
+    }
+    public void ClearSlot()
+    {
+        item = null;
+
+        icon.sprite = null;
+        icon.enabled = false;
     }
 }
