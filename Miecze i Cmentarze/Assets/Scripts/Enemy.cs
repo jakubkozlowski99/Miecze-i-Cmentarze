@@ -5,9 +5,10 @@ using UnityEngine;
 public class Enemy : Mover
 {
     public int xpValue = 15;
+    public int coinsValue = 50;
 
-    public float triggerLenght = 1;
-    public float chaseLenght = 5;
+    public float triggerLength = 1;
+    public float chaseLength = 5;
     public float attackCooldown = 1.5f;
     private bool chasing;
     private bool collidingWithPlayer;
@@ -59,9 +60,9 @@ public class Enemy : Mover
             }
             else enemyIsHurt = false;
 
-            if ((Vector3.Distance(playerTransform.position, startingPosition) < chaseLenght) && !enemyIsAttacking && !enemyIsHurt)
+            if ((Vector3.Distance(playerTransform.position, startingPosition) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
             {
-                if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLenght)
+                if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
                 {
                     chasing = true;
                     if (!collidingWithPlayer) anim.SetBool("EnemyRun", true);
@@ -110,6 +111,7 @@ public class Enemy : Mover
         {
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("enemy_dead"))
             {
+                GameManager.instance.coins += coinsValue;
                 GameManager.instance.experience += xpValue;
                 if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
                 {

@@ -35,6 +35,7 @@ public class ChestOpen : Collidable
         if (Input.GetKeyDown(KeyCode.E) && playerNearby && chest.collectable)
         {
             GameManager.instance.player.canMove = false;
+            Inventory.instance.canToggle = false;
             chest.anim.SetTrigger("Open");
             interactionTextManager.Hide();
         }

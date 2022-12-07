@@ -18,12 +18,16 @@ public class Blacksmith : Collidable
     public InteractionTextManager interactionTextManager;
 
     [Header("Shop")]
-    public Shop shop;
+    private Shop shop;
+
+    public List<Item> shopItems;
 
     protected override void Start()
     {
         base.Start();
         anim = GetComponent<Animator>();
+        shop = new Shop();
+        shop.shopItems = shopItems;
     }
 
     protected override void Update()
@@ -69,7 +73,7 @@ public class Blacksmith : Collidable
     {
         Debug.Log(inkJSON.text);
         HideInteractionText();
-        DialogueManager.instance.EnterDialogueMode(inkJSON, "Blacksmith");
+        DialogueManager.instance.EnterDialogueMode(inkJSON, "Blacksmith", shop);
     }
 
     protected void ShowInteractionText()

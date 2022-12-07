@@ -117,6 +117,20 @@ public class ItemDetailsUI : MonoBehaviour
             inventoryUI.RemoveHighlights();
             HideDetails();
         }
+        if (item.type == "consumable")
+        {
+            GameManager.instance.player.hitpoint += item.potionHp;
+            if (GameManager.instance.player.hitpoint > GameManager.instance.player.maxhitpoint)
+            {
+                GameManager.instance.player.hitpoint = GameManager.instance.player.maxhitpoint;
+            }
+            GameManager.instance.player.healthBar.setValue(GameManager.instance.player.hitpoint);
+            GameManager.instance.player.healthBar.setText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
+            Inventory.instance.Remove(item);
+            inventoryUI.UpdateInventory();
+            inventoryUI.RemoveHighlights();
+            HideDetails();
+        }
     }
 
     public void TakeOff()
@@ -186,11 +200,14 @@ public class ItemDetailsUI : MonoBehaviour
         }
         else if(item.type == "consumable")
         {
-
+            itemDescription.text += "Mikstura \u017Cycia" + "\n";
+            itemDescription.text += "+" + item.potionHp + "HP";
         }
         else if (item.type == "coins")
         {
-
+            if (item.coins == 0) itemDescription.text += "Troch\u0119 z\u0142ota.";
+            else if (item.coins == 1) itemDescription.text += "Sporo z\u0142ota.";
+            else if (item.coins == 2) itemDescription.text += "Du\u017Co z\u0142ota.";
         }
     }
 }

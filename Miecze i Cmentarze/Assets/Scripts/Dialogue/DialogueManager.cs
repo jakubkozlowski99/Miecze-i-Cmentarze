@@ -31,6 +31,8 @@ public class DialogueManager : MonoBehaviour
 
     public ShopUI shopUI;
 
+    Shop shop;
+
     private void Awake()
     {
         if (instance != null)
@@ -67,18 +69,22 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, string newPortrait)
+    public void EnterDialogueMode(TextAsset inkJSON, string newPortrait, Shop newShop)
     {
+        Inventory.instance.canToggle = false;
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         portraitAnim.SetTrigger(newPortrait);
+        Debug.Log(newShop.shopItems.Count);
+        shop = newShop;
         GameManager.instance.player.canMove = false;
         ContinueStory();
     }
 
     private void ExitDialogueMode()
     {
+        Inventory.instance.canToggle = true;
         portraitAnim.SetTrigger("Exit");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -159,12 +165,12 @@ public class DialogueManager : MonoBehaviour
     private void OpenShop()
     {
         dialoguePanel.SetActive(false);
-        shopUI.gameObject.SetActive(true);
+        shopUI.OpenShop(shop);
     }
 
     public void CloseShop()
     {
         dialoguePanel.SetActive(true);
-        shopUI.gameObject.SetActive(false);
+        shopUI.CloseShop();
     }
 }

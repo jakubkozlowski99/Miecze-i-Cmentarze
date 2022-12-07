@@ -21,4 +21,7 @@ MonoBehaviour:
   condition: 0
   defense: 0
   type: weapon
+  coins: 0
   potionHp: 0
+  buyPrice: 1000
+  sellPrice: 500

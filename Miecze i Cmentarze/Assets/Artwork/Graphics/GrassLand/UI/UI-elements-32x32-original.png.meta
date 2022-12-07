@@ -682,7 +682,7 @@ TextureImporter:
         width: 30
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 11, y: 10, z: 11, w: 9}
       outline: []
       physicsShape: []
@@ -690,6 +690,48 @@ TextureImporter:
       bones: []
       spriteID: 6124f8f3bf9bfdb43a81d66a61b93045
       internalID: 1111690892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_27
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 388
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 7, y: 4, z: 7, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe87e06de88aafd4a8c3d76ee6ff52eb
+      internalID: 133247369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gold
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 448
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b94cdff4b796943bc0de7b30a1fb6a
+      internalID: 724331053
       vertices: []
       indices: 
       edges: []
@@ -706,12 +748,14 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       ui_11: 1124653943
+      gold: 724331053
       ui_14: 861365306
       ui_13: 702921174
       ui_9: 438308081
       ui_4: -553051878
       ui_12: -58002472
       ui_19: -1117244344
+      ui_27: 133247369
       ui_0: 178186329
       ui_21: 500720410
       ui_22: 901633255

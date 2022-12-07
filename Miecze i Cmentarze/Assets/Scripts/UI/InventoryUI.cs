@@ -39,6 +39,7 @@ public class InventoryUI : MonoBehaviour
     private void Start()
     {
         inventory = Inventory.instance;
+        inventory.canToggle = true;
         inventory.onItemChangedCallback += UpdateInventory;
         for(int i = 0; i < slots.Length; i++)
         {
@@ -56,19 +57,22 @@ public class InventoryUI : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if (!inventoryPanel.activeSelf)
+        if (inventory.canToggle)
         {
-            UpdateInventory();
-            RemoveHighlights();
-            GameManager.instance.player.canMove = false;
-            inventoryPanel.SetActive(true);
-        }
-        else
-        {
-            GameManager.instance.player.canMove = true;
-            inventoryPanel.SetActive(false);
-            itemDetailsUI.HideDetails();
-            equippedItemDetailsUI.HideDetails();
+            if (!inventoryPanel.activeSelf)
+            {
+                UpdateInventory();
+                RemoveHighlights();
+                GameManager.instance.player.canMove = false;
+                inventoryPanel.SetActive(true);
+            }
+            else
+            {
+                GameManager.instance.player.canMove = true;
+                inventoryPanel.SetActive(false);
+                itemDetailsUI.HideDetails();
+                equippedItemDetailsUI.HideDetails();
+            }
         }
     }
 

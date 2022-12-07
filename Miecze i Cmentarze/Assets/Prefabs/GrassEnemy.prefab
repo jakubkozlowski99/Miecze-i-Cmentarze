@@ -352,6 +352,18 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  boxCollider: {fileID: 0}
+  hits:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   damagePoint: 1
   lastDamage: 0
 --- !u!1 &4770027706796326431
@@ -440,6 +452,18 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  boxCollider: {fileID: 0}
+  hits:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4770027706827916785
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,8 +805,9 @@ MonoBehaviour:
   hitpoint: 100
   maxhitpoint: 100
   xpValue: 15
-  triggerLenght: 1
-  chaseLenght: 5
+  coinsValue: 50
+  triggerLength: 1
+  chaseLength: 5
   attackCooldown: 1.5
   enemyYSpeed: 1
   enemyXSpeed: 1.5

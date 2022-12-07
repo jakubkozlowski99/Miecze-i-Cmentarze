@@ -14,4 +14,6 @@ public class Item : ScriptableObject
     public string type = null; //weapon, armor, boots, helmet, gloves, ring, consumable, questItem
     public int coins = 0;
     public float potionHp = 0;
+    public int buyPrice = 0;
+    public int sellPrice = 0;
 }

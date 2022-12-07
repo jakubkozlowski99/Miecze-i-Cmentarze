@@ -29,6 +29,7 @@ public class ChestUI : MonoBehaviour
     }
     public void CloseChest()
     {
+        Inventory.instance.canToggle = true;
         GameManager.instance.player.canMove = true;
         chestPanel.SetActive(false);
         chest.textShown = false;

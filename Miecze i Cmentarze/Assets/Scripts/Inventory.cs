@@ -21,6 +21,7 @@ public class Inventory : MonoBehaviour
     public OnItemChanged onItemChangedCallback;
 
     public int space = 20;
+    public bool canToggle;
 
     public List<Item> items = new List<Item>();
 

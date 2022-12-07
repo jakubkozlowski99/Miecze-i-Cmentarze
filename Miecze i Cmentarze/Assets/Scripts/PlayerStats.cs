@@ -23,6 +23,7 @@ public class PlayerStats : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
+            GameManager.instance.coins += 10005;
             defense++;
             attack++;
             speed++;

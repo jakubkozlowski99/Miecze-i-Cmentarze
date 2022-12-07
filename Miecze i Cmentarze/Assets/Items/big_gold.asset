@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a113a6acb43973348ad64daec07f78b1, type: 3}
+  m_Name: big_gold
+  m_EditorClassIdentifier: 
+  name: "Du\u017Co z\u0142ota"
+  icon: {fileID: -1137349184, guid: ecfd9638f7d53314cace27db306a2974, type: 3}
+  attack: 0
+  speed: 0
+  agility: 0
+  vitality: 0
+  condition: 0
+  defense: 0
+  type: coins
+  coins: 2
+  potionHp: 0
+  buyPrice: 0
+  sellPrice: 0
