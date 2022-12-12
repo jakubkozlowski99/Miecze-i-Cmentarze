@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 5617
+  controlID: 23386
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 5483
+  controlID: 23262
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 5460
+  controlID: 23210
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -194,8 +194,8 @@ MonoBehaviour:
     y: 0
     width: 292
     height: 477.6
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -232,10 +232,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 96}
+      scrollPos: {x: 0, y: 12.399994}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2cfbffff2451000068510000c05100001a5b0000bc5c0000325d0000205e0000
+      m_ExpandedIDs: a87afffff298ffff3ca0ffff2cfbffff685100001a5b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -569,9 +569,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 577.45337, y: 310.95355, z: -1.4503332}
+    m_Target: {x: 498.82327, y: 293.3268, z: -0.54949075}
     speed: 2
-    m_Value: {x: 577.45337, y: 310.95355, z: -1.4503332}
+    m_Value: {x: 498.82327, y: 293.3268, z: -0.54949075}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -621,9 +621,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 206.52065
+    m_Target: 152.85658
     speed: 2
-    m_Value: 206.52065
+    m_Value: 152.85658
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -881,23 +881,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Artwork/Graphics/Icons/Kyrise's 16x16 RPG Icon Pack - V1.3/spritesheet
+    - Assets/Artwork/Graphics/Icons
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Artwork/Graphics/Icons/Kyrise's 16x16 RPG Icon Pack - V1.3/spritesheet
+  - Assets/Artwork/Graphics/Icons
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Windows\Documents\GitHub\Miecze-i-Cmentarze\Miecze
     i Cmentarze
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 239.80002}
-    m_SelectedIDs: 46810100
-    m_LastClickedID: 98630
-    m_ExpandedIDs: 00000000a2610000c6610000cc610000ce610000d2610000d6610000f6670000f8670000fa670000fc670000fe67000000680000026800000468000006680000086800000a6800000e6800001068000012680000146800001668000018680000f6fc0000ae7f010000ca9a3b
+    scrollPos: {x: 0, y: 287}
+    m_SelectedIDs: f6fc0000
+    m_LastClickedID: 64758
+    m_ExpandedIDs: 00000000a2610000c6610000cc610000ce610000d2610000d6610000f6670000f8670000fa670000fc670000fe67000000680000026800000468000006680000086800000a6800000e68000012680000146800001668000018680000d2680000f6fc000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -925,7 +925,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a2610000c6610000cc610000ce610000d2610000d6610000f6670000f8670000fa670000fc670000fe67000000680000026800000468000006680000086800000a6800000c6800000e680000106800001268000014680000166800001868000000ca9a3b
+    m_ExpandedIDs: 00000000a2610000c6610000cc610000ce610000d2610000d6610000f6670000f8670000fa670000fc670000fe67000000680000026800000468000006680000086800000a6800000e6800001068000012680000146800001668000018680000f6fc00003cfd0000ae7f010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -950,8 +950,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 745a0000
-    m_LastClickedInstanceID: 23156
+    m_SelectedInstanceIDs: ae7f0100
+    m_LastClickedInstanceID: 98222
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000fa7a0000066300001e6a000070540000d4790000a44e0000c6680000cc4e0000907b0000f4510000f2510000425a00005e5d02006055000000000000c83505005272000014550000725400001e5800007c540000705f0000ca5f0000da530000406000003e600000825400001c640000ec720000767e0000185c0000425d00007e5c000098720100
     m_RenameOverlay:
@@ -980,7 +980,7 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 274
+  m_DirectoriesAreaWidth: 294
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 5618
+  controlID: 23387
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1096,7 +1096,7 @@ MonoBehaviour:
     m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 23156
+  m_LastInspectedObjectInstanceID: 98222
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

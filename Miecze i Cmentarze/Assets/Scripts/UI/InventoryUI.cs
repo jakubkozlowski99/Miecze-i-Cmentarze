@@ -12,6 +12,19 @@ public class InventoryUI : MonoBehaviour
     public ItemDetailsUI itemDetailsUI;
     public ItemDetailsUI equippedItemDetailsUI;
 
+    public GameObject questPanel;
+    public Image inventoryTab;
+    public Image questPanelTab;
+    public Image inventoryTabIcon;
+    public Image questPanelTabIcon;
+    public Sprite activeInventoryPanelIcon;
+    public Sprite unactiveInventoryPanelIcon;
+    public Sprite activeTab;
+    public Sprite unactiveTab;
+    public Sprite activeQuestPanelIcon;
+    public Sprite unactiveQuestPanelIcon;
+    private int tab;
+
     public EquippedItemSlot helmet;
     public EquippedItemSlot weapon;
     public EquippedItemSlot armor;
@@ -61,13 +74,19 @@ public class InventoryUI : MonoBehaviour
         {
             if (!inventoryPanel.activeSelf)
             {
+                tab = 1;
+                SetTabs();
                 UpdateInventory();
                 RemoveHighlights();
+                inventoryTab.gameObject.SetActive(true);
+                questPanelTab.gameObject.SetActive(true);
                 GameManager.instance.player.canMove = false;
                 inventoryPanel.SetActive(true);
             }
             else
             {
+                inventoryTab.gameObject.SetActive(false);
+                questPanelTab.gameObject.SetActive(false);
                 GameManager.instance.player.canMove = true;
                 inventoryPanel.SetActive(false);
                 itemDetailsUI.HideDetails();
@@ -154,5 +173,45 @@ public class InventoryUI : MonoBehaviour
         armor.highlightImage.enabled = false;
         boots.highlightImage.enabled = false;
         gloves.highlightImage.enabled = false;
+    }
+
+    private void SetTabs()
+    {
+        if (tab == 0)
+        {
+            inventoryTab.sprite = unactiveTab;
+            inventoryTabIcon.sprite = unactiveInventoryPanelIcon;
+            questPanelTab.sprite = activeTab;
+            questPanelTabIcon.sprite = activeQuestPanelIcon;
+            tab = 1;
+        }
+        else
+        {
+            inventoryTab.sprite = activeTab;
+            inventoryTabIcon.sprite = activeInventoryPanelIcon;
+            questPanelTab.sprite = unactiveTab;
+            questPanelTabIcon.sprite = unactiveQuestPanelIcon;
+            tab = 0;
+        }
+    }
+
+    public void ClickTab()
+    {
+        if (tab == 1)
+        {
+            inventoryPanel.SetActive(true);
+            questPanel.SetActive(false);
+            SetTabs();
+        }
+    }
+
+    public void ClickQuestPanelTab()
+    {
+        if (tab == 0)
+        {
+            inventoryPanel.SetActive(false);
+            questPanel.SetActive(true);
+            SetTabs();
+        }
     }
 }

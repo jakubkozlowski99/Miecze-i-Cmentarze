@@ -11,6 +11,7 @@ public class Player : Mover
     private bool isAttacking;
     public bool canMove;
     private bool isDodging;
+    private bool canAttack;
     private string swing_1 = "adventurer_swing_1";
     private string swing_2 = "adventurer_swing_2";
     private string swing_3 = "adventurer_swing_3";
@@ -44,6 +45,7 @@ public class Player : Mover
     {
         base.Start();
         canMove = true;
+        canAttack = true;
         anim = GetComponent<Animator>();
         anim.SetFloat("AttackSpeed", 1 + (playerStats.condition / 10) - 0.1f);
         maxhitpoint = 60 + (playerStats.vitality * 40);
@@ -125,26 +127,30 @@ public class Player : Mover
 
     private void Swing()
     {
-        isAttacking = true;
-        anim.SetBool("Run", false);
-        if (swingCount == 0) 
+        if (canAttack)
         {
-            anim.SetTrigger("Swing1");
-            swingCount++;
+            isAttacking = true;
+            anim.SetBool("Run", false);
+            if (swingCount == 0)
+            {
+                anim.SetTrigger("Swing1");
+                swingCount++;
+            }
+            else if (swingCount == 1)
+            {
+                anim.SetTrigger("Swing2");
+                swingCount++;
+            }
+            else if (swingCount == 2)
+            {
+                anim.SetTrigger("Swing3");
+                swingCount = 0;
+            }
+            lastSwing = Time.time;
+            stamina -= 10;
+            staminaBar.setValue(stamina);
+
         }
-        else if(swingCount == 1)
-        {
-            anim.SetTrigger("Swing2");
-            swingCount++;
-        }
-        else if(swingCount == 2)
-        {
-            anim.SetTrigger("Swing3");
-            swingCount = 0;
-        }
-        lastSwing = Time.time;
-        stamina -= 10;
-        staminaBar.setValue(stamina);
     }
 
     private void StrongSwing()

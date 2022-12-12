@@ -704,7 +704,7 @@ TextureImporter:
         height: 25
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 7, y: 4, z: 7, w: 5}
+      border: {x: 7, y: 4, z: 9, w: 5}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -716,15 +716,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: gold
+      name: inventory_panel_active
       rect:
         serializedVersion: 2
-        x: 96
-        y: 448
-        width: 32
-        height: 32
+        x: 106
+        y: 454
+        width: 14
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -732,6 +732,111 @@ TextureImporter:
       bones: []
       spriteID: e3b94cdff4b796943bc0de7b30a1fb6a
       internalID: 724331053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quest_icon
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 359
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196da9971b9db544faa3221f7c5c6a12
+      internalID: 1360427760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: questpanel_active
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 455
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1431d0e620f58c94c9fb7656069262f3
+      internalID: -1751019021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quest_panel_unactive
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 423
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1a7bfe94f9fd9c40ae38cb8e7b7b4f1
+      internalID: -17578488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: inventory_panel_unactive
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 422
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b3c1ecab6769546b82f5168f20c5d2
+      internalID: 1896656575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_29
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 389
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 7, y: 3, z: 9, w: 5}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d8eca0c4bab074f9141ded08e808f7
+      internalID: -243433422
       vertices: []
       indices: 
       edges: []
@@ -748,20 +853,24 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       ui_11: 1124653943
-      gold: 724331053
       ui_14: 861365306
+      questpanel_active: -1751019021
       ui_13: 702921174
       ui_9: 438308081
       ui_4: -553051878
       ui_12: -58002472
       ui_19: -1117244344
       ui_27: 133247369
+      quest_icon: 1360427760
       ui_0: 178186329
       ui_21: 500720410
       ui_22: 901633255
       ui_3: -1287306265
+      quest_panel_unactive: -17578488
       ui_6: -1887668924
       ui_8: 194043523
+      ui_29: -243433422
+      inventory_panel_unactive: 1896656575
       ui_7: -712487053
       ui_2: 1682438968
       ui_5: 2021795044
@@ -772,6 +881,7 @@ TextureImporter:
       ui_10: 225735807
       ui_23: -906719968
       ui_24: 551281953
+      inventory_panel_active: 724331053
       ui_1: -498994869
       ui_15: 135552418
       ui_18: -188128606
