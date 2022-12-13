@@ -34,6 +34,8 @@ public class ChestItemDetailsUI : ItemDetailsUI
 
     public void TakeItem()
     {
+        bool itemTaken = false;
+
         if (item.type == "coins")
         {
             int coinAmount;
@@ -41,16 +43,22 @@ public class ChestItemDetailsUI : ItemDetailsUI
             else if (item.coins == 1) coinAmount = Random.Range(150, 501);
             else coinAmount = Random.Range(500, 2001);
             GameManager.instance.coins += coinAmount;
+            itemTaken = true;
         }
-        else
+        else if (Inventory.instance.items.Count < Inventory.instance.space)
         {
             chestUI.inventory.Add(item);
+            itemTaken = true;
         }
 
-        chestUI.chest.chestItems.Remove(item);
-        HideDetails();
-        chestUI.RemoveHighlights();
-        chestUI.UpdateChest();
+        if (itemTaken)
+        {
+            chestUI.chest.chestItems.Remove(item);
+            HideDetails();
+            chestUI.RemoveHighlights();
+            chestUI.UpdateChest();
+
+        }
     }
 
     public void PutItem()

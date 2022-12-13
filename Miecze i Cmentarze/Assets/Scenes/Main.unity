@@ -14400,10 +14400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   space: 20
   canToggle: 0
-  items:
-  - {fileID: 11400000, guid: 485614877dd4db44d8d23f9dec048c9e, type: 2}
-  - {fileID: 11400000, guid: 5780321073413e349a8104f2da1c142a, type: 2}
-  - {fileID: 11400000, guid: 30545826a6a340e4697a3d3ca9e25b3c, type: 2}
+  items: []
 --- !u!1 &671056571
 GameObject:
   m_ObjectHideFlags: 0
@@ -81200,7 +81197,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 534367252}
         m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
-        m_MethodName: ClickInventoryTab
+        m_MethodName: ClickInvengtoryPanelTab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -83533,7 +83530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chestItems:
   - {fileID: 11400000, guid: 5780321073413e349a8104f2da1c142a, type: 2}
-  - {fileID: 11400000, guid: c34d121a9a887544cb7abe50b983c867, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: 30545826a6a340e4697a3d3ca9e25b3c, type: 2}
   - {fileID: 11400000, guid: e96f1d46091608b4fb0a408911de2be2, type: 2}
   - {fileID: 11400000, guid: a5a4079de9a51e144b53974ae7605128, type: 2}

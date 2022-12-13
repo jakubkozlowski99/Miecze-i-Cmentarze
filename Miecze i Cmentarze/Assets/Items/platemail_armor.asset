@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a113a6acb43973348ad64daec07f78b1, type: 3}
+  m_Name: platemail_armor
+  m_EditorClassIdentifier: 
+  name: "P\u0142ytowa zbroja"
+  icon: {fileID: 21300000, guid: 9a143f41992d9554eaafef1ef051ce57, type: 3}
+  attack: 0
+  speed: 0
+  agility: 0
+  vitality: 0
+  condition: 0
+  defense: 5
+  type: armor
+  coins: 0
+  potionHp: 0
+  buyPrice: 1500
+  sellPrice: 750

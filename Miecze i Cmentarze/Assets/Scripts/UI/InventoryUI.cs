@@ -195,7 +195,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    public void ClickTab()
+    public void ClickInvengtoryPanelTab()
     {
         if (tab == 1)
         {

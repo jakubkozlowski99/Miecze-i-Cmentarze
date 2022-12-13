@@ -41,7 +41,7 @@ public class ShopItemDetailsUI : ItemDetailsUI
 
     public void BuyItem()
     {
-        if (item.buyPrice <= GameManager.instance.coins)
+        if (item.buyPrice <= GameManager.instance.coins && Inventory.instance.items.Count < Inventory.instance.space)
         {
             GameManager.instance.coins -= item.buyPrice;
             shopUI.inventory.Add(item);
