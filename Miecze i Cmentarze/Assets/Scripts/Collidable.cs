@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Collidable : MonoBehaviour
 {
-    public ContactFilter2D filter;
-    public BoxCollider2D boxCollider;
-    public Collider2D[] hits = new Collider2D[10];
+    protected ContactFilter2D filter;
+    protected BoxCollider2D boxCollider;
+    protected Collider2D[] hits = new Collider2D[10];
 
     protected virtual void Start()
     {

@@ -201,7 +201,7 @@ public class ItemDetailsUI : MonoBehaviour
         else if(item.type == "consumable")
         {
             itemDescription.text += "Mikstura \u017Cycia" + "\n";
-            itemDescription.text += "+" + item.potionHp + "HP";
+            itemDescription.text += "+" + item.potionHp + "HP" + "\n";
         }
         else if (item.type == "coins")
         {
