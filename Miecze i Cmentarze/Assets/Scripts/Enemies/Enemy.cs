@@ -47,7 +47,7 @@ public class Enemy : Mover
             }
             else enemyIsAttacking = false;
 
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Hurt"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt"))
             {
                 enemyIsHurt = true;
             }
