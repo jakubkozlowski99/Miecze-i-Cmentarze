@@ -72,7 +72,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: f67b361912de8f449928bb6e9c3896a5, type: 2}
-  m_Tag: 
+  m_Tag: Hurt
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -99,7 +99,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 385ace34c88a09d4c8202f4aae0d0f44, type: 2}
-  m_Tag: 
+  m_Tag: Run
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -151,7 +151,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: c3475229b6659694cb0c5420e1553ec9, type: 2}
-  m_Tag: 
+  m_Tag: Idle
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -177,7 +177,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 0ad0d7f80b75fc244b11a363ae2c8703, type: 2}
-  m_Tag: 
+  m_Tag: Dead
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -233,10 +233,7 @@ AnimatorStateMachine:
     m_Position: {x: -220, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4429491200585742404}
-    m_Position: {x: -210, y: -70, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: 5793094298224941897}
-    m_Position: {x: -60, y: -40, z: 0}
+    m_Position: {x: -220, y: -100, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: -5558605869050690045}
@@ -318,7 +315,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: d997fde903559764b889c351023c1642, type: 2}
-  m_Tag: 
+  m_Tag: Attack
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
@@ -345,32 +342,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1102 &5793094298224941897
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: enemy_atk2
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a3b3ce74a8a240f40940b991884961f9, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &6476955439484024362
 AnimatorState:
   serializedVersion: 6
@@ -393,7 +364,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: cd36229d0a21f51468b0511fa163e4ed, type: 2}
-  m_Tag: 
+  m_Tag: Death
   m_SpeedParameter: 
   m_MirrorParameter: 
   m_CycleOffsetParameter: 

@@ -8,17 +8,20 @@ public class EnemyAttackRange : Collidable
     private bool isHurt;
     private float attackCooldown = 1;
     private float lastAttack;
+    private int attackAnimIndex;
+    public int animationsAmount;
 
     protected override void Start()
     {
         base.Start();
+        attackAnimIndex = 1;
         anim = transform.GetComponentInParent<Animator>();
     }
 
     protected override void Update()
     {
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("enemy_hurt") || anim.GetCurrentAnimatorStateInfo(0).IsName("enemy_death") || 
-            anim.GetCurrentAnimatorStateInfo(0).IsName("enemy_dead"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Death") || 
+            anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
         {
             isHurt = true;
         }
@@ -33,11 +36,19 @@ public class EnemyAttackRange : Collidable
             if (coll.tag == "Fighter" && coll.name == "PlayerHitbox")
             {
                 lastAttack = Time.time;
-                anim.SetTrigger("Attack1");
+                SetAttackAnim();
             }
         }
         else return;
     }
 
-
+    private void SetAttackAnim()
+    {
+        anim.SetTrigger("Attack" + attackAnimIndex);
+        if (attackAnimIndex >= animationsAmount)
+        {
+            attackAnimIndex = 1;
+        }
+        else attackAnimIndex++;
+    }
 }
