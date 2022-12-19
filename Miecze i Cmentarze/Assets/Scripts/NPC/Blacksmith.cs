@@ -6,6 +6,9 @@ public class Blacksmith : NPC
 {
     private Animator anim;
 
+    public float animTime = 5;
+    private float lastAnim;
+
     protected override void Start()
     {
         base.Start();

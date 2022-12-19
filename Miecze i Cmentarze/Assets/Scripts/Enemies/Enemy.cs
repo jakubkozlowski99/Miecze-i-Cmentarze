@@ -103,15 +103,7 @@ public class Enemy : Mover
         {
             if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
             {
-                GameManager.instance.coins += coinsValue;
-                GameManager.instance.experience += xpValue;
-                if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
-                {
-                    GameManager.instance.player.LevelUp();
-                }
-                GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
-                GameManager.instance.player.xpBar.setXpBar();
-                Destroy(gameObject);
+                KillReward();
             }
         }
     }
@@ -129,5 +121,18 @@ public class Enemy : Mover
     {
         alive = false;
         anim.SetTrigger(deathTrigger);
+    }
+
+    protected void KillReward()
+    {
+        GameManager.instance.coins += coinsValue;
+        GameManager.instance.experience += xpValue;
+        if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
+        {
+            GameManager.instance.player.LevelUp();
+        }
+        GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
+        GameManager.instance.player.xpBar.setXpBar();
+        Destroy(gameObject);
     }
 }

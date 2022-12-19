@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     public int playerLevel = 1;
     public int availablePoints = 0;
 
+    [SerializeField]
+    public List<Quest> playerQuests;
+
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);

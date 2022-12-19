@@ -2346,6 +2346,19 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9eaeb593bf3cee046b9c9a8baa842d83, type: 2}
   - {fileID: 11400000, guid: 4855d498b62ae7640b1a219db1e15921, type: 2}
   - {fileID: 11400000, guid: 9e007f7afe5109c43b420fa987e695c6, type: 2}
+  quests:
+  - information:
+      name: 
+      description: 
+      giver: {fileID: 0}
+    completed: 0
+    rewardClaimed: 0
+    reward:
+      coins: 0
+      xp: 0
+    goals: []
+  thisNPC: {fileID: 89802477}
+  animTime: 5
 --- !u!61 &89802478
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14576,6 +14589,17 @@ MonoBehaviour:
   experience: 0
   playerLevel: 1
   availablePoints: 0
+  playerQuests:
+  - information:
+      name: 
+      description: 
+      giver: {fileID: 0}
+    completed: 0
+    rewardClaimed: 0
+    reward:
+      coins: 0
+      xp: 0
+    goals: []
 --- !u!4 &668778190
 Transform:
   m_ObjectHideFlags: 0
@@ -22449,7 +22473,7 @@ MonoBehaviour:
   inventoryUI: {fileID: 534367252}
   highlightImage: {fileID: 1649608318}
   itemImage: {fileID: 694287467}
-  slotImage: {fileID: 1801163808}
+  slotImage: {fileID: 967489725}
   item: {fileID: 0}
 --- !u!114 &967489728
 MonoBehaviour:
@@ -25395,6 +25419,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2fa8d679380a1b438343d850f853402, type: 2}
   - {fileID: 11400000, guid: 885db7baa32a6c84b9562adf6a4a0a80, type: 2}
   - {fileID: 11400000, guid: 4d8ad47108ad5b9499f92ac8ee7452f5, type: 2}
+  quests: []
+  thisNPC: {fileID: 1050331316}
 --- !u!61 &1050331317
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30406,6 +30432,7 @@ MonoBehaviour:
   dialogueIsPlaying: 0
   portraitAnim: {fileID: 1600501597}
   shopUI: {fileID: 1561064583}
+  npc: {fileID: 0}
 --- !u!1 &1265669071
 GameObject:
   m_ObjectHideFlags: 0
@@ -90413,6 +90440,12 @@ PrefabInstance:
       propertyPath: xpBar
       value: 
       objectReference: {fileID: 516718693}
+    - target: {fileID: 8015301673090203969, guid: fcee05ba013dde44ea39c316401d5cf6,
+        type: 3}
+      propertyPath: questt
+      value: 
+      objectReference: {fileID: 11400000, guid: fc7dd9642ae7f784a9f5a2986a6ac7c9,
+        type: 2}
     - target: {fileID: 8015301673090203969, guid: fcee05ba013dde44ea39c316401d5cf6,
         type: 3}
       propertyPath: healthBar

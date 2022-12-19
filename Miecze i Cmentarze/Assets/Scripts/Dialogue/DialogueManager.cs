@@ -31,6 +31,10 @@ public class DialogueManager : MonoBehaviour
 
     public ShopUI shopUI;
 
+    private Quest quest;
+
+    public NPC npc;
+
     Shop shop;
 
     private void Awake()
@@ -69,10 +73,14 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void EnterDialogueMode(TextAsset inkJSON, string newPortrait, Shop newShop)
+    public void EnterDialogueMode(TextAsset inkJSON, string newPortrait, Shop newShop, Quest newQuest, NPC newNPC)
     {
+        quest = newQuest;
+        npc = newNPC;
         Inventory.instance.canToggle = false;
         currentStory = new Story(inkJSON.text);
+        Debug.Log("dziendobry");
+        currentStory.variablesState["questState"] = SetQuestState();
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
         portraitAnim.SetTrigger(newPortrait);
@@ -118,6 +126,8 @@ public class DialogueManager : MonoBehaviour
             {
                 case ACTION_TAG:
                     if (tagValue == "shop") OpenShop();
+                    if (tagValue == "quest_ask") CompleteQuest();
+                    if (tagValue == "quest_give") GiveQuest();
                     break;
                 default:
                     break;
@@ -172,5 +182,33 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(true);
         shopUI.CloseShop();
+    }
+
+    private int SetQuestState()
+    {
+        if (quest == null) return 3;
+
+        foreach (Quest playerQuest in GameManager.instance.playerQuests)
+        {
+            if (playerQuest == quest)
+            {
+                if (playerQuest.completed == false)
+                {
+                    return 1;
+                }
+                else return 2;
+            }
+        }
+        return 0;
+    }
+
+    private void GiveQuest()
+    {
+        GameManager.instance.playerQuests.Add(quest);
+    }
+
+    private void CompleteQuest()
+    {
+
     }
 }

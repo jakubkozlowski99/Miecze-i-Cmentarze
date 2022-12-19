@@ -23,6 +23,7 @@ public class InventoryUI : MonoBehaviour
     public Sprite unactiveTab;
     public Sprite activeQuestPanelIcon;
     public Sprite unactiveQuestPanelIcon;
+
     private int tab;
 
     public EquippedItemSlot helmet;

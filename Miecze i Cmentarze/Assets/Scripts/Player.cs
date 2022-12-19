@@ -121,7 +121,6 @@ public class Player : Mover
 
         if (isDodging) UpdateMotor(new Vector3(dodgeX, dodgeY, 0), playerYSpeed * 2, playerXSpeed * 2);
         else UpdateMotor(new Vector3(x, y, 0), playerYSpeed, playerXSpeed);
-        //if (!isAttacking) UpdateMotor(new Vector3(x, y, 0), 1.5f, 2.0f);
     }
 
 

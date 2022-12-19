@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class NPC : Collidable
 {
-    protected float animTime = 5;
-    protected float lastAnim;
-
     protected bool playerNearby;
     protected bool textShown;
     public float interactionTextOffset;
@@ -20,6 +17,11 @@ public class NPC : Collidable
     protected Shop shop;
 
     public List<Item> shopItems;
+
+    [SerializeField]
+    public List<Quest> quests;
+
+    public NPC thisNPC;
 
     protected override void Start()
     {
@@ -47,9 +49,9 @@ public class NPC : Collidable
     }
     protected void OnActivation()
     {
-        Debug.Log(inkJSON.text);
+        Debug.Log(thisNPC.name);
         HideInteractionText();
-        DialogueManager.instance.EnterDialogueMode(inkJSON, transform.name, shop);
+        DialogueManager.instance.EnterDialogueMode(inkJSON, transform.name, shop, FindQuest(), thisNPC);
     }
 
     protected void ShowInteractionText()
@@ -63,5 +65,19 @@ public class NPC : Collidable
     {
         textShown = false;
         interactionTextManager.Hide();
+    }
+
+    public Quest FindQuest()
+    {
+        foreach(Quest quest in quests)
+        {
+            if (quest.rewardClaimed == false) return quest;
+        }
+        return null;
+    }
+
+    public void ClaimReward()
+    {
+        
     }
 }
