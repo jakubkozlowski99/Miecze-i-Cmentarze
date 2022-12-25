@@ -10,6 +10,7 @@ public class Quest
     {
         public string name;
         public string description;
+        public string dialogueText;
     }
 
     [Header("Info")] public Info information;
@@ -30,22 +31,23 @@ public class Quest
     [SerializeField]
     public List<QuestGoal> goals;
 
-    public void Initialize()
-    {
-        completed = false;
+    public QuestGoal currentGoal;
 
+    public void SetGoal()
+    {
         foreach(var goal in goals)
         {
-
+            if (goal.completed == false)
+            {
+                currentGoal = goal;
+                return;
+            }
         }
     }
 
-    private void CheckGoals()
+    public void CheckGoals()
     {
-        //completed = goals.TrueForAll(g => g.completed);
-        if (completed)
-        {
-            //give rewards
-        }
+        completed = goals.TrueForAll(g => g.completed);
+        SetGoal();
     }
 }

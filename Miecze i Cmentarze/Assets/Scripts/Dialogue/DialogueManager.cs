@@ -37,6 +37,8 @@ public class DialogueManager : MonoBehaviour
 
     Shop shop;
 
+    public QuestsUI questsUI;
+
     private void Awake()
     {
         if (instance != null)
@@ -126,8 +128,12 @@ public class DialogueManager : MonoBehaviour
             {
                 case ACTION_TAG:
                     if (tagValue == "shop") OpenShop();
-                    if (tagValue == "quest_ask") CompleteQuest();
+                    if (tagValue == "quest_ask") 
+                    {
+                        if (SetQuestState() != 1) dialogueText.text = quest.information.dialogueText;
+                    }
                     if (tagValue == "quest_give") GiveQuest();
+                    if (tagValue == "quest_reward") CompleteQuest();
                     break;
                 default:
                     break;
@@ -186,7 +192,7 @@ public class DialogueManager : MonoBehaviour
 
     private int SetQuestState()
     {
-        if (quest == null) return 3;
+        if (quest == null) return 1;
 
         foreach (Quest playerQuest in GameManager.instance.playerQuests)
         {
@@ -194,9 +200,9 @@ public class DialogueManager : MonoBehaviour
             {
                 if (playerQuest.completed == false)
                 {
-                    return 1;
+                    return 2;
                 }
-                else return 2;
+                else return 3;
             }
         }
         return 0;
@@ -205,10 +211,33 @@ public class DialogueManager : MonoBehaviour
     private void GiveQuest()
     {
         GameManager.instance.playerQuests.Add(quest);
+        quest.SetGoal();
+        Inventory.instance.CheckQuestItems();
+        questsUI.AddQuest(quest);
     }
 
     private void CompleteQuest()
     {
+        quest.rewardClaimed = true;
 
+        foreach(QuestGoal questGoal in quest.goals)
+        {
+            if (questGoal.goalType == QuestGoal.GoalType.Gathering)
+            {
+                for (int i = 0; i < questGoal.requiredAmount; i++) Inventory.instance.Remove(questGoal.itemGoal);
+            }
+        }
+
+        GameManager.instance.coins += quest.reward.coins;
+        GameManager.instance.experience += quest.reward.xp;
+        if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
+        {
+            GameManager.instance.player.LevelUp();
+        }
+        GameManager.instance.ShowText("+" + quest.reward.coins+ "monet", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
+            GameManager.instance.player.transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f);
+        GameManager.instance.ShowText("+" + quest.reward.xp + "XP", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
+            GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+        GameManager.instance.playerQuests.Remove(quest);
     }
 }

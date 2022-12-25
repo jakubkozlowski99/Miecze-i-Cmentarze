@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private void Awake()
     {
+        foreach (Quest quest in playerQuests) quest.SetGoal();
         if (instance != null)
         {
             Debug.LogWarning("Found more than one Game Manager in the scene");

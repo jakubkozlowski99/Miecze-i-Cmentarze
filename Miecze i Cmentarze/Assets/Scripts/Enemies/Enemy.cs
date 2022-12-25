@@ -125,6 +125,7 @@ public class Enemy : Mover
 
     protected void KillReward()
     {
+        CheckQuestGoals();
         GameManager.instance.coins += coinsValue;
         GameManager.instance.experience += xpValue;
         if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
@@ -134,5 +135,22 @@ public class Enemy : Mover
         GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
         GameManager.instance.player.xpBar.setXpBar();
         Destroy(gameObject);
+    }
+
+    protected void CheckQuestGoals()
+    {
+        foreach (Quest quest in GameManager.instance.playerQuests)
+        {
+            if (quest.completed == false && quest.currentGoal.killGoal != null) 
+            {
+                if(quest.currentGoal.killGoal.name + "(Clone)" == transform.name && quest.currentGoal.completed == false)
+                {
+                    quest.currentGoal.currentAmount++;
+                    if (quest.currentGoal.currentAmount >= quest.currentGoal.requiredAmount) quest.currentGoal.completed = true;
+                    quest.CheckGoals();
+                }
+
+            }
+        }
     }
 }

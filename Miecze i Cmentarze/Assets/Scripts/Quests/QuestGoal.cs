@@ -5,9 +5,11 @@ using UnityEngine;
 [System.Serializable]
 public class QuestGoal
 {
-    protected string description;
+    public GameObject killGoal;
+    public Item itemGoal;
     public int currentAmount;
     public int requiredAmount = 1;
+    public string goalDescription;
 
     public bool completed;
 
@@ -16,4 +18,6 @@ public class QuestGoal
         Kill,
         Gathering
     }
+
+    public GoalType goalType;
 }

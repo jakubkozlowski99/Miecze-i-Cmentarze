@@ -1,22 +1,15 @@
 INCLUDE globals.ink
 
-{ questState == 0 : -> main | questState == 1 : -> main2}
+{ questState < 2 : -> main |-> main2}
 
  == main ==
 Witaj, czego potrzebujesz wędrowcze?
     + [Pokaż mi swoje towary.] #action:shop
         -> main
     + [Masz dla mnie jakieś zadanie?] #action:quest_ask
-        -> quest
+        -> quest_available
     + [Bywaj.]
         -> END
-        
-== quest ==
-    + [Zrobię to.] #action:quest_give
-        -> END
-    + [Może innym razem.]
-        -> END
--> END
 
 == main2 ==
 
@@ -24,16 +17,36 @@ Witaj, czego potrzebujesz wędrowcze?
     + [Pokaż mi swoje towary.] #action:shop
         -> main
     + [Jeśli chodzi o to zadanie..] #action:quest_ask
-        -> quest_notfinished
+        -> quest_started
     + [Bywaj.]
         -> END
 -> END
 
-== quest_notfinished ==
+== quest_started ==
 
-Daj znać jak je wykonasz.
-    + [Oczywiście, zabieram się do pracy.]
-        -> END
-    + [Wróć.]
-        -> main2
--> END
+{
+    - questState == 2:
+        Daj znać jak je wykonasz.
+        + [Oczywiście, zabieram się do pracy.]
+            -> END
+        + [Wróć.]
+            -> main2
+    - else:
+        Świetnie! Oto twoja nagroda.
+        +[Dziękuję, przyda się.] #action:quest_reward
+            -> END
+}
+
+== quest_available ==
+
+{
+    - questState == 0:
+        + [Zrobię to.] #action:quest_give
+            -> END
+        + [Może innym razem.]
+            -> END
+    -else:
+        Niestety nie mam dla ciebie nic do zrobienia.
+        + [Wróć.]
+            ->END
+}

@@ -183,6 +183,14 @@ public class ItemDetailsUI : MonoBehaviour
         else Debug.Log("Nie ma miejsca w ekwipunku");
     }
 
+    public virtual void RemoveItem()
+    {
+        Inventory.instance.Remove(item);
+        inventoryUI.UpdateInventory();
+        inventoryUI.RemoveHighlights();
+        HideDetails();
+    }
+
     public virtual void GenerateDescription()
     {
         Debug.Log('\u015B');

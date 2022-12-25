@@ -12,7 +12,8 @@ public class InventoryUI : MonoBehaviour
     public ItemDetailsUI itemDetailsUI;
     public ItemDetailsUI equippedItemDetailsUI;
 
-    public GameObject questPanel;
+    public QuestsUI questPanel;
+
     public Image inventoryTab;
     public Image questPanelTab;
     public Image inventoryTabIcon;
@@ -201,7 +202,7 @@ public class InventoryUI : MonoBehaviour
         if (tab == 1)
         {
             inventoryPanel.SetActive(true);
-            questPanel.SetActive(false);
+            questPanel.gameObject.SetActive(false);
             SetTabs();
         }
     }
@@ -211,7 +212,7 @@ public class InventoryUI : MonoBehaviour
         if (tab == 0)
         {
             inventoryPanel.SetActive(false);
-            questPanel.SetActive(true);
+            questPanel.gameObject.SetActive(true);
             SetTabs();
         }
     }
