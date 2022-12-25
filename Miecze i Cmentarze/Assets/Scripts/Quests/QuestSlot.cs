@@ -13,7 +13,6 @@ public class QuestSlot : MonoBehaviour
 
     public void ShowDescription()
     {
-        Debug.Log(this.quest.information.name);
         highlightImage.enabled = true;
         Debug.Log("siema");
         questsUI.ShowDescription(quest, this);

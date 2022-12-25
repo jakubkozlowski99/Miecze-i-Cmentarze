@@ -10,7 +10,7 @@ public class QuestsUI : MonoBehaviour
 
     public GameObject questSlotPrefab;
 
-    public List<QuestSlot> questSlots;
+    public List<GameObject> questSlots;
 
     public QuestSlot selectedQuest;
 
@@ -27,15 +27,30 @@ public class QuestsUI : MonoBehaviour
         newQuestSlot.quest = newQuest;
         newQuestSlot.highlightImage.enabled = false;
         newQuestSlot.questsUI = this;
+
+        questSlots.Add(newQuestObject);
+    }
+
+    public void RemoveQuest(Quest newQuest)
+    {
+        foreach (GameObject questObject in questSlots)
+        {
+            QuestSlot questSlot = questObject.GetComponent<QuestSlot>();
+            if (questSlot.quest == newQuest)
+            {
+                questSlots.Remove(questObject);
+                Destroy(questObject);
+                ClearDescription();
+                selectedQuest = null;
+                return;
+            }
+        }
     }
 
     public void ShowDescription(Quest quest, QuestSlot questSlot)
     {
-        questName.text = "";
-        questDescription.text = "";
-        questGoals.text = "";
-        Debug.Log("dzie? dobry");
-        if (selectedQuest != null) selectedQuest.highlightImage.enabled = false;
+        ClearDescription();
+        if (selectedQuest != null && selectedQuest.quest != quest) selectedQuest.highlightImage.enabled = false;
         selectedQuest = questSlot;
         questName.text = quest.information.name;
         questDescription.text = quest.information.description;
@@ -44,5 +59,13 @@ public class QuestsUI : MonoBehaviour
         {
             questGoals.text += questGoal.goalDescription + ' ' + questGoal.currentAmount + '/' + questGoal.requiredAmount + '\n';
         }
+    }
+
+    public void ClearDescription()
+    {
+        questName.text = "";
+        questDescription.text = "";
+        questGoals.text = "";
+
     }
 }

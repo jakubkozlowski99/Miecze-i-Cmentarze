@@ -214,6 +214,8 @@ public class DialogueManager : MonoBehaviour
         quest.SetGoal();
         Inventory.instance.CheckQuestItems();
         questsUI.AddQuest(quest);
+        GameManager.instance.ShowText("Dodano zadanie", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
+            GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f) ;
     }
 
     private void CompleteQuest()
@@ -227,6 +229,8 @@ public class DialogueManager : MonoBehaviour
                 for (int i = 0; i < questGoal.requiredAmount; i++) Inventory.instance.Remove(questGoal.itemGoal);
             }
         }
+
+        questsUI.RemoveQuest(quest);
 
         GameManager.instance.coins += quest.reward.coins;
         GameManager.instance.experience += quest.reward.xp;

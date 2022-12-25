@@ -74,7 +74,7 @@ public class InventoryUI : MonoBehaviour
     {
         if (inventory.canToggle)
         {
-            if (!inventoryPanel.activeSelf)
+            if (!inventoryPanel.activeSelf && !questPanel.gameObject.activeSelf)
             {
                 tab = 1;
                 SetTabs();
@@ -91,6 +91,10 @@ public class InventoryUI : MonoBehaviour
                 questPanelTab.gameObject.SetActive(false);
                 GameManager.instance.player.canMove = true;
                 inventoryPanel.SetActive(false);
+                questPanel.selectedQuest.highlightImage.enabled = false;
+                questPanel.selectedQuest = null;
+                questPanel.gameObject.SetActive(false);
+                questPanel.ClearDescription();
                 itemDetailsUI.HideDetails();
                 equippedItemDetailsUI.HideDetails();
             }

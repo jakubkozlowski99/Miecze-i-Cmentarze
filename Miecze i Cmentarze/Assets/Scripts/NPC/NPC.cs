@@ -33,11 +33,11 @@ public class NPC : Collidable
     {
         playerNearby = IsPlayerNearby();
 
-        if (playerNearby && !textShown)
+        if (playerNearby && !textShown && !DialogueManager.instance.dialogueIsPlaying)
         {
             ShowInteractionText();
         }
-        if (textShown && !playerNearby)
+        if ((textShown && !playerNearby) || DialogueManager.instance.dialogueIsPlaying)
         {
             HideInteractionText();
         }
