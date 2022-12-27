@@ -11,16 +11,14 @@ public class Player : Mover
     private bool isAttacking;
     public bool canMove;
     private bool isDodging;
-    private bool canAttack;
-    private string swing_1 = "adventurer_swing_1";
-    private string swing_2 = "adventurer_swing_2";
-    private string swing_3 = "adventurer_swing_3";
-    private string strongSwing_1 = "adventurer_strongswing_1";
-    private string strongSwing_2 = "adventurer_strongswing_2";
-    private string strongSwing_3 = "adventurer_strongswing_3";
-    private string strongSwing_4 = "adventurer_strongswing_4";
-    private string hurt = "adventurer_hurt";
-    private string dodge = "adventurer_dodge";
+    public bool canAttack;
+
+    private readonly string swing_1 = "adventurer_swing_1";
+    private readonly string swing_2 = "adventurer_swing_2";
+    private readonly string swing_3 = "adventurer_swing_3";
+    private readonly string hurt = "adventurer_hurt";
+    private readonly string dodge = "adventurer_dodge";
+
     public float playerYSpeed = 1.5f;
     public float playerXSpeed = 2;
     private int swingCount = 0;
@@ -30,9 +28,6 @@ public class Player : Mover
     private float dodgeY;
     private float dodgeCooldown = 0.3f;
     private float lastDodge;
-    private float strongSwingCount;
-    private float lastStrongSwing;
-    private float strongSwingReset = 1;
 
     public PlayerBar healthBar;
     public PlayerBar staminaBar;
@@ -71,9 +66,7 @@ public class Player : Mover
             y = 0;
         }
         if (anim.GetCurrentAnimatorStateInfo(0).IsName(swing_1) || anim.GetCurrentAnimatorStateInfo(0).IsName(hurt)
-            || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_2) || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_3)
-            || anim.GetCurrentAnimatorStateInfo(0).IsName(strongSwing_1) || anim.GetCurrentAnimatorStateInfo(0).IsName(strongSwing_2)
-            || anim.GetCurrentAnimatorStateInfo(0).IsName(strongSwing_3) || anim.GetCurrentAnimatorStateInfo(0).IsName(strongSwing_4)) 
+            || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_2) || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_3)) 
         { 
             isAttacking = true; 
         }
@@ -93,20 +86,9 @@ public class Player : Mover
 
         if (Time.time - lastSwing > swingReset) swingCount = 0;
 
-        if (Input.GetKeyDown(KeyCode.Q) && !isAttacking && !isDodging)
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            if (stamina >= 10) 
-            {
-                Swing();
-            }
-            
-        }
-
-        if (Time.time - lastStrongSwing > strongSwingReset) strongSwingCount = 0;
-
-        if(Input.GetKeyDown(KeyCode.R) && !isAttacking && !isDodging)
-        {
-            StrongSwing();
+            Swing();
         }
 
         if(Input.GetKeyDown(KeyCode.Space))
@@ -126,57 +108,32 @@ public class Player : Mover
 
     private void Swing()
     {
-        if (canAttack)
+        if (canAttack && !isAttacking && !isDodging)
         {
-            isAttacking = true;
-            anim.SetBool("Run", false);
-            if (swingCount == 0)
+            if (stamina >= 10)
             {
-                anim.SetTrigger("Swing1");
-                swingCount++;
+                isAttacking = true;
+                anim.SetBool("Run", false);
+                if (swingCount == 0)
+                {
+                    anim.SetTrigger("Swing1");
+                    swingCount++;
+                }
+                else if (swingCount == 1)
+                {
+                    anim.SetTrigger("Swing2");
+                    swingCount++;
+                }
+                else if (swingCount == 2)
+                {
+                    anim.SetTrigger("Swing3");
+                    swingCount = 0;
+                }
+                lastSwing = Time.time;
+                stamina -= 10;
+                staminaBar.setValue(stamina);
             }
-            else if (swingCount == 1)
-            {
-                anim.SetTrigger("Swing2");
-                swingCount++;
-            }
-            else if (swingCount == 2)
-            {
-                anim.SetTrigger("Swing3");
-                swingCount = 0;
-            }
-            lastSwing = Time.time;
-            stamina -= 10;
-            staminaBar.setValue(stamina);
-
         }
-    }
-
-    private void StrongSwing()
-    {
-        isAttacking = true;
-        anim.SetBool("Run", false);
-        if (strongSwingCount == 0)
-        {
-            anim.SetTrigger("StrongSwing1");
-            strongSwingCount++;
-        }
-        else if (strongSwingCount == 1)
-        {
-            anim.SetTrigger("StrongSwing2");
-            strongSwingCount++;
-        }
-        else if (strongSwingCount == 2)
-        {
-            anim.SetTrigger("StrongSwing3");
-            strongSwingCount++;
-        }
-        else if (strongSwingCount == 3) 
-        {
-            anim.SetTrigger("StrongSwing4");
-            strongSwingCount = 0;
-        }
-        lastStrongSwing = Time.time;
     }
 
     private void Dodge(float x, float y)

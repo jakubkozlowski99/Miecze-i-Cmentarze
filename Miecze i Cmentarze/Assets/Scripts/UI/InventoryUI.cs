@@ -84,6 +84,7 @@ public class InventoryUI : MonoBehaviour
                 questPanelTab.gameObject.SetActive(true);
                 GameManager.instance.player.canMove = false;
                 inventoryPanel.SetActive(true);
+                GameManager.instance.player.canAttack = false;
             }
             else
             {
@@ -91,12 +92,13 @@ public class InventoryUI : MonoBehaviour
                 questPanelTab.gameObject.SetActive(false);
                 GameManager.instance.player.canMove = true;
                 inventoryPanel.SetActive(false);
-                questPanel.selectedQuest.highlightImage.enabled = false;
+                if (questPanel.selectedQuest != null) questPanel.selectedQuest.highlightImage.enabled = false;
                 questPanel.selectedQuest = null;
                 questPanel.gameObject.SetActive(false);
                 questPanel.ClearDescription();
                 itemDetailsUI.HideDetails();
                 equippedItemDetailsUI.HideDetails();
+                GameManager.instance.player.canAttack = true;
             }
         }
     }
