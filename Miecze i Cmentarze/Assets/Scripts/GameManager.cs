@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     public int coins = 0;
     public int experience = 0;
+
+    [SerializeField]
     public int playerLevel = 1;
     public int availablePoints = 0;
 
