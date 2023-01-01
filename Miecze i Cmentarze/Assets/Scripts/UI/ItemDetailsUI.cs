@@ -124,8 +124,8 @@ public class ItemDetailsUI : MonoBehaviour
             {
                 GameManager.instance.player.hitpoint = GameManager.instance.player.maxhitpoint;
             }
-            GameManager.instance.player.healthBar.setValue(GameManager.instance.player.hitpoint);
-            GameManager.instance.player.healthBar.setText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
+            GameManager.instance.player.healthBar.SetValue(GameManager.instance.player.hitpoint);
+            GameManager.instance.player.healthBar.SetText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
             Inventory.instance.Remove(item);
             inventoryUI.UpdateInventory();
             inventoryUI.RemoveHighlights();

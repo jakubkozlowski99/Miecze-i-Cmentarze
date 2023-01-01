@@ -5,6 +5,17 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
+    public static InventoryUI instance;
+
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Debug.LogWarning("Found more than one Inventory UI in the scene");
+        }
+        instance = this;
+    }
+
     Inventory inventory;
 
     public GameObject inventoryPanel;

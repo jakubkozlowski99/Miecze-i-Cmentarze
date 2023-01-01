@@ -133,7 +133,7 @@ public class Enemy : Mover
             GameManager.instance.player.LevelUp();
         }
         GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
-        GameManager.instance.player.xpBar.setXpBar();
+        GameManager.instance.player.xpBar.SetXpBar();
         Destroy(gameObject);
     }
 

@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("Found more than one Game Manager in the scene");
         }
         instance = this;
-        SceneManager.sceneLoaded += LoadState;
         DontDestroyOnLoad(gameObject);
     }
 
@@ -35,6 +34,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     public List<Quest> playerQuests;
+
+    public void Start()
+    {
+        
+    }
 
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {

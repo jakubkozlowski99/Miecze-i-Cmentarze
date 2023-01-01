@@ -43,17 +43,21 @@ public class Player : Mover
         canAttack = true;
         anim = GetComponent<Animator>();
         anim.SetFloat("AttackSpeed", 1 + (playerStats.condition / 10) - 0.1f);
-        maxhitpoint = 60 + (playerStats.vitality * 40);
-        hitpoint = maxhitpoint;
-        healthBar.setMaxValue(maxhitpoint);
-        healthBar.setValue(hitpoint);
-        healthBar.setText(hitpoint, maxhitpoint);
-        staminaBar.setMaxValue(maxStamina);
-        staminaBar.setValue(stamina);
-        staminaBar.setText(stamina, maxStamina);
+        if (SaveManager.instance.isLoading == false)
+        {
+            maxhitpoint = 60 + (playerStats.vitality * 40);
+            hitpoint = maxhitpoint;
+        }
+        else
+        {
+            SaveManager.instance.Load();
+        }
+        healthBar.SetAllBars("hp");
+        staminaBar.SetAllBars("stamina");
         staminaRegenTimer = 0;
-        xpBar.setXpBar();
-
+        xpBar.SetXpBar();
+        playerStats.UpdateStats();
+        Debug.Log(FindObjectOfType<Inventory>().name);
     }
     private void Update()
     {
@@ -131,7 +135,7 @@ public class Player : Mover
                 }
                 lastSwing = Time.time;
                 stamina -= 10;
-                staminaBar.setValue(stamina);
+                staminaBar.SetValue(stamina);
             }
         }
     }
@@ -145,15 +149,15 @@ public class Player : Mover
             dodgeY = y;
             anim.SetTrigger("Dodge");
             stamina -= 20;
-            staminaBar.setValue(stamina);
+            staminaBar.SetValue(stamina);
         }
     }
 
     protected override void ReceiveDamage(Damage dmg)
     {
         base.ReceiveDamage(dmg);
-        healthBar.setValue(hitpoint);
-        healthBar.setText(hitpoint, maxhitpoint);
+        healthBar.SetValue(hitpoint);
+        healthBar.SetText(hitpoint, maxhitpoint);
         anim.SetTrigger("Hurt");
     }
 
@@ -165,8 +169,8 @@ public class Player : Mover
             {
                 stamina += 2 + Mathf.CeilToInt(playerStats.condition) / 2 - 1;
                 if (stamina > maxStamina) stamina = maxStamina;
-                staminaBar.setValue(stamina);
-                staminaBar.setText(stamina, maxStamina);
+                staminaBar.SetValue(stamina);
+                staminaBar.SetText(stamina, maxStamina);
             }
             staminaRegenTimer = 0;
         }
@@ -180,6 +184,6 @@ public class Player : Mover
             GameManager.instance.availablePoints++;
             GameManager.instance.playerLevel++;
         }
-        xpBar.setXpBar();
+        xpBar.SetXpBar();
     }
 }

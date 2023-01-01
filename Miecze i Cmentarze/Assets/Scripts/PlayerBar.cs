@@ -8,22 +8,22 @@ public class PlayerBar : MonoBehaviour
     public Slider slider;
     public Text text;
 
-    public void setMaxValue(float health)
+    public void SetMaxValue(float health)
     {
         slider.maxValue = health;
         slider.value = health;    }
 
-    public void setValue(float health)
+    public void SetValue(float health)
     {
         slider.value = health;
     }
 
-    public void setText(float value, float maxValue)
+    public void SetText(float value, float maxValue)
     {
         text.text = value.ToString() + "/" + maxValue.ToString();
     }
 
-    public void setXpBar()
+    public void SetXpBar()
     {
         if(GameManager.instance.playerLevel == 1)
         {
@@ -37,5 +37,23 @@ public class PlayerBar : MonoBehaviour
         }
         float percentage = Mathf.Round((slider.value / slider.maxValue) * 100);
         text.text = percentage.ToString() + "%";
+    }
+
+    public void SetAllBars(string barType)
+    {
+        float value = 0;
+        float maxValue = 0;
+        if (barType == "hp")
+        {
+            value = GameManager.instance.player.hitpoint;
+            maxValue = GameManager.instance.player.maxhitpoint;        }
+        else if (barType == "stamina")
+        {
+            value = GameManager.instance.player.stamina;
+            maxValue = GameManager.instance.player.maxStamina;
+        }
+        SetMaxValue(maxValue);
+        SetValue(value);
+        SetText(value, maxValue);
     }
 }

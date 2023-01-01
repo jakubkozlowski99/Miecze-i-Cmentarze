@@ -41,8 +41,8 @@ public class ActivateWaterWell : Collidable
     protected void OnActivation()
     {
         GameManager.instance.player.hitpoint = GameManager.instance.player.maxhitpoint;
-        GameManager.instance.player.healthBar.setValue(GameManager.instance.player.hitpoint);
-        GameManager.instance.player.healthBar.setText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
+        GameManager.instance.player.healthBar.SetValue(GameManager.instance.player.hitpoint);
+        GameManager.instance.player.healthBar.SetText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
         anim.SetTrigger("Activation");
         interactionTextManager.Hide();
     }
