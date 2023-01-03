@@ -39,6 +39,14 @@ public class Player : Mover
     protected override void Start()
     {
         base.Start();
+        if(FindObjectsOfType<Player>().Length >1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        GameManager.instance.player = this;
+        GameManager.instance.floatingTextManager = FindObjectOfType<FloatingTextManager>();
+        Inventory.instance.items.Clear();
         canMove = true;
         canAttack = true;
         anim = GetComponent<Animator>();
@@ -48,16 +56,15 @@ public class Player : Mover
             maxhitpoint = 60 + (playerStats.vitality * 40);
             hitpoint = maxhitpoint;
         }
-        else
-        {
-            SaveManager.instance.Load();
-        }
+        else SaveManager.instance.Load();
+        SaveManager.instance.isLoading = false;
         healthBar.SetAllBars("hp");
         staminaBar.SetAllBars("stamina");
         staminaRegenTimer = 0;
         xpBar.SetXpBar();
         playerStats.UpdateStats();
-        Debug.Log(FindObjectOfType<Inventory>().name);
+
+        DontDestroyOnLoad(gameObject);
     }
     private void Update()
     {

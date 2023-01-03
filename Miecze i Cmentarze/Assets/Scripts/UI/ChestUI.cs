@@ -34,6 +34,7 @@ public class ChestUI : MonoBehaviour
         chestPanel.SetActive(false);
         chest.textShown = false;
         chest.anim.SetTrigger("Close");
+        chest.LoadTempChests(false);
     }
 
     public void UpdateChest()

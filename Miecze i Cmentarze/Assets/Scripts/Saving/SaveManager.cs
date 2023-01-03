@@ -12,8 +12,11 @@ public class SaveManager : MonoBehaviour
     public List<Item> allItems;
 
     public bool isLoading;
+    public bool loadTempData;
 
-    private Chest[] chests;
+    //private Chest[] chests;
+
+    public List<ChestData> tempChests;
 
     private void Awake()
     {
@@ -23,11 +26,20 @@ public class SaveManager : MonoBehaviour
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
+
+        LoadTempData();
     }
 
     void Start()
     {
+        Debug.Log("siemka");
+        //tempChests = new List<ChestData>();
         Debug.Log(Application.persistentDataPath);
+    }
+
+    public void ResetTemps()
+    {
+        tempChests = new List<ChestData>();
     }
 
     // Update is called once per frame
@@ -86,14 +98,31 @@ public class SaveManager : MonoBehaviour
         Debug.Log("siema");
         LoadPlayer(data);
         LoadInventory(data);
-        LoadChests(data);
+        //LoadChests(data);
 
         file.Close();
 
     }
 
-    private void LoadPlayer(SaveData data)
+    public void LoadTempData()
     {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
+
+        SaveData data = (SaveData)bf.Deserialize(file);
+
+        LoadChests(data);
+
+        file.Close();
+    }
+
+    public void LoadPlayer(SaveData data)
+    {
+        /*BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
+
+        SaveData data = (SaveData)bf.Deserialize(file);*/
+
         GameManager.instance.playerLevel = data.playerData.level;
         GameManager.instance.coins = data.playerData.coins;
         GameManager.instance.experience = data.playerData.xp;
@@ -118,6 +147,8 @@ public class SaveManager : MonoBehaviour
         GameManager.instance.player.playerStats.addedVitalityPoints = data.playerData.addedVitalityPoints;
         GameManager.instance.player.playerStats.addedConditionPoints = data.playerData.addedConditionPoints;
         GameManager.instance.player.playerStats.addedDefensePoints = data.playerData.addedDefensePoints;
+
+        //file.Close();
     }
 
     private void SaveInventory(SaveData data)
@@ -167,18 +198,17 @@ public class SaveManager : MonoBehaviour
 
     private void SaveChests(SaveData data)
     {
-        chests = FindObjectsOfType<Chest>();
-        data.chestData = new List<ChestData>();
+        data.chestData = tempChests;
 
-        foreach (Chest chest in chests) 
+        /*foreach (Chest chest in chests) 
         {
             data.chestData.Add(new ChestData(chest.name, chest.chestItems));
-        }
+        }*/
     }
 
     private void LoadChests(SaveData data)
     {
-        chests = FindObjectsOfType<Chest>();
+        /*chests = FindObjectsOfType<Chest>();
 
         foreach (Chest chest in chests) 
         {
@@ -199,6 +229,9 @@ public class SaveManager : MonoBehaviour
                     }
                 }
             }
-        }
+        }*/
+
+        tempChests = data.chestData;
+        Debug.Log("Wczytano stan skrzynek " + tempChests.Count);
     }
 }

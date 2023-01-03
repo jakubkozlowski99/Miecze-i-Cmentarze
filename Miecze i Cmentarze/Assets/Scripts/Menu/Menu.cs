@@ -13,6 +13,7 @@ public class Menu : MonoBehaviour
 
     public void NewGame()
     {
+        SaveManager.instance.ResetTemps();
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         SaveManager.instance.isLoading = false;
     }

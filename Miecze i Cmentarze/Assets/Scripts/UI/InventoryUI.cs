@@ -11,7 +11,8 @@ public class InventoryUI : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Found more than one Inventory UI in the scene");
+            Destroy(gameObject);
+            return;
         }
         instance = this;
     }
@@ -66,7 +67,7 @@ public class InventoryUI : MonoBehaviour
     {
         inventory = Inventory.instance;
         inventory.canToggle = true;
-        inventory.onItemChangedCallback += UpdateInventory;
+        //inventory.onItemChangedCallback += UpdateInventory;
         for(int i = 0; i < slots.Length; i++)
         {
             slots[i].slotNumber = i;

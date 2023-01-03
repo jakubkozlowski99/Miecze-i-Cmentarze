@@ -14,6 +14,9 @@ public class Chest : MonoBehaviour
     protected void Start()
     {
         anim = GetComponent<Animator>();
+        chestUI = FindObjectOfType<ChestUI>();
+
+        LoadTempChests(true);
     }
 
     protected void Update()
@@ -21,5 +24,44 @@ public class Chest : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("chest_idle")) collectable = true;
         else collectable = false;
+    }
+
+    public void LoadTempChests(bool loadData)
+    {
+        Debug.Log(name);
+        if (loadData) 
+        {
+            foreach (ChestData chest in SaveManager.instance.tempChests)
+            {
+                Debug.Log(chest.chestName + "temp data");
+                if (chest.chestName == name)
+                {
+                    Debug.Log("znalazlem skrzynke");
+                    chestItems = new List<Item>();
+                    foreach (string itemName in chest.itemNames)
+                    {
+                        foreach (Item item in SaveManager.instance.allItems)
+                        {
+                            if (itemName == item.name) chestItems.Add(item);
+                        }
+                    }
+                    SaveManager.instance.tempChests.Remove(chest);
+                    break;
+                }
+            }
+        }
+        else
+        {
+            foreach (ChestData chest in SaveManager.instance.tempChests) 
+            {
+                if(chest.chestName == name)
+                {
+                    SaveManager.instance.tempChests.Remove(chest);
+                    SaveManager.instance.tempChests.Add(new ChestData(name, chestItems));
+                    return;
+                }
+            }
+        }
+        SaveManager.instance.tempChests.Add(new ChestData(name, chestItems));
     }
 }

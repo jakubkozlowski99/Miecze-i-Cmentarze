@@ -13,6 +13,9 @@ public class Portal : Collidable
     private bool textShown;
     public float interactionTextOffset;
 
+    public float playerX;
+    public float playerY;
+
     protected override void Update()
     {
         playerNearby = IsPlayerNearby();
@@ -34,6 +37,7 @@ public class Portal : Collidable
     protected void OnActivation()
     {
         SceneManager.LoadSceneAsync(sceneIndex);
+        GameManager.instance.player.transform.position = new Vector3(playerX, playerY, 0);
     }
 
     protected void ShowInteractionText()
