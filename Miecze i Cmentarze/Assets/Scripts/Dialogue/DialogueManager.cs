@@ -43,7 +43,9 @@ public class DialogueManager : MonoBehaviour
     {
         if (instance != null)
         {
+            Destroy(gameObject);
             Debug.LogWarning("Wi?cej ni? jeden DialogueManager");
+            return;
         }
         instance = this;
     }
@@ -242,6 +244,7 @@ public class DialogueManager : MonoBehaviour
             GameManager.instance.player.transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f);
         GameManager.instance.ShowText("+" + quest.reward.xp + "XP", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
             GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+        GameManager.instance.completedQuests.Add(quest);
         GameManager.instance.playerQuests.Remove(quest);
     }
 }

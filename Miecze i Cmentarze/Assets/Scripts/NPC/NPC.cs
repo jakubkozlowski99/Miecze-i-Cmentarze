@@ -28,6 +28,8 @@ public class NPC : Collidable
         base.Start();
         shop = new Shop();
         shop.shopItems = shopItems;
+        Debug.Log("stworzylem " + name);
+        LoadNPCQuests(GameManager.instance.playerQuests, GameManager.instance.completedQuests);
     }
     protected override void Update()
     {
@@ -79,5 +81,43 @@ public class NPC : Collidable
     public void ClaimReward()
     {
         
+    }
+
+    public void LoadNPCQuests(List<Quest> playerQuests, List<Quest> completedQuests)
+    {
+        List<Quest> quests = new List<Quest>();
+        int questIndex = 0;
+
+        foreach (Quest quest in this.quests)
+        {
+            foreach(Quest completedQuest in completedQuests)
+            {
+                if (quest.information.name == completedQuest.information.name)
+                {
+                    quests.Add(completedQuest);
+                    questIndex++;
+                }
+            }
+        }
+
+        foreach (Quest quest in this.quests)
+        {
+            foreach (Quest playerQuest in playerQuests)
+            {
+                if (quest.information.name == playerQuest.information.name)
+                {
+                    quests.Add(playerQuest);
+                    questIndex++;
+                    Debug.Log("znalazlem questa");
+                }
+            }
+        }
+
+        for (int i = questIndex; i < this.quests.Count; i++)
+        {
+            quests.Add(this.quests[i]);
+        }
+
+        this.quests = quests;
     }
 }

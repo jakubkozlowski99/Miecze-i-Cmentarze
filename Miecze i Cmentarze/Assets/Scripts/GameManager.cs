@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     private void Awake()
     {
+        
         //if(SaveManager.instance.isLoading) SaveManager.instance.Load();
         foreach (Quest quest in playerQuests) quest.SetGoal();
         if (instance != null)
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     public List<Quest> playerQuests;
+
+    [SerializeField]
+    public List<Quest> completedQuests;
 
     public void Start()
     {
@@ -71,5 +75,91 @@ public class GameManager : MonoBehaviour
         experience = int.Parse(data[2]);
 
         Debug.Log("LoadState");
+    }
+
+    private void LoadQuests()
+    {
+        for(int i=0; i<2; i++)
+        {
+            List<QuestData> data = new List<QuestData>();
+            if (i == 0) data = SaveManager.instance.tempQuests;
+            else data = SaveManager.instance.tempCompletedQuests;
+
+            foreach (QuestData questData in data)
+            {
+                Quest quest = new Quest();
+                quest.information.name = questData.questName;
+                quest.information.description = questData.questDescription;
+                quest.information.dialogueText = questData.questDialogueText;
+                quest.completed = questData.completed;
+                quest.rewardClaimed = questData.rewardClaimed;
+                quest.reward.xp = questData.xp;
+                quest.reward.coins = questData.coins;
+
+                foreach (GoalData goalData in questData.goals)
+                {
+                    QuestGoal goal = new QuestGoal();
+                    goal.goalDescription = goalData.goalDescription;
+                    goal.completed = questData.completed;
+                    if (goalData.itemGoalName != "")
+                    {
+                        goal.goalType = QuestGoal.GoalType.Gathering;
+                    }
+                    else goal.goalType = QuestGoal.GoalType.Kill;
+
+                    foreach (Enemy enemy in SaveManager.instance.allEnemies)
+                    {
+                        if (goalData.killGoalName == enemy.name) goal.killGoal = enemy.gameObject;
+                    }
+                    foreach (Item item in SaveManager.instance.allItems)
+                    {
+                        if (goalData.itemGoalName == item.name) goal.itemGoal = item;
+                    }
+                    goal.currentAmount = goalData.currentAmount;
+                    goal.requiredAmount = goalData.requiredAmount;
+
+                    quest.goals.Add(goal);
+                }
+                if (i == 0) playerQuests.Add(quest);
+                else completedQuests.Add(quest);
+            }
+        }
+        foreach (QuestData questData in SaveManager.instance.tempQuests)
+        {
+            Quest quest = new Quest();
+            quest.information.name = questData.questName;
+            quest.information.description = questData.questDescription;
+            quest.information.dialogueText = questData.questDialogueText;
+            quest.completed = questData.completed;
+            quest.rewardClaimed = questData.rewardClaimed;
+            quest.reward.xp = questData.xp;
+            quest.reward.coins = questData.coins;
+
+            foreach (GoalData goalData in questData.goals)
+            {
+                QuestGoal goal = new QuestGoal();
+                goal.goalDescription = goalData.goalDescription;
+                goal.completed = questData.completed;
+                if (goalData.itemGoalName != "")
+                {
+                    goal.goalType = QuestGoal.GoalType.Gathering;
+                }
+                else goal.goalType = QuestGoal.GoalType.Kill;
+
+                foreach (Enemy enemy in SaveManager.instance.allEnemies)
+                {
+                    if (goalData.killGoalName == enemy.name) goal.killGoal = enemy.gameObject;
+                }
+                foreach (Item item in SaveManager.instance.allItems)
+                {
+                    if (goalData.itemGoalName == item.name) goal.itemGoal = item;
+                }
+                goal.currentAmount = goalData.currentAmount;
+                goal.requiredAmount = goalData.requiredAmount;
+
+                quest.goals.Add(goal);
+            }
+            playerQuests.Add(quest);
+        }
     }
 }

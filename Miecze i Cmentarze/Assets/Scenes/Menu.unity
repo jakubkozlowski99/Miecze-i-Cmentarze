@@ -853,6 +853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
         type: 3}
+      propertyPath: allEnemies.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
       propertyPath: allItems.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: e96f1d46091608b4fb0a408911de2be2,
@@ -1073,6 +1078,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ae892b4e8509ca84eacd3004c8af893c,
         type: 2}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
+      propertyPath: allEnemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 4770027707862348149, guid: 92c19580b9ce7cd4790949666782a430,
+        type: 3}
     - target: {fileID: 6879143110615193321, guid: 94ab7919d1f69324d8fee9a38c754533,
         type: 3}
       propertyPath: m_RootOrder

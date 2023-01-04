@@ -11,12 +11,18 @@ public class SaveManager : MonoBehaviour
 
     public List<Item> allItems;
 
+    public List<Enemy> allEnemies;
+
     public bool isLoading;
     public bool loadTempData;
 
     //private Chest[] chests;
 
     public List<ChestData> tempChests;
+
+    public List<QuestData> tempQuests;
+
+    public List<QuestData> tempCompletedQuests;
 
     private void Awake()
     {
@@ -40,6 +46,7 @@ public class SaveManager : MonoBehaviour
     public void ResetTemps()
     {
         tempChests = new List<ChestData>();
+        tempQuests = new List<QuestData>();
     }
 
     // Update is called once per frame
@@ -66,7 +73,8 @@ public class SaveManager : MonoBehaviour
         data.sceneIndex = SceneManager.GetActiveScene().buildIndex;
         SavePlayer(data);
         SaveInventory(data);
-        SaveChests(data);
+        data.chestData = tempChests;
+        SaveQuests(data);
 
         Debug.Log(Inventory.instance.items.Count);
 
@@ -111,7 +119,9 @@ public class SaveManager : MonoBehaviour
 
         SaveData data = (SaveData)bf.Deserialize(file);
 
-        LoadChests(data);
+        tempChests = data.chestData;
+        tempQuests = data.questData;
+        tempCompletedQuests = data.completedQuestData;
 
         file.Close();
     }
@@ -196,19 +206,31 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    private void SaveChests(SaveData data)
+    private void SaveQuests(SaveData data)
+    {
+        foreach(Quest quest in GameManager.instance.playerQuests)
+        {
+            data.questData.Add(new QuestData(quest));
+        }
+        foreach (Quest completedQuest in GameManager.instance.completedQuests)
+        {
+            data.completedQuestData.Add(new QuestData(completedQuest));
+        }
+    }
+
+    /*private void SaveChests(SaveData data)
     {
         data.chestData = tempChests;
 
-        /*foreach (Chest chest in chests) 
+        foreach (Chest chest in chests) 
         {
             data.chestData.Add(new ChestData(chest.name, chest.chestItems));
-        }*/
-    }
+        }
+    }*/
 
-    private void LoadChests(SaveData data)
+    /*private void LoadChests(SaveData data)
     {
-        /*chests = FindObjectsOfType<Chest>();
+        chests = FindObjectsOfType<Chest>();
 
         foreach (Chest chest in chests) 
         {
@@ -229,9 +251,9 @@ public class SaveManager : MonoBehaviour
                     }
                 }
             }
-        }*/
+        }
 
         tempChests = data.chestData;
         Debug.Log("Wczytano stan skrzynek " + tempChests.Count);
-    }
+    }*/
 }

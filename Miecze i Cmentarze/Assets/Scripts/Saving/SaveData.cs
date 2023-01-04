@@ -10,6 +10,8 @@ public class SaveData
     public PlayerData playerData;
     public InventoryData inventoryData;
     public List<ChestData> chestData;
+    public List<QuestData> questData;
+    public List<QuestData> completedQuestData;
     public SaveData()
     {
 
@@ -164,5 +166,62 @@ public class ChestData
         {
             itemNames.Add(item.name);
         }
+    }
+}
+
+[Serializable]
+public class QuestData
+{
+    public string questName;
+    public string questDescription;
+    public string questDialogueText;
+    public List<GoalData> goals;
+    public bool completed;
+    public bool rewardClaimed;
+    public int xp;
+    public int coins;
+
+    public QuestData(Quest quest)
+    {
+        questName = quest.information.name;
+        questDescription = quest.information.description;
+        questDialogueText = quest.information.dialogueText;
+
+        goals = new List<GoalData>();
+
+        foreach (QuestGoal goal in quest.goals)
+        {
+            goals.Add(new GoalData(goal));
+        }
+
+        completed = quest.completed;
+        rewardClaimed = quest.rewardClaimed;
+
+        xp = quest.reward.xp;
+        coins = quest.reward.coins;
+    }
+}
+
+[Serializable]
+public class GoalData
+{
+    public string killGoalName;
+    public string itemGoalName;
+    public string goalDescription;
+    public int goalIndex;
+    public int currentAmount;
+    public int requiredAmount;
+    public bool completed;
+
+    public GoalData(QuestGoal goal)
+    {
+        if (goal.killGoal == null) killGoalName = "";
+        else killGoalName = goal.killGoal.name;
+        if (goal.itemGoal == null) itemGoalName = "";
+        else itemGoalName = goal.itemGoal.name;
+        goalDescription = goal.goalDescription;
+        currentAmount = goal.currentAmount;
+        requiredAmount = goal.requiredAmount;
+        completed = goal.completed;
     }
 }
