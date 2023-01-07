@@ -28,15 +28,12 @@ public class Chest : MonoBehaviour
 
     public void LoadTempChests(bool loadData)
     {
-        Debug.Log(name);
         if (loadData) 
         {
             foreach (ChestData chest in SaveManager.instance.tempChests)
             {
-                Debug.Log(chest.chestName + "temp data");
                 if (chest.chestName == name)
                 {
-                    Debug.Log("znalazlem skrzynke");
                     chestItems = new List<Item>();
                     foreach (string itemName in chest.itemNames)
                     {

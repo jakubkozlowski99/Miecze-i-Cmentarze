@@ -39,7 +39,7 @@ public class Player : Mover
     protected override void Start()
     {
         base.Start();
-        if(FindObjectsOfType<Player>().Length >1)
+        if (FindObjectsOfType<Player>().Length > 1) 
         {
             Destroy(gameObject);
             return;

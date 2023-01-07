@@ -774,4 +774,5 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
+  anim: {fileID: 4770027707862348138}
   healthBar: {fileID: 4770027705950823221}

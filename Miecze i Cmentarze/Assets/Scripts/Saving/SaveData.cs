@@ -7,11 +7,14 @@ using UnityEngine;
 public class SaveData
 {
     public int sceneIndex;
+    public float gameTimer;
     public PlayerData playerData;
     public InventoryData inventoryData;
     public List<ChestData> chestData;
     public List<QuestData> questData;
     public List<QuestData> completedQuestData;
+    public List<ShrineData> shrineData;
+    public List<SpawnerData> spawnerData;
     public SaveData()
     {
 
@@ -59,8 +62,8 @@ public class PlayerData
         this.maxHP = maxHP;
         this.stamina = stamina;
         this.maxStamina = maxStamina;
-        this.playerX = position.x;
-        this.playerY = position.y;
+        playerX = position.x;
+        playerY = position.y;
         this.attack = attack;
         this.speed = speed;
         this.agility = agility;
@@ -223,5 +226,35 @@ public class GoalData
         currentAmount = goal.currentAmount;
         requiredAmount = goal.requiredAmount;
         completed = goal.completed;
+    }
+}
+
+[Serializable]
+public class ShrineData
+{
+    public string shrineName;
+    public bool collected;
+
+    public ShrineData(Shrine shrine)
+    {
+        shrineName = shrine.name;
+        collected = shrine.collected;
+    }
+}
+
+[Serializable]
+public class SpawnerData
+{
+    public string spawnerName;
+    public float timer;
+    public bool dead;
+    public float lastTimerState;
+
+    public SpawnerData(EnemySpawner spawner)
+    {
+        spawnerName = spawner.name;
+        timer = spawner.timer;
+        dead = spawner.dead;
+        lastTimerState = GameManager.instance.gameTimer;
     }
 }

@@ -24,6 +24,12 @@ public class SaveManager : MonoBehaviour
 
     public List<QuestData> tempCompletedQuests;
 
+    public List<ShrineData> tempShrines;
+
+    public List<SpawnerData> tempSpawners;
+
+    public float tempTimer;
+
     private void Awake()
     {
         if (instance != null)
@@ -38,8 +44,6 @@ public class SaveManager : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("siemka");
-        //tempChests = new List<ChestData>();
         Debug.Log(Application.persistentDataPath);
     }
 
@@ -47,9 +51,10 @@ public class SaveManager : MonoBehaviour
     {
         tempChests = new List<ChestData>();
         tempQuests = new List<QuestData>();
+        tempCompletedQuests = new List<QuestData>();
+        tempShrines = new List<ShrineData>();
+        tempSpawners = new List<SpawnerData>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))
@@ -75,8 +80,10 @@ public class SaveManager : MonoBehaviour
         SaveInventory(data);
         data.chestData = tempChests;
         SaveQuests(data);
-
-        Debug.Log(Inventory.instance.items.Count);
+        data.shrineData = tempShrines;
+        data.gameTimer = GameManager.instance.gameTimer;
+        SaveSpawners();
+        data.spawnerData = tempSpawners;
 
         bf.Serialize(file, data);
 
@@ -106,7 +113,7 @@ public class SaveManager : MonoBehaviour
         Debug.Log("siema");
         LoadPlayer(data);
         LoadInventory(data);
-        //LoadChests(data);
+        GameManager.instance.gameTimer = data.gameTimer;
 
         file.Close();
 
@@ -122,6 +129,9 @@ public class SaveManager : MonoBehaviour
         tempChests = data.chestData;
         tempQuests = data.questData;
         tempCompletedQuests = data.completedQuestData;
+        tempShrines = data.shrineData;
+        tempSpawners = data.spawnerData;
+        tempTimer = data.gameTimer;
 
         file.Close();
     }
@@ -208,6 +218,8 @@ public class SaveManager : MonoBehaviour
 
     private void SaveQuests(SaveData data)
     {
+        data.questData = new List<QuestData>();
+        data.completedQuestData = new List<QuestData>();
         foreach(Quest quest in GameManager.instance.playerQuests)
         {
             data.questData.Add(new QuestData(quest));
@@ -256,4 +268,13 @@ public class SaveManager : MonoBehaviour
         tempChests = data.chestData;
         Debug.Log("Wczytano stan skrzynek " + tempChests.Count);
     }*/
+
+    public void SaveSpawners()
+    {
+        EnemySpawner[] spawners = FindObjectsOfType<EnemySpawner>();
+        foreach (EnemySpawner spawner in spawners)
+        {
+            spawner.SaveSpawner();
+        }
+    }
 }

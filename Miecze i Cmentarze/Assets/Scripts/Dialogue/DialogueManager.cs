@@ -83,7 +83,6 @@ public class DialogueManager : MonoBehaviour
         npc = newNPC;
         Inventory.instance.canToggle = false;
         currentStory = new Story(inkJSON.text);
-        Debug.Log("dziendobry");
         currentStory.variablesState["questState"] = SetQuestState();
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true);
@@ -213,7 +212,7 @@ public class DialogueManager : MonoBehaviour
     private void GiveQuest()
     {
         GameManager.instance.playerQuests.Add(quest);
-        quest.SetGoal();
+        //quest.SetGoal();
         Inventory.instance.CheckQuestItems();
         questsUI.AddQuest(quest);
         GameManager.instance.ShowText("Dodano zadanie", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
@@ -224,7 +223,10 @@ public class DialogueManager : MonoBehaviour
     {
         quest.rewardClaimed = true;
 
-        foreach(QuestGoal questGoal in quest.goals)
+        GameManager.instance.completedQuests.Add(quest);
+        GameManager.instance.playerQuests.Remove(quest);
+
+        foreach (QuestGoal questGoal in quest.goals)
         {
             if (questGoal.goalType == QuestGoal.GoalType.Gathering)
             {
@@ -244,7 +246,5 @@ public class DialogueManager : MonoBehaviour
             GameManager.instance.player.transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f);
         GameManager.instance.ShowText("+" + quest.reward.xp + "XP", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
             GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
-        GameManager.instance.completedQuests.Add(quest);
-        GameManager.instance.playerQuests.Remove(quest);
     }
 }

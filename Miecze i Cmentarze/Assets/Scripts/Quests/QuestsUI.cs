@@ -18,6 +18,14 @@ public class QuestsUI : MonoBehaviour
     public TextMeshProUGUI questDescription;
     public TextMeshProUGUI questGoals;
 
+    private void Start()
+    {
+        foreach (Quest quest in GameManager.instance.playerQuests)
+        {
+            AddQuest(quest);
+        }
+    }
+
     public void AddQuest(Quest newQuest)
     {
         GameObject newQuestObject = Instantiate(questSlotPrefab, questsArea);

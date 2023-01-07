@@ -28,7 +28,6 @@ public class NPC : Collidable
         base.Start();
         shop = new Shop();
         shop.shopItems = shopItems;
-        Debug.Log("stworzylem " + name);
         LoadNPCQuests(GameManager.instance.playerQuests, GameManager.instance.completedQuests);
     }
     protected override void Update()

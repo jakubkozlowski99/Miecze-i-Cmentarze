@@ -5,18 +5,16 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemy;
-    private string enemyName;
 
     public bool dead;
-    protected float timer;
+    public float timer;
     public int childCount;
     public float respawnCooldown = 5;
 
     protected virtual void Start()
     {
-        Instantiate(enemy, transform.position, transform.rotation, transform);
-        dead = false;
-        enemyName = enemy.name;
+        LoadSpawner();
+        SaveSpawner();
     }
 
     protected virtual void Update()
@@ -30,12 +28,40 @@ public class EnemySpawner : MonoBehaviour
         {
             dead = true;
         }
-        if(timer >= respawnCooldown)
+        if (timer >= respawnCooldown) 
         {
-            Instantiate(enemy, transform.position,transform.rotation,transform);
+            Instantiate(enemy, transform.position, transform.rotation, transform);
             dead = false;
             timer = 0;
         }
     }
 
+    public void SaveSpawner()
+    {
+        foreach (SpawnerData spawner in SaveManager.instance.tempSpawners)
+        {
+            if (spawner.spawnerName == name)
+            {
+                SaveManager.instance.tempSpawners.Remove(spawner);
+                break;
+            }
+        }
+        SaveManager.instance.tempSpawners.Add(new SpawnerData(this));
+    }
+
+    public void LoadSpawner()
+    {
+        foreach (SpawnerData spawner in SaveManager.instance.tempSpawners)
+        {
+            if (spawner.spawnerName == name)
+            {
+                dead = spawner.dead;
+                if (dead == false) Instantiate(enemy, transform.position, transform.rotation, transform);
+                timer = spawner.timer + GameManager.instance.gameTimer - spawner.lastTimerState;
+                return;
+            }
+        }
+        Instantiate(enemy, transform.position, transform.rotation, transform);
+        dead = false;
+    }
 }

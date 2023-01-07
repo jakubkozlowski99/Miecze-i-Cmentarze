@@ -25,7 +25,7 @@ public class Enemy : Mover
 
     public ContactFilter2D filter;
     private Collider2D[] hits = new Collider2D[20];
-    private Animator anim;
+    public Animator anim;
     public EnemyHealthBarBehaviour healthBar;
 
     protected override void Start()
@@ -141,7 +141,22 @@ public class Enemy : Mover
     {
         foreach (Quest quest in GameManager.instance.playerQuests)
         {
-            if (quest.completed == false && quest.currentGoal.killGoal != null) 
+            if (quest.completed == false)
+            {
+                foreach (QuestGoal questGoal in quest.goals)
+                {
+                    if (questGoal.killGoal != null)
+                    {
+                        if (questGoal.killGoal.name + "(Clone)" == transform.name && questGoal.completed == false)
+                        {
+                            questGoal.currentAmount++;
+                            if (questGoal.currentAmount >= questGoal.requiredAmount) questGoal.completed = true;
+                            quest.CheckGoals();
+                        }
+                    }
+                }
+            }
+            /*if (quest.completed == false && quest.currentGoal.killGoal != null) 
             {
                 if(quest.currentGoal.killGoal.name + "(Clone)" == transform.name && quest.currentGoal.completed == false)
                 {
@@ -150,7 +165,7 @@ public class Enemy : Mover
                     quest.CheckGoals();
                 }
 
-            }
+            }*/
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Blacksmith : NPC
 {
-    private Animator anim;
+    public Animator anim;
 
     public float animTime = 5;
     private float lastAnim;

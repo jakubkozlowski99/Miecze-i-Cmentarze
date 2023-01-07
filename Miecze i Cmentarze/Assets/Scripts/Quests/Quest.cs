@@ -31,9 +31,7 @@ public class Quest
     [SerializeField]
     public List<QuestGoal> goals;
 
-    public QuestGoal currentGoal;
-
-    public void SetGoal()
+    /*public void SetGoal()
     {
         foreach(var goal in goals)
         {
@@ -43,11 +41,11 @@ public class Quest
                 return;
             }
         }
-    }
+    }*/
 
     public void CheckGoals()
     {
         completed = goals.TrueForAll(g => g.completed);
-        SetGoal();
+        //SetGoal();
     }
 }
