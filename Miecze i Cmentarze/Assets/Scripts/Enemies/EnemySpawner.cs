@@ -56,7 +56,12 @@ public class EnemySpawner : MonoBehaviour
             if (spawner.spawnerName == name)
             {
                 dead = spawner.dead;
-                if (dead == false) Instantiate(enemy, transform.position, transform.rotation, transform);
+                if (dead == false)
+                {
+                    Instantiate(enemy, transform.position, transform.rotation, transform);
+                    timer = 0;
+                    return;
+                }
                 timer = spawner.timer + GameManager.instance.gameTimer - spawner.lastTimerState;
                 return;
             }

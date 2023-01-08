@@ -18,7 +18,6 @@ public class Shrine : MonoBehaviour
 
     public void LoadTempShrines(bool loadData)
     {
-        Debug.Log(name);
         if (loadData)
         {
             foreach (ShrineData shrine in SaveManager.instance.tempShrines)
@@ -44,6 +43,5 @@ public class Shrine : MonoBehaviour
             }
         }
         SaveManager.instance.tempShrines.Add(new ShrineData(this));
-        Debug.Log(SaveManager.instance.tempShrines.Count);
     }
 }

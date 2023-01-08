@@ -904,6 +904,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: ui_33
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 394
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 2, z: 1, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 398bdce58472ef74b97a13af5ec14598
+      internalID: 174327661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_34
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 363
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 2, y: 5, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a863d2edcfeb541b2e7ae072087f2f
+      internalID: -404380756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_35
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 392
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 2, y: 3, z: 2, w: 1}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c59159d06d15e24f9ae54ade06b1eee
+      internalID: 2011198021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -924,13 +987,16 @@ TextureImporter:
       ui_12: -58002472
       ui_19: -1117244344
       ui_27: 133247369
+      ui_35: 2011198021
       quest_icon: 1360427760
       ui_0: 178186329
+      ui_34: -404380756
       ui_21: 500720410
       ui_22: 901633255
       ui_32: 933699768
       ui_3: -1287306265
       quest_panel_unactive: -17578488
+      ui_33: 174327661
       ui_31: 1531608072
       ui_6: -1887668924
       ui_8: 194043523

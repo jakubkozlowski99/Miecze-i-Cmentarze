@@ -110,7 +110,6 @@ public class SaveManager : MonoBehaviour
         FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
 
         SaveData data = (SaveData)bf.Deserialize(file);
-        Debug.Log("siema");
         LoadPlayer(data);
         LoadInventory(data);
         GameManager.instance.gameTimer = data.gameTimer;

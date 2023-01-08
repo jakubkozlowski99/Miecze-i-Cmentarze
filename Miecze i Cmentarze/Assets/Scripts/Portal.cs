@@ -37,7 +37,8 @@ public class Portal : Collidable
     protected void OnActivation()
     {
         SaveManager.instance.SaveSpawners();
-        SceneManager.LoadSceneAsync(sceneIndex);
+        //SceneManager.LoadSceneAsync(sceneIndex);
+        LevelLoader.instance.LoadLevel(sceneIndex);
         GameManager.instance.player.transform.position = new Vector3(playerX, playerY, 0);
     }
 

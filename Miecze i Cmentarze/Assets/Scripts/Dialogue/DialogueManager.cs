@@ -44,7 +44,6 @@ public class DialogueManager : MonoBehaviour
         if (instance != null)
         {
             Destroy(gameObject);
-            Debug.LogWarning("Wi?cej ni? jeden DialogueManager");
             return;
         }
         instance = this;
