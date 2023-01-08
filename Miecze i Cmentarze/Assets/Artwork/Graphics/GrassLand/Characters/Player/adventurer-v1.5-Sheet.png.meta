@@ -1472,15 +1472,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_65
+      name: adventurer_death_0
       rect:
         serializedVersion: 2
         x: 100
         y: 222
         width: 50
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1493,15 +1493,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_66
+      name: adventurer_death_1
       rect:
         serializedVersion: 2
         x: 150
         y: 222
         width: 50
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1514,15 +1514,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_67
+      name: adventurer_death_2
       rect:
         serializedVersion: 2
         x: 200
         y: 222
         width: 50
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1535,15 +1535,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: adventurer-v1.5-Sheet_68
+      name: adventurer_death_3
       rect:
         serializedVersion: 2
         x: 250
         y: 222
         width: 50
         height: 37
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2407,6 +2407,7 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       adventurer-v1.5-Sheet_69: 482419342
+      adventurer_death_3: -253596680
       adventurer_attack3_5: 50310384
       adventurer_strongattack_6: -1827932097
       adventurer-v1.5-Sheet_76: -1546429188
@@ -2419,6 +2420,7 @@ TextureImporter:
       adventurer-v1.5-Sheet_7: -1453388461
       adventurer_run_3: -1733359551
       adventurer_idle_7: -1435434361
+      adventurer_death_2: 848546458
       adventurer-v1.5-Sheet_17: 1401091406
       adventurer_attack1_3: -2050535977
       adventurer_hurt_0: 296898073
@@ -2437,7 +2439,6 @@ TextureImporter:
       adventurer-v1.5-Sheet_5: -2037635941
       adventurer-v1.5-Sheet_86: 2029681994
       adventurer-v1.5-Sheet_22: -822025372
-      adventurer-v1.5-Sheet_68: -253596680
       adventurer_attack3_1: -1934632779
       adventurer_attack1_0: -861367418
       adventurer-v1.5-Sheet_88: 468874073
@@ -2449,6 +2450,7 @@ TextureImporter:
       adventurer-v1.5-Sheet_90: 521689408
       adventurer-v1.5-Sheet_23: -1063021635
       adventurer_idle_5: -273130767
+      adventurer_death_1: 2088081330
       adventurer-v1.5-Sheet_37: -381358123
       adventurer_dodge_3: 1080804279
       adventurer_attack3_0: -714256316
@@ -2456,6 +2458,7 @@ TextureImporter:
       adventurer_hurt_2: 124432298
       adventurer_strongattack_11: -1928758428
       adventurer-v1.5-Sheet_92: 369203449
+      adventurer_death_0: -743528020
       adventurer-v1.5-Sheet_80: -1560619498
       adventurer_attack1_2: -1950457217
       adventurer_dodge_4: 319270657
@@ -2470,7 +2473,6 @@ TextureImporter:
       adventurer_attack2_2: 459332742
       adventurer-v1.5-Sheet_81: 2036499570
       adventurer-v1.5-Sheet_85: 1388537098
-      adventurer-v1.5-Sheet_66: 2088081330
       adventurer_attack1_1: 1093509402
       adventurer_run_5: -108963316
       adventurer-v1.5-Sheet_82: 1626706545
@@ -2510,9 +2512,7 @@ TextureImporter:
       adventurer_dodge_1: -834759823
       adventurer_attack1_4: -1741537926
       adventurer_dodge_7: -2041819962
-      adventurer-v1.5-Sheet_67: 848546458
       adventurer-v1.5-Sheet_14: -1523599282
-      adventurer-v1.5-Sheet_65: -743528020
       adventurer_strongattack_9: 507269492
       adventurer_idle_6: -1521879406
   spritePackingTag: 

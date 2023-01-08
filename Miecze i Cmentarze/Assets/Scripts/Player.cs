@@ -36,9 +36,12 @@ public class Player : Mover
     private float staminaRegenTimer;
     private float staminaRegenCooldown = 0.2f;
 
+    public bool alive;
+
     protected override void Start()
     {
         base.Start();
+        alive = true;
         if (FindObjectsOfType<Player>().Length > 1) 
         {
             Destroy(gameObject);
@@ -114,6 +117,11 @@ public class Player : Mover
 
         if (isDodging) UpdateMotor(new Vector3(dodgeX, dodgeY, 0), playerYSpeed * 2, playerXSpeed * 2);
         else UpdateMotor(new Vector3(x, y, 0), playerYSpeed, playerXSpeed);
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
+        {
+            UI.instance.deathScreen.SetActive(true);
+        }
     }
 
 
@@ -192,5 +200,13 @@ public class Player : Mover
             GameManager.instance.playerLevel++;
         }
         xpBar.SetXpBar();
+    }
+
+    protected override void Death()
+    {
+        alive = false;
+        canAttack = false;
+        canMove = false;
+        anim.SetTrigger("Death");
     }
 }

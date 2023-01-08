@@ -31,7 +31,7 @@ public class EnemyAttackRange : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if (!isHurt && Time.time - lastAttack > attackCooldown)
+        if (!isHurt && Time.time - lastAttack > attackCooldown && GameManager.instance.player.alive)
         {
             if (coll.tag == "Fighter" && coll.name == "PlayerHitbox")
             {

@@ -15,4 +15,14 @@ public class UI : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+    public GameObject deathScreen;
+
+    public void BackToMenu()
+    {
+        Destroy(GameManager.instance.player.gameObject);
+        Destroy(GameManager.instance.gameObject);
+        Destroy(SaveManager.instance.gameObject);
+        LevelLoader.instance.LoadLevel(0);
+    }
 }

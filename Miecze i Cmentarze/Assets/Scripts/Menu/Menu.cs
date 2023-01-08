@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    private void Start()
+    {
+        if (UI.instance != null) Destroy(UI.instance.gameObject);
+    }
     public void Continue()
     {
         //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
