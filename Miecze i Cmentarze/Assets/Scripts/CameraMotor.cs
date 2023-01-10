@@ -18,7 +18,9 @@ public class CameraMotor : MonoBehaviour
     {
         Vector3 delta = Vector3.zero;
 
-        float deltaX = lookAt.position.x - transform.position.x;
+        float deltaX = 0;
+
+        if(!PauseMenu.instance.gameIsPaused) deltaX = lookAt.position.x - transform.position.x;
 
         if (deltaX > boundX || deltaX < -boundX)
         {
@@ -32,7 +34,9 @@ public class CameraMotor : MonoBehaviour
             }
         }
 
-        float deltaY = lookAt.position.y - transform.position.y;
+        float deltaY = 0;
+
+        if (!PauseMenu.instance.gameIsPaused) deltaY = lookAt.position.y - transform.position.y;
 
         if (deltaY > boundY || deltaY < -boundY)
         {

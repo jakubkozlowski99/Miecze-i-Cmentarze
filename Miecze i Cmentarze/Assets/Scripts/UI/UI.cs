@@ -23,6 +23,8 @@ public class UI : MonoBehaviour
         Destroy(GameManager.instance.player.gameObject);
         Destroy(GameManager.instance.gameObject);
         Destroy(SaveManager.instance.gameObject);
+        //PauseMenu.instance.background.enabled = false;
+        //PauseMenu.instance.pauseMenuUI.SetActive(false);
         LevelLoader.instance.LoadLevel(0);
     }
 }

@@ -39,7 +39,7 @@ public class SaveManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        LoadTempData();
+        if (FileExists()) LoadTempData();
     }
 
     void Start()
@@ -65,6 +65,11 @@ public class SaveManager : MonoBehaviour
         {
             Load();
         }
+    }
+
+    public bool FileExists()
+    {
+        return File.Exists(Application.persistentDataPath + "/" + "SaveTest.dat");
     }
 
     public void Save()

@@ -73,7 +73,7 @@ public class Enemy : Mover
                     //UpdateMotor(startingPosition - transform.position, enemyYSpeed, enemyXSpeed);
                 }
             }
-            else if (!enemyIsAttacking && !enemyIsHurt && !GameManager.instance.player.alive)
+            else if ((!enemyIsAttacking && !enemyIsHurt) || !GameManager.instance.player.alive)
             {
                 //UpdateMotor(startingPosition - transform.position, enemyYSpeed, enemyXSpeed);
                 chasing = false;

@@ -17,7 +17,7 @@ public class Mover : Fighter
 
     protected virtual void UpdateMotor(Vector3 input, float ySpeed, float xSpeed)
     {
-        moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
+        if(!PauseMenu.instance.gameIsPaused) moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
 
         if (moveDelta.x > 0)
             if (transform.localScale.x > 0) transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1);

@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (dead)
+        if (dead && !PauseMenu.instance.gameIsPaused)
         {
             timer += Time.deltaTime;
         }

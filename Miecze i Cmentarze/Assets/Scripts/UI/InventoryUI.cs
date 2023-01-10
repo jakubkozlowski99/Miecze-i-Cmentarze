@@ -84,7 +84,7 @@ public class InventoryUI : MonoBehaviour
 
     public void ToggleInventory()
     {
-        if (inventory.canToggle)
+        if (inventory.canToggle && !PauseMenu.instance.gameIsPaused)
         {
             if (!inventoryPanel.activeSelf && !questPanel.gameObject.activeSelf)
             {

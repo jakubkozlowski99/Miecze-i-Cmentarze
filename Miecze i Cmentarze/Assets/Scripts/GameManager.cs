@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        gameTimer += Time.deltaTime;
+        if (!PauseMenu.instance.gameIsPaused) gameTimer += Time.deltaTime;
     }
 
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)

@@ -89,27 +89,30 @@ public class Player : Mover
         if (anim.GetCurrentAnimatorStateInfo(0).IsName(dodge)) isDodging = true;
         else isDodging = false;
 
-        if (x != 0 || y != 0 && !isAttacking && !isDodging)
+        if (!PauseMenu.instance.gameIsPaused)
         {
-            anim.SetBool("Run", true);
-        }
-        else if ((x == 0 && y == 0) || isAttacking || isDodging)
-        {
-            anim.SetBool("Run", false);
-        }
-
-        if (Time.time - lastSwing > swingReset) swingCount = 0;
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Swing();
-        }
-
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Time.time - lastDodge > dodgeCooldown && stamina >= 20)
+            if (x != 0 || y != 0 && !isAttacking && !isDodging)
             {
-                Dodge(x, y);
+                anim.SetBool("Run", true);
+            }
+            else if ((x == 0 && y == 0) || isAttacking || isDodging)
+            {
+                anim.SetBool("Run", false);
+            }
+
+            if (Time.time - lastSwing > swingReset) swingCount = 0;
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Swing();
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                if (Time.time - lastDodge > dodgeCooldown && stamina >= 20)
+                {
+                    Dodge(x, y);
+                }
             }
         }
 
