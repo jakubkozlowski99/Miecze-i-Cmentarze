@@ -45,6 +45,7 @@ public class ActivateWaterWell : Collidable
         GameManager.instance.player.healthBar.SetText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
         anim.SetTrigger("Activation");
         interactionTextManager.Hide();
+        AudioManager.instance.Play("heal");
     }
 
     protected void ShowInteractionText()

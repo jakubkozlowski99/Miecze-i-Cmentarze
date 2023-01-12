@@ -36,6 +36,7 @@ public class Portal : Collidable
     }
     protected void OnActivation()
     {
+        AudioManager.instance.Play("teleport");
         SaveManager.instance.SaveSpawners();
         //SceneManager.LoadSceneAsync(sceneIndex);
         LevelLoader.instance.LoadLevel(sceneIndex);

@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
             }
             
         }
-        if (SaveManager.instance.tempQuests != null)
+        /*if (SaveManager.instance.tempQuests != null)
         {
             foreach (QuestData questData in SaveManager.instance.tempQuests)
             {
@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
                 }
                 playerQuests.Add(quest);
             }
-        }
+        }*/
         
     }
 }

@@ -48,6 +48,7 @@ public class ShopItemDetailsUI : ItemDetailsUI
             HideDetails();
             shopUI.RemoveHighlights();
             shopUI.UpdateShop();
+            AudioManager.instance.Play("coins");
         }
     }
 
@@ -58,5 +59,6 @@ public class ShopItemDetailsUI : ItemDetailsUI
         HideDetails();
         shopUI.RemoveHighlights();
         shopUI.UpdateShop();
+        AudioManager.instance.Play("coins");
     }
 }

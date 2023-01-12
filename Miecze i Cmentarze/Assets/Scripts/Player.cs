@@ -38,6 +38,8 @@ public class Player : Mover
 
     public bool alive;
 
+    private bool isRunning;
+
     protected override void Start()
     {
         base.Start();
@@ -89,15 +91,31 @@ public class Player : Mover
         if (anim.GetCurrentAnimatorStateInfo(0).IsName(dodge)) isDodging = true;
         else isDodging = false;
 
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("adventurer_run") || PauseMenu.instance.gameIsPaused)
+        {
+            AudioManager.instance.Stop("run_grass");
+            isRunning = false;
+        }
+
         if (!PauseMenu.instance.gameIsPaused)
         {
             if (x != 0 || y != 0 && !isAttacking && !isDodging)
             {
                 anim.SetBool("Run", true);
+                if (!isRunning && anim.GetCurrentAnimatorStateInfo(0).IsName("adventurer_run") && !PauseMenu.instance.gameIsPaused)
+                {
+                    AudioManager.instance.Play("run_grass");
+                    isRunning = true;
+                }
             }
             else if ((x == 0 && y == 0) || isAttacking || isDodging)
             {
                 anim.SetBool("Run", false);
+                if (isRunning)
+                {
+                    AudioManager.instance.Stop("run_grass");
+                    isRunning = false;
+                }
             }
 
             if (Time.time - lastSwing > swingReset) swingCount = 0;
@@ -154,6 +172,7 @@ public class Player : Mover
                 lastSwing = Time.time;
                 stamina -= 10;
                 staminaBar.SetValue(stamina);
+                AudioManager.instance.Play("player_slash");
             }
         }
     }
@@ -168,6 +187,7 @@ public class Player : Mover
             anim.SetTrigger("Dodge");
             stamina -= 20;
             staminaBar.SetValue(stamina);
+            AudioManager.instance.Play("player_dodge");
         }
     }
 

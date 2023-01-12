@@ -38,6 +38,8 @@ public class EquippedItemSlot : MonoBehaviour
         GameManager.instance.player.playerStats.UpdateStats();
 
         slotImage.sprite = equippedImage;
+
+        AudioManager.instance.Play("equip");
     }
 
     public void OnUnEquip()
@@ -61,6 +63,8 @@ public class EquippedItemSlot : MonoBehaviour
         item = null;
         itemImage.enabled = false;
         slotImage.sprite = unequippedImage;
+
+        AudioManager.instance.Play("unequip");
     }
 
     public void ShowDetails()

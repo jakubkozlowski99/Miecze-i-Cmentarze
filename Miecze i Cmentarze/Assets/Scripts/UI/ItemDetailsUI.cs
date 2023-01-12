@@ -130,6 +130,7 @@ public class ItemDetailsUI : MonoBehaviour
             inventoryUI.UpdateInventory();
             inventoryUI.RemoveHighlights();
             HideDetails();
+            AudioManager.instance.Play("heal");
         }
     }
 

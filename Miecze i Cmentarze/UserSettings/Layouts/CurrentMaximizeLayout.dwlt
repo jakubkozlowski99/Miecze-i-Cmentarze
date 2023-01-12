@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 46869
+  controlID: 49418
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -46,8 +46,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 254.6
-    y: 19
+    x: 253.6
+    y: 73.6
     width: 732.4
     height: 443
   m_ViewDataDictionary: {fileID: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 46822
+  controlID: 49377
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 46813
+  controlID: 49356
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -235,7 +235,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e0e7f2ffcaf7f2ff84f9f2fffc10f3ff9c44f3ffda54f3ff8c56f3ffd657f3ff065af3ff3a6af3ff7e6cf3ffda6df3fff47ff3ff1681f3ff1282f3ff4a93f3ff7a94f3fff69cf3ff80bcf3ffccbdf3ff0cf3f4ff14f3f4ffcc03f5ff7204f5ff307cf5ffca7cf5ff9695f5ff9895f5ffaca6f5ffb4a6f5ff1a52f6ff1e52f6ff2652f6ff2462f6ff6864f6ff647af6ffa690f6ff7892f6ff58daf6ff5ef1f6ff6a4df7ff0c6af7ff5686f7ffccadf7ffceadf7ff96aef7ff02b7f7ff3ecbf7ffb6cbf7ffae55f8ff5856f8ff946df8ff3093f8ff5ea4f8ffeebaf8ff16ccf8ff84def8ffeafaf8ff920df9ff261ff9ffc420f9fffc31f9ff5244f9ffa856f9ff346df9ff567ff9ff9481f9ffe882f9ffc4dcf9ff12f3f9ff2604faff2606faffb817faff3848fbff7849fbff8049fbff8a49fbff9049fbffd049fbff924cfbff9a4cfbffa44cfbffaa4cfbff7e5bfbff3c7afbff447afbff4e7afbff527afbff547afbff8a05fcff9405fcff9805fcffa005fcff4a08fcff5408fcff5a08fcff0c18fcffba19fcffc419fcffca19fcffe229fcffce6bfcff7687fcff7887fcffde88fcffe488fcffe898fcffa8d6fcffb2d6fcffb6d6fcffbed6fcff26d8fcff5edbfcff9aeafcff20effcff28effcff32effcff36effcff3eeffcff40f1fcffca02fdff6c03fdff901efdffd224fdffdc24fdffe668fdff9c6cfdff667efdff3a92fdff02a8fdff48d0fdffa40cfeffe81ffeffca33feff704effff289effff72afffff2cfbfffff4ffffff500201008602010006160100561d0100302801000e3a01006e470100fcaa010086ab010074c10100ccc101005ec20100c8da010000db0100c6f40100e8f4010058f5010030fb0100ceff0100421702002e2c0200362c0200662c0200d0520200625302003e670200746702004c69020082690200ce690200de690200266a0200b06a0200ec6c0200f46c0200226d02006e6d02007e6d0200c66d0200506e02009c700200a4700200b8700200d2700200207102003071020042710200807102000a720200
+      m_ExpandedIDs: 8ad7f1ff34ecf1ff78eef1ffb081f2ff549df2ffe09df2ffe0e7f2ffcaf7f2ff84f9f2fffc10f3ff9c44f3ffda54f3ff8c56f3ffd657f3ff065af3ff3a6af3ff7e6cf3ffda6df3fff47ff3ff1681f3ff1282f3ff4a93f3ff7a94f3fff69cf3ff80bcf3ffccbdf3ff0cf3f4ff14f3f4ffcc03f5ff7204f5ff307cf5ffca7cf5ff9695f5ff9895f5ffaca6f5ffb4a6f5ff1a52f6ff1e52f6ff2652f6ff2462f6ff6864f6ff647af6ffa690f6ff7892f6ff58daf6ff5ef1f6ff6a4df7ff0c6af7ff5686f7ffccadf7ffceadf7ff96aef7ff02b7f7ff3ecbf7ffb6cbf7ffae55f8ff5856f8ff946df8ff3093f8ff5ea4f8ffeebaf8ff16ccf8ff84def8ffeafaf8ff920df9ff261ff9ffc420f9fffc31f9ff5244f9ffa856f9ff346df9ff567ff9ff9481f9ffe882f9ffc4dcf9ff12f3f9ff2604faff2606faffb817faff3848fbff7849fbff8049fbff8a49fbff9049fbffd049fbff924cfbff9a4cfbffa44cfbffaa4cfbff7e5bfbff3c7afbff447afbff4e7afbff527afbff547afbff8a05fcff9405fcff9805fcffa005fcff4a08fcff5408fcff5a08fcff0c18fcffba19fcffc419fcffca19fcffe229fcffce6bfcff7687fcff7887fcffde88fcffe488fcffe898fcffa8d6fcffb2d6fcffb6d6fcffbed6fcff26d8fcff5edbfcff9aeafcff20effcff28effcff32effcff36effcff3eeffcff40f1fcffca02fdff6c03fdff901efdffd224fdffdc24fdffe668fdff9c6cfdff667efdff3a92fdff02a8fdff48d0fdffa40cfeffe81ffeffca33feff704effff289effff72afffff2cfbfffff4ffffff500201008602010006160100561d0100302801000e3a01006e470100fcaa010086ab010074c10100ccc101005ec20100c8da010000db0100c6f40100e8f4010058f5010030fb0100ceff0100421702002e2c0200362c0200662c0200d0520200625302003e670200746702004c69020082690200ce690200de690200266a0200b06a0200ec6c0200f46c0200226d02006e6d02007e6d0200c66d0200506e02009c700200a4700200b8700200d2700200207102003071020042710200807102000a720200c0e70200d0e70200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -552,7 +552,7 @@ MonoBehaviour:
       containerId: overlay-toolbar__left
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -882,14 +882,14 @@ MonoBehaviour:
     y: 464
     width: 988
     height: 258.8
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 12}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 12}
   - {fileID: 13}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1003,7 +1003,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: e4a30000
     m_LastClickedInstanceID: 41956
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000fa7a0000066300001e6a000070540000d4790000a44e0000c6680000cc4e0000907b0000f4510000f2510000425a00005e5d02006055000000000000c83505005272000014550000725400001e5800007c540000705f0000ca5f0000da530000406000003e600000825400001c640000ec720000767e0000185c0000425d00007e5c0000be61000000a700002a620000984e000012be0700aaa70000304f0000ac880000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1085,7 +1085,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 46870
+  controlID: 49419
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1147,7 +1147,7 @@ MonoBehaviour:
     m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 41956
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

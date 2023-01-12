@@ -19,6 +19,7 @@ public class Fighter : MonoBehaviour
             hitpoint -= dmg.damageAmount;
 
             GameManager.instance.ShowText(dmg.damageAmount.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f) ;
+            AudioManager.instance.Play("hit");
 
             if (hitpoint <= 0)
             {

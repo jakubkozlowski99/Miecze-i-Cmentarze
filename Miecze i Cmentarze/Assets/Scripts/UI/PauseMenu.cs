@@ -44,6 +44,7 @@ public class PauseMenu : MonoBehaviour
         background.enabled = false;
         Time.timeScale = 1f;
         gameIsPaused = false;
+        AudioManager.instance.Play("unpause");
     }
 
     public void Pause()
@@ -52,5 +53,6 @@ public class PauseMenu : MonoBehaviour
         background.enabled = true;
         Time.timeScale = 0f;
         gameIsPaused = true;
+        AudioManager.instance.Play("pause");
     }
 }

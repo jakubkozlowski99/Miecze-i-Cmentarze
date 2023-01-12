@@ -44,6 +44,7 @@ public class ChestItemDetailsUI : ItemDetailsUI
             else coinAmount = Random.Range(500, 2001);
             GameManager.instance.coins += coinAmount;
             itemTaken = true;
+            AudioManager.instance.Play("coins");
         }
         else if (Inventory.instance.items.Count < Inventory.instance.space)
         {
