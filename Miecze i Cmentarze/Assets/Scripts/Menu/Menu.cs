@@ -7,12 +7,17 @@ public class Menu : MonoBehaviour
 {
     public GameObject menu;
     public GameObject continueButton;
+    public GameObject settings;
 
     private void Start()
     {
         if (UI.instance != null) Destroy(UI.instance.gameObject);
 
-        if (!SaveManager.instance.FileExists()) continueButton.SetActive(false);
+        if (!SaveManager.instance.FileExists(Application.persistentDataPath + "/" + "SaveTest.dat")) continueButton.SetActive(false);
+
+        AudioManager.instance.PlayMusic("menu");
+
+        if (FindObjectOfType<Player>() != null) Destroy(FindObjectOfType<Player>().gameObject);
     }
     public void Continue()
     {
@@ -20,6 +25,8 @@ public class Menu : MonoBehaviour
         //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         LevelLoader.instance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
         SaveManager.instance.isLoading = true;
+        AudioManager.instance.StopMusic("menu");
+        AudioManager.instance.Play("confirm");
     }
 
     public void NewGame()
@@ -29,5 +36,19 @@ public class Menu : MonoBehaviour
         //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         LevelLoader.instance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
         SaveManager.instance.isLoading = false;
+        AudioManager.instance.StopMusic("menu");
+        AudioManager.instance.Play("confirm");
+    }
+
+    public void Options()
+    {
+        settings.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    public void Quit()
+    {
+        Debug.Log("quit");
+        Application.Quit(0);
     }
 }

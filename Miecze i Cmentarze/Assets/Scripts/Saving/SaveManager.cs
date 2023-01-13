@@ -30,6 +30,9 @@ public class SaveManager : MonoBehaviour
 
     public float tempTimer;
 
+    public float tempMusicVolume;
+    public float tempSoundsVolume;
+
     private void Awake()
     {
         if (instance != null)
@@ -39,7 +42,9 @@ public class SaveManager : MonoBehaviour
         instance = this;
         DontDestroyOnLoad(gameObject);
 
-        if (FileExists()) LoadTempData();
+        if (FileExists(Application.persistentDataPath + "/" + "SaveTest.dat")) LoadTempData();
+
+        LoadGlobals();
     }
 
     void Start()
@@ -67,9 +72,9 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public bool FileExists()
+    public bool FileExists(string path)
     {
-        return File.Exists(Application.persistentDataPath + "/" + "SaveTest.dat");
+        return File.Exists(path);
     }
 
     public void Save()
@@ -280,5 +285,59 @@ public class SaveManager : MonoBehaviour
         {
             spawner.SaveSpawner();
         }
+    }
+
+    public void SaveGlobals()
+    {
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Open(Application.persistentDataPath + "/" + "GlobalSettings.dat", FileMode.Open);
+
+        GlobalData data = new GlobalData();
+
+        tempMusicVolume = AudioManager.instance.musicVolume;
+        tempSoundsVolume = AudioManager.instance.soundsVolume;
+
+        data.musicVolume = tempMusicVolume;
+        data.soundsVolume = tempSoundsVolume;
+
+        bf.Serialize(file, data);
+
+        file.Close();
+    }
+
+    public void LoadGlobals()
+    {
+        if (FileExists(Application.persistentDataPath + "/" + "GlobalSettings.dat"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/" + "GlobalSettings.dat", FileMode.Open);
+
+            GlobalData data = (GlobalData)bf.Deserialize(file);
+            tempMusicVolume = data.musicVolume;
+            tempSoundsVolume = data.soundsVolume;
+
+            file.Close();
+        }
+        else
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/" + "GlobalSettings.dat", FileMode.Create);
+
+            GlobalData data = new GlobalData();
+            tempMusicVolume = 1f;
+            tempSoundsVolume = 1f;
+
+            data.musicVolume = tempMusicVolume;
+            data.soundsVolume = tempSoundsVolume;
+
+            bf.Serialize(file, data);
+
+            file.Close();
+        }
+    }
+
+    private void OnApplicationQuit()
+    {
+        SaveGlobals();
     }
 }

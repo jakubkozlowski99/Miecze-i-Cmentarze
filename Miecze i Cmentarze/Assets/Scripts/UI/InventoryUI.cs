@@ -25,6 +25,7 @@ public class InventoryUI : MonoBehaviour
     public ItemDetailsUI equippedItemDetailsUI;
 
     public QuestsUI questPanel;
+    public GameObject questPanelUI;
 
     public Image inventoryTab;
     public Image questPanelTab;
@@ -86,7 +87,7 @@ public class InventoryUI : MonoBehaviour
     {
         if (inventory.canToggle && !PauseMenu.instance.gameIsPaused)
         {
-            if (!inventoryPanel.activeSelf && !questPanel.gameObject.activeSelf)
+            if (!inventoryPanel.activeSelf && !questPanelUI.activeSelf)
             {
                 tab = 1;
                 SetTabs();
@@ -106,7 +107,7 @@ public class InventoryUI : MonoBehaviour
                 inventoryPanel.SetActive(false);
                 if (questPanel.selectedQuest != null) questPanel.selectedQuest.highlightImage.enabled = false;
                 questPanel.selectedQuest = null;
-                questPanel.gameObject.SetActive(false);
+                questPanelUI.SetActive(false);
                 questPanel.ClearDescription();
                 itemDetailsUI.HideDetails();
                 equippedItemDetailsUI.HideDetails();
@@ -220,7 +221,7 @@ public class InventoryUI : MonoBehaviour
         if (tab == 1)
         {
             inventoryPanel.SetActive(true);
-            questPanel.gameObject.SetActive(false);
+            questPanelUI.SetActive(false);
             SetTabs();
         }
     }
@@ -230,7 +231,7 @@ public class InventoryUI : MonoBehaviour
         if (tab == 0)
         {
             inventoryPanel.SetActive(false);
-            questPanel.gameObject.SetActive(true);
+            questPanelUI.SetActive(true);
             SetTabs();
         }
     }

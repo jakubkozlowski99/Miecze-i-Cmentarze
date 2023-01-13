@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
             gameTimer = SaveManager.instance.tempTimer;
         }
         else gameTimer = 0;
-        //if(SaveManager.instance.isLoading) SaveManager.instance.Load();
-        //foreach (Quest quest in playerQuests) quest.SetGoal();
         if (instance != null)
         {
             Destroy(gameObject);
@@ -60,7 +58,7 @@ public class GameManager : MonoBehaviour
 
     private void LoadQuests()
     {
-        for(int i=0; i<2; i++)
+        for (int i = 0; i < 2; i++) 
         {
             List<QuestData> data = new List<QuestData>();
             if (i == 0) data = SaveManager.instance.tempQuests;
@@ -101,7 +99,6 @@ public class GameManager : MonoBehaviour
                         }
                         goal.currentAmount = goalData.currentAmount;
                         goal.requiredAmount = goalData.requiredAmount;
-                        Debug.Log("questuwwczytywanie");
                         quest.goals.Add(goal);
                     }
                     if (i == 0) playerQuests.Add(quest);

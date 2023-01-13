@@ -9,8 +9,18 @@ public class AudioManager : MonoBehaviour
     public static AudioManager instance;
     public Sound[] sounds, music;
 
+    [Range(0f, 1f)]
+    public float musicVolume = 1;
+    [Range (0f, 1f)]
+    public float soundsVolume = 1;
+
     private void Awake()
     {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
         instance = this;
         DontDestroyOnLoad(this);
         foreach (Sound s in sounds)
@@ -35,7 +45,10 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        PlayMusic("theme");
+        musicVolume = SaveManager.instance.tempMusicVolume;
+        soundsVolume = SaveManager.instance.tempSoundsVolume;
+        SetMusicVolume(musicVolume);
+        SetVolume(soundsVolume);
     }
 
     public void Play(string name)
@@ -59,7 +72,7 @@ public class AudioManager : MonoBehaviour
     public void StopMusic(string name)
     {
         Sound m = Array.Find(music, music => music.name == name);
-        m.source.Play();
+        m.source.Stop();
     }
 
     public void SetVolume(float value)

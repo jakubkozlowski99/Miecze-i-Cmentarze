@@ -50,6 +50,7 @@ public class ChestItemDetailsUI : ItemDetailsUI
         {
             chestUI.inventory.Add(item);
             itemTaken = true;
+            AudioManager.instance.Play("unequip");
         }
 
         if (itemTaken)

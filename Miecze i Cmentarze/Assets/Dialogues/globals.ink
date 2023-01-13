@@ -1,4 +1,4 @@
-VAR questState = 0
+VAR questState = 2
 
 // 0 - quest do wziecia
 // 1 - brak questow u npc

@@ -20,7 +20,7 @@ public class CameraMotor : MonoBehaviour
 
         float deltaX = 0;
 
-        if(!PauseMenu.instance.gameIsPaused) deltaX = lookAt.position.x - transform.position.x;
+        if (!PauseMenu.instance.gameIsPaused) deltaX = lookAt.position.x - transform.position.x;
 
         if (deltaX > boundX || deltaX < -boundX)
         {

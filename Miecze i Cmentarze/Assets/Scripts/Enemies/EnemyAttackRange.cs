@@ -10,6 +10,7 @@ public class EnemyAttackRange : Collidable
     private float lastAttack;
     private int attackAnimIndex;
     public int animationsAmount;
+    public string attackSoundName;
 
     protected override void Start()
     {
@@ -45,6 +46,7 @@ public class EnemyAttackRange : Collidable
     private void SetAttackAnim()
     {
         anim.SetTrigger("Attack" + attackAnimIndex);
+        AudioManager.instance.Play(attackSoundName);
         if (attackAnimIndex >= animationsAmount)
         {
             attackAnimIndex = 1;

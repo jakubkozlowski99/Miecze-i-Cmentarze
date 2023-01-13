@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -20,11 +21,11 @@ public class UI : MonoBehaviour
 
     public void BackToMenu()
     {
-        Destroy(GameManager.instance.player.gameObject);
         Destroy(GameManager.instance.gameObject);
+        SaveManager.instance.SaveGlobals();
         Destroy(SaveManager.instance.gameObject);
-        //PauseMenu.instance.background.enabled = false;
-        //PauseMenu.instance.pauseMenuUI.SetActive(false);
+        AudioManager.instance.StopMusic("theme_" + SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
         LevelLoader.instance.LoadLevel(0);
     }
 }

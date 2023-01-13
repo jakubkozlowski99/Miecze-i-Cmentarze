@@ -413,6 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animationsAmount: 1
+  attackSoundName: bite
 --- !u!1 &4770027706827916785
 GameObject:
   m_ObjectHideFlags: 0
