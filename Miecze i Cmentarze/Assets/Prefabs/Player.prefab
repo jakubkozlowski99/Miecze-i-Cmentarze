@@ -114,7 +114,7 @@ Transform:
   - {fileID: 1606070046}
   - {fileID: 8015301674172899177}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8015301673090203982
 BoxCollider2D:
@@ -210,7 +210,7 @@ MonoBehaviour:
   maxhitpoint: 100
   stamina: 100
   maxStamina: 100
-  anim: {fileID: 0}
+  anim: {fileID: 8015301673090203968}
   canMove: 0
   canAttack: 0
   playerYSpeed: 1.5
@@ -219,6 +219,7 @@ MonoBehaviour:
   staminaBar: {fileID: 8015301673379603141}
   xpBar: {fileID: 8015301673241937043}
   playerStats: {fileID: 1606070047}
+  alive: 0
 --- !u!95 &8015301673090203968
 Animator:
   serializedVersion: 4

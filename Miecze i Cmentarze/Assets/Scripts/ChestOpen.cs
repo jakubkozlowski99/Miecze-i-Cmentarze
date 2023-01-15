@@ -38,6 +38,7 @@ public class ChestOpen : Collidable
             Inventory.instance.canToggle = false;
             chest.anim.SetTrigger("Open");
             interactionTextManager.Hide();
+            AudioManager.instance.Play("chest_open");
         }
 
         if (chest.anim.GetCurrentAnimatorStateInfo(0).IsName("chest_opened") && !chest.chestOpened)

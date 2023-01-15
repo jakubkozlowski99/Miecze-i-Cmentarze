@@ -181,7 +181,7 @@ public class ItemDetailsUI : MonoBehaviour
                 HideDetails();
             }
         }
-        else Debug.Log("Nie ma miejsca w ekwipunku");
+        else AudioManager.instance.Play("denied");
     }
 
     public virtual void RemoveItem()

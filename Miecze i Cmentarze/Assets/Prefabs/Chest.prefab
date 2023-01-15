@@ -272,7 +272,7 @@ Transform:
   - {fileID: 8687865276381639421}
   - {fileID: 8687865276472051239}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8687865276803134576
 SpriteRenderer:
@@ -365,21 +365,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chestItems:
-  - {fileID: 11400000, guid: 58d5345273337e84eacfd00a1aa4d21a, type: 2}
-  - {fileID: 11400000, guid: 8bbc54f8a1e0b0d45bb15f7388b18791, type: 2}
-  - {fileID: 11400000, guid: dde1d601f5974a1488862937a2b3cbef, type: 2}
-  - {fileID: 11400000, guid: e96f1d46091608b4fb0a408911de2be2, type: 2}
-  - {fileID: 11400000, guid: a5a4079de9a51e144b53974ae7605128, type: 2}
-  - {fileID: 11400000, guid: c401df40ec490794bb25c47322d52634, type: 2}
+  - {fileID: 11400000, guid: 608b2aa3198127a4d8e7eb268548f840, type: 2}
+  - {fileID: 11400000, guid: 594871513fe06b041b5ba792ecbee505, type: 2}
   - {fileID: 11400000, guid: 4d8ad47108ad5b9499f92ac8ee7452f5, type: 2}
-  - {fileID: 11400000, guid: 885db7baa32a6c84b9562adf6a4a0a80, type: 2}
-  - {fileID: 11400000, guid: ff67fd6d61c837a4fb2bb0940390a7f4, type: 2}
-  - {fileID: 11400000, guid: 4adfe24f5a36c994486396c07df4cd5c, type: 2}
-  - {fileID: 11400000, guid: 42fa6e36ebdd4b04ebf0bf54b1f586c0, type: 2}
-  - {fileID: 11400000, guid: ff67fd6d61c837a4fb2bb0940390a7f4, type: 2}
-  - {fileID: 11400000, guid: 3e2203baee5deda448b49a546b69b6c5, type: 2}
-  - {fileID: 11400000, guid: 2fe53d9b128ed284589fba1f0759c299, type: 2}
-  - {fileID: 11400000, guid: 63554200e60ea0942b9a640f6a99c59f, type: 2}
+  - {fileID: 11400000, guid: 4855d498b62ae7640b1a219db1e15921, type: 2}
+  - {fileID: 11400000, guid: e966960175561c447acf29ef567585a4, type: 2}
+  - {fileID: 11400000, guid: 594871513fe06b041b5ba792ecbee505, type: 2}
+  - {fileID: 11400000, guid: 594871513fe06b041b5ba792ecbee505, type: 2}
   chestUI: {fileID: 0}
   anim: {fileID: 0}
   chestOpened: 0

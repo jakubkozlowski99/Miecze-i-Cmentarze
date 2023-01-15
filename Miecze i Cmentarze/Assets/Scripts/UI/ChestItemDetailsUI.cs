@@ -52,6 +52,10 @@ public class ChestItemDetailsUI : ItemDetailsUI
             itemTaken = true;
             AudioManager.instance.Play("unequip");
         }
+        else if (Inventory.instance.items.Count >= Inventory.instance.space)
+        {
+            AudioManager.instance.Play("denied");
+        }
 
         if (itemTaken)
         {

@@ -137,7 +137,7 @@ Transform:
   - {fileID: 3801146852144480849}
   - {fileID: 3801146852414827013}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3801146852146994964
 SpriteRenderer:
@@ -252,8 +252,8 @@ MonoBehaviour:
   interactionTextManager: {fileID: 3801146852394331691}
   sceneIndex: 2
   interactionTextOffset: 1
-  playerX: 0
-  playerY: 0
+  playerX: 1
+  playerY: 0.5
 --- !u!1 &3801146852394331688
 GameObject:
   m_ObjectHideFlags: 0

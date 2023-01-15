@@ -35,6 +35,7 @@ public class ChestUI : MonoBehaviour
         chest.textShown = false;
         chest.anim.SetTrigger("Close");
         chest.LoadTempChests(false);
+        AudioManager.instance.Play("chest_close");
     }
 
     public void UpdateChest()

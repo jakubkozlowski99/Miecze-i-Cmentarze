@@ -554,6 +554,30 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: denied
+    clip: {fileID: 8300000, guid: 1ed8fb76fc64e4e46847348138782234, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: shrine
+    clip: {fileID: 8300000, guid: 7a9de5c4d998126449cf964a6b27a8b0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: chest_open
+    clip: {fileID: 8300000, guid: 61deae25cc8cec14b9f4a8a097072169, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: chest_close
+    clip: {fileID: 8300000, guid: 467c987f7d6453741a8eeb223b5cf90f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   music:
   - name: theme_1
     clip: {fileID: 8300000, guid: 4f692dca7018be645a24a54d3c8689f7, type: 3}

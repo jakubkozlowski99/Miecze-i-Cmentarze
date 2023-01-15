@@ -57,6 +57,9 @@ TagManager:
   - name: Buildings
     uniqueID: 1772570527
     locked: 0
+  - name: Props
+    uniqueID: 3258442633
+    locked: 0
   - name: ActorBehind
     uniqueID: 1146447463
     locked: 0

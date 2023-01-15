@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5032532987652863583
 MonoBehaviour:
@@ -46,5 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemy: {fileID: 4770027707862348137, guid: 92c19580b9ce7cd4790949666782a430, type: 3}
   dead: 0
+  timer: 0
   childCount: 0
-  respawnCooldown: 5
+  respawnCooldown: 60
