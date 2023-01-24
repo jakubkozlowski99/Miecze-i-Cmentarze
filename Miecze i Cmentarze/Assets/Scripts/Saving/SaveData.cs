@@ -15,6 +15,7 @@ public class SaveData
     public List<QuestData> completedQuestData;
     public List<ShrineData> shrineData;
     public List<SpawnerData> spawnerData;
+    public List<BossData> bossData;
     public SaveData()
     {
 
@@ -256,5 +257,16 @@ public class SpawnerData
         timer = spawner.timer;
         dead = spawner.dead;
         lastTimerState = GameManager.instance.gameTimer;
+    }
+}
+
+[Serializable]
+public class BossData
+{
+    public string bossName;
+
+    public BossData(Boss boss)
+    {
+        bossName = boss.name;
     }
 }

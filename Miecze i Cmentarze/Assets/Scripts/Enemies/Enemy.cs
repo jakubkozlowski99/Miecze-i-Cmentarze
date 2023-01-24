@@ -10,34 +10,35 @@ public class Enemy : Mover
     public float triggerLength = 1;
     public float chaseLength = 5;
     public float attackCooldown = 1.5f;
-    private bool chasing;
-    private bool collidingWithPlayer;
-    private Transform playerTransform;
-    private Vector3 startingPosition;
+    protected bool chasing;
+    protected bool collidingWithPlayer;
+    protected Transform playerTransform;
+    protected Vector3 startingPosition;
     public float enemyYSpeed = 1;
     public float enemyXSpeed = 1.5f;
-    private string hurtTrigger = "Hurt";
-    private string deathTrigger = "Death";
-    private bool enemyIsAttacking;
-    private bool enemyIsHurt;
-    private bool alive = true;
+    protected string hurtTrigger = "Hurt";
+    protected string deathTrigger = "Death";
+    protected bool enemyIsAttacking;
+    protected bool enemyIsHurt;
+    protected bool alive = true;
 
-
+    [HideInInspector]
     public ContactFilter2D filter;
-    private Collider2D[] hits = new Collider2D[20];
+    protected Collider2D[] hits = new Collider2D[20];
     public Animator anim;
     public EnemyHealthBarBehaviour healthBar;
 
     protected override void Start()
     {
         base.Start();
+        healthBar = GetComponentInChildren<EnemyHealthBarBehaviour>();
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
         anim = GetComponent<Animator>();
         healthBar.SetHealth(hitpoint, maxhitpoint);
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (alive)
         {

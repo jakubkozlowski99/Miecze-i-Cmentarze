@@ -110,12 +110,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 160
-        height: 280
+        x: 5
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,12 +131,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_1
       rect:
         serializedVersion: 2
-        x: 160
-        y: 0
-        width: 160
-        height: 280
+        x: 165
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,12 +152,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_2
       rect:
         serializedVersion: 2
-        x: 320
-        y: 0
-        width: 160
-        height: 280
+        x: 325
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,12 +173,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_3
       rect:
         serializedVersion: 2
-        x: 480
-        y: 0
-        width: 160
-        height: 280
+        x: 485
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,12 +194,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_4
       rect:
         serializedVersion: 2
-        x: 640
-        y: 0
-        width: 160
-        height: 280
+        x: 645
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_5
       rect:
         serializedVersion: 2
-        x: 800
-        y: 0
-        width: 160
-        height: 280
+        x: 805
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,12 +236,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_6
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
-        width: 160
-        height: 280
+        x: 965
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,12 +257,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_7
       rect:
         serializedVersion: 2
-        x: 1120
-        y: 0
-        width: 160
-        height: 280
+        x: 1125
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,12 +278,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_8
       rect:
         serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 160
-        height: 280
+        x: 1285
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,12 +299,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_9
       rect:
         serializedVersion: 2
-        x: 1440
-        y: 0
-        width: 160
-        height: 280
+        x: 1445
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,12 +320,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_10
       rect:
         serializedVersion: 2
-        x: 1600
-        y: 0
-        width: 160
-        height: 280
+        x: 1605
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,12 +341,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_11
       rect:
         serializedVersion: 2
-        x: 1760
-        y: 0
-        width: 160
-        height: 280
+        x: 1765
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,12 +362,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_12
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 0
-        width: 160
-        height: 280
+        x: 1925
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,12 +383,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_13
       rect:
         serializedVersion: 2
-        x: 2080
-        y: 0
-        width: 160
-        height: 280
+        x: 2085
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,12 +404,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_14
       rect:
         serializedVersion: 2
-        x: 2240
-        y: 0
-        width: 160
-        height: 280
+        x: 2245
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,12 +425,12 @@ TextureImporter:
       name: cypt9 entrance glow animation 160x280_15
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 0
-        width: 160
-        height: 280
+        x: 2405
+        y: 19
+        width: 152
+        height: 237
       alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      pivot: {x: 0.5, y: 0.17}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -4886,48 +4886,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_31
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 1952
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3d10ce4419a86a7e0800000000000000
-      internalID: -1754562648283020845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Tileset-Props_32
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 1952
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 91dc04bff9faaea90800000000000000
-      internalID: -7283816345668367079
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Tileset-Props_33
       rect:
         serializedVersion: 2
@@ -5138,7 +5096,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_43
+      name: stonefence_3
       rect:
         serializedVersion: 2
         x: 544
@@ -5264,15 +5222,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_49
+      name: stonefence_7
       rect:
         serializedVersion: 2
-        x: 160
-        y: 1920
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 162
+        y: 1926
+        width: 28
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5285,15 +5243,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_50
+      name: stonefence_8
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1920
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 194
+        y: 1926
+        width: 28
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5432,7 +5390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_57
+      name: stonefence_0
       rect:
         serializedVersion: 2
         x: 448
@@ -5453,7 +5411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_58
+      name: stonefence_1
       rect:
         serializedVersion: 2
         x: 480
@@ -5474,7 +5432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_59
+      name: stonefence_2
       rect:
         serializedVersion: 2
         x: 512
@@ -5495,7 +5453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_60
+      name: stonefence_4
       rect:
         serializedVersion: 2
         x: 544
@@ -5537,7 +5495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_62
+      name: stonefence_5
       rect:
         serializedVersion: 2
         x: 544
@@ -5684,7 +5642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_69
+      name: bridge_0
       rect:
         serializedVersion: 2
         x: 96
@@ -5705,7 +5663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_70
+      name: bridge_1
       rect:
         serializedVersion: 2
         x: 128
@@ -5726,7 +5684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_71
+      name: bridge_2
       rect:
         serializedVersion: 2
         x: 160
@@ -5747,7 +5705,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_72
+      name: bridge_3
       rect:
         serializedVersion: 2
         x: 192
@@ -5768,7 +5726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_73
+      name: bridge_4
       rect:
         serializedVersion: 2
         x: 224
@@ -6251,7 +6209,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_96
+      name: bridge_5
       rect:
         serializedVersion: 2
         x: 128
@@ -6272,7 +6230,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_97
+      name: bridge_6
       rect:
         serializedVersion: 2
         x: 160
@@ -6293,7 +6251,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_98
+      name: bridge_7
       rect:
         serializedVersion: 2
         x: 192
@@ -6734,7 +6692,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_119
+      name: bridge_8
       rect:
         serializedVersion: 2
         x: 96
@@ -6755,7 +6713,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_120
+      name: bridge_9
       rect:
         serializedVersion: 2
         x: 128
@@ -6776,7 +6734,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_121
+      name: bridge_10
       rect:
         serializedVersion: 2
         x: 160
@@ -6797,7 +6755,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_122
+      name: bridge_11
       rect:
         serializedVersion: 2
         x: 192
@@ -6818,7 +6776,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_123
+      name: bridge_12
       rect:
         serializedVersion: 2
         x: 224
@@ -23996,7 +23954,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1033
+      name: house_114
       rect:
         serializedVersion: 2
         x: 544
@@ -24017,7 +23975,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1034
+      name: house_115
       rect:
         serializedVersion: 2
         x: 576
@@ -24038,7 +23996,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1035
+      name: house_116
       rect:
         serializedVersion: 2
         x: 608
@@ -24311,7 +24269,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1048
+      name: house_117
       rect:
         serializedVersion: 2
         x: 512
@@ -24332,7 +24290,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1049
+      name: house_118
       rect:
         serializedVersion: 2
         x: 544
@@ -24353,7 +24311,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1050
+      name: house_119
       rect:
         serializedVersion: 2
         x: 576
@@ -24374,7 +24332,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1051
+      name: house_120
       rect:
         serializedVersion: 2
         x: 608
@@ -24689,7 +24647,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1066
+      name: house_121
       rect:
         serializedVersion: 2
         x: 480
@@ -24710,7 +24668,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1067
+      name: house_122
       rect:
         serializedVersion: 2
         x: 512
@@ -24731,7 +24689,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1068
+      name: house_123
       rect:
         serializedVersion: 2
         x: 544
@@ -24752,7 +24710,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1069
+      name: house_124
       rect:
         serializedVersion: 2
         x: 576
@@ -24773,7 +24731,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1070
+      name: house_125
       rect:
         serializedVersion: 2
         x: 608
@@ -24794,7 +24752,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1071
+      name: house_126
       rect:
         serializedVersion: 2
         x: 640
@@ -25151,7 +25109,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1088
+      name: house_127
       rect:
         serializedVersion: 2
         x: 448
@@ -25172,7 +25130,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1089
+      name: house_128
       rect:
         serializedVersion: 2
         x: 480
@@ -25193,7 +25151,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1090
+      name: house_129
       rect:
         serializedVersion: 2
         x: 512
@@ -25214,7 +25172,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1091
+      name: house_130
       rect:
         serializedVersion: 2
         x: 544
@@ -25235,7 +25193,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1092
+      name: house_131
       rect:
         serializedVersion: 2
         x: 576
@@ -25256,7 +25214,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1093
+      name: house_132
       rect:
         serializedVersion: 2
         x: 608
@@ -25277,7 +25235,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1094
+      name: house_133
       rect:
         serializedVersion: 2
         x: 640
@@ -25298,7 +25256,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1095
+      name: house_134
       rect:
         serializedVersion: 2
         x: 672
@@ -25319,7 +25277,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1096
+      name: house_149
       rect:
         serializedVersion: 2
         x: 864
@@ -25823,7 +25781,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1120
+      name: house_135
       rect:
         serializedVersion: 2
         x: 448
@@ -25844,7 +25802,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1121
+      name: house_136
       rect:
         serializedVersion: 2
         x: 480
@@ -25865,7 +25823,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1122
+      name: house_137
       rect:
         serializedVersion: 2
         x: 512
@@ -25886,7 +25844,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1123
+      name: house_138
       rect:
         serializedVersion: 2
         x: 544
@@ -25907,7 +25865,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1124
+      name: house_139
       rect:
         serializedVersion: 2
         x: 576
@@ -25928,7 +25886,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1125
+      name: house_140
       rect:
         serializedVersion: 2
         x: 608
@@ -25949,7 +25907,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1126
+      name: house_141
       rect:
         serializedVersion: 2
         x: 640
@@ -25970,7 +25928,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1127
+      name: house_142
       rect:
         serializedVersion: 2
         x: 672
@@ -25991,7 +25949,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1128
+      name: house_143
       rect:
         serializedVersion: 2
         x: 704
@@ -26012,7 +25970,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1129
+      name: house_144
       rect:
         serializedVersion: 2
         x: 736
@@ -26033,7 +25991,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1130
+      name: house_145
       rect:
         serializedVersion: 2
         x: 768
@@ -26054,7 +26012,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1131
+      name: house_146
       rect:
         serializedVersion: 2
         x: 800
@@ -26075,7 +26033,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1132
+      name: house_147
       rect:
         serializedVersion: 2
         x: 832
@@ -26096,7 +26054,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1133
+      name: house_148
       rect:
         serializedVersion: 2
         x: 864
@@ -26516,7 +26474,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1153
+      name: house_150
       rect:
         serializedVersion: 2
         x: 448
@@ -26537,7 +26495,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1154
+      name: house_151
       rect:
         serializedVersion: 2
         x: 480
@@ -26558,7 +26516,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1155
+      name: house_152
       rect:
         serializedVersion: 2
         x: 512
@@ -26579,7 +26537,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1156
+      name: house_153
       rect:
         serializedVersion: 2
         x: 544
@@ -26600,7 +26558,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1157
+      name: house_154
       rect:
         serializedVersion: 2
         x: 576
@@ -26621,7 +26579,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1158
+      name: house_155
       rect:
         serializedVersion: 2
         x: 608
@@ -26642,7 +26600,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1159
+      name: house_156
       rect:
         serializedVersion: 2
         x: 640
@@ -26663,7 +26621,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1160
+      name: house_157
       rect:
         serializedVersion: 2
         x: 672
@@ -26684,7 +26642,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1161
+      name: house_158
       rect:
         serializedVersion: 2
         x: 704
@@ -26705,7 +26663,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1162
+      name: house_159
       rect:
         serializedVersion: 2
         x: 736
@@ -26726,7 +26684,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1163
+      name: house_160
       rect:
         serializedVersion: 2
         x: 768
@@ -26747,7 +26705,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1164
+      name: house_161
       rect:
         serializedVersion: 2
         x: 800
@@ -26768,7 +26726,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1165
+      name: house_162
       rect:
         serializedVersion: 2
         x: 832
@@ -26789,7 +26747,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1166
+      name: house_163
       rect:
         serializedVersion: 2
         x: 864
@@ -27335,7 +27293,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1192
+      name: house_164
       rect:
         serializedVersion: 2
         x: 448
@@ -27356,7 +27314,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1193
+      name: house_165
       rect:
         serializedVersion: 2
         x: 480
@@ -27377,7 +27335,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1194
+      name: house_166
       rect:
         serializedVersion: 2
         x: 512
@@ -27398,7 +27356,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1195
+      name: house_167
       rect:
         serializedVersion: 2
         x: 544
@@ -27419,7 +27377,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1196
+      name: house_168
       rect:
         serializedVersion: 2
         x: 576
@@ -27440,7 +27398,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1197
+      name: house_169
       rect:
         serializedVersion: 2
         x: 608
@@ -27461,7 +27419,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1198
+      name: house_170
       rect:
         serializedVersion: 2
         x: 640
@@ -27482,7 +27440,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1199
+      name: house_171
       rect:
         serializedVersion: 2
         x: 672
@@ -27503,7 +27461,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1200
+      name: house_172
       rect:
         serializedVersion: 2
         x: 704
@@ -27524,7 +27482,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1201
+      name: house_173
       rect:
         serializedVersion: 2
         x: 736
@@ -27545,7 +27503,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1202
+      name: house_174
       rect:
         serializedVersion: 2
         x: 768
@@ -27566,7 +27524,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1203
+      name: house_175
       rect:
         serializedVersion: 2
         x: 800
@@ -27587,7 +27545,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1204
+      name: house_176
       rect:
         serializedVersion: 2
         x: 832
@@ -27608,7 +27566,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1205
+      name: house_177
       rect:
         serializedVersion: 2
         x: 864
@@ -28154,7 +28112,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1231
+      name: house_178
       rect:
         serializedVersion: 2
         x: 448
@@ -28175,7 +28133,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1232
+      name: house_179
       rect:
         serializedVersion: 2
         x: 480
@@ -28196,7 +28154,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1233
+      name: house_180
       rect:
         serializedVersion: 2
         x: 512
@@ -28217,7 +28175,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1234
+      name: house_181
       rect:
         serializedVersion: 2
         x: 544
@@ -28238,7 +28196,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1235
+      name: house_182
       rect:
         serializedVersion: 2
         x: 576
@@ -28259,7 +28217,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1236
+      name: house_183
       rect:
         serializedVersion: 2
         x: 608
@@ -28280,7 +28238,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1237
+      name: house_184
       rect:
         serializedVersion: 2
         x: 640
@@ -28301,7 +28259,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1238
+      name: house_185
       rect:
         serializedVersion: 2
         x: 672
@@ -28322,7 +28280,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1239
+      name: house_186
       rect:
         serializedVersion: 2
         x: 704
@@ -28343,7 +28301,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1240
+      name: house_187
       rect:
         serializedVersion: 2
         x: 736
@@ -28364,7 +28322,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1241
+      name: house_188
       rect:
         serializedVersion: 2
         x: 768
@@ -28385,7 +28343,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1242
+      name: house_189
       rect:
         serializedVersion: 2
         x: 800
@@ -28406,7 +28364,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1243
+      name: house_190
       rect:
         serializedVersion: 2
         x: 832
@@ -28427,7 +28385,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1244
+      name: house_191
       rect:
         serializedVersion: 2
         x: 864
@@ -28973,7 +28931,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1270
+      name: house_192
       rect:
         serializedVersion: 2
         x: 448
@@ -28994,7 +28952,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1271
+      name: house_193
       rect:
         serializedVersion: 2
         x: 480
@@ -29015,7 +28973,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1272
+      name: house_194
       rect:
         serializedVersion: 2
         x: 512
@@ -29036,7 +28994,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1273
+      name: house_195
       rect:
         serializedVersion: 2
         x: 544
@@ -29057,7 +29015,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1274
+      name: house_196
       rect:
         serializedVersion: 2
         x: 576
@@ -29078,7 +29036,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1275
+      name: house_197
       rect:
         serializedVersion: 2
         x: 608
@@ -29099,7 +29057,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1276
+      name: house_198
       rect:
         serializedVersion: 2
         x: 640
@@ -29120,7 +29078,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1277
+      name: house_199
       rect:
         serializedVersion: 2
         x: 672
@@ -29141,7 +29099,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1278
+      name: house_200
       rect:
         serializedVersion: 2
         x: 704
@@ -29162,7 +29120,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1279
+      name: house_201
       rect:
         serializedVersion: 2
         x: 736
@@ -29183,7 +29141,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1280
+      name: house_202
       rect:
         serializedVersion: 2
         x: 768
@@ -29204,7 +29162,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1281
+      name: house_203
       rect:
         serializedVersion: 2
         x: 800
@@ -29225,7 +29183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1282
+      name: house_204
       rect:
         serializedVersion: 2
         x: 832
@@ -29246,7 +29204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1283
+      name: house_205
       rect:
         serializedVersion: 2
         x: 864
@@ -29561,7 +29519,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1298
+      name: house_206
       rect:
         serializedVersion: 2
         x: 448
@@ -29582,7 +29540,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1299
+      name: house_207
       rect:
         serializedVersion: 2
         x: 480
@@ -29603,7 +29561,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1300
+      name: house_208
       rect:
         serializedVersion: 2
         x: 512
@@ -29624,7 +29582,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1301
+      name: house_209
       rect:
         serializedVersion: 2
         x: 544
@@ -29645,7 +29603,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1302
+      name: house_210
       rect:
         serializedVersion: 2
         x: 576
@@ -29666,7 +29624,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1303
+      name: house_211
       rect:
         serializedVersion: 2
         x: 608
@@ -29687,7 +29645,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1304
+      name: house_212
       rect:
         serializedVersion: 2
         x: 640
@@ -29708,7 +29666,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_1305
+      name: house_213
       rect:
         serializedVersion: 2
         x: 672
@@ -31629,8 +31587,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tileset-Props_1195: 3197778498518115037
-      Tileset-Props_1275: -2872811476685606928
       wood_3: 2048016870
       blacksmith_house_7: -2401216807985881250
       Tileset-Props_326: 6985773913267765458
@@ -31647,6 +31603,7 @@ TextureImporter:
       Tileset-Props_991: -1004371184840159257
       Tileset-Props_53: 909088319379743231
       Tileset-Props_612: 3249093037476941981
+      house_167: 3197778498518115037
       Tileset-Props_409: -3206629537270020269
       Tileset-Props_399: -3653212404257047132
       Tileset-Props_930: -1418781126321327211
@@ -31669,13 +31626,15 @@ TextureImporter:
       house_74: -4166538079691456494
       Tileset-Props_548: -3223849819978960326
       Tileset-Props_1330: 2204913839560635115
-      Tileset-Props_1283: -6100911332232940180
+      house_118: 1319501232153008566
+      house_160: -7457308532186163704
       Tileset-Props_310: -7826410986886911309
       Tileset-Props_1005: 4355489346083479945
       Tileset-Props_113: 1406910019038436869
       house_23: 7371261722961456515
       Tileset-Props_584: -7379175334381575651
       bush_11: -1908555216
+      stonefence_1: -6972949774890388830
       Tileset-Props_286: 2377099105028770991
       Tileset-Props_1337: -1277443506921032761
       house_72: -8636160229897764468
@@ -31696,11 +31655,11 @@ TextureImporter:
       Tileset-Props_508: 8898320222227072405
       Tileset-Props_107: 4715458096078539135
       Tileset-Props_920: 8387324062930072204
-      Tileset-Props_1163: -7457308532186163704
       Tileset-Props_909: 2625547995566286847
       Tileset-Props_1057: -5078614544239383393
       Tileset-Props_865: -8295457913343492860
       grass_14: 1818776952849388285
+      house_202: 1487843141564398999
       Tileset-Props_1346: 7405780632622463852
       fence_0: 1956927911732757127
       Tileset-Props_677: -5934518399959553901
@@ -31711,14 +31670,13 @@ TextureImporter:
       Tileset-Props_836: -3917195821160710163
       Tileset-Props_1018: 8804676530129157871
       Tileset-Props_654: 4533342551515391571
-      Tileset-Props_1133: 4563079138158386594
       Tileset-Props_398: -4485313230294397767
       Tileset-Props_579: -5966731596684052980
       Tileset-Props_440: 5517403021085815261
       Tileset-Props_473: 1290205061038269036
       Tileset-Props_265: 8673870843004388197
       grass_10: 5547315509571779274
-      Tileset-Props_1033: -1735721277086653775
+      house_183: -5458108230578157268
       flowers_24: 1348722188200487903
       Tileset-Props_104: 8268516125726711918
       fence_40: -6518466340199789500
@@ -31750,10 +31708,9 @@ TextureImporter:
       Tileset-Props_369: -5553126464841856617
       blacksmith_house_38: 1300295317512190026
       blacksmith_wall_7: -8389776171658102913
+      house_177: 6492427421688550281
       Tileset-Props_521: 5356487230478342851
       Tileset-Props_937: 6478736747555653258
-      Tileset-Props_1121: 1001088006731384147
-      Tileset-Props_1068: 5418599335569152798
       Tileset-Props_375: -8001875521770153655
       Tileset-Props_539: 8449858563111801997
       Tileset-Props_960: -4912199861897585220
@@ -31762,7 +31719,6 @@ TextureImporter:
       Tileset-Props_558: -2063463834788162481
       Tileset-Props_31: -1754562648283020845
       Tileset-Props_779: 7094912084741532695
-      Tileset-Props_1299: 5696364549635894956
       Tileset-Props_560: -4569165127935043875
       Tileset-Props_148: 8387605314044240325
       Tileset-Props_625: -5519508432554426675
@@ -31775,23 +31731,23 @@ TextureImporter:
       Tileset-Props_554: 2560435433692172477
       fence_45: 1092830152415198940
       house_110: 7954758655549981107
-      Tileset-Props_1154: -2206414066302657320
       Tileset-Props_351: 4269648725088328096
       stone_7: -5513713246214569502
       Tileset-Props_727: -8506651701228182825
       Tileset-Props_823: 1419226220462539601
       Tileset-Props_899: 7364575607547813137
       flowers_23: 5296602733086748049
+      house_184: -3576769587870772392
       Tileset-Props_1318: -1111451249585298347
-      Tileset-Props_1232: 6808972384785593041
       Tileset-Props_1025: 3705801244443752421
-      Tileset-Props_121: -1382523221119295903
+      house_149: 1689218721461092086
       Tileset-Props_943: -572724526363468507
       Tileset-Props_212: -429017730376106653
       blacksmith_house_12: -4466558439460704973
       Tileset-Props_20: 5547057074931809474
       Tileset-Props_1352: 5338153887771008556
       Tileset-Props_978: 4056172823987176752
+      house_178: -8787958252535147731
       Tileset-Props_323: 7090992541258481175
       Tileset-Props_663: 5147381333712670267
       Tileset-Props_912: -1704067574159496351
@@ -31800,12 +31756,12 @@ TextureImporter:
       Tileset-Props_438: 9146667578261521633
       Tileset-Props_367: -5384293364352626645
       blacksmith_house_27: -2359496398726925676
+      house_163: -8266730966280850509
       Tileset-Props_76: 8149699420573383467
       Tileset-Props_734: -5399185070908588520
       Tileset-Props_1355: -2443318631142047490
-      Tileset-Props_478: -2681376844508129742
       grass_18: -3081229837635575674
-      Tileset-Props_1279: 6205804033430860658
+      Tileset-Props_478: -2681376844508129742
       Tileset-Props_413: -9076228954520732566
       Tileset-Props_723: -5070313331992205843
       fence_14: 2368751147207907784
@@ -31815,6 +31771,7 @@ TextureImporter:
       Tileset-Props_902: 7597976557301730457
       Tileset-Props_979: -7557640639240798506
       fence_21: 2823504072078067799
+      house_175: 6503360170362102890
       Tileset-Props_124: -3520655154316600031
       Tileset-Props_101: 4326284532279027298
       Tileset-Props_206: -1949224381821775877
@@ -31823,14 +31780,15 @@ TextureImporter:
       house_78: -2103967144882095272
       Tileset-Props_44: 3168064540900485221
       Tileset-Props_726: 5357941341446913288
-      Tileset-Props_1122: 7358075969874994510
       Tileset-Props_177: -3304107859985447033
       Tileset-Props_490: -9109283585579765386
       house_64: 3666688549899834276
+      house_121: 5456778050173546840
       Tileset-Props_48: 3105293294206029226
       blacksmith_house_5: -5361570900991994486
       house_50: 270852095380970820
       Tileset-Props_759: 1331698794192148953
+      stonefence_0: 2222123974578833188
       bush_5: -1067121972
       house_36: 8128499668971507994
       blacksmith_house_33: -5912265271324640598
@@ -31839,18 +31797,18 @@ TextureImporter:
       flowers_21: 8035324604508546442
       blacksmith_wall_5: -8733852783952131717
       Tileset-Props_280: -1994169966218654136
-      Tileset-Props_1304: 5201792046668492283
-      Tileset-Props_972: 2906294350905933223
       Tileset-Props_877: -4374513486029956948
+      Tileset-Props_972: 2906294350905933223
       fence_49: 2671937420432036742
+      Tileset-Props_46: -1788702390012568024
       Tileset-Props_552: -1741466305757558481
       Tileset-Props_648: 372113645211045581
-      Tileset-Props_46: -1788702390012568024
       Tileset-Props_867: -7591516360986514733
       Tileset-Props_904: -2647920264013706752
-      Tileset-Props_50: 8526759459770812484
+      house_190: -9194183630877948986
       Tileset-Props_74: 6903841869071969347
       fence_22: 8442748632989524154
+      house_141: -8442401316552492481
       house_66: -8008197094566053092
       Tileset-Props_492: -1423217085080732775
       Tileset-Props_963: -2709886665735011981
@@ -31862,8 +31820,10 @@ TextureImporter:
       Tileset-Props_243: -4861376535858034498
       Tileset-Props_848: 2510749531864938243
       Tileset-Props_520: 182332792757721848
+      house_176: 3458346183277300556
       wood_0: 888313101
       blacksmith_house_52: -8390612540346266718
+      house_129: -2233150393347638780
       Tileset-Props_1007: -6183053316841951671
       Tileset-Props_601: -4072100747056286722
       house_89: 4885995418404391924
@@ -31881,6 +31841,7 @@ TextureImporter:
       Tileset-Props_556: 2180842384168157920
       Tileset-Props_767: 7815596685136170616
       Tileset-Props_794: 80417544772105277
+      house_127: -786090221829039512
       Tileset-Props_250: 2184512294414795232
       Tileset-Props_551: 6477340491580573674
       Tileset-Props_162: -1131695955397290089
@@ -31890,7 +31851,6 @@ TextureImporter:
       box_1: 147689186334912131
       Tileset-Props_468: 498250088256409440
       blacksmith_house_31: -5417818908244675055
-      Tileset-Props_1165: 8575298295495113377
       fence_37: -6257955650939081273
       house_42: 755822971725454288
       Tileset-Props_876: 3421736809391269627
@@ -31898,14 +31858,18 @@ TextureImporter:
       fence_47: 7479025036965975202
       Tileset-Props_204: 1177163665785744284
       Tileset-Props_1348: 4404635568708971066
+      house_151: -2206414066302657320
       fence_11: 773180942875027880
+      house_165: 1787051131142057500
       Tileset-Props_302: -882732953306953186
       Tileset-Props_378: 6929093167895569444
+      house_189: 6140723253913226816
       stone_11: -3389696094486238413
       Tileset-Props_622: -681613050253512217
       Tileset-Props_1010: 2291392320905867723
       Tileset-Props_19: -2189942154991544544
       Tileset-Props_499: -7410638885726460257
+      stonefence_5: -1986251171393643812
       Tileset-Props_365: 5386022836891831982
       Tileset-Props_63: 7255042100097420593
       house_99: 5677503643860825985
@@ -31922,11 +31886,10 @@ TextureImporter:
       grass_8: 5629902849489453558
       Tileset-Props_945: -8687569311032525493
       Tileset-Props_559: 4919684006277406064
-      Tileset-Props_120: 3628085026121933059
+      bridge_12: -5153281309981547657
       Tileset-Props_459: -870335086345119650
       Tileset-Props_598: -7824880867543698604
       Tileset-Props_919: -2328398437993589102
-      Tileset-Props_1242: 6140723253913226816
       wood_5: -1494501724256025891
       Tileset-Props_762: 657761935498251952
       Tileset-Props_390: 2033903953718357753
@@ -31937,12 +31900,13 @@ TextureImporter:
       house_16: -2123088398166736909
       Tileset-Props_755: -2934017132085911404
       bucket_0: 4591069656385523982
+      bridge_7: 7669765767971001217
       Tileset-Props_967: 6281584835921840670
-      Tileset-Props_1066: 5456778050173546840
       Tileset-Props_336: -5008243326781994442
       Tileset-Props_635: 5877885670070548142
       Tileset-Props_651: -4951479919909826061
-      Tileset-Props_1241: -1589989072011027613
+      house_192: 7205506778747095304
+      house_131: 1758381789147738175
       Tileset-Props_1006: -6101661162131326669
       house_59: 7358490711231027038
       fence_16: -2242528872233100015
@@ -31952,9 +31916,9 @@ TextureImporter:
       house_40: -5456768320502538043
       Tileset-Props_980: 613496430370972030
       Tileset-Props_25: 2139136218803410504
-      Tileset-Props_1035: 8335160028123975627
       house_1: -3163772811935184420
       fence_50: -1686919127495748322
+      house_142: 6956361843661165267
       Tileset-Props_145: -6342071360678812129
       Tileset-Props_809: 3488977379663616805
       Tileset-Props_266: -7475362486551848416
@@ -31962,6 +31926,7 @@ TextureImporter:
       Tileset-Props_181: 5959313712846680558
       Tileset-Props_255: -2150809851735252180
       Tileset-Props_506: -2050730302684024962
+      house_138: 811065618830298796
       Tileset-Props_75: 5413870747442316412
       Tileset-Props_293: 4771923274871266132
       Tileset-Props_831: -7118710678324614128
@@ -31972,17 +31937,19 @@ TextureImporter:
       blacksmith_house_53: -3129902408283375453
       Tileset-Props_524: 2781026780352947918
       Tileset-Props_594: -7349350649901468931
-      Tileset-Props_1120: -3472832607283659170
       house_7: 6245610118741589095
       Tileset-Props_841: 1928187359229822593
       Tileset-Props_1367: 1878242397291377702
       blacksmith_house_49: -1360972972081070409
+      house_206: -3371073318038212334
+      house_197: -2872811476685606928
       Tileset-Props_112: -5827222856471766583
       house_41: -79159125958432352
       Tileset-Props_371: -6956919145527300083
       Tileset-Props_872: -1642679464856310072
       Tileset-Props_910: 6797804378512025275
       Tileset-Props_1357: 3653519828263699309
+      house_122: -2707671823886558574
       house_9: -5808309139757932204
       Tileset-Props_984: -3094207792424397179
       Tileset-Props_393: 962449117031593044
@@ -31996,11 +31963,11 @@ TextureImporter:
       Tileset-Props_416: 815278629795356370
       Tileset-Props_128: 1229476971420099183
       Tileset-Props_970: 1756151110393782063
+      house_174: -2309066911372239603
       Tileset-Props_531: 347652149584824613
+      house_207: 5696364549635894956
       Tileset-Props_936: 427526870978266908
-      Tileset-Props_1092: 1758381789147738175
       blacksmith_swords_0: 1098208772438170032
-      Tileset-Props_1281: -2696352401190060408
       house_76: -7213214464928468454
       Tileset-Props_45: 971812135522103140
       Tileset-Props_987: -4948765063520802056
@@ -32016,23 +31983,25 @@ TextureImporter:
       blacksmith_house_9: 5695868862511302476
       Tileset-Props_578: 1132936089622210110
       Tileset-Props_733: -2208526812634364917
-      Tileset-Props_1050: 7780962903656206965
       Tileset-Props_875: 114383338140867154
       Tileset-Props_173: -488715083474080233
+      house_166: 2248759981067460642
+      house_146: 2194698185725455160
       house_84: -6823675493517511057
       Tileset-Props_282: -7782481303523141789
       bush_12: -635278233
       Tileset-Props_1012: -7379255981788505939
       Tileset-Props_1053: 1477058888460751919
-      Tileset-Props_97: -7631895445042977890
       house_20: -6599097790155618372
       house_77: -305838083896004788
       Tileset-Props_534: 3705223660081726920
       blacksmith_swords_1: 253001499134526874
       Tileset-Props_12: -2271121560978951878
       Tileset-Props_588: 5109526566053307745
+      house_144: -6325006541669059505
       Tileset-Props_412: 5806021287549474375
       Tileset-Props_687: 8767676634046013281
+      house_196: 2789129659449854244
       Tileset-Props_933: 2739407673498133673
       Tileset-Props_1364: 2249356093821625547
       Tileset-Props_410: 6709088621841393325
@@ -32046,8 +32015,10 @@ TextureImporter:
       Tileset-Props_788: -5214535998690940133
       Tileset-Props_300: -4896791940638351324
       Tileset-Props_730: 2889511306278785624
+      bridge_5: 3761073400541072892
       box_2: -7070802056967173548
       Tileset-Props_386: 7188423324933544003
+      house_198: 5998299134826165292
       Tileset-Props_235: -8745788083400181958
       flowers_14: 9186983731355317635
       Tileset-Props_780: 25023663578244082
@@ -32073,13 +32044,13 @@ TextureImporter:
       fence_38: 8142645744372401409
       Tileset-Props_814: -5156428661628803388
       Tileset-Props_992: 7740920519444767881
+      bridge_3: -8463110770799339706
       Tileset-Props_278: -6372400470065545722
-      Tileset-Props_1088: -786090221829039512
+      bridge_0: 1787248589957962468
       Tileset-Props_303: -7869182120023232882
       blacksmith_house_37: 461199306180036422
       house_109: -7278982417474467678
       Tileset-Props_61: -5244350446068006907
-      Tileset-Props_1069: 5011612575497877905
       house_85: -448589301044323142
       Tileset-Props_986: -7307227245639604811
       house_106: 2149382770628539861
@@ -32089,8 +32060,8 @@ TextureImporter:
       blacksmith_house_15: 1717083342320939014
       stone_9: -4661714628418614163
       Tileset-Props_472: -4164052855991190315
-      Tileset-Props_1300: -4884722742872915276
       Tileset-Props_111: -2766425628854090975
+      house_117: 1554846403733231200
       Tileset-Props_456: -1263531027286819865
       fence_19: -171720368292614211
       Tileset-Props_329: 8047330388390011446
@@ -32100,16 +32071,11 @@ TextureImporter:
       Tileset-Props_484: -593322037171436618
       grass_13: -2357368890891396840
       stone_2: 6315128478804784934
-      Tileset-Props_1155: 1591859533128012333
       house_4: 3890318384203029317
-      Tileset-Props_62: -1986251171393643812
       flowers_5: -1199031605631421455
       blacksmith_house_25: -4174012135381194777
-      Tileset-Props_1274: 2789129659449854244
       Tileset-Props_792: -4774677495422242837
-      Tileset-Props_1302: -2206350324597617085
       house_29: -9132140975397589766
-      Tileset-Props_60: -2736644414790204745
       bush_8: -1803103340
       house_18: 3566277515151983164
       Tileset-Props_868: -529165934075220704
@@ -32117,24 +32083,23 @@ TextureImporter:
       Tileset-Props_928: -7715482189469523431
       Tileset-Props_6: 981464510688665267
       stone_1: 4396842511857859126
-      Tileset-Props_1271: -2077271696869721474
       Tileset-Props_715: 2714669977312583711
       flowers_15: -4162630505941271438
       fence_30: 255028421390515568
       Tileset-Props_791: -3374090669930586350
+      house_195: -5339640215950979428
       Tileset-Props_636: 4091345097348075668
       Tileset-Props_748: -8237910810768290463
       flowers_10: 1022117096043653226
       flowers_4: 6748085452249443324
       Tileset-Props_657: -1423827415489976902
-      Tileset-Props_1132: 323493163870749146
+      house_159: -3170596644976978471
       Tileset-Props_3: 201465660777942834
       house_28: -6085612580801938727
       Tileset-Props_829: -6471347834087006385
       Tileset-Props_1004: -8374289552636348610
       Tileset-Props_315: -5780052032412305448
       Tileset-Props_5: -2450536860160367376
-      Tileset-Props_1159: 1360574269900866343
       Tileset-Props_172: 1660532314014485095
       Tileset-Props_1359: -2978384586907522502
       Tileset-Props_585: -3585153435864274737
@@ -32146,7 +32111,6 @@ TextureImporter:
       Tileset-Props_275: -1133660905565412934
       Tileset-Props_714: 6512423606630400420
       Tileset-Props_39: -4793711995594336790
-      Tileset-Props_1277: 8434596318108290661
       flowers_17: 3332005548449383583
       Tileset-Props_254: 7433863019527524489
       Tileset-Props_649: -8972872879353912896
@@ -32160,8 +32124,8 @@ TextureImporter:
       house_32: 8031906240048885904
       Tileset-Props_178: -4164990924159486197
       Tileset-Props_149: -3806680345653927256
+      house_209: 1410585022149789511
       Tileset-Props_261: 2201381847058831452
-      Tileset-Props_119: -4668154738014544505
       Tileset-Props_513: 266343526763440327
       Tileset-Props_1027: -7999058112981703742
       Tileset-Props_339: 1904915082275338912
@@ -32169,30 +32133,28 @@ TextureImporter:
       box_0: -6745758209184355736
       Tileset-Props_387: 1114958041725607820
       Tileset-Props_408: -2726875052419302043
-      Tileset-Props_1203: 6503360170362102890
+      house_171: 4010556967725212839
       Tileset-Props_1054: 5636529313836136590
       Tileset-Props_314: -908418373918191345
       Tileset-Props_357: -6389194284118710623
       house_93: -7463160407000090283
       house_46: 3680754018014316491
       Tileset-Props_696: -4908979555154798488
+      house_147: 323493163870749146
       Tileset-Props_77: 2462761367214951902
       Tileset-Props_900: 3489768788499681994
       Tileset-Props_1332: 5313914307411133352
+      house_135: -3472832607283659170
       Tileset-Props_593: 2613440825913863380
       Tileset-Props_501: 1782195680439081725
       Tileset-Props_859: 823407933251734026
       Tileset-Props_924: 725892125518306916
       Tileset-Props_426: -8714148444639226234
       Tileset-Props_1375: 8471400863802140112
-      Tileset-Props_1231: -8787958252535147731
-      Tileset-Props_1067: -2707671823886558574
       Tileset-Props_209: -1394018497110160406
       Tileset-Props_659: 633897377459267119
+      house_200: -4399285409392097271
       Tileset-Props_232: -6456139136700888548
-      Tileset-Props_1071: 8954020575525311661
-      Tileset-Props_96: 3761073400541072892
-      Tileset-Props_1270: 7205506778747095304
       Tileset-Props_535: -3709597755102515730
       Tileset-Props_989: 5858616300992312992
       house_39: -6820963548813794253
@@ -32213,817 +32175,813 @@ TextureImporter:
       Tileset-Props_798: -6657520055073750850
       Tileset-Props_722: 8347052540305368330
       Tileset-Props_377: 4477577039643134108
-      Tileset-Props_1278: -4399285409392097271
       stone_14: 3318705310525021161
       Tileset-Props_679: 3558053995472221540
       Tileset-Props_414: -4214363555651164421
       Tileset-Props_334: -547302064686172420
       blacksmith_house_42: -8511997621097886883
-      Tileset-Props_70: 1787248589957962468
-      Tileset-Props_458: -9213096728264976520
-      Tileset-Props_453: -5454516465252610586
-      Tileset-Props_380: 4179102728777361494
-      Tileset-Props_257: 5877062606948854484
-      Tileset-Props_1095: -8779142505386247444
-      Tileset-Props_331: -4856653375310331690
-      Tileset-Props_946: -5098252151276375526
-      stone_8: -5933352241696795356
-      Tileset-Props_83: -7273510555255393250
-      Tileset-Props_368: -1356444829413044528
-      house_112: -775289899121731015
-      Tileset-Props_632: 2355660204818047227
-      Tileset-Props_557: 1279918504145586841
-      Tileset-Props_312: 6903191336654139453
-      Tileset-Props_787: 1255838898344302785
-      Tileset-Props_502: 6642763858688758449
-      Tileset-Props_469: 1829173937775799116
-      Tileset-Props_1125: 1533534948794595624
-      Tileset-Props_175: 3337740399583503528
-      house_15: 5384750129925560937
-      Tileset-Props_72: -8463110770799339706
-      grass_0: -2303903638511314631
-      fence_8: 2877408460141592709
-      Tileset-Props_1013: 6490540691888256737
-      Tileset-Props_591: 7186431909724747097
-      Tileset-Props_1128: -5364653927080004598
-      Tileset-Props_8: -2020002914841791813
-      house_70: -5976447825577781368
-      Tileset-Props_449: 6545988543955813960
-      Tileset-Props_866: -9089672353527582954
-      Tileset-Props_1126: -8442401316552492481
-      Tileset-Props_395: 5502023943559278241
-      grass_1: 1607433462576150453
-      Tileset-Props_1233: 6263927936272157792
-      Tileset-Props_491: 8598997703618231864
-      fence_2: 7484235435840074275
-      Tileset-Props_308: 4578932562226762106
-      Tileset-Props_976: -6396710688416171509
-      blacksmith_house_58: 6441046777232607178
-      house_83: -4212691663077435156
-      Tileset-Props_851: -4412132128064065315
-      chimney_1: -8469272740857706661
-      Tileset-Props_954: 7244733798513927224
-      Tileset-Props_698: -416193619264671160
-      blacksmith_wall_3: -8919941002264956367
-      Tileset-Props_404: -655153195609075135
-      Tileset-Props_834: 4644442222804474059
-      Tileset-Props_1009: 8968029645116880007
-      Tileset-Props_682: -4291701923231298201
-      Tileset-Props_84: 2255597799984881528
-      props_0: 6268300112355547322
-      house_102: -8379872837879423870
-      Tileset-Props_1240: 8256486195320887761
-      Tileset-Props_789: -8660102862084872156
-      Tileset-Props_586: 2912479232129333266
-      Tileset-Props_510: -3225260964477770034
-      Tileset-Props_988: -2310881726789643159
-      Tileset-Props_1034: 6742317347654547433
-      Tileset-Props_423: -3265012769955282947
-      house_31: -8272321209457189880
-      Tileset-Props_1205: 6492427421688550281
-      house_82: -3906676869974373158
-      Tileset-Props_807: -7826495769221813943
-      Tileset-Props_623: 543132544038162242
-      house_33: 5008345581513850714
-      Tileset-Props_828: -3916246550866222637
-      stone_0: -8659991086095484845
-      Tileset-Props_358: 2180807682113047497
-      Tileset-Props_234: 6442635166821799283
-      Tileset-Props_485: 6110492838219593850
-      Tileset-Props_620: -1442602365892479797
-      Tileset-Props_475: 3254187173277572720
-      Tileset-Props_628: 6511552167824560449
-      Tileset-Props_542: -8618751172664278524
-      Tileset-Props_417: 7536213629061791369
-      Tileset-Props_907: 8073119735769332241
-      wood_7: 8809954528575032487
-      Tileset-Props_433: -2355775925991057751
-      Tileset-Props_488: -8070969305599584316
-      Tileset-Props_884: 451613171120142758
-      grass_12: -692163087582378547
-      Tileset-Props_69: 2384880384051492181
-      house_79: -1354838528834750433
-      Tileset-Props_240: -1392303908974633617
-      house_5: -2108943181105954357
-      fence_48: 8650707546297243251
-      Tileset-Props_256: -6017428419118445765
-      Tileset-Props_838: -6443474936052835570
-      house_21: -6210309475976898490
-      Tileset-Props_996: -4460658944626941308
-      Tileset-Props_647: 427198763720876200
-      Tileset-Props_332: 96763632754181375
-      Tileset-Props_65: -955179670066308438
-      Tileset-Props_1308: -4206452437284702471
-      Tileset-Props_307: -1242946571484555977
-      Tileset-Props_214: -4676963523010954765
-      Tileset-Props_1239: -6155328441633817050
-      Tileset-Props_1336: -5803409437235461944
-      Tileset-Props_1029: 9078958163942099820
-      Tileset-Props_355: -3820431474163594142
-      Tileset-Props_611: -6761973096075059978
-      Tileset-Props_237: -6635848125139842616
-      Tileset-Props_516: 418071631645633453
-      Tileset-Props_42: 1813975017443059902
-      Tileset-Props_429: 7903468577600654076
-      Tileset-Props_328: 6193418327646212854
-      Tileset-Props_372: 8736083580032567171
-      Tileset-Props_590: -1751808144562807369
-      blacksmith_house_3: 7699382760712196925
-      Tileset-Props_373: -2087803521342444468
-      Tileset-Props_658: -561503323884366253
-      Tileset-Props_147: -8134754348384478331
-      Tileset-Props_569: -5752286597890615603
-      Tileset-Props_709: 9179591486311708851
-      Tileset-Props_587: 2014753799452388990
-      Tileset-Props_376: -1448691576775019254
-      Tileset-Props_474: 1582599838530974628
-      Tileset-Props_1306: 3890175914887108524
-      Tileset-Props_460: 1795258668518168516
-      Tileset-Props_544: 534509249123088471
-      Tileset-Props_22: -3673516090552837126
-      Tileset-Props_183: -2326171247366245617
-      Tileset-Props_769: -3642468123489692433
-      Tileset-Props_287: 1673006536551857885
-      Tileset-Props_244: 2297289697968161845
-      Tileset-Props_563: 8282018945169871915
-      flowers_2: -6478006409880035467
-      Tileset-Props_454: -1853810729021422298
-      stone_12: -3608168142416594950
-      stone_19: 6306462430223619522
-      Tileset-Props_1055: -4656659888034808933
-      Tileset-Props_139: 7751022318335194396
-      fence_24: 807644489351549254
-      Tileset-Props_415: 7507476511690493900
-      Tileset-Props_756: 676164625457829999
-      Tileset-Props_754: -8547760365669003375
-      Tileset-Props_873: 2293664011172546087
-      Tileset-Props_595: 3937396928458771186
-      Tileset-Props_115: 6206847811308136944
-      Tileset-Props_961: 6747171921336142031
-      Tileset-Props_1200: -7090231040085865337
-      Tileset-Props_566: -6744451487269906208
-      Tileset-Props_674: -8871226074811325587
-      house_71: 5995492422119526955
-      house_8: 198347728451576860
-      Tileset-Props_653: -6280501214140157388
-      flowers_12: -2148823514499963573
-      Tileset-Props_795: 7605171403907612967
-      Tileset-Props_36: 7083207523224500151
-      house_52: 1847209105843953061
-      Tileset-Props_418: 2891433969014240817
-      grass_7: 5710692989873869689
-      Tileset-Props_52: -4993155397522341303
-      Tileset-Props_26: -5334792381854193077
-      Tileset-Props_1017: 7550039991592463396
-      Tileset-Props_207: 2349228604800874281
-      Tileset-Props_1243: -9194183630877948986
-      house_104: 5504250115621597606
-      Tileset-Props_1193: 1787051131142057500
-      Tileset-Props_102: -2264142780987597814
-      stone_16: 4494130868308364617
-      Tileset-Props_614: 4803063440277901608
-      Tileset-Props_252: -3847367922501080058
-      Tileset-Props_1238: 2739052819343134382
-      Tileset-Props_80: -8952521906901010266
-      Tileset-Props_725: 1682733981311375413
-      Tileset-Props_864: -3674779418242289269
-      Tileset-Props_24: -8031569074656295896
-      Tileset-Props_270: 2682245361688908425
-      blacksmith_house_30: -6449554726062285277
-      Tileset-Props_689: -6708977812627601720
-      Tileset-Props_54: 5119047645905755385
-      Tileset-Props_567: 7174914177355359852
-      blacksmith_house_55: 9190719234462251774
-      Tileset-Props_1002: -4901753988542925803
-      blacksmith_house_0: 8173838940584024253
-      Tileset-Props_1059: 5060761602742641011
-      Tileset-Props_825: 7042712129020126742
-      Tileset-Props_151: 571901450479650826
-      Tileset-Props_830: -436005923914730032
-      Tileset-Props_92: 1411826815905217242
-      Tileset-Props_906: -3503907074168226457
-      Tileset-Props_436: 5791017978240776051
-      Tileset-Props_808: -485141218161808117
-      Tileset-Props_1363: -3454090202024117609
-      Tileset-Props_98: 7669765767971001217
-      Tileset-Props_370: -1743733729436630443
-      Tileset-Props_471: -7098684555460077118
-      Tileset-Props_1003: 9093259349344857795
-      Tileset-Props_349: -2262096610265233597
-      Tileset-Props_941: -3585144934429270774
-      Tileset-Props_550: 7319850016150618427
-      blacksmith_house_11: -711786972496651941
-      fence_42: 6451434740264568535
-      Tileset-Props_1096: 1689218721461092086
-      Tileset-Props_479: -2586419184432599132
-      Tileset-Props_345: 7636392510154783524
-      Tileset-Props_634: -5792989971486098681
-      Tileset-Props_955: -2146550774552898846
-      Tileset-Props_592: 4331878427093460843
-      Tileset-Props_1282: -8319403746193186765
-      Tileset-Props_695: 5590248848818337634
-      house_6: 6954045847160178078
-      Tileset-Props_251: -3181905729617653223
-      Tileset-Props_532: -2649232041024660132
-      Tileset-Props_324: 2248765757589935577
-      house_45: -7266836595356756286
-      Tileset-Props_553: 4161754023348297919
-      blacksmith_house_20: -4758860048874889472
-      Tileset-Props_846: -526577712706889720
-      Tileset-Props_1349: -4304640968784175378
-      Tileset-Props_1158: -3645788015001964643
-      house_57: 1412248044690715986
-      Tileset-Props_116: 648294681037251867
-      Tileset-Props_180: -6420395135928375519
-      bush_4: 682628046
-      Tileset-Props_637: 5748548373978920591
-      flowers_1: -1450117983560758404
-      Tileset-Props_476: 1297430013734239118
-      Tileset-Props_589: 4551214135331460863
-      Tileset-Props_685: 9010834593546467028
-      Tileset-Props_729: -3655301171268436336
-      Tileset-Props_1371: 7468664965453643243
-      bush_14: 274914304
-      Tileset-Props_260: 7178034963829942648
-      Tileset-Props_1369: -8785953014627396245
-      stone_3: 7702493583463214385
-      flowers_16: 4832818577458653892
-      Tileset-Props_16: -2203530929024193930
-      Tileset-Props_1043: -5531877121556338129
-      Tileset-Props_132: -6724030020077787735
-      Tileset-Props_49: 288669238513205255
-      Tileset-Props_1040: -8529812130214408121
-      Tileset-Props_694: -7283911327620924639
-      blacksmith_wall_6: 6410797169843199222
-      Tileset-Props_29: 3110735395642323271
-      Tileset-Props_163: -3253138548092155989
-      blacksmith_house_22: -7186578627038019301
-      Tileset-Props_896: 3597694536795668600
-      blacksmith_house_48: -2814108814792038687
-      Tileset-Props_242: -3328494212597809310
-      Tileset-Props_238: -7471047560059024203
-      Tileset-Props_99: -2450542261611549491
-      Tileset-Props_297: -752660262614410834
-      house_90: -2148199188588638411
-      blacksmith_house_36: 9005105279804267767
-      Tileset-Props_133: 3649252513321068732
-      Tileset-Props_887: -1901842252757170859
-      Tileset-Props_857: 5107209912161233022
-      Tileset-Props_385: -3532054332963634518
-      Tileset-Props_1049: 1319501232153008566
-      Tileset-Props_835: 4819795034594061921
-      house_91: 6827618866386709303
-      Tileset-Props_236: 6502487356190013772
-      flowers_9: 3839430962596541964
-      Tileset-Props_765: 2491147724753949270
-      Tileset-Props_421: 8335851833099487848
-      Tileset-Props_292: -6911260771988367969
-      Tileset-Props_301: 7305918677643803850
-      Tileset-Props_1042: -3767885418801191513
-      Tileset-Props_446: -260049915171156439
-      Tileset-Props_1022: 2081219014272476295
-      Tileset-Props_262: 5541357676717259613
-      Tileset-Props_719: -4160784871157223012
-      Tileset-Props_908: -45280133499273685
-      flowers_7: 5742568240355965028
-      Tileset-Props_35: 1460210475117354138
-      Tileset-Props_793: -6294276495889328663
-      Tileset-Props_940: -8668771112054989071
-      Tileset-Props_384: -7442400834278665675
-      blacksmith_house_43: -1573429923644398733
-      Tileset-Props_939: -9135347371000474828
-      house_54: -7068463150512824108
-      Tileset-Props_233: -1677003739308318948
-      blacksmith_wall_11: 1001415818289735941
-      Tileset-Props_420: 3027783617726747574
-      house_86: 8690270289206696075
-      Tileset-Props_880: 2633906960126739575
-      Tileset-Props_87: -5490542206502872572
-      Tileset-Props_861: 4205559644031838391
-      Tileset-Props_750: -4167649498168170590
-      Tileset-Props_1358: -7680889143358504290
-      Tileset-Props_820: 6728682870344885000
-      Tileset-Props_153: 2418011541435565103
-      Tileset-Props_582: -4404217027614110015
-      Tileset-Props_1089: -7028081359669043273
-      Tileset-Props_1347: 6864852280478844279
-      Tileset-Props_248: 6084557073307522508
-      Tileset-Props_581: -3703973048503165215
-      Tileset-Props_797: 1028564732307070148
-      Tileset-Props_617: -7289280709312842655
-      blacksmith_house_4: -3533817939787395552
-      Tileset-Props_340: -4383699533420650632
-      Tileset-Props_450: -7096336930298572246
-      Tileset-Props_626: 7235652286882026089
-      Tileset-Props_105: -4137071390242366613
-      Tileset-Props_1372: 1352406033350316206
-      Tileset-Props_710: -1620070489195341674
-      bush_13: -1829139470
-      Tileset-Props_712: 3913137984081430439
-      Tileset-Props_785: -1887330268759957331
-      Tileset-Props_383: -8846389107846257673
-      fence_51: 2474684750042756348
-      Tileset-Props_103: -2244774581467488463
-      Tileset-Props_203: -4418087911901139995
-      Tileset-Props_746: 1058696330867430145
-      Tileset-Props_1319: 3993211462713571976
-      Tileset-Props_279: -2400375632096054076
-      Tileset-Props_1373: 4814729782077119377
-      Tileset-Props_1000: 1068733033863479671
-      blacksmith_house_32: 3684978257825861890
-      fence_25: 7092020472368766200
-      Tileset-Props_129: -6734716523872884435
-      Tileset-Props_583: 4699065256967153680
-      flowers_13: -3111859178524381051
-      blacksmith_house_51: 2020859376947149025
-      Tileset-Props_898: 4543681163237587099
-      Tileset-Props_57: 2222123974578833188
-      blacksmith_house_41: -5861365507359214913
-      Tileset-Props_1051: 7420734299948600557
-      Tileset-Props_1153: -8240337549395220590
-      Tileset-Props_956: -4492698571261403510
-      Tileset-Props_344: -7930407105464174152
-      Tileset-Props_333: -656481732481152239
-      grass_11: 1744500256243817978
-      blacksmith_house_13: 6031935098840026457
-      Tileset-Props_692: -8751991324737454211
-      Tileset-Props_646: -6481560765522592841
-      flowers_25: -7548972359616301184
-      bush_0: 3938287749127014579
-      Tileset-Props_1366: 1663958107641869380
-      house_107: 6709757154013239222
-      blacksmith_house_21: 7495444065557645437
-      Tileset-Props_713: 630921809029631746
-      Tileset-Props_997: 4314952922948557256
-      fence_17: 7356611470470457481
-      Tileset-Props_926: 5172076020059007705
-      Tileset-Props_874: -1425743999346374545
-      Tileset-Props_1093: 3701160797981944168
-      Tileset-Props_419: 158956740175927628
-      house_30: -3838923031991524282
-      Tileset-Props_140: -8451688851666768209
-      fence_7: -2049932613989536759
-      Tileset-Props_451: -7676194337951489302
-      Tileset-Props_406: -6351680808754487660
-      Tileset-Props_342: 1568621857213412065
-      Tileset-Props_802: 882849474943936211
-      Tileset-Props_1157: -5660299535900847214
-      Tileset-Props_486: -5998961235587878053
-      fence_29: 5748891907701516541
-      Tileset-Props_361: 1970306923297800713
-      Tileset-Props_215: 7646797621985245524
-      Tileset-Props_547: -9012655900541784563
-      Tileset-Props_895: 6743123120677742927
-      blacksmith_house_35: 6606679040972980916
-      Tileset-Props_67: 142949110136334312
-      Tileset-Props_389: -7781053386188030190
-      Tileset-Props_1353: 4348607437128036639
-      house_55: 7561557358345337711
-      Tileset-Props_782: 8350055863265954337
-      Tileset-Props_858: 2406526320161301076
-      Tileset-Props_1131: 2194698185725455160
-      Tileset-Props_650: -4001354820308762155
-      house_111: -6192590825669101829
-      Tileset-Props_950: -2827369777426705270
-      Tileset-Props_803: -7977422717588149068
-      Tileset-Props_969: -7430037093178973224
-      Tileset-Props_982: 4734001261303493104
-      Tileset-Props_1028: -126112426582808411
-      Tileset-Props_17: -4056642982785782216
-      Tileset-Props_125: 8636301545559580220
-      Tileset-Props_56: 6292490474112663107
-      Tileset-Props_1320: 8626022668606101229
-      Tileset-Props_241: -7918953347323011756
-      house_88: 6040435460563917565
-      Tileset-Props_1237: -3576769587870772392
-      Tileset-Props_799: -5047501524461828615
-      blacksmith_house_19: 4349684472134043147
-      Tileset-Props_269: -2374505100510866406
-      Tileset-Props_211: -2414970264600711292
-      Tileset-Props_1124: 5215805549318205379
-      fence_32: 3890435488608301488
-      Tileset-Props_721: -4836801859109187280
-      Tileset-Props_424: -8277842445492714268
-      Tileset-Props_522: -6027860162465588421
-      Tileset-Props_483: 8659157565388496751
-      Tileset-Props_318: -4676149645892020103
-      house_35: -705692491957924541
-      house_62: -3854238784649020418
-      Tileset-Props_631: -6344400290821204063
-      Tileset-Props_431: 6124325619008786912
-      house_26: 8054238764741234634
-      Tileset-Props_597: -3259139607685787316
-      Tileset-Props_184: 7734189830728063451
-      house_81: -8711294065724178627
-      Tileset-Props_317: -6703166895128195195
-      Tileset-Props_761: -4863487059149305756
-      Tileset-Props_1026: -5851942730801983155
-      fence_13: 5433285314415127849
-      Tileset-Props_1244: 3403465803252240039
-      Tileset-Props_718: -4747231964982125880
-      house_51: 6220107695088308723
-      Tileset-Props_439: -8794442592973788775
-      Tileset-Props_246: -1888184801207059166
-      blacksmith_house_29: 850588768896418264
-      Tileset-Props_1019: -591072145319651205
-      Tileset-Props_94: 7559337751798049759
-      house_105: 92910151684669826
-      Tileset-Props_100: -4555708047389615903
-      Tileset-Props_481: 1988057279336069757
-      Tileset-Props_731: -3990527976365985631
-      Tileset-Props_1166: -8266730966280850509
-      Tileset-Props_294: -2083506134804198010
-      Tileset-Props_633: 1156541279309674723
-      Tileset-Props_975: -2620604791303572595
-      Tileset-Props_690: -4775260366180666350
-      Tileset-Props_811: -5665121314080221446
-      Tileset-Props_951: -6689212122939914563
-      Tileset-Props_1021: 9201407144010978476
-      blacksmith_wall_8: 7758320821169889042
-      Tileset-Props_758: 4483731605618698225
-      Tileset-Props_249: 4854923567242191626
-      Tileset-Props_1162: -3170596644976978471
-      Tileset-Props_903: 9207107119620565574
-      Tileset-Props_171: -7528979347405586975
-      house_3: 7611548100524934634
-      Tileset-Props_23: -1529656709180040686
-      Tileset-Props_994: -1846145780438649272
-      fence_27: 1227690971571408665
-      Tileset-Props_487: -8126068790554554432
-      Tileset-Props_995: -8859271388531432862
-      Tileset-Props_272: 7099018446719386172
-      Tileset-Props_289: -1069923489497570314
-      wood_4: 460526855
-      Tileset-Props_444: -1295469502751987799
-      grass_5: -374160969276351448
-      Tileset-Props_1204: 3458346183277300556
-      Tileset-Props_929: -920789503713427364
-      Tileset-Props_822: 2049694215275270902
-      Tileset-Props_1197: -1683875019265484987
-      fence_39: 5245405467865356847
-      blacksmith_house_39: -3707664855442242462
-      Tileset-Props_509: 8444974189511144864
-      Tileset-Props_949: 3751789291939619761
-      house_12: 5193713697420767942
-      blacksmith_house_23: -2732887728722315118
-      Tileset-Props_143: -5948527001042643745
-      Tileset-Props_766: 5209993504458367951
-      fence_33: -359513870535605120
-      Tileset-Props_1202: -2309066911372239603
-      Tileset-Props_952: 2455989364339658714
-      Tileset-Props_629: -8999375759744243185
-      Tileset-Props_403: 5420818744679587907
-      Tileset-Props_27: 3439664677251213079
-      Tileset-Props_161: -4658459265252267497
-      Tileset-Props_716: -6622762013439834324
-      Tileset-Props_990: -5092842194958226787
-      Tileset-Props_664: 4548790369615417945
-      Tileset-Props_993: 1162847912669745904
-      house_75: -4903555126053334224
-      Tileset-Props_1014: 8617899685790469309
-      Tileset-Props_494: 6847497630541022498
-      Tileset-Props_55: -2746428357649597791
-      Tileset-Props_577: 6317443250780282492
-      fence_26: -2959111538428885318
-      Tileset-Props_407: 4113688408725354988
-      blacksmith_wall_1: 3086604564944350962
-      Tileset-Props_1: -4517286245532501995
-      Tileset-Props_205: -6337141637825645788
-      Tileset-Props_962: 1549242727844493465
-      Tileset-Props_343: 216371833464163454
-      Tileset-Props_401: -7213052971981863910
-      house_61: 4017539770107609800
-      Tileset-Props_1192: -6612095178522035726
-      Tileset-Props_130: 5366112426666358547
-      Tileset-Props_1331: 1451341566822821439
-      Tileset-Props_753: 7075423744836457893
-      Tileset-Props_526: 3654298212322619384
-      Tileset-Props_957: -6772794393189183848
-      flowers_18: 6408921405720492339
-      Tileset-Props_443: -1148559740380940157
-      Tileset-Props_561: -4042105091407455375
-      flowers_27: 5234563804490144658
-      blacksmith_house_26: -8370168783801270667
-      house_13: 2339302322484927882
-      Tileset-Props_901: 4008204172328544686
-      Tileset-Props_845: 6581523661921708938
-      Tileset-Props_347: -6950689089642322288
-      blacksmith_house_45: 1793174297795399654
-      Tileset-Props_1161: -2471933558139731499
-      Tileset-Props_699: 2035076578159407512
-      Tileset-Props_34: 2787201030102034671
-      Tileset-Props_1164: 4310876520805410212
-      Tileset-Props_497: 8389203878710493791
-      Tileset-Props_89: 1207760403739639798
-      Tileset-Props_348: -7872923799468178028
-      Tileset-Props_109: 2642922000226443879
-      Tileset-Props_784: 9030791800562394689
-      Tileset-Props_760: -4339619314311697512
-      Tileset-Props_64: -8705318294001708808
-      Tileset-Props_281: 7193326718860215200
-      Tileset-Props_258: 3047558492298960814
-      Tileset-Props_543: 1590031381487471728
-      Tileset-Props_678: -5700554544544732494
-      Tileset-Props_768: -8349287627440897653
-      house_67: -6319191364734562254
-      Tileset-Props_400: -6726781851927143008
-      Tileset-Props_609: 1017146989771063750
-      Tileset-Props_1016: 2084253441495077685
-      Tileset-Props_615: 3311662966500734609
-      Tileset-Props_432: 1250566715700242264
-      Tileset-Props_863: -2808801120384250935
-      house_24: 1552000500380191494
-      Tileset-Props_82: -9898496426852277
-      Tileset-Props_783: 5918059236168455702
-      Tileset-Props_356: -2878655266370976158
-      Tileset-Props_619: -6855702691555046692
-      flowers_0: 6302930281405470812
-      Tileset-Props_441: -7690502326401931979
-      Tileset-Props_624: -1284645817734880179
-      bush_15: 801535480
-      Tileset-Props_245: 6893148684577545892
-      fence_44: 2632659398140572630
-      Tileset-Props_871: -7580500269081281575
-      Tileset-Props_59: 2081295215293579603
-      Tileset-Props_316: -612485106800756255
-      bush_1: -1927134943
-      Tileset-Props_839: 1883980385192527540
-      Tileset-Props_239: 3497780795261141506
-      Tileset-Props_1058: 7390665916317678627
-      Tileset-Props_599: 2113195046345747777
-      Tileset-Props_724: 1963234757901534904
-      Tileset-Props_827: 4903166821744890249
-      house_58: 1678522525734428028
-      Tileset-Props_38: -7438773331339052860
-      Tileset-Props_435: 2492458325259002360
-      grass_16: 3298551470272185251
-      Tileset-Props_751: 4846438028581959096
-      Tileset-Props_66: -5308416198880017399
-      house_14: 1790958268037596437
-      bucket_1: 5623648178991161883
-      Tileset-Props_131: 4146796405098570534
-      Tileset-Props_335: 1220811235315034593
-      Tileset-Props_786: 8467892548134157612
-      flowers_26: -4786543770702691120
-      Tileset-Props_1194: 2248759981067460642
-      Tileset-Props_514: -7290583430439857778
-      house_25: 1859724526249400756
-      Tileset-Props_268: 225647246023401895
-      Tileset-Props_1356: -303607079424463983
-      Tileset-Props_73: -8621746762885997075
-      Tileset-Props_363: -6063967296316578749
-      Tileset-Props_379: 7450505765468226783
-      Tileset-Props_122: -8433560970592972162
-      Tileset-Props_645: 7606105113755083785
-      Tileset-Props_764: -8304982573378095624
-      Tileset-Props_337: -4129236426498078801
-      Tileset-Props_18: 4876584136305170616
-      Tileset-Props_33: -4421328954627895449
-      Tileset-Props_862: -799765073277505906
-      Tileset-Props_78: -5113000189828673093
-      Tileset-Props_430: 7554736988956436188
-      Tileset-Props_1199: 4010556967725212839
-      Tileset-Props_40: -5409931894233646082
-      Tileset-Props_1196: -8122565250074552574
-      fence_53: -4644521870212503502
-      fence_12: -6447256207898996890
-      house_19: 5070292762931780536
-      Tileset-Props_321: -3396035616965011268
-      blacksmith_house_14: -874319972514357707
-      Tileset-Props_844: 101991603412719378
-      Tileset-Props_893: -1311291905724927837
-      blacksmith_house_10: 858068652138055581
-      Tileset-Props_527: -5117575686920079408
-      Tileset-Props_447: -6448058655141576891
-      Tileset-Props_304: 1168820670795293080
-      stone_4: -6850049270540912801
-      Tileset-Props_179: -5491451576680416038
-      Tileset-Props_1273: -5339640215950979428
-      Tileset-Props_138: -4634294549734487529
-      Tileset-Props_796: -3336092878118878923
-      Tileset-Props_744: 8071723176200735009
-      Tileset-Props_291: -4646064337627097409
-      blacksmith_house_18: -5593055196568391376
-      Tileset-Props_616: -9000120985507562967
-      Tileset-Props_465: 7956384439669409733
-      Tileset-Props_397: 1655657751263180582
-      Tileset-Props_1365: -1740032972136447731
-      blacksmith_house_2: -1101604521907896293
-      Tileset-Props_319: 2848855735825873410
-      Tileset-Props_932: -4546051919185623882
-      house_56: 2139519390018020363
-      Tileset-Props_749: -7484029504713849578
-      Tileset-Props_350: 8736322631417083996
-      Tileset-Props_752: -827655283771756744
-      Tileset-Props_13: -8031195003727677069
-      Tileset-Props_0: 7062583091304998622
-      Tileset-Props_1024: 169435879276040208
-      fence_15: 8272946217942634704
-      fence_46: 5944856473514669678
-      Tileset-Props_1015: 8341010938216059924
-      Tileset-Props_530: -4964187399354320054
-      Tileset-Props_931: 375887850284535572
-      Tileset-Props_144: 1299880849437330917
-      Tileset-Props_299: -3195178000624142088
-      Tileset-Props_935: 1654823215381622202
-      Tileset-Props_1351: 4810300557294693440
-      Tileset-Props_1056: 708012667322381274
-      Tileset-Props_1201: 8715536766128666948
-      Tileset-Props_1236: -5458108230578157268
-      chimney_0: -8225914784288907422
-      blacksmith_house_57: 7716381704703618226
-      Tileset-Props_944: 8623500319731835298
-      house_22: 4008297061314862710
-      house_87: 7072459079664408648
-      Tileset-Props_330: -5158987210694583977
-      Tileset-Props_504: -4143895567947069017
-      house_44: -1048056662241420048
-      Tileset-Props_95: 8569523687181279558
-      Tileset-Props_274: -3021432750702733202
-      Tileset-Props_507: 3245687993030633299
-      Tileset-Props_1303: 5330714786815113128
-      blacksmith_house_46: -6573368134586037395
-      Tileset-Props_1280: 1487843141564398999
-      Tileset-Props_656: -6790455849393533472
-      Tileset-Props_106: 8825314466999108105
-      grass_15: 7004479252749111315
-      Tileset-Props_938: 2202868280717863433
-      house_38: -4847202788498459302
-      Tileset-Props_1129: -6325006541669059505
-      bush_3: -1384871179
-      grass_9: -360146388902943802
-      Tileset-Props_881: 5064144032279139047
-      bush_2: -14532276
-      Tileset-Props_402: -2061016867410468735
-      Tileset-Props_1156: -6794758676429212014
-      Tileset-Props_860: 4157980794372510833
-      Tileset-Props_842: 7060341014211891563
-      Tileset-Props_388: -842119778049365969
-      Tileset-Props_1090: -2233150393347638780
-      Tileset-Props_1048: 1554846403733231200
-      stone_5: -8986761371630421954
-      house_53: 4987243809182278135
-      house_69: -6556100756593510289
-      Tileset-Props_533: -2650246788932298054
-      fence_9: -6847225791601103449
-      Tileset-Props_90: 662213184350824495
-      fence_36: -3511265659437831112
-      fence_23: 3913115728033008285
-      flowers_8: 609051195121081428
-      Tileset-Props_108: -7287247212507833870
-      Tileset-Props_498: 2212920281745587739
-      Tileset-Props_464: -4332935681891219170
-      house_92: -6391968035748153665
-      Tileset-Props_201: -410325276028390646
-      Tileset-Props_693: -4743490136092874293
-      Tileset-Props_1127: 6956361843661165267
-      Tileset-Props_850: 1508934381659576203
-      Tileset-Props_320: -4251712274695977370
-      Tileset-Props_288: -6862835164142331095
-      Tileset-Props_210: -2366878757673201143
-      Tileset-Props_1198: -3769663243952875764
-      flowers_22: -5419478418494244278
-      Tileset-Props_525: 2044534066329960718
-      house_48: 8318851887950958003
-      Tileset-Props_425: -8006258144325522949
-      Tileset-Props_2: -485471354708635174
-      Tileset-Props_1235: 5292447005217265490
-      Tileset-Props_717: 3859386450827705808
-      Tileset-Props_1298: -3371073318038212334
-      wood_1: 1324240085
-      stone_18: 1919947584894500902
-      Tileset-Props_1361: -1739603980367115234
-      Tileset-Props_470: -8874985549026225618
-      Tileset-Props_613: -8484860542171858658
-      Tileset-Props_276: 2828905732910292693
-      Tileset-Props_562: 4318425585710292404
-      house_80: -5532126210324426247
-      house_63: -4939916764240227468
-      Tileset-Props_541: 7735368795891419132
-      Tileset-Props_711: 8438728674653573941
-      Tileset-Props_305: 6899712338436224203
-      Tileset-Props_1037: -3164797225415511457
-      Tileset-Props_466: 890727677378730226
-      blacksmith_house_59: 2415064375231565775
-      Tileset-Props_948: -3506785871813394038
-      Tileset-Props_998: 6738737781948945479
-      Tileset-Props_565: 7051032143112031087
-      Tileset-Props_81: 4078259186164436012
-      Tileset-Props_1362: 6736837308726656807
-      fence_1: 4802800843465343520
-      Tileset-Props_1123: 811065618830298796
-      Tileset-Props_88: 1173651989433591764
-      Tileset-Props_1307: -7737654331953464740
-      Tileset-Props_812: 7999610520946554125
-      Tileset-Props_118: -1876223696658209643
-      Tileset-Props_568: 8180151222123314119
-      Tileset-Props_813: -3222286156476049765
-      Tileset-Props_1094: -4432247954143454838
-      blacksmith_house_16: -2670910006811893497
-      house_0: 2382812941721336697
-      Tileset-Props_213: -5814430188962123747
-      Tileset-Props_720: -1128725178934190497
-      Tileset-Props_843: 7718944835043480549
-      Tileset-Props_964: 1616229106570195491
-      house_113: -3546325589685735156
-      flowers_11: 56509244616425524
-      Tileset-Props_1039: -770861641030061014
-      fence_3: 3865498742345791110
-      Tileset-Props_630: -289320229560217244
-      Tileset-Props_1091: -895670614283991761
-      Tileset-Props_1374: 5256945914615405699
-      house_73: 28490956935614229
-      Tileset-Props_43: 7969205697964989819
-      Tileset-Props_917: 3449211448372899788
-      fence_10: -1168714384455550190
-      Tileset-Props_422: 8097719530926356426
-      Tileset-Props_778: 3257899248846778973
-      Tileset-Props_467: 8395598635195511527
-      Tileset-Props_691: 6105520587284952165
-      Tileset-Props_801: -1522875239035140056
-      Tileset-Props_437: 3506662166551109010
-      house_10: -4905541348151701093
-      Tileset-Props_68: 8418968450603824290
-      Tileset-Props_396: 5564025701413044241
-      Tileset-Props_93: 4746978948362756983
-      Tileset-Props_800: -7967330583913970875
-      Tileset-Props_461: 8586060822952931813
-      Tileset-Props_511: -6964072599592144294
-      Tileset-Props_1160: -8686044420164819713
-      Tileset-Props_837: -1612947109168820619
-      house_60: 6867642470530569482
-      Tileset-Props_360: 4639560774405105834
-      Tileset-Props_518: 3888620230766037986
-      Tileset-Props_697: -8933139632741802929
-      Tileset-Props_1276: 5998299134826165292
-      Tileset-Props_536: 4561267819679326072
-      Tileset-Props_905: 4887092264639295769
-      Tileset-Props_618: 2435142451538327996
-      house_34: 828076691853994154
-      Tileset-Props_869: 8588476945547298316
-      Tileset-Props_9: -7551284460888180158
-      Tileset-Props_1130: 3977288666192958727
-      Tileset-Props_457: -6169952745180573697
-      Tileset-Props_182: -491550913213578080
-      Tileset-Props_309: -3667366329402809475
-      Tileset-Props_452: -7555161725009411816
-      Tileset-Props_1301: 1410585022149789511
-      Tileset-Props_322: 5228730152342496975
-      Tileset-Props_51: 8001181056702927960
-      Tileset-Props_141: -8424989739770290391
-      Tileset-Props_442: 4174582586121162013
-      Tileset-Props_981: -4461102723640089141
-      Tileset-Props_500: -6636043438658215362
-      Tileset-Props_71: 2706459898920553309
-      Tileset-Props_1011: 1217698668141217680
-      Tileset-Props_833: -3813324787980819681
-      blacksmith_house_47: 242104883309982853
-      Tileset-Props_849: -9006029306079290275
-      Tileset-Props_1333: -7316403668771862875
-      Tileset-Props_1335: -8815517734825551720
-      Tileset-Props_847: -1314752519010961857
-      Tileset-Props_58: -6972949774890388830
-      Tileset-Props_1001: 5103679449997020765
-      Tileset-Props_134: -4161274847145616909
-      Tileset-Props_1036: 2753157786251276629
-      Tileset-Props_655: -1512802010161700713
-      fence_4: 230330511234186676
-      Tileset-Props_346: -6948895118884416154
-      Tileset-Props_770: -7884752212814778416
-      blacksmith_wall_9: 2032739572892842043
-      Tileset-Props_445: 5966498610269494946
-      Tileset-Props_290: -7982571938307622815
-      Tileset-Props_366: -1780822184313021706
-      blacksmith_house_54: 3769165423634643220
-      chimney_3: 4675617168941133676
-      Tileset-Props_381: -6929606020168217175
-      Tileset-Props_826: 9019622857719143661
-      Tileset-Props_267: 1591571231746815859
-      Tileset-Props_627: 8764065690124711182
-      Tileset-Props_296: 2825790311641576153
-      blacksmith_house_44: -3089479012770548829
-      Tileset-Props_1305: 7630621438751901840
-      Tileset-Props_353: 505071725256869038
-      Tileset-Props_405: -1232076034318156197
-      Tileset-Props_1350: 8272111922147207152
-      Tileset-Props_965: 1900299373186325500
-      Tileset-Props_1070: -7833770081762238581
-      Tileset-Props_1234: -1872466809486707772
-      Tileset-Props_1272: 6991057840604740144
-      Tileset-Props_681: 5153867127401139227
-      fence_52: -9339177987421730
-      Tileset-Props_757: 367752233000335553
-      Tileset-Props_1052: -5147539147571985466
-      Tileset-Props_953: 7101509459735696124
-      Tileset-Props_480: 479442178031217555
-      Tileset-Props_728: 5823289446468262395
-      Tileset-Props_30: -691007258760626995
-      Tileset-Props_123: -5153281309981547657
-      fence_35: -5064991891086288233
-      Tileset-Props_683: 6248663476897464732
-      Tileset-Props_806: -2513149757477098156
-      Tileset-Props_580: -9208941501837819618
-      Tileset-Props_362: -7047632436448593812
+      Tileset-Props_458: -5454516465252610586
+      Tileset-Props_453: 4179102728777361494
+      Tileset-Props_380: 5877062606948854484
+      Tileset-Props_257: -4856653375310331690
+      Tileset-Props_331: -5098252151276375526
+      Tileset-Props_946: 6991057840604740144
+      house_194: -5933352241696795356
+      stone_8: -7273510555255393250
+      Tileset-Props_83: -1356444829413044528
+      Tileset-Props_368: -775289899121731015
+      house_112: 2355660204818047227
+      Tileset-Props_632: 1279918504145586841
+      Tileset-Props_557: 6903191336654139453
+      Tileset-Props_312: 1255838898344302785
+      Tileset-Props_787: 6642763858688758449
+      Tileset-Props_502: 1829173937775799116
+      Tileset-Props_469: 6205804033430860658
+      house_201: 3337740399583503528
+      Tileset-Props_175: 5384750129925560937
+      house_15: -8463110770799339706
+      grass_0: 2877408460141592709
+      fence_8: 6490540691888256737
+      Tileset-Props_1013: 7186431909724747097
+      Tileset-Props_591: -2020002914841791813
+      Tileset-Props_8: -5976447825577781368
+      house_70: 6545988543955813960
+      Tileset-Props_449: -8122565250074552574
+      house_168: -9089672353527582954
+      Tileset-Props_866: 5502023943559278241
+      Tileset-Props_395: 1607433462576150453
+      grass_1: 8598997703618231864
+      Tileset-Props_491: 7484235435840074275
+      fence_2: 4578932562226762106
+      Tileset-Props_308: -6396710688416171509
+      Tileset-Props_976: 6441046777232607178
+      blacksmith_house_58: -4212691663077435156
+      house_83: -4412132128064065315
+      Tileset-Props_851: -8469272740857706661
+      chimney_1: 7244733798513927224
+      Tileset-Props_954: -416193619264671160
+      Tileset-Props_698: -8919941002264956367
+      blacksmith_wall_3: -655153195609075135
+      Tileset-Props_404: 4644442222804474059
+      Tileset-Props_834: 8968029645116880007
+      Tileset-Props_1009: -4291701923231298201
+      Tileset-Props_682: 2255597799984881528
+      Tileset-Props_84: 6268300112355547322
+      props_0: -8379872837879423870
+      house_102: -3645788015001964643
+      house_155: -8660102862084872156
+      Tileset-Props_789: 2912479232129333266
+      Tileset-Props_586: -3225260964477770034
+      Tileset-Props_510: -2310881726789643159
+      Tileset-Props_988: -3265012769955282947
+      Tileset-Props_423: -8272321209457189880
+      house_31: -3906676869974373158
+      house_82: -7826495769221813943
+      Tileset-Props_807: 543132544038162242
+      Tileset-Props_623: 5008345581513850714
+      house_33: -3916246550866222637
+      Tileset-Props_828: -8659991086095484845
+      stone_0: 2180807682113047497
+      Tileset-Props_358: 6442635166821799283
+      Tileset-Props_234: 6110492838219593850
+      Tileset-Props_485: 8256486195320887761
+      house_187: -1442602365892479797
+      Tileset-Props_620: 3254187173277572720
+      Tileset-Props_475: 6511552167824560449
+      Tileset-Props_628: -8618751172664278524
+      Tileset-Props_542: 7536213629061791369
+      Tileset-Props_417: 8073119735769332241
+      Tileset-Props_907: 8809954528575032487
+      wood_7: -2355775925991057751
+      Tileset-Props_433: -8070969305599584316
+      Tileset-Props_488: 451613171120142758
+      Tileset-Props_884: -692163087582378547
+      grass_12: -1354838528834750433
+      house_79: -1392303908974633617
+      Tileset-Props_240: -2108943181105954357
+      house_5: 8650707546297243251
+      fence_48: -6017428419118445765
+      Tileset-Props_256: -6443474936052835570
+      Tileset-Props_838: -6210309475976898490
+      house_21: -4460658944626941308
+      Tileset-Props_996: 6742317347654547433
+      house_115: 427198763720876200
+      Tileset-Props_647: 96763632754181375
+      Tileset-Props_332: -955179670066308438
+      Tileset-Props_65: -4206452437284702471
+      Tileset-Props_1308: -1242946571484555977
+      Tileset-Props_307: -4676963523010954765
+      Tileset-Props_214: -5803409437235461944
+      Tileset-Props_1336: 9078958163942099820
+      Tileset-Props_1029: -3820431474163594142
+      Tileset-Props_355: -6761973096075059978
+      Tileset-Props_611: -6635848125139842616
+      Tileset-Props_237: 418071631645633453
+      Tileset-Props_516: 1813975017443059902
+      Tileset-Props_42: 7903468577600654076
+      Tileset-Props_429: 6193418327646212854
+      Tileset-Props_328: 8736083580032567171
+      Tileset-Props_372: -1751808144562807369
+      Tileset-Props_590: 7699382760712196925
+      blacksmith_house_3: -2087803521342444468
+      Tileset-Props_373: -561503323884366253
+      Tileset-Props_658: -8134754348384478331
+      Tileset-Props_147: -5752286597890615603
+      Tileset-Props_569: 9179591486311708851
+      Tileset-Props_709: 2014753799452388990
+      Tileset-Props_587: -1448691576775019254
+      Tileset-Props_376: 1582599838530974628
+      Tileset-Props_474: 3890175914887108524
+      Tileset-Props_1306: -3673516090552837126
+      Tileset-Props_22: 534509249123088471
+      Tileset-Props_544: -4432247954143454838
+      house_133: -2326171247366245617
+      Tileset-Props_183: -3642468123489692433
+      Tileset-Props_769: 1673006536551857885
+      Tileset-Props_287: 1795258668518168516
+      Tileset-Props_460: 2297289697968161845
+      Tileset-Props_244: 8282018945169871915
+      Tileset-Props_563: -6478006409880035467
+      flowers_2: -1853810729021422298
+      Tileset-Props_454: -3608168142416594950
+      stone_12: 6306462430223619522
+      stone_19: -4656659888034808933
+      Tileset-Props_1055: 7751022318335194396
+      Tileset-Props_139: 807644489351549254
+      fence_24: 7507476511690493900
+      Tileset-Props_415: 5418599335569152798
+      house_123: 676164625457829999
+      Tileset-Props_756: -8547760365669003375
+      Tileset-Props_754: 2293664011172546087
+      Tileset-Props_873: 3937396928458771186
+      Tileset-Props_595: 6206847811308136944
+      Tileset-Props_115: 6808972384785593041
+      house_179: 6747171921336142031
+      Tileset-Props_961: -6744451487269906208
+      Tileset-Props_566: -8871226074811325587
+      Tileset-Props_674: 5995492422119526955
+      house_71: 198347728451576860
+      house_8: -6280501214140157388
+      Tileset-Props_653: -2148823514499963573
+      flowers_12: 7605171403907612967
+      Tileset-Props_795: 7083207523224500151
+      Tileset-Props_36: 1847209105843953061
+      house_52: 2891433969014240817
+      Tileset-Props_418: 5710692989873869689
+      grass_7: -4993155397522341303
+      Tileset-Props_52: -5334792381854193077
+      Tileset-Props_26: 7550039991592463396
+      Tileset-Props_1017: 2349228604800874281
+      Tileset-Props_207: 4494130868308364617
+      stone_16: 5504250115621597606
+      house_104: -2264142780987597814
+      Tileset-Props_102: 4803063440277901608
+      Tileset-Props_614: -3847367922501080058
+      Tileset-Props_252: -8952521906901010266
+      Tileset-Props_80: 1682733981311375413
+      Tileset-Props_725: -3674779418242289269
+      Tileset-Props_864: -8031569074656295896
+      Tileset-Props_24: 2682245361688908425
+      Tileset-Props_270: -6449554726062285277
+      blacksmith_house_30: -6708977812627601720
+      Tileset-Props_689: 5119047645905755385
+      bridge_1: 1787248589957962468
+      Tileset-Props_54: 7174914177355359852
+      Tileset-Props_567: 9190719234462251774
+      blacksmith_house_55: -4901753988542925803
+      Tileset-Props_1002: 8173838940584024253
+      blacksmith_house_0: 5060761602742641011
+      Tileset-Props_1059: 7042712129020126742
+      Tileset-Props_825: 571901450479650826
+      Tileset-Props_151: -436005923914730032
+      Tileset-Props_830: 1411826815905217242
+      Tileset-Props_92: -3503907074168226457
+      Tileset-Props_906: -895670614283991761
+      house_130: 5791017978240776051
+      Tileset-Props_436: -485141218161808117
+      Tileset-Props_808: -3454090202024117609
+      Tileset-Props_1363: 7669765767971001217
+      house_156: -1743733729436630443
+      Tileset-Props_370: -7098684555460077118
+      Tileset-Props_471: 9093259349344857795
+      Tileset-Props_1003: -2262096610265233597
+      Tileset-Props_349: -3585144934429270774
+      Tileset-Props_941: 7319850016150618427
+      Tileset-Props_550: -711786972496651941
+      blacksmith_house_11: 6451434740264568535
+      fence_42: 8434596318108290661
+      house_199: -2586419184432599132
+      Tileset-Props_479: 7636392510154783524
+      Tileset-Props_345: -5792989971486098681
+      Tileset-Props_634: -2146550774552898846
+      Tileset-Props_955: 4331878427093460843
+      Tileset-Props_592: -8319403746193186765
+      house_204: 5590248848818337634
+      Tileset-Props_695: 6954045847160178078
+      house_6: -3181905729617653223
+      Tileset-Props_251: -2649232041024660132
+      Tileset-Props_532: 2248765757589935577
+      Tileset-Props_324: -7266836595356756286
+      house_45: 4161754023348297919
+      Tileset-Props_553: 4563079138158386594
+      house_148: -4758860048874889472
+      blacksmith_house_20: -526577712706889720
+      Tileset-Props_846: -4304640968784175378
+      Tileset-Props_1349: 1412248044690715986
+      house_57: 648294681037251867
+      Tileset-Props_116: -6420395135928375519
+      Tileset-Props_180: 682628046
+      bush_4: 5748548373978920591
+      Tileset-Props_637: -1450117983560758404
+      flowers_1: 1297430013734239118
+      Tileset-Props_476: 4551214135331460863
+      Tileset-Props_589: 9010834593546467028
+      bridge_9: 3628085026121933059
+      Tileset-Props_685: -3655301171268436336
+      Tileset-Props_729: 7468664965453643243
+      Tileset-Props_1371: 274914304
+      bush_14: 1533534948794595624
+      house_140: 7178034963829942648
+      Tileset-Props_260: -8785953014627396245
+      Tileset-Props_1369: 7702493583463214385
+      stone_3: 4832818577458653892
+      flowers_16: -2203530929024193930
+      Tileset-Props_16: -5531877121556338129
+      Tileset-Props_1043: -6724030020077787735
+      Tileset-Props_132: -8529812130214408121
+      Tileset-Props_1040: -7283911327620924639
+      Tileset-Props_694: 6410797169843199222
+      blacksmith_wall_6: 3110735395642323271
+      Tileset-Props_29: -3253138548092155989
+      Tileset-Props_163: -7186578627038019301
+      blacksmith_house_22: 2739052819343134382
+      house_185: 3597694536795668600
+      Tileset-Props_896: -2814108814792038687
+      blacksmith_house_48: -6612095178522035726
+      house_164: -3328494212597809310
+      Tileset-Props_242: -7471047560059024203
+      Tileset-Props_238: -2450542261611549491
+      Tileset-Props_99: -752660262614410834
+      Tileset-Props_297: -2148199188588638411
+      house_90: 9005105279804267767
+      blacksmith_house_36: 3649252513321068732
+      Tileset-Props_133: -1901842252757170859
+      Tileset-Props_887: 5107209912161233022
+      Tileset-Props_857: -3532054332963634518
+      Tileset-Props_385: 4819795034594061921
+      Tileset-Props_835: 6827618866386709303
+      house_91: 6502487356190013772
+      Tileset-Props_236: 3839430962596541964
+      flowers_9: -8240337549395220590
+      house_150: 2491147724753949270
+      Tileset-Props_765: 8335851833099487848
+      Tileset-Props_421: -6911260771988367969
+      Tileset-Props_292: 7305918677643803850
+      Tileset-Props_301: -3767885418801191513
+      Tileset-Props_1042: -260049915171156439
+      Tileset-Props_446: 2081219014272476295
+      Tileset-Props_1022: 5541357676717259613
+      Tileset-Props_262: -4160784871157223012
+      Tileset-Props_719: -45280133499273685
+      Tileset-Props_908: 5742568240355965028
+      flowers_7: 8575298295495113377
+      house_162: 1460210475117354138
+      Tileset-Props_35: -6294276495889328663
+      Tileset-Props_793: -8668771112054989071
+      Tileset-Props_940: 5011612575497877905
+      house_124: -7442400834278665675
+      Tileset-Props_384: -1573429923644398733
+      blacksmith_house_43: -9135347371000474828
+      Tileset-Props_939: -6155328441633817050
+      house_186: 7358075969874994510
+      house_137: -7068463150512824108
+      house_54: -1677003739308318948
+      Tileset-Props_233: 1001415818289735941
+      blacksmith_wall_11: -1735721277086653775
+      house_114: 3027783617726747574
+      Tileset-Props_420: 8690270289206696075
+      house_86: 2633906960126739575
+      Tileset-Props_880: -5490542206502872572
+      Tileset-Props_87: 4205559644031838391
+      Tileset-Props_861: 7969205697964989819
+      stonefence_3: -4167649498168170590
+      Tileset-Props_750: -7680889143358504290
+      Tileset-Props_1358: 6728682870344885000
+      Tileset-Props_820: 2418011541435565103
+      Tileset-Props_153: -4404217027614110015
+      Tileset-Props_582: 5292447005217265490
+      house_182: 6864852280478844279
+      Tileset-Props_1347: 6084557073307522508
+      Tileset-Props_248: -3703973048503165215
+      Tileset-Props_581: 1028564732307070148
+      Tileset-Props_797: 7420734299948600557
+      house_120: -7289280709312842655
+      Tileset-Props_617: -3533817939787395552
+      blacksmith_house_4: -4383699533420650632
+      Tileset-Props_340: -7096336930298572246
+      Tileset-Props_450: 7235652286882026089
+      Tileset-Props_626: -4137071390242366613
+      Tileset-Props_105: 1352406033350316206
+      Tileset-Props_1372: -1620070489195341674
+      Tileset-Props_710: -1829139470
+      bush_13: 3913137984081430439
+      Tileset-Props_712: -1887330268759957331
+      Tileset-Props_785: -8846389107846257673
+      Tileset-Props_383: 2474684750042756348
+      fence_51: -2244774581467488463
+      Tileset-Props_103: -4418087911901139995
+      Tileset-Props_203: 1058696330867430145
+      Tileset-Props_746: 3993211462713571976
+      Tileset-Props_1319: -2400375632096054076
+      Tileset-Props_279: 4814729782077119377
+      Tileset-Props_1373: 1068733033863479671
+      Tileset-Props_1000: 3684978257825861890
+      blacksmith_house_32: 7092020472368766200
+      fence_25: -6734716523872884435
+      Tileset-Props_129: 4699065256967153680
+      Tileset-Props_583: -3111859178524381051
+      flowers_13: 2020859376947149025
+      blacksmith_house_51: 4543681163237587099
+      Tileset-Props_898: -5861365507359214913
+      blacksmith_house_41: -4492698571261403510
+      Tileset-Props_956: -2471933558139731499
+      house_158: -7930407105464174152
+      Tileset-Props_344: -656481732481152239
+      Tileset-Props_333: 1744500256243817978
+      grass_11: 6031935098840026457
+      blacksmith_house_13: -8751991324737454211
+      Tileset-Props_692: -6481560765522592841
+      Tileset-Props_646: -7548972359616301184
+      flowers_25: 3938287749127014579
+      bush_0: 1663958107641869380
+      Tileset-Props_1366: 6709757154013239222
+      house_107: 7495444065557645437
+      blacksmith_house_21: 630921809029631746
+      Tileset-Props_713: 4314952922948557256
+      Tileset-Props_997: 5330714786815113128
+      house_211: 7356611470470457481
+      fence_17: 5172076020059007705
+      Tileset-Props_926: -5364653927080004598
+      house_143: -1425743999346374545
+      Tileset-Props_874: 158956740175927628
+      Tileset-Props_419: -3838923031991524282
+      house_30: -8451688851666768209
+      Tileset-Props_140: -2049932613989536759
+      fence_7: -7676194337951489302
+      Tileset-Props_451: -6351680808754487660
+      Tileset-Props_406: 1568621857213412065
+      Tileset-Props_342: 882849474943936211
+      Tileset-Props_802: 8715536766128666948
+      bridge_11: -8433560970592972162
+      house_173: -5998961235587878053
+      Tileset-Props_486: 5748891907701516541
+      fence_29: 1970306923297800713
+      Tileset-Props_361: 7646797621985245524
+      Tileset-Props_215: -9012655900541784563
+      Tileset-Props_547: 6743123120677742927
+      Tileset-Props_895: 5201792046668492283
+      house_212: 6606679040972980916
+      blacksmith_house_35: 142949110136334312
+      Tileset-Props_67: -7781053386188030190
+      Tileset-Props_389: 4348607437128036639
+      Tileset-Props_1353: 7561557358345337711
+      house_55: 8350055863265954337
+      Tileset-Props_782: -3769663243952875764
+      house_170: 2406526320161301076
+      Tileset-Props_858: -4001354820308762155
+      Tileset-Props_650: -6192590825669101829
+      house_111: -2827369777426705270
+      Tileset-Props_950: -7977422717588149068
+      Tileset-Props_803: -7430037093178973224
+      Tileset-Props_969: 4734001261303493104
+      Tileset-Props_982: -126112426582808411
+      Tileset-Props_1028: -4056642982785782216
+      Tileset-Props_17: 8636301545559580220
+      Tileset-Props_125: 6292490474112663107
+      Tileset-Props_56: 8626022668606101229
+      Tileset-Props_1320: -7918953347323011756
+      Tileset-Props_241: 6040435460563917565
+      house_88: -5047501524461828615
+      Tileset-Props_799: 4349684472134043147
+      blacksmith_house_19: -2374505100510866406
+      Tileset-Props_269: -2414970264600711292
+      Tileset-Props_211: 7780962903656206965
+      house_119: 3890435488608301488
+      fence_32: -4836801859109187280
+      Tileset-Props_721: -8277842445492714268
+      Tileset-Props_424: -6027860162465588421
+      Tileset-Props_522: 8659157565388496751
+      Tileset-Props_483: -4676149645892020103
+      Tileset-Props_318: -705692491957924541
+      house_35: -3854238784649020418
+      house_62: -6344400290821204063
+      Tileset-Props_631: 8954020575525311661
+      house_126: 6124325619008786912
+      Tileset-Props_431: 8054238764741234634
+      house_26: -3259139607685787316
+      Tileset-Props_597: 7734189830728063451
+      Tileset-Props_184: -8711294065724178627
+      house_81: -6703166895128195195
+      Tileset-Props_317: -4863487059149305756
+      Tileset-Props_761: -5851942730801983155
+      Tileset-Props_1026: 5433285314415127849
+      fence_13: -4747231964982125880
+      Tileset-Props_718: -2206350324597617085
+      house_210: 1001088006731384147
+      house_136: 6220107695088308723
+      house_51: -8794442592973788775
+      Tileset-Props_439: -1888184801207059166
+      Tileset-Props_246: 850588768896418264
+      blacksmith_house_29: -591072145319651205
+      Tileset-Props_1019: 7559337751798049759
+      Tileset-Props_94: 92910151684669826
+      house_105: -4555708047389615903
+      Tileset-Props_100: 1988057279336069757
+      Tileset-Props_481: -3990527976365985631
+      Tileset-Props_731: -2083506134804198010
+      Tileset-Props_294: 1156541279309674723
+      Tileset-Props_633: -2620604791303572595
+      Tileset-Props_975: -4775260366180666350
+      Tileset-Props_690: -5665121314080221446
+      Tileset-Props_811: -6689212122939914563
+      Tileset-Props_951: 9201407144010978476
+      Tileset-Props_1021: 7758320821169889042
+      blacksmith_wall_8: 4483731605618698225
+      Tileset-Props_758: 4854923567242191626
+      Tileset-Props_249: 9207107119620565574
+      Tileset-Props_903: -7528979347405586975
+      Tileset-Props_171: 7611548100524934634
+      house_3: -1529656709180040686
+      Tileset-Props_23: -1846145780438649272
+      Tileset-Props_994: 1227690971571408665
+      fence_27: 3403465803252240039
+      house_191: -8126068790554554432
+      Tileset-Props_487: -8859271388531432862
+      Tileset-Props_995: 7099018446719386172
+      Tileset-Props_272: -1069923489497570314
+      Tileset-Props_289: 460526855
+      wood_4: -1295469502751987799
+      Tileset-Props_444: -374160969276351448
+      grass_5: 4310876520805410212
+      house_161: -920789503713427364
+      Tileset-Props_929: 2049694215275270902
+      Tileset-Props_822: 5245405467865356847
+      fence_39: -3707664855442242462
+      blacksmith_house_39: 8444974189511144864
+      Tileset-Props_509: 3751789291939619761
+      Tileset-Props_949: -7028081359669043273
+      house_128: 5193713697420767942
+      house_12: 8335160028123975627
+      house_116: -2732887728722315118
+      blacksmith_house_23: -5948527001042643745
+      Tileset-Props_143: 5209993504458367951
+      Tileset-Props_766: -359513870535605120
+      fence_33: 2455989364339658714
+      Tileset-Props_952: -8999375759744243185
+      Tileset-Props_629: 5420818744679587907
+      Tileset-Props_403: 3439664677251213079
+      Tileset-Props_27: -4658459265252267497
+      Tileset-Props_161: -6622762013439834324
+      Tileset-Props_716: -5092842194958226787
+      Tileset-Props_990: 4548790369615417945
+      Tileset-Props_664: 1162847912669745904
+      Tileset-Props_993: -4903555126053334224
+      house_75: 8617899685790469309
+      Tileset-Props_1014: 6847497630541022498
+      Tileset-Props_494: -2746428357649597791
+      Tileset-Props_55: 6317443250780282492
+      Tileset-Props_577: -2959111538428885318
+      fence_26: 4113688408725354988
+      Tileset-Props_407: 3086604564944350962
+      blacksmith_wall_1: -4517286245532501995
+      Tileset-Props_1: -6337141637825645788
+      Tileset-Props_205: 1549242727844493465
+      Tileset-Props_962: 216371833464163454
+      Tileset-Props_343: -2077271696869721474
+      house_193: -7213052971981863910
+      Tileset-Props_401: 4017539770107609800
+      house_61: 5366112426666358547
+      Tileset-Props_130: 1451341566822821439
+      Tileset-Props_1331: 7075423744836457893
+      Tileset-Props_753: 3654298212322619384
+      Tileset-Props_526: -6772794393189183848
+      Tileset-Props_957: 6408921405720492339
+      flowers_18: -1148559740380940157
+      Tileset-Props_443: -4042105091407455375
+      Tileset-Props_561: 5234563804490144658
+      flowers_27: -6794758676429212014
+      house_153: -8370168783801270667
+      blacksmith_house_26: 2339302322484927882
+      house_13: 4008204172328544686
+      Tileset-Props_901: 6581523661921708938
+      Tileset-Props_845: -6950689089642322288
+      Tileset-Props_347: 1793174297795399654
+      blacksmith_house_45: 2035076578159407512
+      Tileset-Props_699: 2787201030102034671
+      Tileset-Props_34: 8389203878710493791
+      Tileset-Props_497: 1207760403739639798
+      Tileset-Props_89: -7872923799468178028
+      Tileset-Props_348: 2642922000226443879
+      Tileset-Props_109: 9030791800562394689
+      Tileset-Props_784: -4339619314311697512
+      Tileset-Props_760: -8705318294001708808
+      Tileset-Props_64: 7193326718860215200
+      Tileset-Props_281: 3047558492298960814
+      Tileset-Props_258: 1590031381487471728
+      Tileset-Props_543: -8686044420164819713
+      house_157: -5700554544544732494
+      Tileset-Props_678: -8349287627440897653
+      Tileset-Props_768: -6319191364734562254
+      house_67: -6726781851927143008
+      Tileset-Props_400: 1017146989771063750
+      Tileset-Props_609: 2084253441495077685
+      Tileset-Props_1016: 3311662966500734609
+      Tileset-Props_615: 1250566715700242264
+      Tileset-Props_432: -2808801120384250935
+      Tileset-Props_863: 1552000500380191494
+      house_24: -9898496426852277
+      Tileset-Props_82: 5918059236168455702
+      Tileset-Props_783: -2878655266370976158
+      Tileset-Props_356: 2081295215293579603
+      stonefence_2: -6855702691555046692
+      Tileset-Props_619: 6302930281405470812
+      flowers_0: -7690502326401931979
+      Tileset-Props_441: -1284645817734880179
+      Tileset-Props_624: 801535480
+      bush_15: 6893148684577545892
+      Tileset-Props_245: 2632659398140572630
+      fence_44: -7580500269081281575
+      Tileset-Props_871: -612485106800756255
+      Tileset-Props_316: -1927134943
+      bush_1: 1883980385192527540
+      Tileset-Props_839: 3497780795261141506
+      Tileset-Props_239: 7390665916317678627
+      Tileset-Props_1058: -8779142505386247444
+      house_134: 2113195046345747777
+      Tileset-Props_599: 1963234757901534904
+      Tileset-Props_724: 4903166821744890249
+      Tileset-Props_827: 1678522525734428028
+      house_58: -7438773331339052860
+      Tileset-Props_38: 2492458325259002360
+      Tileset-Props_435: 3298551470272185251
+      grass_16: 4846438028581959096
+      Tileset-Props_751: -5308416198880017399
+      Tileset-Props_66: 1790958268037596437
+      house_14: 5623648178991161883
+      bucket_1: 4146796405098570534
+      Tileset-Props_131: -6100911332232940180
+      house_205: 1220811235315034593
+      Tileset-Props_335: 8467892548134157612
+      Tileset-Props_786: -4786543770702691120
+      flowers_26: -7290583430439857778
+      Tileset-Props_514: 1859724526249400756
+      house_25: -1683875019265484987
+      house_169: 225647246023401895
+      Tileset-Props_268: -303607079424463983
+      Tileset-Props_1356: -8621746762885997075
+      Tileset-Props_363: 7450505765468226783
+      Tileset-Props_645: -8304982573378095624
+      Tileset-Props_379: -8433560970592972162
+      Tileset-Props_764: -4129236426498078801
+      Tileset-Props_337: 4876584136305170616
+      Tileset-Props_18: -4421328954627895449
+      Tileset-Props_33: -799765073277505906
+      Tileset-Props_862: -5113000189828673093
+      Tileset-Props_78: 7554736988956436188
+      Tileset-Props_430: -5409931894233646082
+      Tileset-Props_40: -4644521870212503502
+      fence_53: -6447256207898996890
+      fence_12: 5215805549318205379
+      house_139: 5070292762931780536
+      house_19: 6263927936272157792
+      house_180: -874319972514357707
+      blacksmith_house_14: 101991603412719378
+      Tileset-Props_844: -3396035616965011268
+      Tileset-Props_321: -1311291905724927837
+      Tileset-Props_893: 858068652138055581
+      blacksmith_house_10: -5117575686920079408
+      Tileset-Props_527: -6448058655141576891
+      Tileset-Props_447: 1168820670795293080
+      Tileset-Props_304: -6850049270540912801
+      stone_4: -5491451576680416038
+      Tileset-Props_179: -4634294549734487529
+      Tileset-Props_138: -3336092878118878923
+      Tileset-Props_796: 8071723176200735009
+      Tileset-Props_744: -4646064337627097409
+      Tileset-Props_291: -5593055196568391376
+      blacksmith_house_18: -9000120985507562967
+      bridge_10: -1382523221119295903
+      Tileset-Props_616: 7956384439669409733
+      Tileset-Props_465: 1655657751263180582
+      Tileset-Props_397: -1740032972136447731
+      Tileset-Props_1365: -1101604521907896293
+      blacksmith_house_2: 2848855735825873410
+      Tileset-Props_319: -4546051919185623882
+      Tileset-Props_932: 2139519390018020363
+      house_56: -7484029504713849578
+      Tileset-Props_749: 8736322631417083996
+      Tileset-Props_350: -827655283771756744
+      Tileset-Props_752: -8031195003727677069
+      Tileset-Props_13: 7062583091304998622
+      Tileset-Props_0: 169435879276040208
+      Tileset-Props_1024: 8272946217942634704
+      fence_15: 5944856473514669678
+      fence_46: 8341010938216059924
+      Tileset-Props_1015: -4964187399354320054
+      Tileset-Props_530: 375887850284535572
+      Tileset-Props_931: 1299880849437330917
+      Tileset-Props_144: -3195178000624142088
+      Tileset-Props_299: 1654823215381622202
+      Tileset-Props_935: 708012667322381274
+      Tileset-Props_1056: 4810300557294693440
+      Tileset-Props_1351: -8225914784288907422
+      chimney_0: -7833770081762238581
+      house_125: 7716381704703618226
+      blacksmith_house_57: 8623500319731835298
+      Tileset-Props_944: 4008297061314862710
+      house_22: 7072459079664408648
+      house_87: -5158987210694583977
+      Tileset-Props_330: -4143895567947069017
+      Tileset-Props_504: -1048056662241420048
+      house_44: 8569523687181279558
+      Tileset-Props_95: 3701160797981944168
+      house_132: -3021432750702733202
+      Tileset-Props_274: 3245687993030633299
+      Tileset-Props_507: -6573368134586037395
+      blacksmith_house_46: -6790455849393533472
+      Tileset-Props_656: 8825314466999108105
+      Tileset-Props_106: 7004479252749111315
+      grass_15: 2202868280717863433
+      Tileset-Props_938: -4847202788498459302
+      house_38: -1384871179
+      bush_3: -360146388902943802
+      grass_9: -4884722742872915276
+      house_208: 5064144032279139047
+      Tileset-Props_881: -14532276
+      bush_2: -2061016867410468735
+      Tileset-Props_402: 7060341014211891563
+      Tileset-Props_842: 4157980794372510833
+      Tileset-Props_860: -842119778049365969
+      Tileset-Props_388: -8986761371630421954
+      stone_5: 4987243809182278135
+      house_53: -6556100756593510289
+      house_69: -2650246788932298054
+      Tileset-Props_533: -6847225791601103449
+      fence_9: 662213184350824495
+      Tileset-Props_90: -3511265659437831112
+      fence_36: 7630621438751901840
+      house_213: 3913115728033008285
+      fence_23: 609051195121081428
+      flowers_8: -7287247212507833870
+      Tileset-Props_108: 3977288666192958727
+      house_145: -5660299535900847214
+      house_154: 2212920281745587739
+      Tileset-Props_498: -4332935681891219170
+      Tileset-Props_464: -6391968035748153665
+      house_92: -410325276028390646
+      Tileset-Props_201: -4743490136092874293
+      Tileset-Props_693: 1508934381659576203
+      Tileset-Props_850: -4251712274695977370
+      Tileset-Props_320: -6862835164142331095
+      Tileset-Props_288: -2366878757673201143
+      Tileset-Props_210: -1589989072011027613
+      house_188: -5419478418494244278
+      flowers_22: 2044534066329960718
+      Tileset-Props_525: 8318851887950958003
+      house_48: -8006258144325522949
+      Tileset-Props_425: -485471354708635174
+      Tileset-Props_2: 3859386450827705808
+      Tileset-Props_717: 1324240085
+      wood_1: 1919947584894500902
+      stone_18: -1739603980367115234
+      Tileset-Props_1361: -8874985549026225618
+      Tileset-Props_470: -8484860542171858658
+      Tileset-Props_613: 2828905732910292693
+      Tileset-Props_276: 4318425585710292404
+      bridge_8: -4668154738014544505
+      Tileset-Props_562: -5532126210324426247
+      house_80: -4939916764240227468
+      house_63: 7735368795891419132
+      Tileset-Props_541: 8438728674653573941
+      Tileset-Props_711: 6899712338436224203
+      Tileset-Props_305: -3164797225415511457
+      Tileset-Props_1037: 890727677378730226
+      Tileset-Props_466: 2415064375231565775
+      blacksmith_house_59: -3506785871813394038
+      Tileset-Props_948: 6738737781948945479
+      Tileset-Props_998: 7051032143112031087
+      Tileset-Props_565: 4078259186164436012
+      Tileset-Props_81: 6736837308726656807
+      bridge_2: 2706459898920553309
+      Tileset-Props_1362: 4802800843465343520
+      fence_1: 1173651989433591764
+      Tileset-Props_88: -7737654331953464740
+      Tileset-Props_1307: 7999610520946554125
+      Tileset-Props_812: -1876223696658209643
+      Tileset-Props_118: 8180151222123314119
+      Tileset-Props_568: -3222286156476049765
+      Tileset-Props_813: -7090231040085865337
+      house_172: -2670910006811893497
+      blacksmith_house_16: 2382812941721336697
+      house_0: -5814430188962123747
+      Tileset-Props_213: -1128725178934190497
+      Tileset-Props_720: 7718944835043480549
+      Tileset-Props_843: 1616229106570195491
+      Tileset-Props_964: -3546325589685735156
+      house_113: 56509244616425524
+      flowers_11: -770861641030061014
+      Tileset-Props_1039: 3865498742345791110
+      fence_3: -289320229560217244
+      bridge_4: -8621746762885997075
+      Tileset-Props_630: 5256945914615405699
+      Tileset-Props_1374: 28490956935614229
+      house_73: 3449211448372899788
+      Tileset-Props_917: -1168714384455550190
+      fence_10: 8097719530926356426
+      Tileset-Props_422: 3257899248846778973
+      Tileset-Props_778: 8395598635195511527
+      Tileset-Props_467: 6105520587284952165
+      Tileset-Props_691: -1522875239035140056
+      Tileset-Props_801: 3506662166551109010
+      Tileset-Props_437: -4905541348151701093
+      house_10: 8418968450603824290
+      Tileset-Props_68: 5564025701413044241
+      Tileset-Props_396: 4746978948362756983
+      Tileset-Props_93: -7967330583913970875
+      Tileset-Props_800: 8586060822952931813
+      Tileset-Props_461: -6964072599592144294
+      Tileset-Props_511: -1612947109168820619
+      Tileset-Props_837: 6867642470530569482
+      house_60: 4639560774405105834
+      Tileset-Props_360: 3888620230766037986
+      Tileset-Props_518: -8933139632741802929
+      Tileset-Props_697: 4561267819679326072
+      Tileset-Props_536: 4887092264639295769
+      Tileset-Props_905: 2435142451538327996
+      Tileset-Props_618: 828076691853994154
+      house_34: 8588476945547298316
+      Tileset-Props_869: -7551284460888180158
+      Tileset-Props_9: -6169952745180573697
+      Tileset-Props_457: -2736644414790204745
+      stonefence_4: 8526759459770812484
+      stonefence_8: -491550913213578080
+      Tileset-Props_182: -3667366329402809475
+      Tileset-Props_309: -7555161725009411816
+      Tileset-Props_452: 5228730152342496975
+      Tileset-Props_322: 8001181056702927960
+      Tileset-Props_51: 4174582586121162013
+      Tileset-Props_442: -8424989739770290391
+      Tileset-Props_141: -4461102723640089141
+      Tileset-Props_981: -6636043438658215362
+      Tileset-Props_500: 2706459898920553309
+      Tileset-Props_1011: -3813324787980819681
+      Tileset-Props_833: 242104883309982853
+      blacksmith_house_47: -9006029306079290275
+      Tileset-Props_849: -7316403668771862875
+      Tileset-Props_1333: -8815517734825551720
+      Tileset-Props_1335: -1314752519010961857
+      Tileset-Props_847: 5103679449997020765
+      Tileset-Props_1001: -4161274847145616909
+      Tileset-Props_134: -2696352401190060408
+      house_203: 2753157786251276629
+      Tileset-Props_1036: -1512802010161700713
+      Tileset-Props_655: 230330511234186676
+      fence_4: -6948895118884416154
+      Tileset-Props_346: -7884752212814778416
+      Tileset-Props_770: 2032739572892842043
+      blacksmith_wall_9: 5966498610269494946
+      Tileset-Props_445: -7982571938307622815
+      Tileset-Props_290: -1780822184313021706
+      Tileset-Props_366: 3769165423634643220
+      blacksmith_house_54: 4675617168941133676
+      chimney_3: -6929606020168217175
+      Tileset-Props_381: 9019622857719143661
+      Tileset-Props_826: 1591571231746815859
+      Tileset-Props_267: 8764065690124711182
+      Tileset-Props_627: 2825790311641576153
+      Tileset-Props_296: -3089479012770548829
+      blacksmith_house_44: 505071725256869038
+      Tileset-Props_353: -1232076034318156197
+      Tileset-Props_405: 288669238513205255
+      stonefence_7: 8272111922147207152
+      Tileset-Props_1350: 1900299373186325500
+      Tileset-Props_965: -9339177987421730
+      fence_52: 5153867127401139227
+      Tileset-Props_681: 367752233000335553
+      Tileset-Props_757: 1591859533128012333
+      house_152: -5147539147571985466
+      Tileset-Props_1052: 7101509459735696124
+      Tileset-Props_953: 479442178031217555
+      bridge_6: -7631895445042977890
+      Tileset-Props_480: 5823289446468262395
+      Tileset-Props_728: -691007258760626995
+      Tileset-Props_30: -5153281309981547657
+      fence_35: 6248663476897464732
+      Tileset-Props_806: -9208941501837819618
+      Tileset-Props_683: -2513149757477098156
+      house_181: -7047632436448593812
+      Tileset-Props_580: -1872466809486707772
+      Tileset-Props_362: 2384880384051492181
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

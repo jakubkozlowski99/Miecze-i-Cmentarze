@@ -7,8 +7,8 @@ public class Fighter : MonoBehaviour
     public float hitpoint;
     public float maxhitpoint;
 
-    private float lastImmune;
-    private float immuneTime = 0.1f;
+    protected float lastImmune;
+    protected float immuneTime = 0.1f;
 
     protected virtual void ReceiveDamage(Damage dmg)
     {

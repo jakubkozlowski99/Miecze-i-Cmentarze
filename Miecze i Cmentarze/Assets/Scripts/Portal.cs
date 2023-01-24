@@ -7,6 +7,12 @@ public class Portal : Collidable
 {
     public InteractionTextManager interactionTextManager;
 
+    public Sprite unActivePortal;
+
+    public bool active;
+
+    public string bossToActivate;
+
     public int sceneIndex;
 
     private bool playerNearby;
@@ -16,23 +22,39 @@ public class Portal : Collidable
     public float playerX;
     public float playerY;
 
+    public Animator anim;
+    public SpriteRenderer spriteRenderer;
+
+    protected override void Start()
+    {
+        base.Start();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        CheckPortal();
+    }
+
     protected override void Update()
     {
-        playerNearby = IsPlayerNearby();
+        if (active)
+        {
+            playerNearby = IsPlayerNearby();
 
-        if (playerNearby && !textShown)
-        {
-            ShowInteractionText();
-        }
-        if (textShown && !playerNearby)
-        {
-            HideInteractionText();
+            if (playerNearby && !textShown && active)
+            {
+                ShowInteractionText();
+            }
+            if (textShown && !playerNearby)
+            {
+                HideInteractionText();
+            }
+
+            if (Input.GetKeyDown(KeyCode.E) && playerNearby)
+            {
+                OnActivation();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerNearby)
-        {
-            OnActivation();
-        }
+        
     }
     protected void OnActivation()
     {
@@ -53,5 +75,20 @@ public class Portal : Collidable
     {
         textShown = false;
         interactionTextManager.Hide();
+    }
+
+    public void CheckPortal()
+    {
+        foreach(BossData boss in SaveManager.instance.tempBosses)
+        {
+            if (boss.bossName == bossToActivate)
+            {
+                anim.enabled = true;
+                active = true;
+                return;
+            }
+        }
+        anim.enabled = false;
+        spriteRenderer.sprite = unActivePortal;
     }
 }

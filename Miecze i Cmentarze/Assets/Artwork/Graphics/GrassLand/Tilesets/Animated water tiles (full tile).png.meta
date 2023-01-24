@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_0
+      name: water_animated_0
       rect:
         serializedVersion: 2
         x: 0
@@ -139,7 +139,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_1
+      name: water_animated_1
       rect:
         serializedVersion: 2
         x: 32
@@ -160,7 +160,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_2
+      name: water_animated_2
       rect:
         serializedVersion: 2
         x: 64
@@ -181,7 +181,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_3
+      name: water_animated_3
       rect:
         serializedVersion: 2
         x: 96
@@ -202,7 +202,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_4
+      name: water_animated_4
       rect:
         serializedVersion: 2
         x: 128
@@ -223,7 +223,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_5
+      name: water_animated_5
       rect:
         serializedVersion: 2
         x: 160
@@ -244,7 +244,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_6
+      name: water_animated_6
       rect:
         serializedVersion: 2
         x: 192
@@ -265,7 +265,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Animated water tiles (full tile)_7
+      name: water_animated_7
       rect:
         serializedVersion: 2
         x: 224
@@ -286,7 +286,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,14 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Animated water tiles (full tile)_5: -2998362782779224828
-      Animated water tiles (full tile)_2: 7973959407377945782
-      Animated water tiles (full tile)_7: 7917066960044068287
-      Animated water tiles (full tile)_0: 4247796335939484946
-      Animated water tiles (full tile)_3: -1568492328050437829
-      Animated water tiles (full tile)_1: 4936759048927882749
-      Animated water tiles (full tile)_6: 8365550958490678985
-      Animated water tiles (full tile)_4: 5926330903841014217
+      water_animated_2: 7973959407377945782
+      water_animated_5: -2998362782779224828
+      water_animated_7: 7917066960044068287
+      water_animated_3: -1568492328050437829
+      water_animated_4: 5926330903841014217
+      water_animated_6: 8365550958490678985
+      water_animated_0: 4247796335939484946
+      water_animated_1: 4936759048927882749
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -15512,7 +15512,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_512
+      name: stonefence_9
       rect:
         serializedVersion: 2
         x: 32
@@ -15533,7 +15533,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_513
+      name: stonefence_10
       rect:
         serializedVersion: 2
         x: 64
@@ -15554,7 +15554,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_514
+      name: stonefence_11
       rect:
         serializedVersion: 2
         x: 96
@@ -16310,7 +16310,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_550
+      name: stonefence_12
       rect:
         serializedVersion: 2
         x: 0
@@ -16331,7 +16331,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_551
+      name: stonefence_13
       rect:
         serializedVersion: 2
         x: 32
@@ -16352,7 +16352,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_552
+      name: stonefence_14
       rect:
         serializedVersion: 2
         x: 96
@@ -16373,7 +16373,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_553
+      name: stonefence_15
       rect:
         serializedVersion: 2
         x: 128
@@ -17276,7 +17276,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_596
+      name: stonefence_16
       rect:
         serializedVersion: 2
         x: 0
@@ -17297,7 +17297,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_597
+      name: stonefence_17
       rect:
         serializedVersion: 2
         x: 128
@@ -18179,7 +18179,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_639
+      name: stonefence_18
       rect:
         serializedVersion: 2
         x: 0
@@ -18200,7 +18200,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_640
+      name: stonefence_19
       rect:
         serializedVersion: 2
         x: 32
@@ -18221,7 +18221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_641
+      name: stonefence_20
       rect:
         serializedVersion: 2
         x: 96
@@ -18242,7 +18242,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_642
+      name: stonefence_21
       rect:
         serializedVersion: 2
         x: 128
@@ -18914,7 +18914,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_674
+      name: stonefence_22
       rect:
         serializedVersion: 2
         x: 32
@@ -18935,7 +18935,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_675
+      name: stonefence_23
       rect:
         serializedVersion: 2
         x: 64
@@ -18956,7 +18956,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_676
+      name: stonefence_24
       rect:
         serializedVersion: 2
         x: 96
@@ -19754,7 +19754,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_714
+      name: fence_53
       rect:
         serializedVersion: 2
         x: 32
@@ -19775,7 +19775,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_715
+      name: fence_54
       rect:
         serializedVersion: 2
         x: 64
@@ -19796,7 +19796,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_716
+      name: fence_55
       rect:
         serializedVersion: 2
         x: 96
@@ -20657,7 +20657,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_757
+      name: fence_56
       rect:
         serializedVersion: 2
         x: 0
@@ -20678,7 +20678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_758
+      name: fence_57
       rect:
         serializedVersion: 2
         x: 32
@@ -20699,7 +20699,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_759
+      name: fence_58
       rect:
         serializedVersion: 2
         x: 96
@@ -20720,7 +20720,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_760
+      name: fence_59
       rect:
         serializedVersion: 2
         x: 128
@@ -21434,7 +21434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_794
+      name: fence_60
       rect:
         serializedVersion: 2
         x: 0
@@ -21455,7 +21455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_795
+      name: fence_61
       rect:
         serializedVersion: 2
         x: 128
@@ -22253,7 +22253,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_833
+      name: fence_62
       rect:
         serializedVersion: 2
         x: 0
@@ -22274,7 +22274,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_834
+      name: fence_63
       rect:
         serializedVersion: 2
         x: 32
@@ -22295,7 +22295,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_835
+      name: fence_64
       rect:
         serializedVersion: 2
         x: 96
@@ -22316,7 +22316,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_836
+      name: fence_65
       rect:
         serializedVersion: 2
         x: 128
@@ -23072,7 +23072,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_872
+      name: fence_66
       rect:
         serializedVersion: 2
         x: 32
@@ -23093,7 +23093,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_873
+      name: fence_67
       rect:
         serializedVersion: 2
         x: 64
@@ -23114,7 +23114,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Terrain_874
+      name: fence_68
       rect:
         serializedVersion: 2
         x: 96
@@ -37173,22 +37173,23 @@ TextureImporter:
       Tileset-Terrain_1194: -5954892723659333516
       Tileset-Terrain_305: 1885751645191299929
       Tileset-Terrain_1241: 4109785517206230762
-      Tileset-Terrain_187: 5548351845115041787
       Tileset-Terrain_890: -7384314951356246869
+      Tileset-Terrain_187: 5548351845115041787
       Tileset-Terrain_1052: 6227532821723535359
       Tileset-Terrain_811: -157639500653986916
       Tileset-Terrain_891: -7165202620991198804
       Tileset-Terrain_8: -4236337210254196639
       Tileset-Terrain_908: -6670934348400161606
+      fence_56: -5903073208291414712
       Tileset-Terrain_1011: 1068708473994146981
       gravel_52: 6393320278289641089
+      stonefence_18: -9171540923400872485
       Tileset-Terrain_1511: 81125994867566879
       Tileset-Terrain_147: 8335522741147835108
       Tileset-Terrain_880: -5477419290042655654
       Tileset-Terrain_1174: 8572708507390998138
       Tileset-Terrain_549: 2164961642487672777
       Tileset-Terrain_925: 5525644822487420839
-      Tileset-Terrain_514: -7883202810518623851
       Tileset-Terrain_1366: -3309247730564741110
       dirt_36: -1025141316494303162
       Tileset-Terrain_915: -3815254636412449948
@@ -37259,7 +37260,6 @@ TextureImporter:
       dirt_63: -3419104801894146814
       grass_47: -8731219122584086380
       grass_10: 4728895088459449009
-      Tileset-Terrain_874: -7196670489621734708
       Tileset-Terrain_1529: 3401933681079859773
       Tileset-Terrain_1008: 1083553782792176580
       Tileset-Terrain_307: -5095131396039423335
@@ -37273,9 +37273,9 @@ TextureImporter:
       Tileset-Terrain_730: -8291511239218709451
       Tileset-Terrain_1081: 1634921158151501089
       Tileset-Terrain_741: -1271624435962927164
-      Tileset-Terrain_1015: 7294732449358245974
-      Tileset-Terrain_1438: -1883537509380570724
       tall_grass_11: -261550542157802821
+      Tileset-Terrain_1438: -1883537509380570724
+      Tileset-Terrain_1015: 7294732449358245974
       Tileset-Terrain_516: -2866416877180543135
       Tileset-Terrain_913: -785779110231189487
       Tileset-Terrain_127: -567985103400464472
@@ -37298,7 +37298,6 @@ TextureImporter:
       gravel_1: 6908012034855672148
       gravel_9: -8870471395671046270
       Tileset-Terrain_1464: 7034860288300791798
-      Tileset-Terrain_639: -9171540923400872485
       dirt_29: -8866132527543949562
       Tileset-Terrain_427: 835029062243274367
       Tileset-Terrain_652: 7460003516157712647
@@ -37311,6 +37310,7 @@ TextureImporter:
       Tileset-Terrain_1161: -3117105938329958494
       stonepath_27: 5701054835054632549
       Tileset-Terrain_1385: -5078358602976075765
+      stonefence_9: -144176546355647723
       Tileset-Terrain_1325: -179955946877003324
       dirt_39: 6715648964415164385
       Tileset-Terrain_604: 8041012549259293434
@@ -37377,7 +37377,6 @@ TextureImporter:
       Tileset-Terrain_1396: -4979083152887728429
       grass_46: -1171348835568882125
       Tileset-Terrain_1474: 5785743742892829193
-      Tileset-Terrain_715: 5001596551608944862
       Tileset-Terrain_1299: -3148233060465438522
       Tileset-Terrain_1415: -7721419169440204086
       Tileset-Terrain_1483: -2739794732305209960
@@ -37419,7 +37418,6 @@ TextureImporter:
       Tileset-Terrain_42: 8451074102445932978
       grass_75: 6205306644393338649
       Tileset-Terrain_1397: -6315529103915416211
-      Tileset-Terrain_835: 8041818726565231632
       Tileset-Terrain_1381: 2468872978498846109
       dirt_60: 2462410311445203095
       Tileset-Terrain_1487: -4576725564204894011
@@ -37437,6 +37435,7 @@ TextureImporter:
       Tileset-Terrain_615: 1894604800419618751
       Tileset-Terrain_797: -8294204588846599122
       Tileset-Terrain_991: -6006662009350614352
+      fence_60: 3104678803661847290
       Tileset-Terrain_526: 4084808430609232488
       Tileset-Terrain_1423: 1508583457065781260
       Tileset-Terrain_1518: 1405075045623110756
@@ -37459,7 +37458,6 @@ TextureImporter:
       Tileset-Terrain_865: 6302349863909658597
       Tileset-Terrain_333: -4439017263946241152
       Tileset-Terrain_761: -2863970175772041315
-      Tileset-Terrain_833: 5568104726034218806
       Tileset-Terrain_76: 3799401945529959565
       dirt_50: -5226445044211364032
       Tileset-Terrain_698: -6440092314417710208
@@ -37472,6 +37470,7 @@ TextureImporter:
       tall_grass_21: -7965286068317266980
       Tileset-Terrain_119: -585839303037737036
       Tileset-Terrain_142: -4339961520401325318
+      stonefence_14: -4907118165252932202
       dirt_43: -4040426902997692097
       Tileset-Terrain_65: -1559627459673957143
       Tileset-Terrain_1486: -8242693765012577759
@@ -37484,10 +37483,10 @@ TextureImporter:
       Tileset-Terrain_169: -4503212915438273892
       Tileset-Terrain_769: -6498499059718630028
       Tileset-Terrain_1040: -5112110880051552908
-      Tileset-Terrain_597: 8754073122127024490
       Tileset-Terrain_770: 3071049814329614172
-      Tileset-Terrain_1038: -5076101845095176875
+      fence_54: 5001596551608944862
       Tileset-Terrain_1133: -6848539246538923261
+      Tileset-Terrain_1038: -5076101845095176875
       grass_59: 6129304871278229515
       Tileset-Terrain_1091: 1700965662750926617
       Tileset-Terrain_943: 8820824860356717463
@@ -37531,7 +37530,6 @@ TextureImporter:
       Tileset-Terrain_1284: -1121757477291105693
       Tileset-Terrain_1252: 5764552136434574598
       Tileset-Terrain_350: 6876837699980352279
-      Tileset-Terrain_552: -4907118165252932202
       Tileset-Terrain_87: -5484110677241601329
       Tileset-Terrain_1090: -3098663865850283639
       gravel_44: -2319523847788797923
@@ -37547,7 +37545,6 @@ TextureImporter:
       leaves_16: 469681554791308707
       Tileset-Terrain_1073: 7219069823436170230
       tall_grass_14: -4752528574366953540
-      Tileset-Terrain_873: 5853080888518233749
       Tileset-Terrain_1251: 214645075225483533
       Tileset-Terrain_54: 6892866563089932955
       Tileset-Terrain_301: 6935909843024595935
@@ -37556,12 +37553,11 @@ TextureImporter:
       grass_38: 8354315395231068884
       Tileset-Terrain_1095: -8662341459312230606
       dirt_68: -4470990395949722315
-      Tileset-Terrain_872: -314785380138075501
-      Tileset-Terrain_641: 1297134784893057007
       Tileset-Terrain_1200: -8625562994536145507
       grass_51: 1914388148790675542
       grass_83: -5256959527950446175
       stonepath_16: -6267700070866223758
+      fence_66: -314785380138075501
       gravel_10: -515007680503772933
       Tileset-Terrain_1027: -1382158567944768388
       Tileset-Terrain_1088: -3132884550369189516
@@ -37575,7 +37571,6 @@ TextureImporter:
       Tileset-Terrain_938: 8025246246625115066
       Tileset-Terrain_1184: 2246416688013697440
       Tileset-Terrain_1094: -8975352019338099395
-      Tileset-Terrain_551: -7191533143983957190
       Tileset-Terrain_48: -1269284501095632098
       Tileset-Terrain_47: 1473483428810329299
       Tileset-Terrain_1093: -3936582541191193005
@@ -37596,9 +37591,9 @@ TextureImporter:
       Tileset-Terrain_52: -3368544850009256718
       Tileset-Terrain_391: 7217532271015548043
       Tileset-Terrain_960: 7839314708537370480
-      Tileset-Terrain_553: -6346888728684992381
       grass_19: -1973790501656603984
       Tileset-Terrain_654: -3732734755047329192
+      stonefence_11: -7883202810518623851
       grass_25: 6520674408913653043
       leaves_21: -8644401401755511446
       Tileset-Terrain_395: -6722798145941914254
@@ -37615,6 +37610,7 @@ TextureImporter:
       Tileset-Terrain_1452: -3782288064353910180
       Tileset-Terrain_1289: -2774907658235006820
       Tileset-Terrain_1086: 1222792029371389217
+      stonefence_13: -7191533143983957190
       Tileset-Terrain_219: -2083691767567055842
       Tileset-Terrain_1202: 1707634041060059906
       Tileset-Terrain_614: -6835618803869027705
@@ -37625,7 +37621,6 @@ TextureImporter:
       Tileset-Terrain_792: 2340534684384094797
       Tileset-Terrain_600: 4677318972690294370
       Tileset-Terrain_168: -1432511611881158393
-      Tileset-Terrain_758: 3355340614516603469
       Tileset-Terrain_1003: 8102427605800697445
       Tileset-Terrain_1137: -3947789670887563246
       Tileset-Terrain_517: 7192720752349169278
@@ -37650,7 +37645,6 @@ TextureImporter:
       stonepath_8: 4934216733434019249
       Tileset-Terrain_1106: 638322321603674279
       Tileset-Terrain_316: 33395695800129946
-      Tileset-Terrain_760: -1177303071126363614
       Tileset-Terrain_1521: 933504385938512699
       Tileset-Terrain_472: -4381218523977462911
       dirt_35: -145388319028805285
@@ -37666,6 +37660,7 @@ TextureImporter:
       Tileset-Terrain_397: 3646490627276598746
       gravel_20: 4817206777131541990
       tall_grass_2: -3149132635589049755
+      stonefence_15: -6346888728684992381
       Tileset-Terrain_1481: -5677463910636779145
       stonepath_41: 1777095988246647127
       Tileset-Terrain_858: 294826639695184796
@@ -37737,12 +37732,12 @@ TextureImporter:
       Tileset-Terrain_347: 1240278145348262911
       grass_6: -1019967032642838019
       stonepath_28: -6119449261640916473
+      fence_63: 3723725945432719503
       stonepath_33: 9021852926741344513
       Tileset-Terrain_224: 1029508556847237091
       Tileset-Terrain_712: 5369689135261821266
       Tileset-Terrain_1304: -1543963568307276583
       Tileset-Terrain_1315: 5220910726552970088
-      Tileset-Terrain_596: 5293150524689967255
       Tileset-Terrain_740: -3584769567067468478
       Tileset-Terrain_635: -1061756082370224250
       Tileset-Terrain_848: -310512212229074559
@@ -37752,7 +37747,6 @@ TextureImporter:
       gravel_32: -2501693435022872177
       Tileset-Terrain_1363: -1716272942743858149
       Tileset-Terrain_955: 1761566283489536877
-      Tileset-Terrain_550: 1606404156701476847
       Tileset-Terrain_524: -139593784828026397
       dirt_31: 8701483416402279777
       Tileset-Terrain_482: -8007312077717498922
@@ -37782,7 +37776,6 @@ TextureImporter:
       Tileset-Terrain_1342: -7246618631081884001
       Tileset-Terrain_912: 4498581575995244545
       Tileset-Terrain_1404: -6228878800862148725
-      Tileset-Terrain_716: -5261244240240316681
       Tileset-Terrain_1430: -5532609999231724470
       Tileset-Terrain_1460: 165152924224246656
       Tileset-Terrain_1361: 3864024645195105039
@@ -37814,6 +37807,7 @@ TextureImporter:
       Tileset-Terrain_22: 1758117328093904032
       Tileset-Terrain_523: 6722547174964676815
       Tileset-Terrain_1527: 1849213617905717589
+      stonefence_20: 1297134784893057007
       Tileset-Terrain_144: -5856493629459443567
       dirt_14: -4383796139173959395
       Tileset-Terrain_258: 1183846358263233026
@@ -37882,6 +37876,7 @@ TextureImporter:
       Tileset-Terrain_67: -8970000477237016947
       Tileset-Terrain_588: 795001833598286915
       Tileset-Terrain_1159: -4678660848981373091
+      stonefence_12: 1606404156701476847
       Tileset-Terrain_129: 1479320426364475423
       Tileset-Terrain_972: -4712184075574395463
       Tileset-Terrain_1180: 6763743161284170719
@@ -37904,13 +37899,13 @@ TextureImporter:
       Tileset-Terrain_889: -3453055070674775015
       Tileset-Terrain_18: -9090955103701158082
       Tileset-Terrain_1383: -4439381416088268161
-      Tileset-Terrain_640: 4837684892040152494
       Tileset-Terrain_1004: -1030708593243293415
       Tileset-Terrain_556: 4875671818342804460
       Tileset-Terrain_1479: -9133920050259335300
       grass_12: 6082623938467910608
       Tileset-Terrain_121: -2060932079307830734
       Tileset-Terrain_1274: -3033969646369843810
+      fence_62: 5568104726034218806
       leaves_6: -4196067386904297871
       gravel_14: -6149280483063850332
       Tileset-Terrain_1468: 8959612668566893184
@@ -37937,13 +37932,11 @@ TextureImporter:
       Tileset-Terrain_29: 9174616661955950528
       Tileset-Terrain_487: -7554039613585455750
       Tileset-Terrain_400: -7978869272995574587
-      Tileset-Terrain_795: -6112003189664687154
       Tileset-Terrain_605: 4365713108334224306
       grass_52: 1348222760015432829
       grass_62: -7748457130830746444
       Tileset-Terrain_695: -6755465403241276173
       Tileset-Terrain_475: 6342392114365267542
-      Tileset-Terrain_512: -144176546355647723
       Tileset-Terrain_1307: -9006745411417335293
       Tileset-Terrain_5: -863427019268495568
       Tileset-Terrain_1197: 8925257554529619474
@@ -37951,7 +37944,7 @@ TextureImporter:
       Tileset-Terrain_713: 8117913621529516112
       dirt_32: -6773507342873679100
       Tileset-Terrain_1434: 7803472863067727073
-      Tileset-Terrain_834: 3723725945432719503
+      fence_67: 5853080888518233749
       Tileset-Terrain_842: -3452757382354926200
       Tileset-Terrain_828: -3480154499130298833
       Tileset-Terrain_1286: 7179182216281914281
@@ -37978,6 +37971,7 @@ TextureImporter:
       dirt_23: -1356574562254163693
       grass_81: -1451806218218082762
       Tileset-Terrain_747: -7199957730078757082
+      fence_68: -7196670489621734708
       grass_7: -3039590688314275732
       Tileset-Terrain_688: 671882576761641332
       Tileset-Terrain_1028: 8791648166255559826
@@ -38001,6 +37995,7 @@ TextureImporter:
       Tileset-Terrain_484: -6896367259199039577
       Tileset-Terrain_1401: -4426821974401536156
       Tileset-Terrain_590: -2752069297095431830
+      fence_58: 7624399379350051875
       Tileset-Terrain_1205: -3623790617566676974
       grass_63: 8579813423424840343
       Tileset-Terrain_322: -4452798491197565258
@@ -38020,10 +38015,10 @@ TextureImporter:
       Tileset-Terrain_3: -7656516171991713970
       Tileset-Terrain_1138: 8833247037513458738
       Tileset-Terrain_582: -2938449027437965913
+      stonefence_17: 8754073122127024490
       Tileset-Terrain_1244: -8951422073488675154
       Tileset-Terrain_437: -6967418163018226920
       Tileset-Terrain_229: 5352462790011595434
-      Tileset-Terrain_513: 6582564108215843659
       Tileset-Terrain_1175: 5414182510214719275
       Tileset-Terrain_945: 3582100548331904955
       Tileset-Terrain_877: 985931786918976213
@@ -38033,14 +38028,14 @@ TextureImporter:
       Tileset-Terrain_926: -160629802459063653
       stonepath_1: 5483009091467887717
       dirt_16: -2740045411518629936
-      stonepath_29: 7893045002220020189
       Tileset-Terrain_535: 7110208335445589912
+      Tileset-Terrain_434: -4014067300344541214
       Tileset-Terrain_435: 1585965042851188262
       Tileset-Terrain_645: -188529080739804249
       Tileset-Terrain_631: 1808737156245803604
       Tileset-Terrain_1368: 7200783933654932748
-      Tileset-Terrain_434: -4014067300344541214
       Tileset-Terrain_957: 59506998899744673
+      stonepath_29: 7893045002220020189
       Tileset-Terrain_1305: -6305335829233183526
       Tileset-Terrain_920: -3284837061787587167
       Tileset-Terrain_190: -5619682172451087067
@@ -38072,7 +38067,6 @@ TextureImporter:
       gravel_55: 95886672089208572
       Tileset-Terrain_978: 5548118668660588755
       Tileset-Terrain_78: 8497748683467519595
-      Tileset-Terrain_757: -5903073208291414712
       Tileset-Terrain_1379: -3913282112307058677
       Tileset-Terrain_620: -4696376764859493476
       Tileset-Terrain_823: 4454080003605194500
@@ -38087,13 +38081,13 @@ TextureImporter:
       Tileset-Terrain_565: -44350969724058864
       Tileset-Terrain_1010: -929164599669893357
       Tileset-Terrain_1458: 2629631305266638687
+      stonefence_24: -9113495262521606021
       Tileset-Terrain_813: -4094450432778553397
       Tileset-Terrain_679: 3718290987441519389
       Tileset-Terrain_261: -40839090017665296
-      Tileset-Terrain_676: -9113495262521606021
+      Tileset-Terrain_709: 6968175147047224170
       Tileset-Terrain_594: -3436403511815306468
       Tileset-Terrain_298: 6382145216218173539
-      Tileset-Terrain_709: 6968175147047224170
       Tileset-Terrain_651: -2780886645575909642
       Tileset-Terrain_612: 4779594769958717734
       Tileset-Terrain_466: 2211353580119844192
@@ -38108,6 +38102,7 @@ TextureImporter:
       Tileset-Terrain_634: -1609955114954465124
       grass_37: 1329993272362803041
       Tileset-Terrain_644: 8470333208445520206
+      stonefence_23: -4183982914607825053
       Tileset-Terrain_710: -4111157118509145507
       Tileset-Terrain_174: -8445589151047483580
       Tileset-Terrain_691: -3211952541964471647
@@ -38138,15 +38133,16 @@ TextureImporter:
       dirt_51: -1418314715435540976
       Tileset-Terrain_922: 3141614486475066469
       Tileset-Terrain_1303: -1502083217733963067
-      Tileset-Terrain_675: -4183982914607825053
+      Tileset-Terrain_1400: -461991720676794453
+      stonefence_16: 5293150524689967255
       Tileset-Terrain_1355: 2046344752573103008
       Tileset-Terrain_1372: -2683519329387606398
       Tileset-Terrain_371: 3770456235091631251
-      Tileset-Terrain_1400: -461991720676794453
       dirt_18: 7701061352786155353
       Tileset-Terrain_1349: 3926697160137399457
       Tileset-Terrain_927: 3566963018224440327
       Tileset-Terrain_630: 4465405397524450192
+      stonefence_19: 4837684892040152494
       Tileset-Terrain_554: 3705508491613016456
       Tileset-Terrain_1316: 2648414144397557461
       Tileset-Terrain_309: 6435258631788484954
@@ -38206,11 +38202,10 @@ TextureImporter:
       Tileset-Terrain_1453: 8091544733275532016
       Tileset-Terrain_528: 2842459350644735871
       grass_76: 5132262410514306821
-      Tileset-Terrain_794: 3104678803661847290
-      Tileset-Terrain_1222: 5440717121044234510
       Tileset-Terrain_562: 1148628371711626159
-      Tileset-Terrain_97: -1967389815664674570
+      Tileset-Terrain_1222: 5440717121044234510
       stonepath_32: -6764193996795948425
+      Tileset-Terrain_97: -1967389815664674570
       Tileset-Terrain_20: -3400953890889727002
       Tileset-Terrain_80: -9064662209844310697
       Tileset-Terrain_1314: -2562086903586792267
@@ -38281,7 +38276,6 @@ TextureImporter:
       Tileset-Terrain_705: -1681154543813274145
       tall_grass_15: 6257603554424274986
       dirt_19: -2352524853187060439
-      Tileset-Terrain_642: -5941763242366978861
       Tileset-Terrain_1075: 4193475732821949943
       Tileset-Terrain_1345: -3452954193797026168
       grass_5: -563083173405158689
@@ -38301,6 +38295,7 @@ TextureImporter:
       Tileset-Terrain_956: -870548941067581122
       Tileset-Terrain_572: -794873778655137022
       Tileset-Terrain_51: 1118984494104956879
+      fence_64: 8041818726565231632
       gravel_13: 3572582609302532743
       Tileset-Terrain_66: 426306337075041341
       Tileset-Terrain_1290: 5788053643648978566
@@ -38342,6 +38337,7 @@ TextureImporter:
       Tileset-Terrain_1058: -4575601711144138333
       gravel_16: -8168543079008987742
       Tileset-Terrain_89: -2801851242317087988
+      fence_55: -5261244240240316681
       Tileset-Terrain_226: 3377107815334896353
       Tileset-Terrain_1324: 4640897370550091041
       Tileset-Terrain_1242: -6848587682799998203
@@ -38439,6 +38435,7 @@ TextureImporter:
       Tileset-Terrain_648: -684492570504843847
       dirt_3: -3201277383511993127
       Tileset-Terrain_671: 2615587429824868144
+      fence_53: 6365084820318191984
       Tileset-Terrain_986: 566462077831172074
       Tileset-Terrain_736: -1927382991426179154
       Tileset-Terrain_1382: 4733605178152871707
@@ -38451,7 +38448,6 @@ TextureImporter:
       Tileset-Terrain_270: 2286036757895655536
       Tileset-Terrain_585: -303689358211967838
       Tileset-Terrain_1092: -4269750094150826651
-      Tileset-Terrain_714: 6365084820318191984
       Tileset-Terrain_4: 8430913995347581427
       Tileset-Terrain_1356: -7566515781827001128
       dirt_5: 9023295932677884169
@@ -38460,9 +38456,11 @@ TextureImporter:
       Tileset-Terrain_1446: 2825319690723571206
       Tileset-Terrain_789: 2947105207100339841
       Tileset-Terrain_780: -6648400739347834131
+      fence_61: -6112003189664687154
       gravel_15: -2148385589396123460
       gravel_33: 7307105614803804283
       Tileset-Terrain_510: 8083156643193387093
+      stonefence_22: 5219862059586105620
       Tileset-Terrain_994: 5507991043054723777
       stonepath_14: -6658777746898523484
       Tileset-Terrain_1329: 3515238848039249416
@@ -38492,7 +38490,7 @@ TextureImporter:
       Tileset-Terrain_90: 8637566354174598258
       Tileset-Terrain_294: -2840862083448572451
       Tileset-Terrain_461: -3297162322987501003
-      Tileset-Terrain_836: 6379645361883058510
+      fence_57: 3355340614516603469
       Tileset-Terrain_1507: 7519849465167352277
       grass_31: -2753209714704937452
       Tileset-Terrain_963: 8149575979103212122
@@ -38510,7 +38508,7 @@ TextureImporter:
       grass_15: 6765788207941058324
       Tileset-Terrain_1198: -2189710690833886846
       grass_9: -2971876506616206457
-      Tileset-Terrain_759: 7624399379350051875
+      fence_59: -1177303071126363614
       Tileset-Terrain_11: -6042148306078276270
       grass_23: -584849085330639533
       Tileset-Terrain_731: 3495708278643523450
@@ -38622,6 +38620,7 @@ TextureImporter:
       stonepath_45: -6945386761204577037
       Tileset-Terrain_140: -1385100194478305153
       leaves_7: 9217941190739674428
+      stonefence_21: -5941763242366978861
       Tileset-Terrain_328: 4259295230867842196
       stonepath_4: -4255216770454230771
       Tileset-Terrain_764: -7228703139261002221
@@ -38640,7 +38639,6 @@ TextureImporter:
       dirt_33: -1650575710006720077
       grass_80: 2059044941986623576
       Tileset-Terrain_1360: 6379683755193588559
-      Tileset-Terrain_674: 5219862059586105620
       Tileset-Terrain_469: 1262029450486584221
       tall_grass_7: 6165051100835617837
       Tileset-Terrain_1322: 5210283811781848379
@@ -38669,10 +38667,12 @@ TextureImporter:
       Tileset-Terrain_64: -6420834284308670057
       Tileset-Terrain_1046: 8389740171750493160
       Tileset-Terrain_376: 5292255954514245786
+      fence_65: 6379645361883058510
       Tileset-Terrain_1394: -3751179379074174924
       Tileset-Terrain_879: -3736553211807595214
       Tileset-Terrain_610: -2076703872566830245
       tall_grass_17: 6621871106634943851
+      stonefence_10: 6582564108215843659
       Tileset-Terrain_1330: -6159785475433057183
       Tileset-Terrain_1064: -3557067058093429515
       Tileset-Terrain_1062: 1494384501408273248

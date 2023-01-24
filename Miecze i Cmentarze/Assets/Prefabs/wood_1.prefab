@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5826539274655679999
 SpriteRenderer:
@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1337190763
-  m_SortingLayer: 10
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 1324240085, guid: ebd8c5be295c1954f98014f21b557cdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -110,12 +110,12 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.0213307, y: 0.047843277}
+    - - {x: 0.041422233, y: 0.05453998}
       - {x: -0.17241652, y: 0.046397507}
       - {x: -0.23749042, y: 0.04216385}
       - {x: -0.23992093, y: -0.06534833}
       - {x: 0.004153643, y: -0.31229144}
-      - {x: 0.23637326, y: -0.30624014}
-      - {x: 0.2538975, y: -0.17257535}
-      - {x: 0.18921062, y: -0.10193011}
+      - {x: 0.26316148, y: -0.30624014}
+      - {x: 0.2806862, y: -0.16252935}
+      - {x: 0.2026045, y: -0.09523246}
   m_UseDelaunayMesh: 0

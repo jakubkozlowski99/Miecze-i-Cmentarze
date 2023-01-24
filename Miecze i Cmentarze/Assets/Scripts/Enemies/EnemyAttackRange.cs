@@ -6,7 +6,7 @@ public class EnemyAttackRange : Collidable
 {
     private Animator anim;
     private bool isHurt;
-    private float attackCooldown = 1;
+    public float attackCooldown = 1;
     private float lastAttack;
     private int attackAnimIndex;
     public int animationsAmount;

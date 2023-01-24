@@ -28,6 +28,8 @@ public class SaveManager : MonoBehaviour
 
     public List<SpawnerData> tempSpawners;
 
+    public List<BossData> tempBosses;
+
     public float tempTimer;
 
     public float tempMusicVolume;
@@ -59,6 +61,7 @@ public class SaveManager : MonoBehaviour
         tempCompletedQuests = new List<QuestData>();
         tempShrines = new List<ShrineData>();
         tempSpawners = new List<SpawnerData>();
+        tempBosses = new List<BossData>();
     }
     void Update()
     {
@@ -94,6 +97,7 @@ public class SaveManager : MonoBehaviour
         data.gameTimer = GameManager.instance.gameTimer;
         SaveSpawners();
         data.spawnerData = tempSpawners;
+        data.bossData = tempBosses;
 
         bf.Serialize(file, data);
 
@@ -141,6 +145,7 @@ public class SaveManager : MonoBehaviour
         tempShrines = data.shrineData;
         tempSpawners = data.spawnerData;
         tempTimer = data.gameTimer;
+        tempBosses = data.bossData;
 
         file.Close();
     }

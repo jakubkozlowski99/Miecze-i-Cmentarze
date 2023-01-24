@@ -2053,12 +2053,12 @@ PrefabInstance:
     - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
         type: 3}
       propertyPath: allItems.Array.size
-      value: 37
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
         type: 3}
       propertyPath: allEnemies.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
         type: 3}
@@ -2284,9 +2284,45 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
         type: 3}
+      propertyPath: allItems.Array.data[37]
+      value: 
+      objectReference: {fileID: 11400000, guid: d9765bb6f6cfc96499567111f7ab1023,
+        type: 2}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
+      propertyPath: allItems.Array.data[38]
+      value: 
+      objectReference: {fileID: 11400000, guid: afc0ec0c3098c1c46b51c6cbba9d6c20,
+        type: 2}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
+      propertyPath: allItems.Array.data[39]
+      value: 
+      objectReference: {fileID: 11400000, guid: 373cf4801bd26a14b9ba74bd2be7d8bc,
+        type: 2}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
+      propertyPath: allItems.Array.data[40]
+      value: 
+      objectReference: {fileID: 11400000, guid: 79c3dcb76627f104e9899ffb2a303694,
+        type: 2}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
       propertyPath: allEnemies.Array.data[0]
       value: 
       objectReference: {fileID: 4770027707862348149, guid: 92c19580b9ce7cd4790949666782a430,
+        type: 3}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
+      propertyPath: allEnemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 2259702797431179556, guid: 0422976e4be73d540ba121992ad13c4d,
+        type: 3}
+    - target: {fileID: 6879143110615193320, guid: 94ab7919d1f69324d8fee9a38c754533,
+        type: 3}
+      propertyPath: allEnemies.Array.data[2]
+      value: 
+      objectReference: {fileID: 869337767729224981, guid: fd71fd56df976f04987ac826533ecf05,
         type: 3}
     - target: {fileID: 6879143110615193321, guid: 94ab7919d1f69324d8fee9a38c754533,
         type: 3}
