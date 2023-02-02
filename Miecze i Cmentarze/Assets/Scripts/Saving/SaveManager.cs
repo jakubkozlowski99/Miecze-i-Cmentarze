@@ -114,6 +114,7 @@ public class SaveManager : MonoBehaviour
             GameManager.instance.player.playerStats.addedAttackPoints, GameManager.instance.player.playerStats.addedSpeedPoints,
             GameManager.instance.player.playerStats.addedAgilityPoints, GameManager.instance.player.playerStats.addedVitalityPoints,
             GameManager.instance.player.playerStats.addedConditionPoints, GameManager.instance.player.playerStats.addedDefensePoints);
+        Debug.Log(data.playerData.hp);
     }
 
     public void Load()
@@ -156,15 +157,11 @@ public class SaveManager : MonoBehaviour
         FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
 
         SaveData data = (SaveData)bf.Deserialize(file);*/
-
+        Debug.Log(data.playerData.hp);
         GameManager.instance.playerLevel = data.playerData.level;
         GameManager.instance.coins = data.playerData.coins;
         GameManager.instance.experience = data.playerData.xp;
         GameManager.instance.availablePoints = data.playerData.abilityPoints;
-        GameManager.instance.player.hitpoint = data.playerData.hp;
-        GameManager.instance.player.maxhitpoint = data.playerData.maxHP;
-        GameManager.instance.player.stamina = data.playerData.stamina;
-        GameManager.instance.player.maxStamina = data.playerData.maxStamina;
         GameManager.instance.player.healthBar.SetAllBars("hp");
         GameManager.instance.player.staminaBar.SetAllBars("stamina");
         GameManager.instance.player.xpBar.SetXpBar();
@@ -228,6 +225,10 @@ public class SaveManager : MonoBehaviour
                 InventoryUI.instance.gloves.OnEquip(item);
             }
         }
+        GameManager.instance.player.maxhitpoint = data.playerData.maxHP;
+        GameManager.instance.player.hitpoint = data.playerData.hp;
+        GameManager.instance.player.stamina = data.playerData.stamina;
+        GameManager.instance.player.maxStamina = data.playerData.maxStamina;
     }
 
     private void SaveQuests(SaveData data)

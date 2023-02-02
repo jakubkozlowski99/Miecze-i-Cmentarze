@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Collidable : MonoBehaviour
 {
+    public int hitsSize = 10;
+
     protected ContactFilter2D filter;
     protected BoxCollider2D boxCollider;
-    protected Collider2D[] hits = new Collider2D[10];
+    protected Collider2D[] hits;
 
     protected virtual void Start()
     {
         boxCollider = GetComponent<BoxCollider2D>();
-    }
+        hits = new Collider2D[hitsSize];
+}
 
     protected virtual void Update()
     {

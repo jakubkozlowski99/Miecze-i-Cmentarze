@@ -95,7 +95,7 @@ public class ItemDetailsUI : MonoBehaviour
         {
             if (inventoryUI.gloves.item != null)
             {
-                inventoryUI.boots.OnUnEquip();
+                inventoryUI.gloves.OnUnEquip();
             }
 
             inventoryUI.gloves.OnEquip(item);

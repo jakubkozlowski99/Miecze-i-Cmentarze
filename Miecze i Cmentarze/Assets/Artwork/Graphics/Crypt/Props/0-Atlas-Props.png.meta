@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,448 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: crypt_props_0
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 291
+        width: 83
+        height: 48
+      alignment: 9
+      pivot: {x: 0.49999964, y: 0.61861545}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9abcbea583227b4386ff1613f9583a1
+      internalID: -1822397394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 424
+        width: 25
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d032f7f6ec05b954b93d24277b5c0075
+      internalID: 583574423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_2
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 305
+        width: 79
+        height: 34
+      alignment: 9
+      pivot: {x: 0.51877177, y: 0.30988356}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1553673787df944091b76d2264d2085
+      internalID: 1804728593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_3
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 479
+        width: 25
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3fa86f9a7217f240a5bf521e72325ec
+      internalID: 972935352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 166
+        width: 36
+        height: 47
+      alignment: 9
+      pivot: {x: 0.50373715, y: 0.016672337}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63e8c8e123d58f944a607b891710bb79
+      internalID: 1919712553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_5
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 130
+        width: 35
+        height: 38
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3543918}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9acbb8a1da3be4947bdab39960be2afa
+      internalID: 369575589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_6
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 202
+        width: 23
+        height: 14
+      alignment: 9
+      pivot: {x: 0.49999735, y: -0.6068159}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff38e98452334c14a99a7b64813a83f7
+      internalID: -1698624020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_7
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 163
+        width: 39
+        height: 60
+      alignment: 9
+      pivot: {x: 0.5055597, y: 0.1278539}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c48fcfb020ff44ca89ca44c4b940ba
+      internalID: 1594723184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_8
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 129
+        width: 46
+        height: 30
+      alignment: 9
+      pivot: {x: 0.50000066, y: 0.74568886}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52bc1ef50d188694d920316648ad8375
+      internalID: -1960491292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_10
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 326
+        width: 44
+        height: 67
+      alignment: 9
+      pivot: {x: 0.49999964, y: 0.7447405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f7b22c2643ed6941b917f13faf7ec17
+      internalID: 37471788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crypt_props_11
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 229
+        width: 42
+        height: 68
+      alignment: 9
+      pivot: {x: 0.53048795, y: 0.7196929}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fba4950c879a1844aa01587a7d96fec
+      internalID: 942433496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 640
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201b239b9ef1cc54e8657e46940b9d79
+      internalID: 300577612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 645
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a387a8adaf0f357449b08b48f72e2416
+      internalID: 269914803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 640
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffcde55c9b08114b9edb10a812e04a9
+      internalID: 680377382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd5f6e0d0a5df54b81d5f41859c15c3
+      internalID: 1863926434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 641
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4823afa6f337c3b448c192a10515409d
+      internalID: -513887137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_5
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 613
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 443a23ebde6b6c049a77c5cc478d02cb
+      internalID: -1851125368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_6
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb57649d38457b438db35228739ecd2
+      internalID: 830234640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_7
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 609
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 114ae629abdced34fa052087c1530667
+      internalID: 888966040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 611
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b119a0732e1e3f84cbf86d3a00fcae93
+      internalID: -1058498463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bones_9
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 622
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13797494f9dcb8743b5b36dd9195cf60
+      internalID: -968236756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +557,28 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      crypt_props_1: 583574423
+      bones_5: -1851125368
+      bones_0: 300577612
+      crypt_props_5: 369575589
+      bones_9: -968236756
+      crypt_props_11: 942433496
+      bones_6: 830234640
+      crypt_props_8: -1960491292
+      bones_1: 269914803
+      bones_8: -1058498463
+      crypt_props_0: -1822397394
+      bones_7: 888966040
+      bones_3: 1863926434
+      crypt_props_6: -1698624020
+      crypt_props_10: 37471788
+      crypt_props_2: 1804728593
+      bones_4: -513887137
+      crypt_props_3: 972935352
+      bones_2: 680377382
+      crypt_props_7: 1594723184
+      crypt_props_4: 1919712553
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

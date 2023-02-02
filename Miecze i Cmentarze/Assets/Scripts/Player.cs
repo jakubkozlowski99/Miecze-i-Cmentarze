@@ -60,11 +60,11 @@ public class Player : Mover
         {
             maxhitpoint = 60 + (playerStats.vitality * 40);
             hitpoint = maxhitpoint;
+            healthBar.SetAllBars("hp");
+            staminaBar.SetAllBars("stamina");
         }
         else SaveManager.instance.Load();
         SaveManager.instance.isLoading = false;
-        healthBar.SetAllBars("hp");
-        staminaBar.SetAllBars("stamina");
         staminaRegenTimer = 0;
         xpBar.SetXpBar();
         playerStats.UpdateStats();
