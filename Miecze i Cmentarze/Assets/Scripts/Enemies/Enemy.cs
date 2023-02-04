@@ -35,7 +35,7 @@ public class Enemy : Mover
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
         anim = GetComponent<Animator>();
-        healthBar.SetHealth(hitpoint, maxhitpoint);
+        if(healthBar != null) healthBar.SetHealth(hitpoint, maxhitpoint);
     }
 
     protected virtual void FixedUpdate()
@@ -124,7 +124,7 @@ public class Enemy : Mover
         anim.SetTrigger(deathTrigger);
     }
 
-    protected void KillReward()
+    protected virtual void KillReward()
     {
         CheckQuestGoals();
         GameManager.instance.coins += coinsValue;
@@ -138,7 +138,7 @@ public class Enemy : Mover
         Destroy(gameObject);
     }
 
-    protected void CheckQuestGoals()
+    protected virtual void CheckQuestGoals()
     {
         foreach (Quest quest in GameManager.instance.playerQuests)
         {

@@ -11,6 +11,10 @@ public class Slot : MonoBehaviour
 
     public Item item;
 
+    public bool highlighted;
+
+    protected float lastClick;
+
     public void AddItem(Item newItem)
     {
         item = newItem;

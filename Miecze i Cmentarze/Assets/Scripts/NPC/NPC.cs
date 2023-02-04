@@ -107,7 +107,6 @@ public class NPC : Collidable
                 {
                     quests.Add(playerQuest);
                     questIndex++;
-                    Debug.Log("znalazlem questa");
                 }
             }
         }

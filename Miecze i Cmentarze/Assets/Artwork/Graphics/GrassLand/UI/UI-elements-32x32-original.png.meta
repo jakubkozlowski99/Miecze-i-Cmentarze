@@ -1009,6 +1009,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cursor
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 454
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ddda567facbe7643b1c3af13f97fb6e
+      internalID: -1446566622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1046,6 +1067,7 @@ TextureImporter:
       ui_22: 901633255
       ui_3: -1287306265
       quest_panel_unactive: -17578488
+      cursor: -1446566622
       ui_6: -1887668924
       ui_8: 194043523
       ui_29: -243433422

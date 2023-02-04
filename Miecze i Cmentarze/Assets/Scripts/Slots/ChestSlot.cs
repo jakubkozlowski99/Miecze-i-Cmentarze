@@ -9,9 +9,20 @@ public class ChestSlot : Slot
 
     public void ShowDetails()
     {
-        chestUI.RemoveHighlights();
-        chestUI.chestInventoryItemDetailsUI.HideDetails();
-        chestUI.chestItemDetailsUI.ShowDetails(item);
-        highlightImage.enabled = true;
+        if (!highlighted)
+        {
+            lastClick = Time.time;
+            chestUI.RemoveHighlights();
+            chestUI.chestInventoryItemDetailsUI.HideDetails();
+            chestUI.chestItemDetailsUI.ShowDetails(item);
+            highlightImage.enabled = true;
+            highlighted = true;
+        }
+        else if (Time.time - lastClick < 0.5f && item != null)
+        {
+            highlighted = false;
+            chestUI.chestItemDetailsUI.TakeItem();
+        }
+        else lastClick = Time.time;
     }
 }

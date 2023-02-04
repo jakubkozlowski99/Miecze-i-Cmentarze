@@ -2,33 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss : Mover
+public class Boss : Enemy
 {
-    public int xpValue = 15;
-    public int coinsValue = 50;
-
     public string bossName;
-    public float triggerLength = 1;
-    public float chaseLength = 5;
-    public float attackCooldown = 1.5f;
-    protected bool chasing;
-    protected bool collidingWithPlayer;
-    protected Transform playerTransform;
-    protected Vector3 startingPosition;
-    public float enemyYSpeed = 1;
-    public float enemyXSpeed = 1.5f;
-    protected string hurtTrigger = "Hurt";
-    protected string deathTrigger = "Death";
-    protected bool enemyIsAttacking;
-    protected bool enemyIsHurt;
-    protected bool alive = true;
     private bool healthBarShown;
 
-    [HideInInspector]
-    public ContactFilter2D filter;
-    protected Collider2D[] hits = new Collider2D[20];
-    public Animator anim;
-    public BossHealthBar healthBar;
+    public BossHealthBar bossHealthBar;
 
     protected override void Start()
     {
@@ -37,6 +16,7 @@ public class Boss : Mover
         startingPosition = transform.position;
         anim = GetComponent<Animator>();
         healthBarShown = false;
+        if (!alive) CheckQuestGoals();
         LoadBoss();
     }
 
@@ -58,12 +38,12 @@ public class Boss : Mover
                     Death();
                 }
             }
-            healthBar.SetHealth(hitpoint, maxhitpoint);
+            bossHealthBar.SetHealth(hitpoint, maxhitpoint);
 
         }
     }
 
-    protected void FixedUpdate()
+    protected override void FixedUpdate()
     {
         if (alive)
         {
@@ -136,13 +116,13 @@ public class Boss : Mover
         if (chasing && !healthBarShown)
         {
             healthBarShown = true;
-            healthBar.gameObject.SetActive(true);
-            healthBar.bossName.text = bossName;
+            bossHealthBar.gameObject.SetActive(true);
+            bossHealthBar.bossName.text = bossName;
         }
         else if (!chasing && healthBarShown)
         {
             healthBarShown = false;
-            healthBar.gameObject.SetActive(false);
+            bossHealthBar.gameObject.SetActive(false);
         }
     }
 
@@ -151,9 +131,8 @@ public class Boss : Mover
         alive = false;
         anim.SetTrigger(deathTrigger);
     }
-    protected void KillReward()
+    protected override void KillReward()
     {
-        CheckQuestGoals();
         GameManager.instance.coins += coinsValue;
         GameManager.instance.experience += xpValue;
         if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
@@ -163,11 +142,12 @@ public class Boss : Mover
         GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
         GameManager.instance.player.xpBar.SetXpBar();
         SaveManager.instance.tempBosses.Add(new BossData(this));
+        GameManager.instance.CheckQuestBosses();
         CheckPortals();
         Destroy(gameObject);
     }
 
-    protected void CheckQuestGoals()
+    /*protected override void CheckQuestGoals()
     {
         foreach (Quest quest in GameManager.instance.playerQuests)
         {
@@ -185,7 +165,7 @@ public class Boss : Mover
                         }
                     }
                 }
-            }
+            }*/
             /*if (quest.completed == false && quest.currentGoal.killGoal != null) 
             {
                 if(quest.currentGoal.killGoal.name + "(Clone)" == transform.name && quest.currentGoal.completed == false)
@@ -196,8 +176,8 @@ public class Boss : Mover
                 }
 
             }*/
-        }
-    }
+        
+    
 
     private void LoadBoss()
     {

@@ -36,7 +36,7 @@ Transform:
   - {fileID: 4770140503540996062}
   - {fileID: 4770140503682750038}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4770140502705562769
 SpriteRenderer:
@@ -152,7 +152,6 @@ MonoBehaviour:
   maxhitpoint: 5000
   xpValue: 5000
   coinsValue: 50
-  bossName: "Upad\u0142y wojownik"
   triggerLength: 4
   chaseLength: 8
   attackCooldown: 1.5
@@ -173,7 +172,9 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   anim: {fileID: 0}
-  healthBar: {fileID: 4770140503682750039}
+  healthBar: {fileID: 0}
+  bossName: "Upad\u0142y wojownik"
+  bossHealthBar: {fileID: 4770140503682750039}
 --- !u!1 &4770140502729901870
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitsSize: 10
-  damagePoint: 35
+  damagePoint: 200
   lastDamage: 0
 --- !u!1 &4770140502871265582
 GameObject:

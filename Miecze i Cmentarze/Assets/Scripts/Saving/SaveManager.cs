@@ -63,17 +63,6 @@ public class SaveManager : MonoBehaviour
         tempSpawners = new List<SpawnerData>();
         tempBosses = new List<BossData>();
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            Save();
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            Load();
-        }
-    }
 
     public bool FileExists(string path)
     {

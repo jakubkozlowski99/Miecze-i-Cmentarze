@@ -659,7 +659,6 @@ MonoBehaviour:
   maxhitpoint: 600
   xpValue: 400
   coinsValue: 400
-  bossName: "Le\u015Bna \u0142owczyni"
   triggerLength: 2
   chaseLength: 6
   attackCooldown: 7.5
@@ -680,7 +679,9 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   anim: {fileID: 0}
-  healthBar: {fileID: 1688622843}
+  healthBar: {fileID: 0}
+  bossName: "Le\u015Bna \u0142owczyni"
+  bossHealthBar: {fileID: 1688622843}
 --- !u!61 &4935495977864810097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -778,6 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51041e56bb3a4474e847b4758ffc5c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitsSize: 10
   damagePoint: 70
   lastDamage: 0
 --- !u!1 &4935495978478930803
@@ -852,6 +854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed05d211c05d0384d88a4d1ec4c30814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitsSize: 10
   attackCooldown: 2
   animationsAmount: 1
   attackSoundName: bite

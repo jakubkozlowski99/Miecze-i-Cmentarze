@@ -358,7 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitsSize: 10
-  attackCooldown: 2.5
+  attackCooldown: 4
   animationsAmount: 1
   attackSoundName: bite
 --- !u!1 &506691084241473616
@@ -590,7 +590,7 @@ Transform:
   - {fileID: 506691084028847540}
   - {fileID: 506691084272999292}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &506691084670807986
 SpriteRenderer:
@@ -660,7 +660,6 @@ MonoBehaviour:
   maxhitpoint: 3000
   xpValue: 1500
   coinsValue: 50
-  bossName: "Z\u0142y czarnoksi\u0119\u017Cnik"
   triggerLength: 4
   chaseLength: 8
   attackCooldown: 1.5
@@ -681,7 +680,9 @@ MonoBehaviour:
     minNormalAngle: 0
     maxNormalAngle: 0
   anim: {fileID: 0}
-  healthBar: {fileID: 506691084272999293}
+  healthBar: {fileID: 0}
+  bossName: "Z\u0142y czarnoksi\u0119\u017Cnik"
+  bossHealthBar: {fileID: 506691084272999293}
 --- !u!95 &506691084670807988
 Animator:
   serializedVersion: 4
@@ -800,7 +801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitsSize: 10
-  damagePoint: 100
+  damagePoint: 75
   lastDamage: 0
 --- !u!1 &506691084866258262
 GameObject:

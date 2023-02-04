@@ -3,18 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EquippedItemSlot : MonoBehaviour
+public class EquippedItemSlot : Slot
 {
     public Sprite unequippedImage;
     public Sprite equippedImage;
 
     public InventoryUI inventoryUI;
-    
-    public Image highlightImage;
     public Image itemImage;
     public Image slotImage;
-
-    public Item item;
 
     public void OnEquip(Item newItem)
     {
@@ -69,10 +65,21 @@ public class EquippedItemSlot : MonoBehaviour
 
     public void ShowDetails()
     {
-        inventoryUI.RemoveHighlights();
-        inventoryUI.itemDetailsUI.HideDetails();
-        inventoryUI.equippedItemDetailsUI.ShowDetails(item);
-        highlightImage.enabled = true;
+        if (!highlighted)
+        {
+            lastClick = Time.time;
+            inventoryUI.RemoveHighlights();
+            inventoryUI.itemDetailsUI.HideDetails();
+            inventoryUI.equippedItemDetailsUI.ShowDetails(item);
+            highlightImage.enabled = true;
+            highlighted = true;
+        }
+        else if (Time.time - lastClick < 0.5f && item != null)
+        {
+            highlighted = false;
+            inventoryUI.equippedItemDetailsUI.TakeOff();
+        }
+        else lastClick = Time.time;
     }
 
 }

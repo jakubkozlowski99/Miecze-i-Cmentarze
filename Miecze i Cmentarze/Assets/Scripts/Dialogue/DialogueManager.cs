@@ -213,6 +213,7 @@ public class DialogueManager : MonoBehaviour
         GameManager.instance.playerQuests.Add(quest);
         //quest.SetGoal();
         Inventory.instance.CheckQuestItems();
+        GameManager.instance.CheckQuestBosses();
         questsUI.AddQuest(quest);
         GameManager.instance.ShowText("Dodano zadanie", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
             GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f) ;

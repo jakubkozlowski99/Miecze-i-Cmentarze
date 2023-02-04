@@ -18,31 +18,7 @@ public class PlayerStats : MonoBehaviour {
     public int addedConditionPoints;
     public int addedDefensePoints;
 
-
-    protected void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            GameManager.instance.coins += 10005;
-            defense++;
-            attack++;
-            speed++;
-            vitality++;
-            condition++;
-            agility++;
-            GameManager.instance.player.playerXSpeed = 2 + 0.1f * speed - 0.1f;
-            GameManager.instance.player.playerYSpeed = 1.5f + 0.075f * speed - 0.075f;
-            GameManager.instance.player.anim.SetFloat("AttackSpeed", 1 + (condition/10) - 0.1f);
-            GameManager.instance.player.maxhitpoint = 60 + (vitality * 40);
-            GameManager.instance.player.healthBar.SetMaxValue(GameManager.instance.player.maxhitpoint);
-            GameManager.instance.player.healthBar.SetValue(GameManager.instance.player.hitpoint);
-            GameManager.instance.player.healthBar.SetText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
-            GameManager.instance.player.maxStamina = 60 + (Mathf.CeilToInt(condition) * 40);
-            GameManager.instance.player.staminaBar.SetMaxValue(GameManager.instance.player.maxStamina);
-            GameManager.instance.player.staminaBar.SetValue(GameManager.instance.player.stamina);
-            GameManager.instance.player.staminaBar.SetText(GameManager.instance.player.stamina, GameManager.instance.player.maxStamina);
-        }
-    }
+    public float hpPercentage;
 
     public void AddPoint(string stat)
     {
@@ -81,6 +57,8 @@ public class PlayerStats : MonoBehaviour {
 
     public void UpdateStats()
     {
+        hpPercentage = GameManager.instance.player.hitpoint / GameManager.instance.player.maxhitpoint;
+        hpPercentage = Mathf.Round((GameManager.instance.player.hitpoint / GameManager.instance.player.maxhitpoint) * 100) / 100;
         GameManager.instance.player.playerXSpeed = 2 + 0.1f * speed - 0.1f;
         GameManager.instance.player.playerYSpeed = 1.5f + 0.075f * speed - 0.075f;
 
@@ -88,10 +66,11 @@ public class PlayerStats : MonoBehaviour {
 
         GameManager.instance.player.maxhitpoint = 60 + (vitality * 40);
         GameManager.instance.player.healthBar.SetMaxValue(GameManager.instance.player.maxhitpoint);
-        if (GameManager.instance.player.hitpoint > GameManager.instance.player.maxhitpoint)
+        /*if (GameManager.instance.player.hitpoint > GameManager.instance.player.maxhitpoint)
         { 
             GameManager.instance.player.hitpoint = GameManager.instance.player.maxhitpoint; 
-        }
+        }*/
+        GameManager.instance.player.hitpoint = Mathf.Round(GameManager.instance.player.maxhitpoint * hpPercentage);
         GameManager.instance.player.healthBar.SetValue(GameManager.instance.player.hitpoint);
         GameManager.instance.player.healthBar.SetText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
 

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class LevelLoader : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class LevelLoader : MonoBehaviour
         while (!operation.isDone)
         {
             float progress = Mathf.Clamp01(operation.progress / .9f);
-            progressText.text = progress * 100 + "%";
+            progressText.text = Mathf.Round(progress * 100) + "%";
             slider.value = progress;
             yield return null;
         }

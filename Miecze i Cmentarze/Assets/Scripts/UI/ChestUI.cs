@@ -18,6 +18,17 @@ public class ChestUI : MonoBehaviour
         inventory = Inventory.instance;
     }
 
+    private void Update()
+    {
+        if (chest != null) 
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                CloseChest();
+            }
+        }
+    }
+
     public void OpenChest(Chest newChest)
     {
         chest = newChest;
@@ -35,6 +46,7 @@ public class ChestUI : MonoBehaviour
         chest.textShown = false;
         chest.anim.SetTrigger("Close");
         chest.LoadTempChests(false);
+        chest = null;
         AudioManager.instance.Play("chest_close");
     }
 
@@ -69,10 +81,12 @@ public class ChestUI : MonoBehaviour
         for (int i = 0; i < chestInventorySlots.Length; i++)
         {
             chestInventorySlots[i].highlightImage.enabled = false;
+            chestInventorySlots[i].highlighted = false;
         }
         for (int i = 0; i < chestSlots.Length; i++)
         {
             chestSlots[i].highlightImage.enabled = false;
+            chestSlots[i].highlighted = false;
         }
     }
 }

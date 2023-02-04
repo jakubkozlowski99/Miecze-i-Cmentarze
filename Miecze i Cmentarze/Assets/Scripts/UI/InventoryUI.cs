@@ -187,6 +187,7 @@ public class InventoryUI : MonoBehaviour
         for (int i = 0; i < slots.Length; i++)
         {
             slots[i].highlightImage.enabled = false;
+            slots[i].highlighted = false;
         }
         helmet.highlightImage.enabled = false;
         weapon.highlightImage.enabled = false;
@@ -194,6 +195,12 @@ public class InventoryUI : MonoBehaviour
         armor.highlightImage.enabled = false;
         boots.highlightImage.enabled = false;
         gloves.highlightImage.enabled = false;
+        helmet.highlighted = false;
+        weapon.highlighted = false;
+        ring.highlighted = false;
+        armor.highlighted = false;
+        boots.highlighted = false;
+        gloves.highlighted = false;
     }
 
     private void SetTabs()

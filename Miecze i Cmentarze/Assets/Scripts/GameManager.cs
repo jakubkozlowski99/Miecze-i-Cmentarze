@@ -150,4 +150,26 @@ public class GameManager : MonoBehaviour
         }*/
         
     }
+
+    public void CheckQuestBosses()
+    {
+        foreach (Quest quest in playerQuests)
+        {
+            foreach (QuestGoal questGoal in quest.goals)
+            {
+                if (!questGoal.completed && questGoal.goalType == QuestGoal.GoalType.Kill)
+                {
+                    foreach (BossData bossData in SaveManager.instance.tempBosses) 
+                    {
+                        if (bossData.bossName == questGoal.killGoal.name)
+                        {
+                            questGoal.currentAmount++;
+                            if (questGoal.currentAmount >= questGoal.requiredAmount) questGoal.completed = true;
+                            quest.CheckGoals();
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -12,6 +12,7 @@ public class Portal : Collidable
     public bool active;
 
     public string bossToActivate;
+    public string bossToActivateName;
 
     public int sceneIndex;
 
@@ -35,26 +36,21 @@ public class Portal : Collidable
 
     protected override void Update()
     {
-        if (active)
+        playerNearby = IsPlayerNearby();
+
+        if (playerNearby && !textShown && active)
         {
-            playerNearby = IsPlayerNearby();
-
-            if (playerNearby && !textShown && active)
-            {
-                ShowInteractionText();
-            }
-            if (textShown && !playerNearby)
-            {
-                HideInteractionText();
-            }
-
-            if (Input.GetKeyDown(KeyCode.E) && playerNearby)
-            {
-                OnActivation();
-            }
+            ShowInteractionText();
+        }
+        if (textShown && !playerNearby)
+        {
+            HideInteractionText();
         }
 
-        
+        if (Input.GetKeyDown(KeyCode.E) && playerNearby && active)
+        {
+            OnActivation();
+        }
     }
     protected void OnActivation()
     {
@@ -68,7 +64,8 @@ public class Portal : Collidable
 
     protected void ShowInteractionText()
     {
-        interactionTextManager.Show("[E] Wejdz", 7, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
+        if (active) interactionTextManager.Show("[E] Wejdz", 7, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
+        else interactionTextManager.Show("Pokonaj " + " aby otworzyc portal", 7, Color.red, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
         textShown = true;
     }
     protected void HideInteractionText()

@@ -11,9 +11,20 @@ public class InventorySlot : Slot
 
     public void ShowDetails()
     {
-        inventoryUI.RemoveHighlights();
-        inventoryUI.equippedItemDetailsUI.HideDetails();
-        inventoryUI.itemDetailsUI.ShowDetails(item);
-        highlightImage.enabled = true;
+        if (!highlighted)
+        {
+            lastClick = Time.time;
+            inventoryUI.RemoveHighlights();
+            inventoryUI.equippedItemDetailsUI.HideDetails();
+            inventoryUI.itemDetailsUI.ShowDetails(item);
+            highlightImage.enabled = true;
+            highlighted = true;
+        }
+        else if (Time.time - lastClick < 0.5f && item != null)
+        {
+            highlighted = false;
+            inventoryUI.itemDetailsUI.UseItem();
+        }
+        else lastClick = Time.time;
     }
 }
