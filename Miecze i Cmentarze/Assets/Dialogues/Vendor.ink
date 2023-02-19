@@ -15,7 +15,7 @@ Czołem młodzieńcze! Powiedz mi czego potrzebujesz, może mikstura, magiczny p
 
 Czołem młodzieńcze! Powiedz mi czego potrzebujesz, może mikstura, magiczny pierścień? Zajrzyj, zobacz co mam na składzie, nie pożałujesz!
     + [Pokaż mi swoje towary.] #action:shop
-        -> main
+        -> main2
     + [Jeśli chodzi o to zadanie..] #action:quest_ask
         -> quest_started
     + [Bywaj.]

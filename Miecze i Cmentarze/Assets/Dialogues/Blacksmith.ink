@@ -15,7 +15,7 @@ Witaj, czego potrzebujesz wędrowcze?
 
 Witaj, czego potrzebujesz wędrowcze?
     + [Pokaż mi swoje towary.] #action:shop
-        -> main
+        -> main2
     + [Jeśli chodzi o to zadanie..] #action:quest_ask
         -> quest_started
     + [Bywaj.]
