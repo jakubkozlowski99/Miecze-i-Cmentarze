@@ -185,6 +185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed05d211c05d0384d88a4d1ec4c30814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitsSize: 10
+  attackCooldown: 1
   animationsAmount: 1
   attackSoundName: bite
 --- !u!1 &869337767729224978
@@ -223,7 +225,7 @@ Transform:
   - {fileID: 869337769040980534}
   - {fileID: 869337769806770166}
   m_Father: {fileID: 0}
-  m_RootOrder: 53
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &869337767729224979
 SpriteRenderer:
@@ -554,7 +556,8 @@ MonoBehaviour:
   slider: {fileID: 869337769787255535}
   low: {r: 0.990566, g: 0.013082896, b: 0.013082896, a: 1}
   high: {r: 0.99215686, g: 0.015686275, b: 0.015686275, a: 1}
-  offset: {x: 0, y: 0.5, z: 0}
+  offset: {x: 0, y: 0.75, z: 0}
+  isBoss: 0
 --- !u!1 &869337769611005962
 GameObject:
   m_ObjectHideFlags: 0
@@ -626,6 +629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51041e56bb3a4474e847b4758ffc5c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitsSize: 10
   damagePoint: 50
   lastDamage: 0
 --- !u!1 &869337769787255534

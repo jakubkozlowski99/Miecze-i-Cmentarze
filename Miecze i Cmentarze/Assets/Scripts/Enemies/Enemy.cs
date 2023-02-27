@@ -69,14 +69,9 @@ public class Enemy : Mover
                         UpdateMotor((playerTransform.position - transform.position).normalized, enemyYSpeed, enemyXSpeed);
                     }
                 }
-                else
-                {
-                    //UpdateMotor(startingPosition - transform.position, enemyYSpeed, enemyXSpeed);
-                }
             }
             else if ((!enemyIsAttacking && !enemyIsHurt) || !GameManager.instance.player.alive)
             {
-                //UpdateMotor(startingPosition - transform.position, enemyYSpeed, enemyXSpeed);
                 chasing = false;
                 startingPosition = transform.position;
                 anim.SetBool("EnemyRun", false);

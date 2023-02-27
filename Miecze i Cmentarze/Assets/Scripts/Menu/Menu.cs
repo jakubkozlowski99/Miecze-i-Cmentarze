@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
     public GameObject menu;
     public GameObject continueButton;
     public GameObject settings;
+    public GameObject help;
 
     private void Start()
     {
@@ -44,6 +45,18 @@ public class Menu : MonoBehaviour
     {
         settings.SetActive(true);
         gameObject.SetActive(false);
+    }
+
+    public void Help()
+    {
+        help.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    public void CloseHelp()
+    {
+        help.SetActive(false);
+        gameObject.SetActive(true);
     }
 
     public void Quit()
