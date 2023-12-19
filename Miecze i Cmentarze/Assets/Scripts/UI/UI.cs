@@ -27,5 +27,6 @@ public class UI : MonoBehaviour
         AudioManager.instance.StopMusic("theme_" + SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
         LevelLoader.instance.LoadLevel(0);
+        GameManager.instance.ShowText("Gra zapisana", 10, Color.yellow, GameManager.instance.GetPlayerPosition(), Vector3.up * 25, 0.5f);
     }
 }

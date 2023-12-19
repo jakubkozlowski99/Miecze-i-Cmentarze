@@ -169,4 +169,9 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public Vector3 GetPlayerPosition()
+    {
+        return new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
+    }
 }

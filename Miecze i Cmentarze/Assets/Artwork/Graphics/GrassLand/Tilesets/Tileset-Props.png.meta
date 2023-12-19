@@ -13475,15 +13475,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tileset-Props_512
+      name: sign_0
       rect:
         serializedVersion: 2
         x: 128
         y: 1024
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.64697075, y: 0.12876892}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -31639,7 +31639,6 @@ TextureImporter:
       Tileset-Props_1337: -1277443506921032761
       house_72: -8636160229897764468
       Tileset-Props_152: 7060270364515087663
-      Tileset-Props_512: 6191776377790436601
       Tileset-Props_966: -7990246007637398156
       Tileset-Props_878: 7002488463840510898
       Tileset-Props_298: -632761068868829508
@@ -31661,6 +31660,7 @@ TextureImporter:
       grass_14: 1818776952849388285
       house_202: 1487843141564398999
       Tileset-Props_1346: 7405780632622463852
+      sign_0: 6191776377790436601
       fence_0: 1956927911732757127
       Tileset-Props_677: -5934518399959553901
       Tileset-Props_805: 4349413987181897731

@@ -87,4 +87,15 @@ public class PauseMenu : MonoBehaviour
         settingsUI.SetActive(false);
         background.enabled = false;
     }
+
+    public void Save()
+    {
+        SaveManager.instance.Save();
+        pauseMenuUI.SetActive(false);
+        settingsUI.SetActive(false);
+        background.enabled = false;
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+        AudioManager.instance.Play("unpause");
+    }
 }

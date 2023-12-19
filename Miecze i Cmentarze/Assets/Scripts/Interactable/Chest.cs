@@ -21,7 +21,6 @@ public class Chest : MonoBehaviour
 
     protected void Update()
     {
-
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("chest_idle")) collectable = true;
         else collectable = false;
     }
