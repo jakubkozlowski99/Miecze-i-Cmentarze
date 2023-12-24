@@ -5,10 +5,16 @@ using UnityEngine;
 public class RoadSign : Collidable
 {
     public InteractionTextManager interactionTextManager;
+    public RoadSignUI roadSignUI;
 
     private bool playerNearby;
     private bool textShown;
     public float interactionTextOffset;
+
+    protected override void Start()
+    {
+        base.Start();
+    }
 
     protected override void Update()
     {
@@ -31,7 +37,8 @@ public class RoadSign : Collidable
     }
     protected void OnActivation()
     {
-        
+        roadSignUI = FindObjectOfType<RoadSignUI>();
+        roadSignUI.ReadSign();
     }
 
     protected void ShowInteractionText()

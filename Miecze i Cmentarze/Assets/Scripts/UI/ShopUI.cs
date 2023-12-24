@@ -35,6 +35,7 @@ public class ShopUI : MonoBehaviour
     }
     public void CloseShop()
     {
+        DialogueManager.instance.dialoguePanel.SetActive(true);
         shopPanel.SetActive(false);
     }
 

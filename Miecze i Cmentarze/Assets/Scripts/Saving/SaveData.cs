@@ -8,6 +8,7 @@ public class SaveData
 {
     public int sceneIndex;
     public float gameTimer;
+    public List<string> mapsUnlocked;
     public PlayerData playerData;
     public InventoryData inventoryData;
     public List<ChestData> chestData;

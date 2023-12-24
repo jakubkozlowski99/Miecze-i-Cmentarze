@@ -47,6 +47,9 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         instance = this;
+        shopUI = FindObjectOfType<ShopUI>();
+        ShopUI = FindObjectOfType<ShopUI>().gameObject;
+        questsUI = FindObjectOfType<QuestsUI>();
     }
 
     private void Start()
@@ -182,12 +185,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialoguePanel.SetActive(false);
         shopUI.OpenShop(shop);
-    }
-
-    public void CloseShop()
-    {
-        dialoguePanel.SetActive(true);
-        shopUI.CloseShop();
     }
 
     private int SetQuestState()

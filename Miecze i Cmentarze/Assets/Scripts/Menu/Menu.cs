@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
     {
         menu.SetActive(false);
         //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-        LevelLoader.instance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        LevelLoader.instance.LoadLevel(SaveManager.instance.tempSceneIndex);
         SaveManager.instance.isLoading = true;
         AudioManager.instance.StopMusic("menu");
         AudioManager.instance.Play("confirm");

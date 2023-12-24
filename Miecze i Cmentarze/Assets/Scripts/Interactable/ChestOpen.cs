@@ -55,6 +55,7 @@ public class ChestOpen : Collidable
 
     protected void OnActivation()
     {
+        chest.chestUI = FindObjectOfType<ChestUI>();
         chest.chestUI.OpenChest(chest);
     }
 

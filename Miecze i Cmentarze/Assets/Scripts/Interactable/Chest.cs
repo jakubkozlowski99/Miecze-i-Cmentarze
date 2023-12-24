@@ -14,7 +14,6 @@ public class Chest : MonoBehaviour
     protected void Start()
     {
         anim = GetComponent<Animator>();
-        chestUI = FindObjectOfType<ChestUI>();
 
         LoadTempChests(true);
     }

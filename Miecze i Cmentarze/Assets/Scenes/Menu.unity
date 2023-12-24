@@ -739,6 +739,12 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: theme_4
+    clip: {fileID: 8300000, guid: 532daca5960c6eb429376d646f93e9f5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   musicVolume: 1
   soundsVolume: 1
 --- !u!4 &91539939
@@ -4902,6 +4908,7 @@ GameObject:
   - component: {fileID: 2045011685}
   - component: {fileID: 2045011684}
   - component: {fileID: 2045011683}
+  - component: {fileID: 2045011686}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4975,6 +4982,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045011686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045011682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6b93eeb1328294493e7d08cc779d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookAt: {fileID: 0}
+  boundX: 0.3
+  boundY: 0.1
 --- !u!1 &2118213262
 GameObject:
   m_ObjectHideFlags: 0

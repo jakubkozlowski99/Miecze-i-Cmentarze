@@ -569,7 +569,7 @@ Transform:
   - {fileID: 4935495978478930812}
   - {fileID: 1688622838}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 72
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4935495977864810102
 SpriteRenderer:
@@ -659,8 +659,8 @@ MonoBehaviour:
   maxhitpoint: 600
   xpValue: 400
   coinsValue: 400
-  triggerLength: 2
-  chaseLength: 6
+  triggerLength: 3
+  chaseLength: 7
   attackCooldown: 7.5
   enemyYSpeed: 1
   enemyXSpeed: 1.5
@@ -681,6 +681,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   healthBar: {fileID: 0}
   bossName: "Le\u015Bna \u0142owczyni"
+  unlockedMapName: cemetery
   bossHealthBar: {fileID: 1688622843}
 --- !u!61 &4935495977864810097
 BoxCollider2D:

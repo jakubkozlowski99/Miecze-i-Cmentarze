@@ -5,6 +5,7 @@ using UnityEngine;
 public class Boss : Enemy
 {
     public string bossName;
+    public string unlockedMapName;
     private bool healthBarShown;
 
     public BossHealthBar bossHealthBar;
@@ -138,6 +139,10 @@ public class Boss : Enemy
         if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
         {
             GameManager.instance.player.LevelUp();
+        }
+        if (unlockedMapName != "none") 
+        {
+            GameManager.instance.mapsUnlocked.Add(unlockedMapName);
         }
         GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
         GameManager.instance.player.xpBar.SetXpBar();

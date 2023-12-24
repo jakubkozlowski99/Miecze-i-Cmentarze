@@ -68,6 +68,7 @@ public class Player : Mover
         staminaRegenTimer = 0;
         xpBar.SetXpBar();
         playerStats.UpdateStats();
+        CameraMotor.instance.lookAt = transform;
 
         DontDestroyOnLoad(gameObject);
     }

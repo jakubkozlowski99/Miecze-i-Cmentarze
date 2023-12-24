@@ -52,6 +52,7 @@ public class ChestUI : MonoBehaviour
 
     public void UpdateChest()
     {
+        inventory = Inventory.instance;
         for (int i = 0; i < chestInventorySlots.Length; i++)
         {
             if (i < inventory.items.Count)
@@ -63,7 +64,7 @@ public class ChestUI : MonoBehaviour
                 chestInventorySlots[i].ClearSlot();
             }
         }
-        for(int i = 0; i < chestSlots.Length; i++)
+        for (int i = 0; i < chestSlots.Length; i++) 
         {
             if (i < chest.chestItems.Count)
             {

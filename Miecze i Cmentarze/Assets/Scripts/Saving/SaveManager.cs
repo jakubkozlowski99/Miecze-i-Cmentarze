@@ -30,6 +30,8 @@ public class SaveManager : MonoBehaviour
 
     public List<BossData> tempBosses;
 
+    public int tempSceneIndex;
+
     public float tempTimer;
 
     public float tempMusicVolume;
@@ -39,7 +41,8 @@ public class SaveManager : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("Found more than one Save Manager in the scene");
+            Destroy(gameObject);
+            return;
         }
         instance = this;
         DontDestroyOnLoad(gameObject);
@@ -78,6 +81,7 @@ public class SaveManager : MonoBehaviour
 
         SaveData data = new SaveData();
         data.sceneIndex = SceneManager.GetActiveScene().buildIndex;
+        data.mapsUnlocked = GameManager.instance.mapsUnlocked;
         SavePlayer(data);
         SaveInventory(data);
         data.chestData = tempChests;
@@ -117,6 +121,7 @@ public class SaveManager : MonoBehaviour
         LoadPlayer(data);
         LoadInventory(data);
         GameManager.instance.gameTimer = data.gameTimer;
+        GameManager.instance.mapsUnlocked = data.mapsUnlocked;
 
         file.Close();
 
@@ -129,6 +134,7 @@ public class SaveManager : MonoBehaviour
 
         SaveData data = (SaveData)bf.Deserialize(file);
 
+        tempSceneIndex = data.sceneIndex;
         tempChests = data.chestData;
         tempQuests = data.questData;
         tempCompletedQuests = data.completedQuestData;

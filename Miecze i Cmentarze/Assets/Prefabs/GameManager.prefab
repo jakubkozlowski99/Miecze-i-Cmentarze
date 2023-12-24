@@ -32,7 +32,7 @@ Transform:
   m_Children:
   - {fileID: 8875225938458601322}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8875225938130551113
 MonoBehaviour:
@@ -46,9 +46,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec9694e5be1c99148a6ad816d93072a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSprites: []
-  weaponSprites: []
-  weaponPrices: 
   xpTable: 32000000c8000000900100002003000040060000800c000000190000003200000064000000c8000000900100002003000040060000800c000000190000003200000064000000c8000000900100002003
   player: {fileID: 0}
   floatingTextManager: {fileID: 0}
@@ -58,6 +55,8 @@ MonoBehaviour:
   availablePoints: 0
   playerQuests: []
   completedQuests: []
+  mapsUnlocked:
+  - village
   gameTimer: 0
 --- !u!114 &8875225938130551115
 MonoBehaviour:
