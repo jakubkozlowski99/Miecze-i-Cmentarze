@@ -1542,6 +1542,43 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &395069581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395069582}
+  m_Layer: 5
+  m_Name: SkillsPanelUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &395069582
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395069581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 816227969}
+  m_Father: {fileID: 6097452658390559492}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &436692973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1830,6 +1867,82 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &701723566
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 701723567}
+  - component: {fileID: 701723569}
+  - component: {fileID: 701723568}
+  m_Layer: 5
+  m_Name: SkillsButtonIcon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &701723567
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701723566}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1780483978}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 40, y: 40}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &701723569
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701723566}
+  m_CullTransparentMesh: 1
+--- !u!114 &701723568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701723566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -2001639382, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &726139289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,6 +2153,82 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &816227968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 816227969}
+  - component: {fileID: 816227971}
+  - component: {fileID: 816227970}
+  m_Layer: 5
+  m_Name: SkillsPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &816227969
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816227968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 395069582}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 776.0298, y: 481.45557}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &816227971
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816227968}
+  m_CullTransparentMesh: 1
+--- !u!114 &816227970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816227968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 178186329, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &877585517
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,6 +4683,140 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &1780483977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1780483978}
+  - component: {fileID: 1780483981}
+  - component: {fileID: 1780483980}
+  - component: {fileID: 1780483979}
+  m_Layer: 5
+  m_Name: SkillsPanelButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1780483978
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780483977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 701723567}
+  m_Father: {fileID: 6097452658390559492}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 75, y: 326}
+  m_SizeDelta: {x: 75, y: 75}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &1780483981
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780483977}
+  m_CullTransparentMesh: 1
+--- !u!114 &1780483980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780483977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -243433422, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1780483979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780483977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1780483980}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6097452658360653239}
+        m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
+        m_MethodName: ClickPanelTab
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1800207346
 GameObject:
   m_ObjectHideFlags: 0
@@ -11947,7 +12270,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08a67d59694fad748998aa1c4774d124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 6097452659651885164}
+  panelsUI:
+  - {fileID: 6097452659651885164}
+  - {fileID: 6097452658087110119}
+  - {fileID: 816227968}
   slots:
   - {fileID: 6097452659921441305}
   - {fileID: 6097452658889321638}
@@ -11972,27 +12298,32 @@ MonoBehaviour:
   itemDetailsUI: {fileID: 6097452659866495535}
   equippedItemDetailsUI: {fileID: 6097452659474232124}
   questPanel: {fileID: 6097452658078046630}
-  questPanelUI: {fileID: 6097452658087110119}
-  inventoryTab: {fileID: 6097452659818618027}
-  questPanelTab: {fileID: 6097452659573313222}
-  inventoryTabIcon: {fileID: 6097452658317865536}
-  questPanelTabIcon: {fileID: 6097452659816322791}
-  activeInventoryPanelIcon: {fileID: 724331053, guid: 4782f6f756df0fe4eb43b070522857b9,
-    type: 3}
-  unactiveInventoryPanelIcon: {fileID: 1896656575, guid: 4782f6f756df0fe4eb43b070522857b9,
-    type: 3}
+  skillsPanelUI: {fileID: 816227968}
+  panelTabs:
+  - {fileID: 6097452659818618027}
+  - {fileID: 6097452659573313222}
+  - {fileID: 1780483980}
+  tabIcons:
+  - {fileID: 6097452658317865536}
+  - {fileID: 6097452659816322791}
+  - {fileID: 701723568}
   activeTab: {fileID: 133247369, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   unactiveTab: {fileID: -243433422, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
-  activeQuestPanelIcon: {fileID: -1751019021, guid: 4782f6f756df0fe4eb43b070522857b9,
-    type: 3}
-  unactiveQuestPanelIcon: {fileID: -17578488, guid: 4782f6f756df0fe4eb43b070522857b9,
-    type: 3}
-  helmet: {fileID: 6097452659778473345}
-  weapon: {fileID: 6097452659327816259}
-  armor: {fileID: 6097452658995126556}
-  ring: {fileID: 6097452659225330095}
-  boots: {fileID: 6097452658859097739}
-  gloves: {fileID: 6097452660047187476}
+  activeIcons:
+  - {fileID: 724331053, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  - {fileID: -1340753065, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  - {fileID: -1446566622, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  unactiveIcons:
+  - {fileID: 1896656575, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  - {fileID: 1772154611, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  - {fileID: -2001639382, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  equippedItemSlots:
+  - {fileID: 6097452659778473345}
+  - {fileID: 6097452658995126556}
+  - {fileID: 6097452660047187476}
+  - {fileID: 6097452659327816259}
+  - {fileID: 6097452659225330095}
+  - {fileID: 6097452658859097739}
   abilityPoints: {fileID: 6097452659312464963}
   level: {fileID: 6097452658683698211}
   attack: {fileID: 6097452658409643381}
@@ -12657,13 +12988,15 @@ RectTransform:
   - {fileID: 6097452659925377812}
   - {fileID: 6097452659471232293}
   - {fileID: 6097452658942105589}
+  - {fileID: 395069582}
   - {fileID: 6097452659818618020}
   - {fileID: 6097452659573313223}
   - {fileID: 877585518}
   - {fileID: 240164079}
   - {fileID: 1197695019}
+  - {fileID: 1780483978}
   m_Father: {fileID: 0}
-  m_RootOrder: 54
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -22290,6 +22623,7 @@ MonoBehaviour:
   highlightImage: {fileID: 6097452659841530368}
   item: {fileID: 0}
   highlighted: 0
+  itemType: boots
   unequippedImage: {fileID: 438308081, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   equippedImage: {fileID: 225735807, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   inventoryUI: {fileID: 6097452658360653239}
@@ -26335,6 +26669,7 @@ MonoBehaviour:
   highlightImage: {fileID: 6097452659660546013}
   item: {fileID: 0}
   highlighted: 0
+  itemType: armor
   unequippedImage: {fileID: 2021795044, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   equippedImage: {fileID: 225735807, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   inventoryUI: {fileID: 6097452658360653239}
@@ -30327,6 +30662,7 @@ MonoBehaviour:
   highlightImage: {fileID: 6097452659753399282}
   item: {fileID: 0}
   highlighted: 0
+  itemType: ring
   unequippedImage: {fileID: 194043523, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   equippedImage: {fileID: 225735807, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   inventoryUI: {fileID: 6097452658360653239}
@@ -32665,6 +33001,7 @@ MonoBehaviour:
   highlightImage: {fileID: 6097452659616897290}
   item: {fileID: 0}
   highlighted: 0
+  itemType: weapon
   unequippedImage: {fileID: -712487053, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   equippedImage: {fileID: 225735807, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   inventoryUI: {fileID: 6097452658360653239}
@@ -35476,7 +35813,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6097452659866495535}
         m_TargetAssemblyTypeName: ItemDetailsUI, Assembly-CSharp
-        m_MethodName: UseItem
+        m_MethodName: UseItemButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36177,7 +36514,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6097452659573313223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36196,7 +36533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 50, y: 326}
+  m_AnchoredPosition: {x: -0.0000076293945, y: 326}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6097452659573313221
@@ -36283,12 +36620,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6097452658360653239}
         m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
-        m_MethodName: ClickQuestPanelTab
-        m_Mode: 1
+        m_MethodName: ClickPanelTab
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -38286,7 +38623,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6097452659651885171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40144,6 +40481,7 @@ MonoBehaviour:
   highlightImage: {fileID: 6097452659719255634}
   item: {fileID: 0}
   highlighted: 0
+  itemType: helmet
   unequippedImage: {fileID: -553051878, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   equippedImage: {fileID: 225735807, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   inventoryUI: {fileID: 6097452658360653239}
@@ -40999,7 +41337,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -17578488, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
+  m_Sprite: {fileID: 1772154611, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -41103,7 +41441,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6097452659818618020
 RectTransform:
   m_ObjectHideFlags: 0
@@ -41122,7 +41460,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 326}
+  m_AnchoredPosition: {x: -75, y: 326}
   m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6097452659818618026
@@ -41209,8 +41547,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6097452658360653239}
         m_TargetAssemblyTypeName: InventoryUI, Assembly-CSharp
-        m_MethodName: ClickInvengtoryPanelTab
-        m_Mode: 1
+        m_MethodName: ClickPanelTab
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -43747,7 +44085,7 @@ RectTransform:
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -45764,6 +46102,7 @@ MonoBehaviour:
   highlightImage: {fileID: 6097452660087684050}
   item: {fileID: 0}
   highlighted: 0
+  itemType: gloves
   unequippedImage: {fileID: -1887668924, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   equippedImage: {fileID: 225735807, guid: 4782f6f756df0fe4eb43b070522857b9, type: 3}
   inventoryUI: {fileID: 6097452658360653239}

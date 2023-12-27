@@ -179,45 +179,41 @@ public class SaveManager : MonoBehaviour
 
     private void SaveInventory(SaveData data)
     {
-        data.inventoryData = new InventoryData(Inventory.instance.items, InventoryUI.instance.helmet.item, InventoryUI.instance.weapon.item,
-            InventoryUI.instance.armor.item, InventoryUI.instance.ring.item, InventoryUI.instance.boots.item, InventoryUI.instance.gloves.item);
+        //do zmiany
+        List<Item> equippedItems = new List<Item>();
+        foreach (var equippedItemSlot in InventoryUI.instance.equippedItemSlots)
+        {
+            if (equippedItemSlot.item != null) equippedItems.Add(equippedItemSlot.item);
+        }
+        data.inventoryData = new InventoryData(Inventory.instance.items, equippedItems);
     }
 
     private void LoadInventory(SaveData data)
     {
-        foreach (string itemName in data.inventoryData.itemNames)
+        foreach (var equippedItemName in data.inventoryData.equippedItemNames)
         {
-            foreach(Item item in allItems)
+            foreach (var item in allItems)
             {
-                if (item.name == itemName) Inventory.instance.Add(item);
+                if (item.name == equippedItemName)
+                {
+                    foreach (var equippedItemSlot in InventoryUI.instance.equippedItemSlots)
+                    {
+                        if (item.type == equippedItemSlot.itemType)
+                        {
+                            equippedItemSlot.OnEquip(item);
+                        }
+                    }
+                }
             }
         }
-
-        foreach (Item item in allItems)
+        foreach(var inventoryItemName in data.inventoryData.itemNames)
         {
-            if (item.name == data.inventoryData.helmetName) 
+            foreach (var item in allItems)
             {
-                InventoryUI.instance.helmet.OnEquip(item);
-            }
-            if (item.name == data.inventoryData.weaponName)
-            {
-                InventoryUI.instance.weapon.OnEquip(item);
-            }
-            if (item.name == data.inventoryData.armorName)
-            {
-                InventoryUI.instance.armor.OnEquip(item);
-            }
-            if (item.name == data.inventoryData.ringName)
-            {
-                InventoryUI.instance.ring.OnEquip(item);
-            }
-            if (item.name == data.inventoryData.bootsName)
-            {
-                InventoryUI.instance.boots.OnEquip(item);
-            }
-            if (item.name == data.inventoryData.glovesName)
-            {
-                InventoryUI.instance.gloves.OnEquip(item);
+                if (item.name == inventoryItemName)
+                {
+                    Inventory.instance.Add(item);
+                }
             }
         }
         GameManager.instance.player.maxhitpoint = data.playerData.maxHP;

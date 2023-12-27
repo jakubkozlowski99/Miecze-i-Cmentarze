@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class EquippedItemSlot : Slot
 {
+    public string itemType;
+
     public Sprite unequippedImage;
     public Sprite equippedImage;
 
@@ -18,6 +20,8 @@ public class EquippedItemSlot : Slot
 
         itemImage.sprite = item.icon;
         itemImage.enabled = true;
+
+        //zrobic funkcje ktora przekazuje item i polepsza wszystkie staty na raz
 
         GameManager.instance.player.playerStats.attack += item.attack;
 

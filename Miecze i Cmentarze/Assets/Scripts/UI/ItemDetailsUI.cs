@@ -37,87 +37,25 @@ public class ItemDetailsUI : MonoBehaviour
         itemDetailsUI.SetActive(false);
     }
 
-    public virtual void UseItem()
+    public void UseItemButton()
     {
-        if (item.type == "weapon")
-        {
-            if (inventoryUI.weapon.item != null)
-            {
-                inventoryUI.weapon.OnUnEquip();
-            }
+        UseItem(item.type);
+    }
 
-            inventoryUI.weapon.OnEquip(item);
-            Inventory.instance.Remove(item);
-            inventoryUI.UpdateInventory();
-            inventoryUI.RemoveHighlights();
-            HideDetails();
-        }
-        if (item.type == "armor")
+    public virtual void UseItem(string type)
+    {
+        if (item.type != "consumable")
         {
-            if (inventoryUI.armor.item != null)
+            foreach (var equippedItemSlot in inventoryUI.equippedItemSlots)
             {
-                inventoryUI.armor.OnUnEquip();
+                if (equippedItemSlot.itemType == type)
+                {
+                    if (equippedItemSlot.item != null) equippedItemSlot.OnUnEquip();
+                    equippedItemSlot.OnEquip(item);
+                }
             }
-
-            inventoryUI.armor.OnEquip(item);
-            Inventory.instance.Remove(item);
-            inventoryUI.UpdateInventory();
-            inventoryUI.RemoveHighlights();
-            HideDetails();
         }
-        if (item.type == "helmet")
-        {
-            if (inventoryUI.helmet.item != null)
-            {
-                inventoryUI.helmet.OnUnEquip();
-            }
-
-            inventoryUI.helmet.OnEquip(item);
-            Inventory.instance.Remove(item);
-            inventoryUI.UpdateInventory();
-            inventoryUI.RemoveHighlights();
-            HideDetails();
-        }
-        if (item.type == "ring")
-        {
-            if (inventoryUI.ring.item != null)
-            {
-                inventoryUI.ring.OnUnEquip();
-            }
-
-            inventoryUI.ring.OnEquip(item);
-            Inventory.instance.Remove(item);
-            inventoryUI.UpdateInventory();
-            inventoryUI.RemoveHighlights();
-            HideDetails();
-        }
-        if (item.type == "gloves")
-        {
-            if (inventoryUI.gloves.item != null)
-            {
-                inventoryUI.gloves.OnUnEquip();
-            }
-
-            inventoryUI.gloves.OnEquip(item);
-            Inventory.instance.Remove(item);
-            inventoryUI.UpdateInventory();
-            inventoryUI.RemoveHighlights();
-            HideDetails();
-        }
-        if (item.type == "boots")
-        {
-            if (inventoryUI.boots.item != null)
-            {
-                inventoryUI.boots.OnUnEquip();
-            }
-
-            inventoryUI.boots.OnEquip(item);
-            Inventory.instance.Remove(item);
-            inventoryUI.UpdateInventory();
-            inventoryUI.RemoveHighlights();
-            HideDetails();
-        }
-        if (item.type == "consumable")
+        else
         {
             GameManager.instance.player.hitpoint += item.potionHp;
             if (GameManager.instance.player.hitpoint > GameManager.instance.player.maxhitpoint)
@@ -126,12 +64,12 @@ public class ItemDetailsUI : MonoBehaviour
             }
             GameManager.instance.player.healthBar.SetValue(GameManager.instance.player.hitpoint);
             GameManager.instance.player.healthBar.SetText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
-            Inventory.instance.Remove(item);
-            inventoryUI.UpdateInventory();
-            inventoryUI.RemoveHighlights();
-            HideDetails();
             AudioManager.instance.Play("heal");
         }
+        Inventory.instance.Remove(item);
+        inventoryUI.UpdateInventory();
+        inventoryUI.RemoveHighlights();
+        HideDetails();
     }
 
     public void TakeOff()
@@ -140,42 +78,42 @@ public class ItemDetailsUI : MonoBehaviour
         {
             if (item.type == "helmet")
             {
-                inventoryUI.helmet.OnUnEquip();
-                inventoryUI.UpdateInventory();
-                inventoryUI.RemoveHighlights();
-                HideDetails();
-            }
-            if (item.type == "weapon")
-            {
-                inventoryUI.weapon.OnUnEquip();
+                inventoryUI.equippedItemSlots[0].OnUnEquip();
                 inventoryUI.UpdateInventory();
                 inventoryUI.RemoveHighlights();
                 HideDetails();
             }
             if (item.type == "armor")
             {
-                inventoryUI.armor.OnUnEquip();
+                inventoryUI.equippedItemSlots[1].OnUnEquip();
                 inventoryUI.UpdateInventory();
                 inventoryUI.RemoveHighlights();
                 HideDetails();
             }
             if (item.type == "gloves")
             {
-                inventoryUI.gloves.OnUnEquip();
+                inventoryUI.equippedItemSlots[2].OnUnEquip();
+                inventoryUI.UpdateInventory();
+                inventoryUI.RemoveHighlights();
+                HideDetails();
+            }
+            if (item.type == "weapon")
+            {
+                inventoryUI.equippedItemSlots[3].OnUnEquip();
                 inventoryUI.UpdateInventory();
                 inventoryUI.RemoveHighlights();
                 HideDetails();
             }
             if (item.type == "ring")
             {
-                inventoryUI.ring.OnUnEquip();
+                inventoryUI.equippedItemSlots[4].OnUnEquip();
                 inventoryUI.UpdateInventory();
                 inventoryUI.RemoveHighlights();
                 HideDetails();
             }
             if (item.type == "boots")
             {
-                inventoryUI.boots.OnUnEquip();
+                inventoryUI.equippedItemSlots[5].OnUnEquip();
                 inventoryUI.UpdateInventory();
                 inventoryUI.RemoveHighlights();
                 HideDetails();

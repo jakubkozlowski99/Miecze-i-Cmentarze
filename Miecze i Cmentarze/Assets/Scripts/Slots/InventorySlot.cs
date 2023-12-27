@@ -23,7 +23,7 @@ public class InventorySlot : Slot
         else if (Time.time - lastClick < 0.5f && item != null)
         {
             highlighted = false;
-            inventoryUI.itemDetailsUI.UseItem();
+            inventoryUI.itemDetailsUI.UseItem(item.type);
         }
         else lastClick = Time.time;
     }

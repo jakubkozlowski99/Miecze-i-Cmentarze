@@ -19,33 +19,29 @@ public class InventoryUI : MonoBehaviour
 
     Inventory inventory;
 
-    public GameObject inventoryPanel;
+    public List<GameObject> panelsUI;
+
     public InventorySlot[] slots;
     public ItemDetailsUI itemDetailsUI;
     public ItemDetailsUI equippedItemDetailsUI;
 
     public QuestsUI questPanel;
-    public GameObject questPanelUI;
 
-    public Image inventoryTab;
-    public Image questPanelTab;
-    public Image inventoryTabIcon;
-    public Image questPanelTabIcon;
-    public Sprite activeInventoryPanelIcon;
-    public Sprite unactiveInventoryPanelIcon;
+    public GameObject skillsPanelUI;
+
+    public List<Image> panelTabs;
+
+    public List<Image> tabIcons;
+
     public Sprite activeTab;
     public Sprite unactiveTab;
-    public Sprite activeQuestPanelIcon;
-    public Sprite unactiveQuestPanelIcon;
+
+    public List<Sprite> activeIcons;
+    public List<Sprite> unactiveIcons;
 
     private int tab;
 
-    public EquippedItemSlot helmet;
-    public EquippedItemSlot weapon;
-    public EquippedItemSlot armor;
-    public EquippedItemSlot ring;
-    public EquippedItemSlot boots;
-    public EquippedItemSlot gloves;
+    public List<EquippedItemSlot> equippedItemSlots;
 
     public Text abilityPoints;
     public Text level;
@@ -87,30 +83,39 @@ public class InventoryUI : MonoBehaviour
     {
         if (inventory.canToggle && !PauseMenu.instance.gameIsPaused)
         {
-            if (!inventoryPanel.activeSelf && !questPanelUI.activeSelf)
+            if (panelsUI.TrueForAll(p => !p.activeSelf))
             {
-                tab = 1;
-                SetTabs();
+                tab = 0;
+                SetTabs(tab);
                 UpdateInventory();
                 RemoveHighlights();
-                inventoryTab.gameObject.SetActive(true);
-                questPanelTab.gameObject.SetActive(true);
+                foreach (var panelTab in panelTabs)
+                {
+                    panelTab.gameObject.SetActive(true);
+                }
+                panelsUI[tab].SetActive(true);
                 GameManager.instance.player.canMove = false;
-                inventoryPanel.SetActive(true);
                 GameManager.instance.player.canAttack = false;
             }
             else
             {
-                inventoryTab.gameObject.SetActive(false);
-                questPanelTab.gameObject.SetActive(false);
+                foreach (var panelTab in panelTabs) 
+                {
+                    panelTab.gameObject.SetActive(false);
+                }
+
                 GameManager.instance.player.canMove = true;
-                inventoryPanel.SetActive(false);
+
                 if (questPanel.selectedQuest != null) questPanel.selectedQuest.highlightImage.enabled = false;
                 questPanel.selectedQuest = null;
-                questPanelUI.SetActive(false);
                 questPanel.ClearDescription();
                 itemDetailsUI.HideDetails();
                 equippedItemDetailsUI.HideDetails();
+
+                foreach(var panelUI in panelsUI)
+                {
+                    panelUI.SetActive(false);
+                }
                 GameManager.instance.player.canAttack = true;
             }
         }
@@ -189,57 +194,52 @@ public class InventoryUI : MonoBehaviour
             slots[i].highlightImage.enabled = false;
             slots[i].highlighted = false;
         }
-        helmet.highlightImage.enabled = false;
-        weapon.highlightImage.enabled = false;
-        ring.highlightImage.enabled = false;
-        armor.highlightImage.enabled = false;
-        boots.highlightImage.enabled = false;
-        gloves.highlightImage.enabled = false;
-        helmet.highlighted = false;
-        weapon.highlighted = false;
-        ring.highlighted = false;
-        armor.highlighted = false;
-        boots.highlighted = false;
-        gloves.highlighted = false;
-    }
 
-    private void SetTabs()
-    {
-        if (tab == 0)
+        foreach (var equippedItemSlot in equippedItemSlots)
         {
-            inventoryTab.sprite = unactiveTab;
-            inventoryTabIcon.sprite = unactiveInventoryPanelIcon;
-            questPanelTab.sprite = activeTab;
-            questPanelTabIcon.sprite = activeQuestPanelIcon;
-            tab = 1;
-        }
-        else
-        {
-            inventoryTab.sprite = activeTab;
-            inventoryTabIcon.sprite = activeInventoryPanelIcon;
-            questPanelTab.sprite = unactiveTab;
-            questPanelTabIcon.sprite = unactiveQuestPanelIcon;
-            tab = 0;
+            equippedItemSlot.highlightImage.enabled = false;
+            equippedItemSlot.highlighted = false;
         }
     }
 
-    public void ClickInvengtoryPanelTab()
+    private void SetTabs(int tabIndex)
     {
-        if (tab == 1)
+        var index = 0; 
+        foreach (var panelTab in panelTabs)
         {
-            inventoryPanel.SetActive(true);
-            questPanelUI.SetActive(false);
-            SetTabs();
+            if (index == tabIndex)
+            {
+                panelTab.sprite = activeTab;
+                tabIcons[index].sprite = activeIcons[index];
+            }
+            else
+            {
+                panelTab.sprite = unactiveTab;
+                tabIcons[index].sprite = unactiveIcons[index];
+            }
+            index++;
         }
+        tab = tabIndex;
     }
 
-    public void ClickQuestPanelTab()
+    public void ClickPanelTab(int tabIndex)
     {
-        if (tab == 0)
+        if (tab != tabIndex)
         {
-            inventoryPanel.SetActive(false);
-            questPanelUI.SetActive(true);
-            SetTabs();
+            var index = 0;
+            foreach (var panelUI in panelsUI)
+            {
+                if (index == tabIndex)
+                {
+                    panelUI.SetActive(true);
+                }
+                else
+                {
+                    panelUI.SetActive(false);
+                }
+                index++;
+            }
+            SetTabs(tabIndex);
         }
     }
 }

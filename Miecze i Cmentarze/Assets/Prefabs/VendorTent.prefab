@@ -75,7 +75,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1337190763
-  m_SortingLayer: 9
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: -1113279545, guid: d4fb280a0de6835429ef77ecee836a28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7af506f070e12448f60a1773bfe807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitsSize: 10
   interactionTextOffset: 0.3
   inkJSON: {fileID: 4900000, guid: 2e862be9f689d2b4fb292b85a4e349ac, type: 3}
   interactionTextManager: {fileID: 4897146578314368151}
@@ -127,23 +128,80 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c2fa8d679380a1b438343d850f853402, type: 2}
   - {fileID: 11400000, guid: 885db7baa32a6c84b9562adf6a4a0a80, type: 2}
   - {fileID: 11400000, guid: 4d8ad47108ad5b9499f92ac8ee7452f5, type: 2}
+  - {fileID: 11400000, guid: d25f104a69d8f634b8aa8f5a352362b7, type: 2}
+  - {fileID: 11400000, guid: cf3e6ecdb2b37ec49a1be1d151b4fdab, type: 2}
+  - {fileID: 11400000, guid: 594871513fe06b041b5ba792ecbee505, type: 2}
+  - {fileID: 11400000, guid: e966960175561c447acf29ef567585a4, type: 2}
   quests:
   - information:
-      name: gitara siema
-      description: tralalabumcykcyk
-      dialogueText: poprosze zebys normalnie zrobil salto tak o od buta
+      name: Czyszczenie lasu
+      description: "Handlarz poprosi\u0142 o zabicie sze\u015Bciu le\u015Bnych potwor\xF3w.
+        Powinny by\u0107 gdzie\u015B dooko\u0142a wioski."
+      dialogueText: "M\xF3g\u0142by\u015B zaj\u0105\u0107 si\u0119 tymi bestiami,
+        kt\xF3re zal\u0119g\u0142y si\u0119 w naszym lesie? Zabij sze\u015B\u0107
+        takich a dam ci nagrod\u0119. "
     completed: 0
     rewardClaimed: 0
     reward:
-      coins: 0
-      xp: 0
+      coins: 200
+      xp: 200
     goals:
     - killGoal: {fileID: 4770027707862348137, guid: 92c19580b9ce7cd4790949666782a430,
         type: 3}
       itemGoal: {fileID: 0}
       currentAmount: 0
+      requiredAmount: 6
+      goalDescription: "Zabij le\u015Bne potwory."
+      completed: 0
+      goalType: 0
+  - information:
+      name: Zniszczone buty
+      description: "Handlarzowi zniszczy\u0142y si\u0119 buty i potrzebuje nowych,
+        znajd\u017A par\u0119 sk\xF3rzanych but\xF3w i przynie\u015B mu."
+      dialogueText: "W ostatnim czasie zniszczy\u0142y mi si\u0119 buty, mo\u017Ce
+        m\xF3g\u0142by\u015B za\u0142atwi\u0107 mi now\u0105 par\u0119? Oczywi\u015Bcie
+        ci\u0119 wynagrodz\u0119."
+    completed: 0
+    rewardClaimed: 0
+    reward:
+      coins: 200
+      xp: 200
+    goals:
+    - killGoal: {fileID: 0}
+      itemGoal: {fileID: 11400000, guid: b14c2c005f789e542b9aba913e8b2920, type: 2}
+      currentAmount: 0
       requiredAmount: 1
-      goalDescription: we no zabij tych chlopow
+      goalDescription: "Znajd\u017A sk\xF3rzane buty."
+      completed: 0
+      goalType: 1
+  - information:
+      name: "Zagro\u017Cenie przy cmentarzu"
+      description: "Handlarz potrzebuje pomocy, w okolicach cmentarza znajduj\u0105
+        si\u0119 sk\u0142adniki, kt\xF3rych potrzebuje. Zabij znajduj\u0105ce si\u0119
+        tam powtory, \u017Ceby m\xF3g\u0142 je zebra\u0107."
+      dialogueText: "W okolicach cmentarza rosn\u0105 ro\u015Bliny, kt\xF3rych potrzebuj\u0119
+        do mikstur, ale przez nietoperze i zombie nie mog\u0119 ich zebra\u0107.
+        Pozb\u0105d\u017A si\u0119 ich, a dam ci nagrod\u0119."
+    completed: 0
+    rewardClaimed: 0
+    reward:
+      coins: 500
+      xp: 500
+    goals:
+    - killGoal: {fileID: 869337767729224978, guid: fd71fd56df976f04987ac826533ecf05,
+        type: 3}
+      itemGoal: {fileID: 0}
+      currentAmount: 0
+      requiredAmount: 5
+      goalDescription: Zabij zombie
+      completed: 0
+      goalType: 0
+    - killGoal: {fileID: 2259702797431179567, guid: 0422976e4be73d540ba121992ad13c4d,
+        type: 3}
+      itemGoal: {fileID: 0}
+      currentAmount: 0
+      requiredAmount: 5
+      goalDescription: Zabij nietoperze
       completed: 0
       goalType: 0
   thisNPC: {fileID: 4897146577076021817}
@@ -425,7 +483,7 @@ Transform:
   - {fileID: 4897146577332427332}
   - {fileID: 4897146578673973025}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4897146577924294750
 SpriteRenderer:
@@ -466,7 +524,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1337190763
-  m_SortingLayer: 9
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 00227530bc13b8c4bb6104e2da467f2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -82,29 +82,12 @@ public class PlayerData
     }
     private void CheckStats()
     {
-        if (InventoryUI.instance.helmet.item != null)
+        foreach (var equippedItemSlot in InventoryUI.instance.equippedItemSlots)
         {
-            CheckItemSlot(InventoryUI.instance.helmet);
-        }
-        if (InventoryUI.instance.weapon.item != null)
-        {
-            CheckItemSlot(InventoryUI.instance.weapon);
-        }
-        if (InventoryUI.instance.armor.item != null)
-        {
-            CheckItemSlot(InventoryUI.instance.armor);
-        }
-        if (InventoryUI.instance.ring.item != null)
-        {
-            CheckItemSlot(InventoryUI.instance.ring);
-        }
-        if (InventoryUI.instance.boots.item != null)
-        {
-            CheckItemSlot(InventoryUI.instance.boots);
-        }
-        if (InventoryUI.instance.gloves.item != null) 
-        {
-            CheckItemSlot(InventoryUI.instance.gloves);
+            if (equippedItemSlot.item != null)
+            {
+                CheckItemSlot(equippedItemSlot);
+            }
         }
     }
 
@@ -124,16 +107,9 @@ public class PlayerData
 public class InventoryData
 {
     public List<string> itemNames;
+    public List<string> equippedItemNames;
 
-    public string helmetName;
-    public string weaponName;
-    public string armorName;
-    public string ringName;
-    public string bootsName;
-    public string glovesName;
-
-    public InventoryData(List<Item> items, Item helmet, Item weapon, Item armor, Item ring, Item boots,
-        Item gloves)
+    public InventoryData(List<Item> items, List<Item> equippedItems)
     {
         itemNames = new List<string>();
         foreach (Item item in items)
@@ -141,18 +117,11 @@ public class InventoryData
             itemNames.Add(item.name);
         }
 
-        if (helmet != null) helmetName = helmet.name;
-        else helmetName = "";
-        if (weapon != null) weaponName = weapon.name;
-        else weaponName = "";
-        if (armor != null) armorName = armor.name;
-        else armorName = "";
-        if (ring != null) ringName = ring.name;
-        else ringName = "";
-        if (boots != null) bootsName = boots.name;
-        else bootsName = "";
-        if (gloves != null) glovesName = gloves.name;
-        else glovesName = "";
+        equippedItemNames = new List<string>();
+        foreach (Item equippedItem in equippedItems) 
+        {
+            equippedItemNames.Add(equippedItem.name);
+        }
     }
 }
 

@@ -779,7 +779,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: quest_panel_unactive
+      name: questpanel_unactive
       rect:
         serializedVersion: 2
         x: 7
@@ -1010,7 +1010,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cursor
+      name: skills_panel_active
       rect:
         serializedVersion: 2
         x: 73
@@ -1039,7 +1039,7 @@ TextureImporter:
         width: 30
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 7, y: 9, z: 7, w: 9}
       outline: []
       physicsShape: []
@@ -1047,6 +1047,69 @@ TextureImporter:
       bones: []
       spriteID: 172f483fd044d744fbe488c5c85e8c33
       internalID: -945885297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skills_panel_unactive
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 422
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bece30021312b5f4ab42534c66253b45
+      internalID: -2001639382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quest_panel_active
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 456
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9530a2ea1eff7449866606cfb1fcafa
+      internalID: -1340753065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: quest_panel_unactive
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 424
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ff9a0ca46b5a34b88b9e393bc067d2
+      internalID: 1772154611
       vertices: []
       indices: 
       edges: []
@@ -1073,11 +1136,13 @@ TextureImporter:
       ui_40: 625721329
       ui_33: 174327661
       ui_31: 1531608072
+      skills_panel_unactive: -2001639382
       inventory_panel_unactive: 1896656575
       ui_7: -712487053
       ui_16: 426690800
       ui_23: -906719968
       ui_1: -498994869
+      questpanel_unactive: -17578488
       ui_11: 1124653943
       ui_14: 861365306
       questpanel_active: -1751019021
@@ -1087,10 +1152,11 @@ TextureImporter:
       ui_21: 500720410
       ui_22: 901633255
       ui_3: -1287306265
-      cursor: -1446566622
-      quest_panel_unactive: -17578488
+      quest_panel_unactive: 1772154611
       ui_6: -1887668924
       ui_8: 194043523
+      skills_panel_active: -1446566622
+      quest_panel_active: -1340753065
       ui_29: -243433422
       ui_99: -945885297
       ui_41: 1507946328
@@ -1100,10 +1166,10 @@ TextureImporter:
       ui_20: 488817974
       inventory_panel_active: 724331053
       ui_17: 1930829329
-      ui_24: 551281953
       ui_10: 225735807
-      ui_26: 1111690892
       ui_30: -1557416232
+      ui_24: 551281953
+      ui_26: 1111690892
       ui_15: 135552418
       ui_18: -188128606
       ui_25: -1062908792
