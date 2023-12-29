@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Miecz ognia
   icon: {fileID: 2138328948, guid: 314c66b0719028d438fd8600c854b4a3, type: 3}
-  attack: 15
-  speed: 0
-  agility: 1
-  vitality: 2
-  condition: 0
-  defense: 0
+  basicDamage: 80
+  armorPenetration: 50
+  bonusAttackSpeed: 0
+  critChance: 20
+  bonusHp: 0
+  bonusHpRegen: 0
+  bonusSpeed: 0
+  bonusStamina: 0
+  bonusStaminaRegen: 0
+  damageReduction: 0
   type: weapon
   coins: 0
   potionHp: 0

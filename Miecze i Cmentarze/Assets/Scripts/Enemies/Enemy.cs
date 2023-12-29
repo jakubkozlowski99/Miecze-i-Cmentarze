@@ -6,6 +6,7 @@ public class Enemy : Mover
 {
     public int xpValue = 15;
     public int coinsValue = 50;
+    public float damageReduction = 0;
 
     public float triggerLength = 1;
     public float chaseLength = 5;
@@ -107,6 +108,7 @@ public class Enemy : Mover
     {
         if (alive)
         {
+            dmg.damageReduction = damageReduction;
             base.ReceiveDamage(dmg);
             healthBar.SetHealth(hitpoint, maxhitpoint);
             anim.SetTrigger(hurtTrigger);

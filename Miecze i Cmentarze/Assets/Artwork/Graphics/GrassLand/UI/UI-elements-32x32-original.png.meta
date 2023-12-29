@@ -1060,7 +1060,7 @@ TextureImporter:
         width: 17
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1081,7 +1081,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1102,7 +1102,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1110,6 +1110,216 @@ TextureImporter:
       bones: []
       spriteID: 13ff9a0ca46b5a34b88b9e393bc067d2
       internalID: 1772154611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: vitality_icon
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 358
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7177ddcac2fbe498a858aacbb704cd
+      internalID: -1970924831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: attack_icon
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 358
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e00810426acb848a2a4513b0624a39
+      internalID: -1375363036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: defense_icon
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 358
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f7473e24ca9d440a94a2ad431702c8
+      internalID: 2026322661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: speed_icon
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 358
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0e2e08823d42845826e47e18349df8
+      internalID: -965604900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: health_bar_fill
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 259
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 13, z: 5, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58f1aedc49cc44845941177f95271e44
+      internalID: -768509779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: xp_bar_fill
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 259
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 13, z: 5, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5dd67a81533b44ba71605eb7c04739
+      internalID: -1370868910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: energy_bar_fill
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 259
+        width: 27
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 5, y: 13, z: 5, w: 4}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9e6951c1f5ad9419e100afe2869eeb
+      internalID: 179231165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI-elements-32x32-original_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 259
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b16c97a21e18e4e4e861eeec6ae77852
+      internalID: -1263103442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_98
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 164
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eca6c6f22b0f9d40b4434c4c9a79641
+      internalID: 1994156003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ui_97
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 132
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ac02fec24152274da902c75459377e6
+      internalID: 1308150921
       vertices: []
       indices: 
       edges: []
@@ -1125,6 +1335,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      UI-elements-32x32-original_1: -1263103442
       ui_13: 702921174
       ui_9: 438308081
       ui_4: -553051878
@@ -1137,15 +1348,22 @@ TextureImporter:
       ui_33: 174327661
       ui_31: 1531608072
       skills_panel_unactive: -2001639382
+      vitality_icon: -1970924831
+      ui_97: 1308150921
       inventory_panel_unactive: 1896656575
       ui_7: -712487053
       ui_16: 426690800
+      attack_icon: -1375363036
       ui_23: -906719968
+      xp_bar_fill: -1370868910
       ui_1: -498994869
+      energy_bar_fill: 179231165
       questpanel_unactive: -17578488
+      speed_icon: -965604900
       ui_11: 1124653943
       ui_14: 861365306
       questpanel_active: -1751019021
+      ui_98: 1994156003
       ui_35: 2011198021
       ui_0: 178186329
       ui_34: -404380756
@@ -1154,12 +1372,14 @@ TextureImporter:
       ui_3: -1287306265
       quest_panel_unactive: 1772154611
       ui_6: -1887668924
-      ui_8: 194043523
       skills_panel_active: -1446566622
+      ui_8: 194043523
       quest_panel_active: -1340753065
+      defense_icon: 2026322661
       ui_29: -243433422
       ui_99: -945885297
       ui_41: 1507946328
+      health_bar_fill: -768509779
       ui_2: 1682438968
       ui_5: 2021795044
       UI-elements-32x32-original_0: -950590470

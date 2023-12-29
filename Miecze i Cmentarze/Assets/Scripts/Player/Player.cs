@@ -33,6 +33,10 @@ public class Player : Mover
     public PlayerBar staminaBar;
     public PlayerBar xpBar;
     public PlayerStats playerStats;
+
+    private float hpRegenTimer;
+    private float hpRegenCooldown = 5f;
+
     private float staminaRegenTimer;
     private float staminaRegenCooldown = 0.2f;
 
@@ -55,7 +59,7 @@ public class Player : Mover
         canMove = true;
         canAttack = true;
         anim = GetComponent<Animator>();
-        anim.SetFloat("AttackSpeed", 1 + (playerStats.condition / 10) - 0.1f);
+        anim.SetFloat("AttackSpeed", 1 + playerStats.bonusAttackSpeed / 100);
         if (SaveManager.instance.isLoading == false)
         {
             maxhitpoint = 60 + (playerStats.vitality * 40);
@@ -65,6 +69,7 @@ public class Player : Mover
         }
         else SaveManager.instance.Load();
         SaveManager.instance.isLoading = false;
+        hpRegenTimer = 0;
         staminaRegenTimer = 0;
         xpBar.SetXpBar();
         playerStats.UpdateStats();
@@ -128,13 +133,14 @@ public class Player : Mover
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (Time.time - lastDodge > dodgeCooldown && stamina >= 20)
+                if (Time.time - lastDodge > dodgeCooldown && ((stamina >= 20 && !playerStats.freeDodge) || playerStats.freeDodge))
                 {
                     Dodge(x, y);
                 }
             }
         }
 
+        HpRegen();
         StaminaRegen();
 
         if (isDodging) UpdateMotor(new Vector3(dodgeX, dodgeY, 0), playerYSpeed * 2, playerXSpeed * 2);
@@ -186,7 +192,7 @@ public class Player : Mover
             dodgeX = x;
             dodgeY = y;
             anim.SetTrigger("Dodge");
-            stamina -= 20;
+            if (!playerStats.freeDodge) stamina -= 20;
             staminaBar.SetValue(stamina);
             AudioManager.instance.Play("player_dodge");
         }
@@ -194,10 +200,27 @@ public class Player : Mover
 
     protected override void ReceiveDamage(Damage dmg)
     {
+        dmg.damageReduction = GameManager.instance.player.playerStats.damageReduction;
         base.ReceiveDamage(dmg);
         healthBar.SetValue(hitpoint);
         healthBar.SetText(hitpoint, maxhitpoint);
         anim.SetTrigger("Hurt");
+    }
+
+    private void HpRegen()
+    {
+        if (hpRegenTimer >= hpRegenCooldown)
+        {
+            if (hitpoint < maxhitpoint)
+            {
+                hitpoint += Mathf.CeilToInt(playerStats.bonusHpRegen);
+                if (hitpoint > maxhitpoint) hitpoint = maxhitpoint;
+                healthBar.SetValue(hitpoint);
+                healthBar.SetText(hitpoint, maxhitpoint);
+            }
+            hpRegenTimer = 0;
+        }
+        hpRegenTimer += Time.deltaTime;
     }
 
     private void StaminaRegen()
@@ -206,7 +229,7 @@ public class Player : Mover
         {
             if (stamina < maxStamina)
             {
-                stamina += 2 + Mathf.CeilToInt(playerStats.condition) / 2 - 1;
+                stamina += 2 + Mathf.CeilToInt(2 * (playerStats.bonusStaminaRegen / 100));
                 if (stamina > maxStamina) stamina = maxStamina;
                 staminaBar.SetValue(stamina);
                 staminaBar.SetText(stamina, maxStamina);

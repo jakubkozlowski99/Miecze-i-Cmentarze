@@ -27,7 +27,9 @@ public class InventoryUI : MonoBehaviour
 
     public QuestsUI questPanel;
 
-    public GameObject skillsPanelUI;
+    public GameObject statsPanelUI;
+
+    public StatsPanelUI statsPanel;
 
     public List<Image> panelTabs;
 
@@ -47,17 +49,13 @@ public class InventoryUI : MonoBehaviour
     public Text level;
     public Text attack;
     public Text speed;
-    public Text agility;
     public Text vitality;
-    public Text condition;
     public Text defense;
     public Text coins;
 
     public GameObject attackButton;
     public GameObject speedButton;
-    public GameObject agilityButton;
     public GameObject vitalityButton;
-    public GameObject conditionButton;
     public GameObject defenseButton;
 
     private void Start()
@@ -88,6 +86,7 @@ public class InventoryUI : MonoBehaviour
                 tab = 0;
                 SetTabs(tab);
                 UpdateInventory();
+                statsPanel.SetStatsText();
                 RemoveHighlights();
                 foreach (var panelTab in panelTabs)
                 {
@@ -139,9 +138,7 @@ public class InventoryUI : MonoBehaviour
         level.text = GameManager.instance.playerLevel.ToString();
         attack.text = GameManager.instance.player.playerStats.attack.ToString();
         speed.text = GameManager.instance.player.playerStats.speed.ToString();
-        agility.text = GameManager.instance.player.playerStats.agility.ToString();
         vitality.text = GameManager.instance.player.playerStats.vitality.ToString();
-        condition.text = GameManager.instance.player.playerStats.condition.ToString();
         defense.text = GameManager.instance.player.playerStats.defense.ToString();
         coins.text = GameManager.instance.coins.ToString();
 
@@ -162,23 +159,11 @@ public class InventoryUI : MonoBehaviour
         }
         else speedButton.SetActive(false);
 
-        if (GameManager.instance.availablePoints > 0 && GameManager.instance.player.playerStats.addedAgilityPoints < 9)
-        {
-            agilityButton.SetActive(true);
-        }
-        else agilityButton.SetActive(false);
-
         if (GameManager.instance.availablePoints > 0 && GameManager.instance.player.playerStats.addedVitalityPoints < 9)
         {
             vitalityButton.SetActive(true);
         }
         else vitalityButton.SetActive(false);
-
-        if (GameManager.instance.availablePoints > 0 && GameManager.instance.player.playerStats.addedConditionPoints < 9)
-        {
-            conditionButton.SetActive(true);
-        }
-        else conditionButton.SetActive(false);
 
         if (GameManager.instance.availablePoints > 0 && GameManager.instance.player.playerStats.addedDefensePoints < 9)
         {

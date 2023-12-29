@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerAttack : Collidable
 {
     public PlayerStats playerStats;
-    private float damagePoint = 25;
     protected override void Start()
     {
         base.Start();
@@ -24,7 +23,9 @@ public class PlayerAttack : Collidable
 
             Damage dmg = new Damage
             {
-                damageAmount = Mathf.Round((damagePoint * (1 + GameManager.instance.player.playerStats.attack / 10)))
+                damageAmount = GameManager.instance.player.playerStats.basicDamage,
+                critChance = GameManager.instance.player.playerStats.critChance,
+                armorPenetration = GameManager.instance.player.playerStats.armorPenetration
             };
             //Debug.Log(coll.name);
             coll.transform.parent.SendMessage("ReceiveDamage", dmg);

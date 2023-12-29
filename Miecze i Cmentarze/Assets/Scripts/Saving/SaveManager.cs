@@ -102,11 +102,10 @@ public class SaveManager : MonoBehaviour
         data.playerData = new PlayerData(GameManager.instance.playerLevel, GameManager.instance.coins, GameManager.instance.experience, GameManager.instance.availablePoints,
             GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint, GameManager.instance.player.stamina, GameManager.instance.player.maxStamina,
             new Vector2(GameManager.instance.player.transform.position.x, GameManager.instance.player.transform.position.y),
-            GameManager.instance.player.playerStats.attack, GameManager.instance.player.playerStats.speed, GameManager.instance.player.playerStats.agility,
-            GameManager.instance.player.playerStats.vitality, GameManager.instance.player.playerStats.condition, GameManager.instance.player.playerStats.defense,
+            GameManager.instance.player.playerStats.attack, GameManager.instance.player.playerStats.speed,
+            GameManager.instance.player.playerStats.vitality, GameManager.instance.player.playerStats.defense,
             GameManager.instance.player.playerStats.addedAttackPoints, GameManager.instance.player.playerStats.addedSpeedPoints,
-            GameManager.instance.player.playerStats.addedAgilityPoints, GameManager.instance.player.playerStats.addedVitalityPoints,
-            GameManager.instance.player.playerStats.addedConditionPoints, GameManager.instance.player.playerStats.addedDefensePoints);
+            GameManager.instance.player.playerStats.addedVitalityPoints, GameManager.instance.player.playerStats.addedDefensePoints);
         Debug.Log(data.playerData.hp);
     }
 
@@ -163,16 +162,20 @@ public class SaveManager : MonoBehaviour
         GameManager.instance.player.transform.position = new Vector3(data.playerData.playerX, data.playerData.playerY);
         GameManager.instance.player.playerStats.attack = data.playerData.attack;
         GameManager.instance.player.playerStats.speed = data.playerData.speed;
-        GameManager.instance.player.playerStats.agility = data.playerData.agility;
         GameManager.instance.player.playerStats.vitality = data.playerData.vitality;
-        GameManager.instance.player.playerStats.condition = data.playerData.condition;
         GameManager.instance.player.playerStats.defense = data.playerData.defense;
         GameManager.instance.player.playerStats.addedAttackPoints = data.playerData.addedAttackPoints;
         GameManager.instance.player.playerStats.addedSpeedPoints = data.playerData.addedSpeedPoints;
-        GameManager.instance.player.playerStats.addedAgilityPoints = data.playerData.addedAgilityPoints;
         GameManager.instance.player.playerStats.addedVitalityPoints = data.playerData.addedVitalityPoints;
-        GameManager.instance.player.playerStats.addedConditionPoints = data.playerData.addedConditionPoints;
         GameManager.instance.player.playerStats.addedDefensePoints = data.playerData.addedDefensePoints;
+        GameManager.instance.player.playerStats.basicDamage += data.playerData.addedAttackPoints * 5;
+        GameManager.instance.player.playerStats.critChance += data.playerData.addedAttackPoints * 2;
+        GameManager.instance.player.playerStats.bonusAttackSpeed += data.playerData.addedSpeedPoints * 5;
+        GameManager.instance.player.playerStats.bonusSpeed += data.playerData.addedSpeedPoints * 5;
+        GameManager.instance.player.playerStats.bonusStamina += data.playerData.addedSpeedPoints * 20;
+        GameManager.instance.player.playerStats.bonusStaminaRegen += data.playerData.addedSpeedPoints * 50;
+        GameManager.instance.player.playerStats.bonusHp += data.playerData.addedVitalityPoints * 40;
+        GameManager.instance.player.playerStats.damageReduction += data.playerData.addedDefensePoints * 2;
 
         //file.Close();
     }

@@ -214,6 +214,7 @@ public class DialogueManager : MonoBehaviour
         questsUI.AddQuest(quest);
         GameManager.instance.ShowText("Dodano zadanie", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
             GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f) ;
+        npc.SetAttentionMark();
     }
 
     private void CompleteQuest()
@@ -244,5 +245,7 @@ public class DialogueManager : MonoBehaviour
             GameManager.instance.player.transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f);
         GameManager.instance.ShowText("+" + quest.reward.xp + "XP", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
             GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+
+        npc.SetAttentionMark();
     }
 }

@@ -40,21 +40,17 @@ public class PlayerData
     //player attributes
     public float attack;
     public float speed;
-    public float agility;
     public float vitality;
-    public float condition;
     public float defense;
 
     public int addedAttackPoints;
     public int addedSpeedPoints;
-    public int addedAgilityPoints;
     public int addedVitalityPoints;
-    public int addedConditionPoints;
     public int addedDefensePoints;
 
     public PlayerData(int level, int coins, int xp, int abilityPoints, float hp, float maxHP, int stamina, int maxStamina, Vector2 position,
-        float attack, float speed, float agility, float vitality, float condition, float defense, int addedAttackPoints,
-        int addedSpeedPoints, int addedAgilityPoints, int addedVitalityPoints, int addedConditionPoints, int addedDefensePoints)
+        float attack, float speed, float vitality, float defense, int addedAttackPoints,
+        int addedSpeedPoints, int addedVitalityPoints, int addedDefensePoints)
     {
         this.level = level;
         this.coins = coins;
@@ -68,17 +64,13 @@ public class PlayerData
         playerY = position.y;
         this.attack = attack;
         this.speed = speed;
-        this.agility = agility;
         this.vitality = vitality;
-        this.condition = condition;
         this.defense = defense;
         this.addedAttackPoints = addedAttackPoints;
         this.addedSpeedPoints = addedSpeedPoints;
-        this.addedAgilityPoints = addedAgilityPoints;
         this.addedVitalityPoints = addedVitalityPoints;
-        this.addedConditionPoints = addedConditionPoints;
         this.addedDefensePoints = addedDefensePoints;
-        CheckStats();
+        //CheckStats();
     }
     private void CheckStats()
     {
@@ -93,12 +85,12 @@ public class PlayerData
 
     private void CheckItemSlot(EquippedItemSlot slot)
     {
-        attack -= slot.item.attack;
+        /*attack -= slot.item.attack;
         speed -= slot.item.speed;
         agility -= slot.item.agility;
         vitality -= slot.item.vitality;
         condition -= slot.item.condition;
-        defense -= slot.item.defense;
+        defense -= slot.item.defense;*/
     }
 
 }

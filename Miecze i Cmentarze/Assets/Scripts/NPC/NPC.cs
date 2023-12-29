@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,12 +24,15 @@ public class NPC : Collidable
 
     public NPC thisNPC;
 
+    public GameObject attentionMark;
+
     protected override void Start()
     {
         base.Start();
         shop = new Shop();
         shop.shopItems = shopItems;
         LoadNPCQuests(GameManager.instance.playerQuests, GameManager.instance.completedQuests);
+        SetAttentionMark();
     }
     protected override void Update()
     {
@@ -117,5 +121,23 @@ public class NPC : Collidable
         }
 
         this.quests = quests;
+    }
+
+    public void SetAttentionMark()
+    {
+        var quest = FindQuest();
+        if (quest != null)
+        {
+            foreach (Quest playerQuest in GameManager.instance.playerQuests)
+            {
+                if (playerQuest == quest)
+                {
+                    attentionMark.SetActive(false);
+                    return;
+                }
+            }
+            attentionMark.SetActive(true);
+        }
+        else attentionMark.SetActive(false);
     }
 }

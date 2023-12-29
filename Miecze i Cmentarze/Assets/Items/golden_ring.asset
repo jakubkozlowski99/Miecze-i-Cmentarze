@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: "Z\u0142oty pier\u015Bcie\u0144"
   icon: {fileID: 21300000, guid: 8959cfdf61bfc044090b04fa1da6490a, type: 3}
-  attack: 0
-  speed: 0
-  agility: 0
-  vitality: 1
-  condition: 1
-  defense: 2
+  basicDamage: 0
+  armorPenetration: 0
+  bonusAttackSpeed: 0
+  critChance: 0
+  bonusHp: 20
+  bonusHpRegen: 0
+  bonusSpeed: 0
+  bonusStamina: 20
+  bonusStaminaRegen: 50
+  damageReduction: 0
   type: ring
   coins: 0
   potionHp: 0

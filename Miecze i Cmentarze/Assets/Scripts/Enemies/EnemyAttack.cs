@@ -5,6 +5,8 @@ using UnityEngine;
 public class EnemyAttack : Collidable
 {
     public int damagePoint = 1;
+    public float critChance = 0;
+    public float armorPenetration = 5;
     public float lastDamage;
 
     protected override void Start()
@@ -25,10 +27,10 @@ public class EnemyAttack : Collidable
             {
                 Damage dmg = new Damage
                 {
-                    damageAmount = damagePoint
+                    damageAmount = damagePoint,
+                    critChance = critChance,
+                    armorPenetration = armorPenetration
                 };
-                dmg.damageAmount -= GameManager.instance.player.playerStats.defense;
-                if (dmg.damageAmount < 0) dmg.damageAmount = 0;
                 GameManager.instance.player.SendMessage("ReceiveDamage", dmg);
             }
             else return;

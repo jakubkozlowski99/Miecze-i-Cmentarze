@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -132,18 +132,21 @@ public class ItemDetailsUI : MonoBehaviour
 
     public virtual void GenerateDescription()
     {
-        Debug.Log('\u015B');
         itemDescription.text = "";
 
         if (item.type == "weapon" || item.type == "armor" || item.type == "gloves" || 
             item.type == "boots" || item.type == "ring" || item.type == "helmet")
         {
-            if (item.attack != 0) itemDescription.text += "Atak: " + item.attack + "\n";
-            if (item.speed != 0) itemDescription.text += "Szybko\u015B\u0107: " + item.speed + "\n";
-            if (item.agility != 0) itemDescription.text += "Zwinno\u015B\u0107: " + item.agility + "\n";
-            if (item.vitality != 0) itemDescription.text += "Witalno\u015B\u0107: " + item.vitality + "\n";
-            if (item.condition != 0) itemDescription.text += "Kondycja: " + item.condition + "\n";
-            if (item.defense != 0) itemDescription.text += "Obrona: " + item.defense + "\n";
+            if (item.basicDamage != 0) itemDescription.text += "Zadawane obrażenia: +" + item.basicDamage + "\n";
+            if (item.armorPenetration != 0) itemDescription.text += "Penetracja pancerza: +" + item.armorPenetration + "%\n";
+            if (item.bonusAttackSpeed != 0) itemDescription.text += "Szybkość ataku: +" + item.bonusAttackSpeed + "%\n";
+            if (item.critChance != 0) itemDescription.text += "Szansa na cios krytyczny: +" + item.critChance + "%\n";
+            if (item.bonusHp != 0) itemDescription.text += "Punkty zdrowia: +" + item.bonusHp + "\n";
+            if (item.bonusHpRegen != 0) itemDescription.text += "Regeneracja zdrowia: +" + item.bonusHpRegen + "/5s\n";
+            if (item.bonusSpeed != 0) itemDescription.text += "Szybkość ruchu: +" + item.bonusSpeed + "%\n";
+            if (item.bonusStamina != 0) itemDescription.text += "Punkty kondycji: +" + item.bonusStamina + "\n";
+            if (item.bonusStaminaRegen != 0) itemDescription.text += "Regeneracja kondycji: +" + item.bonusStaminaRegen + "%\n";
+            if (item.damageReduction != 0) itemDescription.text += "Redukcja obrażeń: +" + item.damageReduction + "%\n"; 
         }
         else if(item.type == "consumable")
         {
@@ -158,3 +161,4 @@ public class ItemDetailsUI : MonoBehaviour
         }
     }
 }
+ 

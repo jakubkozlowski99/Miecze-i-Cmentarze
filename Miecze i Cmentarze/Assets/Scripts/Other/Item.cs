@@ -7,12 +7,18 @@ public class Item : ScriptableObject
 {
     new public string name = "New item";
     public Sprite icon = null;
-    public int attack = 0;
-    public int speed = 0;
-    public int agility = 0;
-    public int vitality = 0;
-    public int condition = 0;
-    public int defense = 0;
+
+    public float basicDamage;
+    public float armorPenetration;
+    public float bonusAttackSpeed;
+    public float critChance;
+    public float bonusHp;
+    public float bonusHpRegen;
+    public float bonusSpeed;
+    public float bonusStamina;
+    public float bonusStaminaRegen;
+    public float damageReduction;
+
     public string type = null; //weapon, armor, boots, helmet, gloves, ring, consumable, questItem
     public int coins = 0;
     public float potionHp = 0;

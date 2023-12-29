@@ -28,9 +28,31 @@ public class Boss : Enemy
             if (Time.time - lastImmune > immuneTime)
             {
                 lastImmune = Time.time;
-                hitpoint -= dmg.damageAmount;
 
-                GameManager.instance.ShowText(dmg.damageAmount.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+                int rand = Random.Range(1, 100);
+                int critChance = ((int)Mathf.Round(dmg.critChance));
+
+                dmg.damageReduction = damageReduction;
+
+                float bonusDamage = dmg.damageAmount * ((dmg.armorPenetration - dmg.damageReduction) / 100);
+
+                float damageDealt = Mathf.Round(dmg.damageAmount + bonusDamage);
+                if (damageDealt < 0)
+                {
+                    damageDealt = 0;
+                }
+
+                if (rand <= critChance)
+                {
+                    hitpoint -= (damageDealt * 2);
+                    GameManager.instance.ShowText((damageDealt * 2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+                }
+                else
+                {
+                    hitpoint -= damageDealt;
+                    GameManager.instance.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+                }
+
                 AudioManager.instance.Play("hit");
 
                 if (hitpoint <= 0)
