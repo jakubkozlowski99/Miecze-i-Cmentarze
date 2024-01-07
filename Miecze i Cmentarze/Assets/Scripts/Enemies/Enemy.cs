@@ -1,81 +1,89 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : Mover
 {
+    #region Stats variables
     public int xpValue = 15;
     public int coinsValue = 50;
     public float damageReduction = 0;
+    #endregion
+
+    #region Movement variables
+    //[SerializeField] protected Transform target;
+    protected NavMeshAgent agent;
+    public float angle = 0;
 
     public float triggerLength = 1;
     public float chaseLength = 5;
     public float attackCooldown = 1.5f;
+    public float movementSpeed = 2f;
     protected bool chasing;
     protected bool collidingWithPlayer;
     protected Transform playerTransform;
     protected Vector3 startingPosition;
-    public float enemyYSpeed = 1;
-    public float enemyXSpeed = 1.5f;
     protected string hurtTrigger = "Hurt";
     protected string deathTrigger = "Death";
     protected bool enemyIsAttacking;
     protected bool enemyIsHurt;
     protected bool alive = true;
+    #endregion
 
+    #region Collider variables
     [HideInInspector]
     public ContactFilter2D filter;
     protected Collider2D[] hits = new Collider2D[20];
     public Animator anim;
     public EnemyHealthBarBehaviour healthBar;
+    #endregion
 
     protected override void Start()
     {
         base.Start();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        agent.updatePosition = false;
         healthBar = GetComponentInChildren<EnemyHealthBarBehaviour>();
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
         anim = GetComponent<Animator>();
-        if(healthBar != null) healthBar.SetHealth(hitpoint, maxhitpoint);
+        if (healthBar != null) healthBar.SetHealth(hitpoint, maxhitpoint);
     }
 
     protected virtual void FixedUpdate()
     {
         if (alive)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-            {
-                enemyIsAttacking = true;
-            }
-            else enemyIsAttacking = false;
-
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt"))
-            {
-                enemyIsHurt = true;
-            }
-            else enemyIsHurt = false;
+            CheckAnimations();
 
             if ((Vector3.Distance(playerTransform.position, startingPosition) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
             {
                 if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
                 {
-                    chasing = true;
-                    if (!collidingWithPlayer) anim.SetBool("EnemyRun", true);
+                    SetChasing(true);
                 }
 
                 if (chasing)
                 {
                     if (!collidingWithPlayer)
                     {
-                        UpdateMotor((playerTransform.position - transform.position).normalized, enemyYSpeed, enemyXSpeed);
+                        agent.updatePosition = true;
+                        agent.SetDestination(playerTransform.position);
+
+                        if (agent.path.corners.Length > 1)
+                        {
+                            agent.speed = CalculateSpeed();
+                            TurnEnemy();
+                        }
                     }
                 }
             }
             else if ((!enemyIsAttacking && !enemyIsHurt) || !GameManager.instance.player.alive)
             {
-                chasing = false;
-                startingPosition = transform.position;
-                anim.SetBool("EnemyRun", false);
+                SetChasing(false);
             }
 
             collidingWithPlayer = false;
@@ -104,6 +112,68 @@ public class Enemy : Mover
             }
         }
     }
+
+    protected virtual void SetChasing(bool shouldChase)
+    {
+        if (shouldChase == false)
+        {
+            chasing = false;
+            startingPosition = transform.position;
+            agent.SetDestination(startingPosition);
+            anim.SetBool("EnemyRun", false);
+        }
+        else
+        {
+            chasing = true;
+            if (!collidingWithPlayer) anim.SetBool("EnemyRun", true);
+        }
+    }
+
+    protected virtual void TurnEnemy()
+    {
+        if (agent.path.corners[1].x > transform.position.x)
+        {
+            if (transform.localScale.x < 0) transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1);
+        }
+        else if (agent.path.corners[1].x < transform.position.x) 
+        {
+            if (transform.localScale.x > 0) transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, 1);
+        }
+    }
+
+    protected virtual void CheckAnimations()
+    {
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            enemyIsAttacking = true;
+            agent.updatePosition = false;
+            agent.SetDestination(transform.position);
+        }
+        else enemyIsAttacking = false;
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt"))
+        {
+            enemyIsHurt = true;
+            agent.updatePosition = false;
+            agent.SetDestination(transform.position);
+        }
+        else enemyIsHurt = false;
+    }
+
+    protected override float CalculateSpeed()
+    {
+        //measure angle between enemy's running direction and X
+        angle = Vector2.Angle(transform.position - agent.path.corners[1], new Vector2(1, 0));
+
+        //keeping angle under 90 degrees
+        if (angle > 90) angle = 180 - angle;
+
+        //calculating speed
+        float currentSpeed = movementSpeed - (angle * (0.00278f * movementSpeed));
+
+        return currentSpeed;
+    }
+
     protected override void ReceiveDamage(Damage dmg)
     {
         if (alive)

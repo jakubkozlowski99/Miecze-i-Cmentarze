@@ -159,15 +159,16 @@ public class GameManager : MonoBehaviour
             {
                 if (!questGoal.completed && questGoal.goalType == QuestGoal.GoalType.Kill)
                 {
+                    questGoal.currentAmount = 0;
                     foreach (BossData bossData in SaveManager.instance.tempBosses) 
                     {
                         if (bossData.bossName == questGoal.killGoal.name)
                         {
                             questGoal.currentAmount++;
                             if (questGoal.currentAmount >= questGoal.requiredAmount) questGoal.completed = true;
-                            quest.CheckGoals();
                         }
                     }
+                    quest.CheckGoals();
                 }
             }
         }

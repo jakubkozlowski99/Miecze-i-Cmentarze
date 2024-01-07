@@ -13,14 +13,18 @@ public class Player : Mover
     private bool isDodging;
     public bool canAttack;
 
+    private float x;
+    private float y;
+
     private readonly string swing_1 = "adventurer_swing_1";
     private readonly string swing_2 = "adventurer_swing_2";
     private readonly string swing_3 = "adventurer_swing_3";
     private readonly string hurt = "adventurer_hurt";
     private readonly string dodge = "adventurer_dodge";
 
-    public float playerYSpeed = 1.5f;
-    public float playerXSpeed = 2;
+    public float playerSpeed = 2;
+    public float currentSpeed;
+
     private int swingCount = 0;
     private float lastSwing;
     private float swingReset = 0.75f;
@@ -75,18 +79,21 @@ public class Player : Mover
         playerStats.UpdateStats();
         CameraMotor.instance.lookAt = transform;
 
+        currentSpeed = playerSpeed;
+
         DontDestroyOnLoad(gameObject);
     }
     private void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        x = Input.GetAxisRaw("Horizontal");
+        y = Input.GetAxisRaw("Vertical");
 
         if (isAttacking || !canMove) 
         {
             x = 0;
             y = 0;
         }
+
         if (anim.GetCurrentAnimatorStateInfo(0).IsName(swing_1) || anim.GetCurrentAnimatorStateInfo(0).IsName(hurt)
             || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_2) || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_3)) 
         { 
@@ -143,8 +150,10 @@ public class Player : Mover
         HpRegen();
         StaminaRegen();
 
-        if (isDodging) UpdateMotor(new Vector3(dodgeX, dodgeY, 0), playerYSpeed * 2, playerXSpeed * 2);
-        else UpdateMotor(new Vector3(x, y, 0), playerYSpeed, playerXSpeed);
+        currentSpeed = CalculateSpeed();
+
+        if (isDodging) UpdateMotor(new Vector3(dodgeX, dodgeY, 0), currentSpeed * 2);
+        else UpdateMotor(new Vector3(x, y, 0), currentSpeed);
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
         {
@@ -152,6 +161,15 @@ public class Player : Mover
         }
     }
 
+    protected override float CalculateSpeed()
+    {
+        if (y != 0)
+        {
+            if (x != 0) return playerSpeed - (playerSpeed * 0.125f);
+            else return playerSpeed - (playerSpeed * 0.25f);
+        }
+        else return playerSpeed;
+    }
 
     private void Swing()
     {

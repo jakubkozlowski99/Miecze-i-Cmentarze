@@ -31,6 +31,7 @@ public class Quest
     [SerializeField]
     public List<QuestGoal> goals;
 
+    //potencjalnie do robienia etapowych questow ale do przerobienia
     /*public void SetGoal()
     {
         foreach(var goal in goals)

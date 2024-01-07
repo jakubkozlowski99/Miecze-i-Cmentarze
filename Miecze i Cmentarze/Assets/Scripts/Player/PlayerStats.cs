@@ -33,6 +33,7 @@ public class PlayerStats : MonoBehaviour {
 
     public void AddPoint(string stat)
     {
+        //adding player stat based on stat name
         if (stat == "Attack")
         {
             attack++;
@@ -61,6 +62,8 @@ public class PlayerStats : MonoBehaviour {
             damageReduction += 2;
             addedDefensePoints++;
         }
+
+        //updating player stats
         UpdateStats();
     }
 
@@ -69,8 +72,7 @@ public class PlayerStats : MonoBehaviour {
         //setting player attributes by stat values
         hpPercentage = GameManager.instance.player.hitpoint / GameManager.instance.player.maxhitpoint;
         hpPercentage = Mathf.Round((GameManager.instance.player.hitpoint / GameManager.instance.player.maxhitpoint) * 100) / 100;
-        GameManager.instance.player.playerXSpeed = 2 + 0.01f * bonusSpeed - 0.1f;
-        GameManager.instance.player.playerYSpeed = 1.5f + 0.075f * bonusSpeed - 0.075f;
+        GameManager.instance.player.playerSpeed = 2 + 0.1f * bonusSpeed;
 
         GameManager.instance.player.anim.SetFloat("AttackSpeed", 1 + (bonusAttackSpeed / 100) - 0.1f);
 

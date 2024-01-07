@@ -15,9 +15,9 @@ public class Mover : Fighter
         boxCollider = GetComponent<BoxCollider2D>();
     }
 
-    protected virtual void UpdateMotor(Vector3 input, float ySpeed, float xSpeed)
+    protected virtual void UpdateMotor(Vector3 input, float speed)
     {
-        if (!PauseMenu.instance.gameIsPaused) moveDelta = new Vector3(input.x * xSpeed, input.y * ySpeed, 0);
+        if (!PauseMenu.instance.gameIsPaused) moveDelta = new Vector3(input.x * speed, input.y * speed, 0);
 
         if (moveDelta.x > 0)
             if (transform.localScale.x > 0) transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, 1);
@@ -42,4 +42,10 @@ public class Mover : Fighter
             transform.Translate(moveDelta.x * Time.deltaTime, 0, 0);
         }
     }
+
+    protected virtual float CalculateSpeed()
+    {
+        return 0;
+    }
+
 }

@@ -13,27 +13,42 @@ public class Boss : Enemy
     protected override void Start()
     {
         base.Start();
+
+        //setting player and boss positions to measure distance between them
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
+
+        //getting animator component
         anim = GetComponent<Animator>();
+
+        //hiding boss health bar
         healthBarShown = false;
-        if (!alive) CheckQuestGoals();
+
+        //???
+        //if (!alive) CheckQuestGoals();
+
+        //checking if boss was already killed
         LoadBoss();
     }
 
     protected override void ReceiveDamage(Damage dmg)
     {
+        //do if boss is alive
         if (alive)
         {
+            //do if immune time is finished
             if (Time.time - lastImmune > immuneTime)
             {
+                //update immune time
                 lastImmune = Time.time;
 
+                //randomizing critical hit
                 int rand = Random.Range(1, 100);
                 int critChance = ((int)Mathf.Round(dmg.critChance));
 
                 dmg.damageReduction = damageReduction;
 
+                //setting bonus damage based on basic damage, armor penetration and damage reduction
                 float bonusDamage = dmg.damageAmount * ((dmg.armorPenetration - dmg.damageReduction) / 100);
 
                 float damageDealt = Mathf.Round(dmg.damageAmount + bonusDamage);
@@ -62,7 +77,6 @@ public class Boss : Enemy
                 }
             }
             bossHealthBar.SetHealth(hitpoint, maxhitpoint);
-
         }
     }
 
@@ -94,7 +108,7 @@ public class Boss : Enemy
                 {
                     if (!collidingWithPlayer)
                     {
-                        UpdateMotor((playerTransform.position - transform.position).normalized, enemyYSpeed, enemyXSpeed);
+                        //UpdateMotor((playerTransform.position - transform.position).normalized, enemyYSpeed, enemyXSpeed);
                     }
                 }
                 else
