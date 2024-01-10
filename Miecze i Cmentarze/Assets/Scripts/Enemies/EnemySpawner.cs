@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
@@ -10,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     public float timer;
     public int childCount;
     public float respawnCooldown = 5;
+
+    public bool flipped = false; //false = right, true = left
 
     protected virtual void Start()
     {
@@ -31,6 +35,7 @@ public class EnemySpawner : MonoBehaviour
         if (timer >= respawnCooldown) 
         {
             Instantiate(enemy, transform.position, transform.rotation, transform);
+            if (flipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
             dead = false;
             timer = 0;
         }
@@ -38,14 +43,10 @@ public class EnemySpawner : MonoBehaviour
 
     public void SaveSpawner()
     {
-        foreach (SpawnerData spawner in SaveManager.instance.tempSpawners)
-        {
-            if (spawner.spawnerName == name)
-            {
-                SaveManager.instance.tempSpawners.Remove(spawner);
-                break;
-            }
-        }
+        var spawner = Array.Find(SaveManager.instance.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
+
+        if (spawner != null) SaveManager.instance.tempSpawners.Remove(spawner);
+
         SaveManager.instance.tempSpawners.Add(new SpawnerData(this));
     }
 
@@ -58,8 +59,11 @@ public class EnemySpawner : MonoBehaviour
                 dead = spawner.dead;
                 if (dead == false)
                 {
-                    Instantiate(enemy, transform.position, transform.rotation, transform);
+                    Instantiate(enemy, new Vector2(spawner.posX, spawner.posY), new Quaternion(0, 0, 0, 0), transform);
                     timer = 0;
+
+                    transform.GetChild(0).localScale = new Vector3(spawner.scaleX, enemy.transform.localScale.y, enemy.transform.localScale.z);
+
                     return;
                 }
                 timer = spawner.timer + GameManager.instance.gameTimer - spawner.lastTimerState;
@@ -67,6 +71,8 @@ public class EnemySpawner : MonoBehaviour
             }
         }
         Instantiate(enemy, transform.position, transform.rotation, transform);
+        if (flipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
         dead = false;
     }
+
 }

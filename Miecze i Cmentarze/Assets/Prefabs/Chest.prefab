@@ -234,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b2598476b0f2545a6bb2b13b0ad280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitsSize: 10
   interactionTextManager: {fileID: 8687865275606631091}
   chest: {fileID: 8687865276803134578}
   interactionTextOffset: 0.3
@@ -250,6 +251,7 @@ GameObject:
   - component: {fileID: 8687865276803134577}
   - component: {fileID: 8687865276803134578}
   - component: {fileID: 8687865276803134589}
+  - component: {fileID: 6929898021667425653}
   m_Layer: 6
   m_Name: Chest
   m_TagString: Untagged
@@ -272,7 +274,7 @@ Transform:
   - {fileID: 8687865276381639421}
   - {fileID: 8687865276472051239}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8687865276803134576
 SpriteRenderer:
@@ -313,7 +315,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1337190763
-  m_SortingLayer: 9
+  m_SortingLayer: 11
   m_SortingOrder: 0
   m_Sprite: {fileID: -329354520, guid: f89bd06024743c84b9619146826fe1f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -370,7 +372,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4d8ad47108ad5b9499f92ac8ee7452f5, type: 2}
   - {fileID: 11400000, guid: 4855d498b62ae7640b1a219db1e15921, type: 2}
   - {fileID: 11400000, guid: e966960175561c447acf29ef567585a4, type: 2}
-  - {fileID: 11400000, guid: 594871513fe06b041b5ba792ecbee505, type: 2}
+  - {fileID: 11400000, guid: 6ff5443f9d52f6d43b199574ecc0cc1e, type: 2}
   - {fileID: 11400000, guid: 594871513fe06b041b5ba792ecbee505, type: 2}
   chestUI: {fileID: 0}
   anim: {fileID: 0}
@@ -397,3 +399,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6929898021667425653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8687865276803134582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

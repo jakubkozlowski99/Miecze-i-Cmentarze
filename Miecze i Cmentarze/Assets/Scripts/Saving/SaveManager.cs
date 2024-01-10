@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -195,7 +196,13 @@ public class SaveManager : MonoBehaviour
     {
         foreach (var equippedItemName in data.inventoryData.equippedItemNames)
         {
-            foreach (var item in allItems)
+            var item = Array.Find(allItems.ToArray(), item => item.name == equippedItemName);
+
+            var slot = Array.Find(InventoryUI.instance.equippedItemSlots.ToArray(), slot => slot.itemType == item.type);
+
+            slot.OnEquip(item);
+
+            /*foreach (var item in allItems)
             {
                 if (item.name == equippedItemName)
                 {
@@ -207,18 +214,24 @@ public class SaveManager : MonoBehaviour
                         }
                     }
                 }
-            }
+            */
         }
-        foreach(var inventoryItemName in data.inventoryData.itemNames)
+
+        foreach (var inventoryItemName in data.inventoryData.itemNames)
         {
+            var item = Array.Find(allItems.ToArray(), item => item.name == inventoryItemName);
+
+            Inventory.instance.Add(item);
+            /*
             foreach (var item in allItems)
             {
                 if (item.name == inventoryItemName)
                 {
                     Inventory.instance.Add(item);
                 }
-            }
+            }*/
         }
+
         GameManager.instance.player.maxhitpoint = data.playerData.maxHP;
         GameManager.instance.player.hitpoint = data.playerData.hp;
         GameManager.instance.player.stamina = data.playerData.stamina;

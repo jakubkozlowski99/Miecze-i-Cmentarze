@@ -49,6 +49,7 @@ public class Enemy : Mover
         healthBar = GetComponentInChildren<EnemyHealthBarBehaviour>();
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
+        transform.rotation = new Quaternion(0, 0, 0, 0);
         anim = GetComponent<Animator>();
         if (healthBar != null) healthBar.SetHealth(hitpoint, maxhitpoint);
     }
@@ -158,6 +159,12 @@ public class Enemy : Mover
             agent.SetDestination(transform.position);
         }
         else enemyIsHurt = false;
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Death") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
+        {
+            agent.updatePosition = false;
+            agent.SetDestination(transform.position);
+        }
     }
 
     protected override float CalculateSpeed()

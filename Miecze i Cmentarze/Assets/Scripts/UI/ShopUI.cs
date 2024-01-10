@@ -36,6 +36,7 @@ public class ShopUI : MonoBehaviour
     public void CloseShop()
     {
         DialogueManager.instance.dialoguePanel.SetActive(true);
+        DialogueManager.instance.portraitAnim.SetTrigger(DialogueManager.instance.npc.transform.name);
         shopPanel.SetActive(false);
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,10 +19,8 @@ public class Boss : Enemy
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
 
-        //getting animator component
-        anim = GetComponent<Animator>();
-
         //hiding boss health bar
+        bossHealthBar = GetComponentInChildren<BossHealthBar>();
         healthBarShown = false;
 
         //???
@@ -43,7 +42,7 @@ public class Boss : Enemy
                 lastImmune = Time.time;
 
                 //randomizing critical hit
-                int rand = Random.Range(1, 100);
+                int rand = UnityEngine.Random.Range(1, 100);
                 int critChance = ((int)Mathf.Round(dmg.critChance));
 
                 dmg.damageReduction = damageReduction;
@@ -82,33 +81,29 @@ public class Boss : Enemy
 
     protected override void FixedUpdate()
     {
-        if (alive)
+        /*if (alive)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
-            {
-                enemyIsAttacking = true;
-            }
-            else enemyIsAttacking = false;
-
-            if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt"))
-            {
-                enemyIsHurt = true;
-            }
-            else enemyIsHurt = false;
+            CheckAnimations();
 
             if ((Vector3.Distance(playerTransform.position, startingPosition) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
             {
                 if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
                 {
-                    chasing = true;
-                    if (!collidingWithPlayer) anim.SetBool("EnemyRun", true);
+                    SetChasing(true);
                 }
 
                 if (chasing)
                 {
                     if (!collidingWithPlayer)
                     {
-                        //UpdateMotor((playerTransform.position - transform.position).normalized, enemyYSpeed, enemyXSpeed);
+                        agent.updatePosition = true;
+                        agent.SetDestination(playerTransform.position);
+
+                        if (agent.path.corners.Length > 1)
+                        {
+                            agent.speed = CalculateSpeed();
+                            TurnEnemy();
+                        }
                     }
                 }
                 else
@@ -118,10 +113,7 @@ public class Boss : Enemy
             }
             else if ((!enemyIsAttacking && !enemyIsHurt) || !GameManager.instance.player.alive)
             {
-                //UpdateMotor(startingPosition - transform.position, enemyYSpeed, enemyXSpeed);
-                chasing = false;
-                startingPosition = transform.position;
-                anim.SetBool("EnemyRun", false);
+                SetChasing(false);
             }
 
             collidingWithPlayer = false;
@@ -148,8 +140,15 @@ public class Boss : Enemy
             {
                 KillReward();
             }
-        }
+        }*/
 
+        base.FixedUpdate();
+
+        SetHealthBar();
+    }
+
+    private void SetHealthBar()
+    {
         if (chasing && !healthBarShown)
         {
             healthBarShown = true;
@@ -222,20 +221,24 @@ public class Boss : Enemy
 
     private void LoadBoss()
     {
-        foreach (BossData boss in SaveManager.instance.tempBosses)
+        var shouldDelete = Array.Exists(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name);
+
+        if (shouldDelete) Destroy(gameObject);
+
+        /*foreach (BossData boss in SaveManager.instance.tempBosses)
         {
             if (boss.bossName == name) 
             {
                 Destroy(gameObject);
             }
-        }
+        }*/
     }
 
     private void CheckPortals()
     {
         Portal[] portals = FindObjectsOfType<Portal>();
 
-        foreach(Portal portal in portals)
+        foreach (Portal portal in portals) 
         {
             portal.CheckPortal();
         }

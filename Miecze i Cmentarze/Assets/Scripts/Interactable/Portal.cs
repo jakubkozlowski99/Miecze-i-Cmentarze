@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -76,15 +77,15 @@ public class Portal : Collidable
 
     public void CheckPortal()
     {
-        foreach(BossData boss in SaveManager.instance.tempBosses)
+        var unlocked = Array.Exists(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == bossToActivate);
+
+        if (unlocked)
         {
-            if (boss.bossName == bossToActivate)
-            {
-                anim.enabled = true;
-                active = true;
-                return;
-            }
+            anim.enabled = true;
+            active = true;
+            return;
         }
+
         anim.enabled = false;
         spriteRenderer.sprite = unActivePortal;
     }

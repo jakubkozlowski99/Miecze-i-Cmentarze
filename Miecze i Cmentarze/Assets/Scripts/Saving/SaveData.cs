@@ -213,12 +213,26 @@ public class SpawnerData
     public bool dead;
     public float lastTimerState;
 
+    public float posX;
+    public float posY;
+
+    public float scaleX;
+
     public SpawnerData(EnemySpawner spawner)
     {
         spawnerName = spawner.name;
         timer = spawner.timer;
         dead = spawner.dead;
         lastTimerState = GameManager.instance.gameTimer;
+        if (spawner.transform.childCount > 0)
+        {
+            if (spawner.transform.GetChild(0) != null) posX = spawner.transform.GetChild(0).position.x;
+            else posX = 0;
+            if (spawner.transform.GetChild(0) != null) posY = spawner.transform.GetChild(0).position.y;
+            else posY = 0;
+            if (spawner.transform.GetChild(0) != null) scaleX = spawner.transform.GetChild(0).localScale.x;
+            else scaleX = 0;
+        }
     }
 }
 
