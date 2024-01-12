@@ -23,6 +23,11 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void FixedUpdate()
+    {
+        
+    }
+
     public List<int> xpTable = new List<int>();
     public Player player;
 
@@ -51,9 +56,11 @@ public class GameManager : MonoBehaviour
         if (!PauseMenu.instance.gameIsPaused) gameTimer += Time.deltaTime;
     }
 
-    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration, bool onPlayer)
     {
-        floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
+        floatingTextManager.Show(msg, fontSize, color, position, motion, duration, onPlayer);
+
+        Debug.Log("text shown");
     }
 
     private void LoadQuests()

@@ -59,12 +59,12 @@ public class Boss : Enemy
                 if (rand <= critChance)
                 {
                     hitpoint -= (damageDealt * 2);
-                    GameManager.instance.ShowText((damageDealt * 2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+                    GameManager.instance.ShowText((damageDealt * 2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
                 }
                 else
                 {
                     hitpoint -= damageDealt;
-                    GameManager.instance.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+                    GameManager.instance.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
                 }
 
                 AudioManager.instance.Play("hit");
@@ -179,7 +179,7 @@ public class Boss : Enemy
         {
             GameManager.instance.mapsUnlocked.Add(unlockedMapName);
         }
-        GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
+        GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f, false);
         GameManager.instance.player.xpBar.SetXpBar();
         SaveManager.instance.tempBosses.Add(new BossData(this));
         GameManager.instance.CheckQuestBosses();

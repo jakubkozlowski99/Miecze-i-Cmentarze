@@ -7059,14 +7059,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2129938237, guid: 92c19580b9ce7cd4790949666782a430, type: 3}
-      propertyPath: m_Acceleration
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2129938237, guid: 92c19580b9ce7cd4790949666782a430, type: 3}
-      propertyPath: m_AngularSpeed
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 4770027707541490539, guid: 92c19580b9ce7cd4790949666782a430,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -7082,25 +7074,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrassEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348139, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
         type: 3}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
         type: 3}

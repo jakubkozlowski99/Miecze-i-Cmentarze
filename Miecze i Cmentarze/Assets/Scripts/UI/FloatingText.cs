@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ public class FloatingText
     public float duration;
     public float lastShown;
 
+    public bool onPlayer;
+
     public void Show()
     {
         active = true;
@@ -22,16 +25,24 @@ public class FloatingText
     public void Hide()
     {
         active = false;
+        if (onPlayer) onPlayer = false;
         go.SetActive(active);
     }
 
-    public void UpdateFloatingText()
+    public void UpdateFloatingText(bool onPlayerIsBusy)
     {
         if (!active)
+        {
+            //if (onPlayerIsBusy) Show();
             return;
+        }
+
+        //Debug.Log(onPlayer);
 
         if (Time.time - lastShown > duration)
+        {
             Hide();
+        }
 
         go.transform.position += motion * Time.deltaTime;
     }

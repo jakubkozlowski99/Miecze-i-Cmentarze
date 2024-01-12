@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
+using System;
 
 public class RoadSignSlot : MonoBehaviour
 {
@@ -26,19 +24,18 @@ public class RoadSignSlot : MonoBehaviour
 
     public void CheckIfUnlocked()
     {
-        foreach (var mapName in GameManager.instance.mapsUnlocked) 
+        unlocked = Array.Exists(GameManager.instance.mapsUnlocked.ToArray(), mapName => mapName == slotName);
+
+        if (unlocked)
         {
-            if (slotName == mapName)
-            {
-                unlocked = true;
-                textBox.text = slotTitle;
-                slotImg.color = Color.white;
-                return;
-            }
+            textBox.text = slotTitle;
+            slotImg.color = Color.white;
         }
-        unlocked = false;
-        textBox.text = "ZABLOKOWANE";
-        slotImg.color = Color.gray;
+        else
+        {
+            textBox.text = "ZABLOKOWANE";
+            slotImg.color = Color.gray;
+        }
     }
 
     public void OnClick()

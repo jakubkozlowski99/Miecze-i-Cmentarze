@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
 using UnityEngine.SceneManagement;
 
 public class RoadSignUI : MonoBehaviour
@@ -9,6 +7,7 @@ public class RoadSignUI : MonoBehaviour
     public GameObject panel;
     public List<RoadSignSlot> slots;
     public RoadSignSlot chosenSlot;
+
     public void ReadSign()
     {
         GameManager.instance.player.canMove = false;

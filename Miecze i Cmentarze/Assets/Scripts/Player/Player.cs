@@ -258,7 +258,7 @@ public class Player : Mover
     }
     public void LevelUp()
     {  
-        GameManager.instance.ShowText("Level up", 15, Color.yellow, new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f);
+        GameManager.instance.ShowText("Level up", 15, Color.yellow, new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f, true);
         while (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
         {
             GameManager.instance.availablePoints++;

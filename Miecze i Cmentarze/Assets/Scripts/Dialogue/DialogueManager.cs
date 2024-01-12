@@ -213,7 +213,7 @@ public class DialogueManager : MonoBehaviour
         GameManager.instance.CheckQuestBosses();
         questsUI.AddQuest(quest);
         GameManager.instance.ShowText("Dodano zadanie", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f) ;
+            GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f, true) ;
         npc.SetAttentionMark();
     }
 
@@ -241,10 +241,10 @@ public class DialogueManager : MonoBehaviour
             GameManager.instance.player.LevelUp();
         }
         GameManager.instance.player.xpBar.SetXpBar();
-        GameManager.instance.ShowText("+" + quest.reward.coins+ "monet", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f);
+        GameManager.instance.ShowText("+" + quest.reward.coins+ " monet", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
+            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset, transform.position.z), Vector3.up * 25, 0.5f, true);
         GameManager.instance.ShowText("+" + quest.reward.xp + "XP", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset, transform.position.z), Vector3.up * 25, 0.5f, true);
 
         npc.SetAttentionMark();
     }

@@ -52,27 +52,30 @@ public class EnemySpawner : MonoBehaviour
 
     public void LoadSpawner()
     {
-        foreach (SpawnerData spawner in SaveManager.instance.tempSpawners)
+        bool shouldLoad = Array.Exists(SaveManager.instance.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
+
+        if (shouldLoad)
         {
-            if (spawner.spawnerName == name)
+            SpawnerData spawner = Array.Find(SaveManager.instance.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
+
+            dead = spawner.dead;
+
+            if (!dead)
             {
-                dead = spawner.dead;
-                if (dead == false)
-                {
-                    Instantiate(enemy, new Vector2(spawner.posX, spawner.posY), new Quaternion(0, 0, 0, 0), transform);
-                    timer = 0;
+                Instantiate(enemy, new Vector2(spawner.posX, spawner.posY), new Quaternion(0, 0, 0, 0), transform);
+                timer = 0;
 
-                    transform.GetChild(0).localScale = new Vector3(spawner.scaleX, enemy.transform.localScale.y, enemy.transform.localScale.z);
-
-                    return;
-                }
-                timer = spawner.timer + GameManager.instance.gameTimer - spawner.lastTimerState;
-                return;
+                transform.GetChild(0).localScale = new Vector3(spawner.scaleX, enemy.transform.localScale.y, enemy.transform.localScale.z);
             }
+
+            else timer = spawner.timer + GameManager.instance.gameTimer - spawner.lastTimerState;
         }
-        Instantiate(enemy, transform.position, transform.rotation, transform);
-        if (flipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
-        dead = false;
+        else
+        {
+            Instantiate(enemy, transform.position, transform.rotation, transform);
+            if (flipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
+            dead = false;
+        }
     }
 
 }

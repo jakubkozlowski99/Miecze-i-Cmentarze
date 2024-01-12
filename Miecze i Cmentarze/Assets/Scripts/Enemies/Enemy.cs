@@ -152,19 +152,13 @@ public class Enemy : Mover
         }
         else enemyIsAttacking = false;
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Death") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
         {
             enemyIsHurt = true;
             agent.updatePosition = false;
             agent.SetDestination(transform.position);
         }
         else enemyIsHurt = false;
-
-        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Death") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
-        {
-            agent.updatePosition = false;
-            agent.SetDestination(transform.position);
-        }
     }
 
     protected override float CalculateSpeed()
@@ -207,7 +201,7 @@ public class Enemy : Mover
         {
             GameManager.instance.player.LevelUp();
         }
-        GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f);
+        GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f, false);
         GameManager.instance.player.xpBar.SetXpBar();
         Destroy(gameObject);
     }

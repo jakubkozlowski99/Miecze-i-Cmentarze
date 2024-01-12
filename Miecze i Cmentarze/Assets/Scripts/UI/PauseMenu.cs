@@ -32,14 +32,8 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (gameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            if (gameIsPaused) Resume();
+            else Pause();
         }
     }
 
@@ -97,5 +91,9 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         gameIsPaused = false;
         AudioManager.instance.Play("unpause");
+        GameManager.instance.ShowText("Gra zapisana", 10, Color.yellow, 
+            new Vector3(GameManager.instance.player.transform.position.x, 
+            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset, 
+            GameManager.instance.player.transform.position.z), Vector3.up * 25, 0.5f, true);
     }
 }

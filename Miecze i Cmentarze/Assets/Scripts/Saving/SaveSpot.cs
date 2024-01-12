@@ -41,7 +41,9 @@ public class SaveSpot : Collidable
         if (!saveDone)
         {
             interactionTextManager.Hide();
-            GameManager.instance.ShowText("Gra zapisana", 10, Color.yellow, GameManager.instance.GetPlayerPosition(), Vector3.up * 25, 0.5f);
+            GameManager.instance.ShowText("Gra zapisana", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
+            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset,
+            GameManager.instance.player.transform.position.z), Vector3.up * 25, 0.5f, true);
             SaveManager.instance.Save();
             saveDone = true;
         }

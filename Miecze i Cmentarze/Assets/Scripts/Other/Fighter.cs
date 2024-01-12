@@ -7,6 +7,8 @@ public class Fighter : MonoBehaviour
     public float hitpoint;
     public float maxhitpoint;
 
+    public float textOffset = 0.5f;
+
     protected float lastImmune;
     protected float immuneTime = 0.1f;
 
@@ -30,12 +32,12 @@ public class Fighter : MonoBehaviour
             if (rand <= critChance)
             {
                 hitpoint -= (damageDealt * 2);
-                GameManager.instance.ShowText((damageDealt *2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+                GameManager.instance.ShowText((damageDealt *2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
             }
             else
             {
                 hitpoint -= damageDealt;
-                GameManager.instance.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f);
+                GameManager.instance.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
             }
 
             AudioManager.instance.Play("hit");

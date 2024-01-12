@@ -72,7 +72,7 @@ public class PlayerStats : MonoBehaviour {
         //setting player attributes by stat values
         hpPercentage = GameManager.instance.player.hitpoint / GameManager.instance.player.maxhitpoint;
         hpPercentage = Mathf.Round((GameManager.instance.player.hitpoint / GameManager.instance.player.maxhitpoint) * 100) / 100;
-        GameManager.instance.player.playerSpeed = 2 + 0.1f * bonusSpeed;
+        GameManager.instance.player.playerSpeed = 2 + 0.01f * bonusSpeed;
 
         GameManager.instance.player.anim.SetFloat("AttackSpeed", 1 + (bonusAttackSpeed / 100) - 0.1f);
 

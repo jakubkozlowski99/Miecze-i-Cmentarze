@@ -46,7 +46,7 @@ public class ActivateShrine : Collidable
         shrine.collected = true;
         interactionTextManager.Hide();
         GameManager.instance.ShowText("+Punkt talentu", 7, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + 0.3f, GameManager.instance.player.transform.position.z), Vector3.up * 25, 0.5f);
+            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset, GameManager.instance.player.transform.position.z), Vector3.up * 25, 0.5f, true);
         GameManager.instance.availablePoints++;
         shrine.LoadTempShrines(false);
         AudioManager.instance.Play("shrine");

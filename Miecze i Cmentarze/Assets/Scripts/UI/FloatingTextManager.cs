@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,16 +9,25 @@ public class FloatingTextManager : MonoBehaviour
     public GameObject textContainer;
     public GameObject textPrefab;
 
-    private List<FloatingText> floatingTexts = new List<FloatingText>();
+    public List<FloatingText> floatingTexts = new List<FloatingText>();
+
+    private bool onPlayerIsBusy;
 
     private void Update()
     {
-
         foreach (FloatingText txt in floatingTexts)
-            txt.UpdateFloatingText();
+        {
+            if (txt.onPlayer)
+            {
+                onPlayerIsBusy = floatingTexts.Exists(t => t.onPlayer && t.active);
+                if (!onPlayerIsBusy) txt.Show();
+            }
+
+            txt.UpdateFloatingText(onPlayerIsBusy);
+        }
     }
 
-    public void Show(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    public void Show(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration, bool onPlayer)
     {
         FloatingText floatingText = GetFloatingText();
 
@@ -29,13 +39,15 @@ public class FloatingTextManager : MonoBehaviour
         floatingText.motion = motion;
         floatingText.duration = duration;
 
-        floatingText.Show();
+        floatingText.onPlayer = onPlayer;
 
+        if (onPlayer) floatingText.go.SetActive(false);
+        else floatingText.Show();
     }
 
     private FloatingText GetFloatingText()
     {
-        FloatingText txt = floatingTexts.Find(t => !t.active);
+        FloatingText txt = floatingTexts.Find(t => !t.active && !t.onPlayer);
 
         if (txt == null)
         {
