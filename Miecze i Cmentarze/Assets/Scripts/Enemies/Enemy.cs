@@ -20,7 +20,7 @@ public class Enemy : Mover
     public float chaseLength = 5;
     public float attackCooldown = 1.5f;
     public float movementSpeed = 2f;
-    protected bool chasing;
+    public bool chasing;
     protected bool collidingWithPlayer;
     protected Transform playerTransform;
     protected Vector3 startingPosition;

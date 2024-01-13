@@ -36,6 +36,7 @@ public class FloatingTextManager : MonoBehaviour
         floatingText.txt.color = color;
 
         floatingText.go.transform.position = Camera.main.WorldToScreenPoint(position);
+
         floatingText.motion = motion;
         floatingText.duration = duration;
 

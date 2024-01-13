@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -51,17 +53,16 @@ public class GameManager : MonoBehaviour
 
     public float gameTimer;
 
+    public bool playerInCombat = false;
+
     private void Update()
     {
         if (!PauseMenu.instance.gameIsPaused) gameTimer += Time.deltaTime;
+        playerInCombat = Array.Exists(FindObjectsOfType<Enemy>().ToArray(), e => e.chasing);
     }
 
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration, bool onPlayer)
-    {
-        floatingTextManager.Show(msg, fontSize, color, position, motion, duration, onPlayer);
-
-        Debug.Log("text shown");
-    }
+        => floatingTextManager.Show(msg, fontSize, color, position, motion, duration, onPlayer);
 
     private void LoadQuests()
     {
@@ -71,7 +72,7 @@ public class GameManager : MonoBehaviour
             if (i == 0) data = SaveManager.instance.tempQuests;
             else data = SaveManager.instance.tempCompletedQuests;
 
-            if(SaveManager.instance.tempCompletedQuests != null)
+            if (SaveManager.instance.tempCompletedQuests != null) 
             {
                 foreach (QuestData questData in data)
                 {
@@ -162,7 +163,26 @@ public class GameManager : MonoBehaviour
     {
         foreach (Quest quest in playerQuests)
         {
-            foreach (QuestGoal questGoal in quest.goals)
+            var questGoals = Array.FindAll(quest.goals.ToArray(), g => !g.completed && g.goalType == QuestGoal.GoalType.Kill);
+
+            if (questGoals != null)
+            {
+                foreach (var questGoal in questGoals)
+                {
+                    if (questGoal != null)
+                    {
+                        questGoal.currentAmount = 0;
+                        var bossData = Array.FindAll(SaveManager.instance.tempBosses.ToArray(), bd => bd.bossName == questGoal.killGoal.name);
+
+                        questGoal.currentAmount = bossData.Length;
+                        if (questGoal.currentAmount >= questGoal.requiredAmount) questGoal.completed = true;
+
+                        quest.CheckGoals();
+                    }
+                }
+            }
+                
+            /*foreach (QuestGoal questGoal in quest.goals)
             {
                 if (!questGoal.completed && questGoal.goalType == QuestGoal.GoalType.Kill)
                 {
@@ -177,7 +197,7 @@ public class GameManager : MonoBehaviour
                     }
                     quest.CheckGoals();
                 }
-            }
+            }*/
         }
     }
 

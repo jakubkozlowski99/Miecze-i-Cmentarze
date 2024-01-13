@@ -49,13 +49,16 @@ public class Inventory : MonoBehaviour
                 int questItemsAmount = 0;
                 if (questGoal.itemGoal != null)
                 {
-                    foreach (Item item in items)
+                    questItemsAmount = items.FindAll(i => questGoal.itemGoal == i).Count;
+
+                    /*foreach (Item item in items)
                     {
                         if (questGoal.itemGoal == item)
                         {
                             questItemsAmount++;
                         }
-                    }
+                    }*/
+
                     questGoal.currentAmount = questItemsAmount;
                     if (questGoal.currentAmount >= questGoal.requiredAmount) questGoal.completed = true;
                     else questGoal.completed = false;
