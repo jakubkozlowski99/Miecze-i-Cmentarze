@@ -13,6 +13,9 @@ public class EnemySpawner : MonoBehaviour
     public int childCount;
     public float respawnCooldown = 5;
 
+    [SerializeField]
+    public List<PatrolCheckpoint> patrolCheckpoints = new();
+
     public bool flipped = false; //false = right, true = left
 
     protected virtual void Start()

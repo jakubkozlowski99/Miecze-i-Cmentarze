@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -29,6 +30,12 @@ public class Enemy : Mover
     protected bool enemyIsAttacking;
     protected bool enemyIsHurt;
     protected bool alive = true;
+
+    public EnemySpawner spawner;
+    protected bool patrolReverseDirection = false;
+    protected float patrolTimer = 0;
+    protected int nextCheckpointIndex;
+    protected float afterChasingTimer = 15f;
     #endregion
 
     #region Collider variables
@@ -42,6 +49,8 @@ public class Enemy : Mover
     protected override void Start()
     {
         base.Start();
+        spawner = GetComponentInParent<EnemySpawner>();
+        nextCheckpointIndex = 1;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -56,13 +65,14 @@ public class Enemy : Mover
 
     protected virtual void FixedUpdate()
     {
+        Debug.Log(afterChasingTimer);
         if (alive)
         {
             CheckAnimations();
 
-            if ((Vector3.Distance(playerTransform.position, startingPosition) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
+            if ((Vector3.Distance(playerTransform.position, transform.position) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
             {
-                if (Vector3.Distance(playerTransform.position, startingPosition) < triggerLength)
+                if (Vector3.Distance(playerTransform.position, transform.position) < triggerLength)
                 {
                     SetChasing(true);
                 }
@@ -85,6 +95,12 @@ public class Enemy : Mover
             else if ((!enemyIsAttacking && !enemyIsHurt) || !GameManager.instance.player.alive)
             {
                 SetChasing(false);
+            }
+
+            if (!chasing)
+            {
+                if (afterChasingTimer >= 15f) Patrol();
+                else afterChasingTimer += Time.deltaTime;
             }
 
             collidingWithPlayer = false;
@@ -113,20 +129,75 @@ public class Enemy : Mover
             }
         }
     }
+    protected virtual void Patrol()
+    {
+        if (spawner.patrolCheckpoints.Count == 0) return;
 
+        var nextCheckpoint = spawner.patrolCheckpoints[nextCheckpointIndex];
+
+        if (new Vector2(transform.position.x, transform.position.y) == nextCheckpoint.coordinates)
+        {
+            if (patrolTimer == 0 && agent.updatePosition)
+            {
+                agent.updatePosition = false;
+                anim.SetBool("EnemyRun", false);
+            }
+            else if (patrolTimer >= nextCheckpoint.waitingTime)
+            {
+                patrolTimer = 0f;
+
+                agent.updatePosition = true;
+                agent.SetDestination(nextCheckpoint.coordinates);
+
+                if (agent.path.corners.Length > 1)
+                {
+                    agent.speed = CalculateSpeed() / 2;
+                    TurnEnemy();
+                }
+
+                anim.SetBool("EnemyRun", true);
+
+                if (nextCheckpointIndex == spawner.patrolCheckpoints.Count - 1)
+                {
+                    nextCheckpointIndex -= 1;
+                    patrolReverseDirection = true;
+                }
+                else if (nextCheckpointIndex == 0)
+                {
+                    nextCheckpointIndex += 1;
+                    patrolReverseDirection = false;
+                }
+                else if (!patrolReverseDirection) nextCheckpointIndex += 1;
+                else nextCheckpointIndex -= 1;
+            }
+            else patrolTimer += Time.deltaTime;
+        }
+        else
+        {
+            agent.updatePosition = true;
+            agent.SetDestination(nextCheckpoint.coordinates);
+            anim.SetBool("EnemyRun", true);
+            if (agent.path.corners.Length > 1)
+            {
+                agent.speed = CalculateSpeed() / 2;
+                TurnEnemy();
+            }
+        }
+    }
     protected virtual void SetChasing(bool shouldChase)
     {
-        if (shouldChase == false)
+        if (!shouldChase)
         {
             chasing = false;
-            startingPosition = transform.position;
-            agent.SetDestination(startingPosition);
+            //startingPosition = transform.position;
+            agent.SetDestination(transform.position);
             anim.SetBool("EnemyRun", false);
         }
         else
         {
             chasing = true;
             if (!collidingWithPlayer) anim.SetBool("EnemyRun", true);
+            afterChasingTimer = 0;
         }
     }
 

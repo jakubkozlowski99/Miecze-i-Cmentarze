@@ -1952,7 +1952,7 @@ PrefabInstance:
     - target: {fileID: 8687865276803134579, guid: ab6a6f4cf0c7cef4fb40b55656f7291c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8687865276803134579, guid: ab6a6f4cf0c7cef4fb40b55656f7291c,
         type: 3}
@@ -2344,7 +2344,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &500423079
 GameObject:
@@ -2566,13 +2566,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
+      propertyPath: quests.Array.data[0].reward.xp
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].reward.xp
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
       propertyPath: quests.Array.data[2].reward.xp
       value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
+      propertyPath: quests.Array.data[0].reward.coins
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].reward.coins
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
       propertyPath: quests.Array.data[2].reward.coins
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[0].information.name
+      value: boss test
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
@@ -2582,7 +2607,7 @@ PrefabInstance:
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
       propertyPath: quests.Array.data[1].information.name
-      value: boss test
+      value: Mikstura kowala
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
@@ -2596,8 +2621,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
-      propertyPath: quests.Array.data[1].information.description
+      propertyPath: quests.Array.data[0].information.description
       value: boss test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].information.description
+      value: "Kowal potrzebuje ma\u0142ej mikstury \u017Cycia, przynie\u015B mu j\u0105.
+        Mo\u017Cna tak\u0105 kupi\u0107 u handlarza jak, ale mo\u017Ce uda si\u0119
+        j\u0105 gdzie\u015B znale\u017A\u0107."
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
@@ -2608,8 +2640,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
-      propertyPath: quests.Array.data[1].information.dialogueText
+      propertyPath: quests.Array.data[0].information.dialogueText
       value: boss test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].information.dialogueText
+      value: "Wiesz co, potrzebuj\u0119 niedu\u017Cej mikstury, ale mam strasznie
+        du\u017Co pracy. Przyni\xF3s\u0142by\u015B mi tak\u0105? Handlarz podobno
+        sprzedaje, oddam Ci z nawi\u0105zk\u0105."
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
@@ -2621,10 +2660,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
-      propertyPath: quests.Array.data[1].goals.Array.data[0].killGoal
+      propertyPath: quests.Array.data[0].goals.Array.data[0].goalType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[0].goals.Array.data[0].itemGoal
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[0].goals.Array.data[0].killGoal
       value: 
       objectReference: {fileID: 4935495977864810100, guid: be2e763b8f1f66a4abd8d3e7ca96dca4,
         type: 3}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].goals.Array.data[0].goalType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].goals.Array.data[0].itemGoal
+      value: 
+      objectReference: {fileID: 11400000, guid: c2fa8d679380a1b438343d850f853402,
+        type: 2}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].goals.Array.data[0].killGoal
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
       propertyPath: quests.Array.data[1].goals.Array.data[1].killGoal
@@ -2651,8 +2716,14 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
+      propertyPath: quests.Array.data[2].goals.Array.data[3].killGoal
+      value: 
+      objectReference: {fileID: 506691084670807987, guid: 07fcd0ecceb4a464b8fe9af986564d53,
+        type: 3}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
       propertyPath: quests.Array.data[1].goals.Array.data[0].requiredAmount
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
@@ -2676,8 +2747,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
-      propertyPath: quests.Array.data[1].goals.Array.data[0].goalDescription
+      propertyPath: quests.Array.data[2].goals.Array.data[3].requiredAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[0].goals.Array.data[0].goalDescription
       value: boss test
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[1].goals.Array.data[0].goalDescription
+      value: "Zdob\u0105d\u017A ma\u0142\u0105 mikstur\u0119 \u017Cycia"
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
@@ -2697,6 +2778,11 @@ PrefabInstance:
     - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
         type: 3}
       propertyPath: quests.Array.data[2].goals.Array.data[2].goalDescription
+      value: Zabij czarodzieja
+      objectReference: {fileID: 0}
+    - target: {fileID: 6235356605290088447, guid: ad50ef297dc5aab4f9c200ec921f6232,
+        type: 3}
+      propertyPath: quests.Array.data[2].goals.Array.data[3].goalDescription
       value: Zabij czarodzieja
       objectReference: {fileID: 0}
     - target: {fileID: 6235356605712601508, guid: ad50ef297dc5aab4f9c200ec921f6232,
@@ -4875,7 +4961,7 @@ PrefabInstance:
     - target: {fileID: 4683235620620821543, guid: d0a6696501d0cea4981a59c86c972417,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4683235620620821543, guid: d0a6696501d0cea4981a59c86c972417,
         type: 3}
@@ -5192,20 +5278,70 @@ PrefabInstance:
       propertyPath: respawnCooldown
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[0].waitingTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[1].waitingTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[2].waitingTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[0].coordinates.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[0].coordinates.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[1].coordinates.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[1].coordinates.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[2].coordinates.x
+      value: -6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5032532987652863583, guid: 38682fb5851438d42a772c68a79f3561,
+        type: 3}
+      propertyPath: patrolCheckpoints.Array.data[2].coordinates.y
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 5032532987652863584, guid: 38682fb5851438d42a772c68a79f3561,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5032532987652863584, guid: 38682fb5851438d42a772c68a79f3561,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.1715333
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 5032532987652863584, guid: 38682fb5851438d42a772c68a79f3561,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9625585
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5032532987652863584, guid: 38682fb5851438d42a772c68a79f3561,
         type: 3}
@@ -5290,7 +5426,7 @@ PrefabInstance:
     - target: {fileID: 8687865276803134579, guid: ab6a6f4cf0c7cef4fb40b55656f7291c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8687865276803134579, guid: ab6a6f4cf0c7cef4fb40b55656f7291c,
         type: 3}
@@ -5415,7 +5551,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1369472015
 PrefabInstance:
@@ -5433,7 +5569,7 @@ PrefabInstance:
     - target: {fileID: 4935495977864810103, guid: be2e763b8f1f66a4abd8d3e7ca96dca4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4935495977864810103, guid: be2e763b8f1f66a4abd8d3e7ca96dca4,
         type: 3}
@@ -5499,7 +5635,7 @@ PrefabInstance:
     - target: {fileID: 8687865276803134579, guid: ab6a6f4cf0c7cef4fb40b55656f7291c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8687865276803134579, guid: ab6a6f4cf0c7cef4fb40b55656f7291c,
         type: 3}
@@ -6167,7 +6303,7 @@ Transform:
   - {fileID: 51637855}
   - {fileID: 483300374}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1561064581 stripped
 GameObject:
@@ -6219,7 +6355,7 @@ Transform:
   - {fileID: 523477338}
   - {fileID: 21916662}
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1637050020
 PrefabInstance:
@@ -6325,7 +6461,7 @@ Transform:
   - {fileID: 487365958}
   - {fileID: 558276940}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011163553
 GameObject:
@@ -7187,87 +7323,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1001 &2129938235
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 2
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4770027707541490539, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707541490539, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348137, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_Name
-      value: GrassEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.240142
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.0909107
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4770027707862348148, guid: 92c19580b9ce7cd4790949666782a430,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_AddedGameObjects: []
-  m_SourcePrefab: {fileID: 100100000, guid: 92c19580b9ce7cd4790949666782a430, type: 3}
 --- !u!850595691 &2131802129
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -7342,7 +7397,7 @@ PrefabInstance:
     - target: {fileID: 5326986451318908060, guid: cc89f68bcf2089644b834b498e27a1f9,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5326986451318908060, guid: cc89f68bcf2089644b834b498e27a1f9,
         type: 3}
@@ -7436,7 +7491,7 @@ PrefabInstance:
     - target: {fileID: 6097452658390559492, guid: f913c0b72bf7fcb4387d6dddbdf7cbbe,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6097452658390559492, guid: f913c0b72bf7fcb4387d6dddbdf7cbbe,
         type: 3}
@@ -7579,7 +7634,7 @@ PrefabInstance:
     - target: {fileID: 7404425684488177549, guid: e08ecc046002a954b866c51195fdac71,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7404425684488177549, guid: e08ecc046002a954b866c51195fdac71,
         type: 3}
@@ -7690,7 +7745,7 @@ PrefabInstance:
     - target: {fileID: 8015301673090203980, guid: fcee05ba013dde44ea39c316401d5cf6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8015301673090203980, guid: fcee05ba013dde44ea39c316401d5cf6,
         type: 3}
@@ -7806,7 +7861,7 @@ PrefabInstance:
     - target: {fileID: 8875225938130551114, guid: 75663902ce4da554d982bfe5ac1d248a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8875225938130551114, guid: 75663902ce4da554d982bfe5ac1d248a,
         type: 3}

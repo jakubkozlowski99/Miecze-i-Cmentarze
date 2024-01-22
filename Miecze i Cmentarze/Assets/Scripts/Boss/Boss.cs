@@ -20,10 +20,8 @@ public class Boss : Enemy
         startingPosition = transform.position;
 
         //hiding boss health bar
-        bossHealthBar = GetComponentInChildren<BossHealthBar>();
         healthBarShown = false;
 
-        //???
         //if (!alive) CheckQuestGoals();
 
         //checking if boss was already killed
@@ -145,6 +143,11 @@ public class Boss : Enemy
         base.FixedUpdate();
 
         SetHealthBar();
+    }
+
+    protected override void Patrol()
+    {
+        //base.Patrol();
     }
 
     private void SetHealthBar()
