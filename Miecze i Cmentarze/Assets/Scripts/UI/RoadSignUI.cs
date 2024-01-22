@@ -41,6 +41,7 @@ public class RoadSignUI : MonoBehaviour
         {
             panel.SetActive(false);
             AudioManager.instance.StopMusic("theme_" + SceneManager.GetActiveScene().buildIndex);
+            SaveManager.instance.SaveBosses();
             SaveManager.instance.SaveSpawners();
             LevelLoader.instance.LoadLevel(chosenSlot.sceneIndex);
             GameManager.instance.player.transform.position = new Vector3(chosenSlot.playerX, chosenSlot.playerY, 0);

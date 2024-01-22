@@ -68,7 +68,14 @@ public class EnemySpawner : MonoBehaviour
                 Instantiate(enemy, new Vector2(spawner.posX, spawner.posY), new Quaternion(0, 0, 0, 0), transform);
                 timer = 0;
 
-                transform.GetChild(0).localScale = new Vector3(spawner.scaleX, enemy.transform.localScale.y, enemy.transform.localScale.z);
+                var spawnerEnemy = transform.GetComponentInChildren<Enemy>();
+
+                spawnerEnemy.patrolReverseDirection = spawner.patrolReverseDirection;
+                spawnerEnemy.patrolTimer = spawner.patrolTimer;
+                spawnerEnemy.nextCheckpointIndex = spawner.nextCheckpointIndex;
+                spawnerEnemy.afterChasingTimer = spawner.afterChasingTimer;
+
+                spawnerEnemy.transform.localScale = new Vector3(spawner.scaleX, enemy.transform.localScale.y, enemy.transform.localScale.z);
             }
 
             else timer = spawner.timer + GameManager.instance.gameTimer - spawner.lastTimerState;

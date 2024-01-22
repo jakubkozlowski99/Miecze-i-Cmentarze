@@ -1,13 +1,17 @@
+using Ink.Parsed;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class Boss : Enemy
 {
     public string bossName;
     public string unlockedMapName;
     private bool healthBarShown;
+
+    public List<PatrolCheckpoint> patrolCheckpoints;
 
     public BossHealthBar bossHealthBar;
 
@@ -147,6 +151,59 @@ public class Boss : Enemy
 
     protected override void Patrol()
     {
+        if (patrolCheckpoints.Count < 2) return;
+
+        var nextCheckpoint = patrolCheckpoints[nextCheckpointIndex];
+
+        if (new Vector2(transform.position.x, transform.position.y) == nextCheckpoint.coordinates)
+        {
+            if (patrolTimer < nextCheckpoint.waitingTime && !agent.isStopped)
+            {
+                agent.isStopped = true;
+                anim.SetBool("EnemyRun", false);
+            }
+            else if (patrolTimer >= nextCheckpoint.waitingTime)
+            {
+                patrolTimer = 0f;
+
+                agent.isStopped = false;
+                agent.SetDestination(nextCheckpoint.coordinates);
+
+                if (agent.path.corners.Length > 1)
+                {
+                    agent.speed = CalculateSpeed() / 2;
+                    TurnEnemy();
+                }
+
+                anim.SetBool("EnemyRun", true);
+
+                if (nextCheckpointIndex == patrolCheckpoints.Count - 1)
+                {
+                    nextCheckpointIndex -= 1;
+                    patrolReverseDirection = true;
+                }
+                else if (nextCheckpointIndex == 0)
+                {
+                    nextCheckpointIndex += 1;
+                    patrolReverseDirection = false;
+                }
+                else if (!patrolReverseDirection) nextCheckpointIndex += 1;
+                else nextCheckpointIndex -= 1;
+            }
+            else patrolTimer += Time.deltaTime;
+        }
+        else
+        {
+            agent.isStopped = false;
+            agent.SetDestination(nextCheckpoint.coordinates);
+            anim.SetBool("EnemyRun", true);
+            if (agent.path.corners.Length > 1)
+            {
+                agent.speed = CalculateSpeed() / 2;
+                TurnEnemy();
+            }
+        }
+
         //base.Patrol();
     }
 
@@ -184,7 +241,7 @@ public class Boss : Enemy
         }
         GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f, false);
         GameManager.instance.player.xpBar.SetXpBar();
-        SaveManager.instance.tempBosses.Add(new BossData(this));
+        SaveBoss(true);
         GameManager.instance.CheckQuestBosses();
         CheckPortals();
         Destroy(gameObject);
@@ -222,12 +279,32 @@ public class Boss : Enemy
         
     
 
+    public void SaveBoss(bool isDead)
+    {
+        var boss = Array.Find(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name);
+
+        if (boss != null) SaveManager.instance.tempBosses.Remove(boss);
+
+        SaveManager.instance.tempBosses.Add(new BossData(this, isDead));
+    }
+
     private void LoadBoss()
     {
-        var shouldDelete = Array.Exists(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name);
+        var shouldDelete = Array.Exists(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name && boss.dead);
 
         if (shouldDelete) Destroy(gameObject);
+        else
+        {
+            var bossData = Array.Find(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name);
 
+            transform.position = new Vector3(bossData.posX, bossData.posY, 0);
+            transform.localScale = new Vector3(bossData.scaleX, transform.localScale.y, transform.localScale.z);
+
+            patrolReverseDirection = bossData.patrolReverseDirection;
+            nextCheckpointIndex = bossData.nextCheckpointIndex;
+            patrolTimer = bossData.patrolTimer;
+            afterChasingTimer = bossData.afterChasingTimer;
+        }
         /*foreach (BossData boss in SaveManager.instance.tempBosses)
         {
             if (boss.bossName == name) 

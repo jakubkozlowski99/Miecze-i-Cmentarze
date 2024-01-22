@@ -172,7 +172,7 @@ public class GameManager : MonoBehaviour
                     if (questGoal != null)
                     {
                         questGoal.currentAmount = 0;
-                        var bossData = Array.FindAll(SaveManager.instance.tempBosses.ToArray(), bd => bd.bossName == questGoal.killGoal.name);
+                        var bossData = Array.FindAll(SaveManager.instance.tempBosses.ToArray(), bd => bd.bossName == questGoal.killGoal.name && bd.dead);
 
                         questGoal.currentAmount = bossData.Length;
                         if (questGoal.currentAmount >= questGoal.requiredAmount) questGoal.completed = true;

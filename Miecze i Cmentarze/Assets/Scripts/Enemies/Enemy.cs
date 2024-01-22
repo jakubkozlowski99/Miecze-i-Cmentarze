@@ -32,10 +32,10 @@ public class Enemy : Mover
     protected bool alive = true;
 
     public EnemySpawner spawner;
-    protected bool patrolReverseDirection = false;
-    protected float patrolTimer = 0;
-    protected int nextCheckpointIndex;
-    protected float afterChasingTimer = 15f;
+    public bool patrolReverseDirection = false;
+    public float patrolTimer = 0;
+    public int nextCheckpointIndex;
+    public float afterChasingTimer = 15f;
     #endregion
 
     #region Collider variables
@@ -50,11 +50,10 @@ public class Enemy : Mover
     {
         base.Start();
         spawner = GetComponentInParent<EnemySpawner>();
-        nextCheckpointIndex = 1;
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        agent.updatePosition = false;
+        agent.isStopped = true;
         healthBar = GetComponentInChildren<EnemyHealthBarBehaviour>();
         playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
@@ -65,7 +64,6 @@ public class Enemy : Mover
 
     protected virtual void FixedUpdate()
     {
-        Debug.Log(afterChasingTimer);
         if (alive)
         {
             CheckAnimations();
@@ -81,7 +79,7 @@ public class Enemy : Mover
                 {
                     if (!collidingWithPlayer)
                     {
-                        agent.updatePosition = true;
+                        agent.isStopped = false;
                         agent.SetDestination(playerTransform.position);
 
                         if (agent.path.corners.Length > 1)
@@ -131,22 +129,22 @@ public class Enemy : Mover
     }
     protected virtual void Patrol()
     {
-        if (spawner.patrolCheckpoints.Count == 0) return;
+        if (spawner.patrolCheckpoints.Count < 2) return;
 
         var nextCheckpoint = spawner.patrolCheckpoints[nextCheckpointIndex];
 
         if (new Vector2(transform.position.x, transform.position.y) == nextCheckpoint.coordinates)
         {
-            if (patrolTimer == 0 && agent.updatePosition)
+            if (patrolTimer < nextCheckpoint.waitingTime && !agent.isStopped)
             {
-                agent.updatePosition = false;
+                agent.isStopped = true;
                 anim.SetBool("EnemyRun", false);
             }
             else if (patrolTimer >= nextCheckpoint.waitingTime)
             {
                 patrolTimer = 0f;
 
-                agent.updatePosition = true;
+                agent.isStopped = false;
                 agent.SetDestination(nextCheckpoint.coordinates);
 
                 if (agent.path.corners.Length > 1)
@@ -174,7 +172,7 @@ public class Enemy : Mover
         }
         else
         {
-            agent.updatePosition = true;
+            agent.isStopped = false;
             agent.SetDestination(nextCheckpoint.coordinates);
             anim.SetBool("EnemyRun", true);
             if (agent.path.corners.Length > 1)
@@ -190,6 +188,7 @@ public class Enemy : Mover
         {
             chasing = false;
             //startingPosition = transform.position;
+            agent.isStopped = true;
             agent.SetDestination(transform.position);
             anim.SetBool("EnemyRun", false);
         }
@@ -218,7 +217,7 @@ public class Enemy : Mover
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             enemyIsAttacking = true;
-            agent.updatePosition = false;
+            agent.isStopped = false;
             agent.SetDestination(transform.position);
         }
         else enemyIsAttacking = false;
@@ -226,7 +225,7 @@ public class Enemy : Mover
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Death") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
         {
             enemyIsHurt = true;
-            agent.updatePosition = false;
+            agent.isStopped = true;
             agent.SetDestination(transform.position);
         }
         else enemyIsHurt = false;
@@ -234,7 +233,7 @@ public class Enemy : Mover
 
     protected override float CalculateSpeed()
     {
-        //measure angle between enemy's running direction and X
+        //measuring angle between enemy's running direction and X
         angle = Vector2.Angle(transform.position - agent.path.corners[1], new Vector2(1, 0));
 
         //keeping angle under 90 degrees

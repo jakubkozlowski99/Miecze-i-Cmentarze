@@ -245,7 +245,7 @@ Transform:
   - {fileID: 4770140503540996062}
   - {fileID: 3643306657959128836}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4770140502705562769
 SpriteRenderer:
@@ -359,6 +359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoint: 5000
   maxhitpoint: 5000
+  textOffset: 0.5
   xpValue: 5000
   coinsValue: 50
   damageReduction: 0
@@ -367,6 +368,12 @@ MonoBehaviour:
   chaseLength: 8
   attackCooldown: 1.5
   movementSpeed: 2
+  chasing: 0
+  spawner: {fileID: 0}
+  patrolReverseDirection: 0
+  patrolTimer: 0
+  nextCheckpointIndex: 0
+  afterChasingTimer: 15
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -385,7 +392,12 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   bossName: "Upad\u0142y wojownik"
   unlockedMapName: 
-  bossHealthBar: {fileID: 0}
+  patrolCheckpoints:
+  - coordinates: {x: 9, y: 2}
+    waitingTime: 5
+  - coordinates: {x: 13, y: 2}
+    waitingTime: 5
+  bossHealthBar: {fileID: 7051559620032026107}
 --- !u!195 &6984529406619590301
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -395,16 +407,16 @@ NavMeshAgent:
   m_GameObject: {fileID: 4770140502705562771}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.81
-  m_Speed: 3.5
+  m_Radius: 1
+  m_Speed: 2
   m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 100
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
-  m_Height: 1.9764001
+  m_Height: 1
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

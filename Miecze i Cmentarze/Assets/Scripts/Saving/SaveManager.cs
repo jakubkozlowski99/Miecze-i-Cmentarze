@@ -89,6 +89,7 @@ public class SaveManager : MonoBehaviour
         SaveQuests(data);
         data.shrineData = tempShrines;
         data.gameTimer = GameManager.instance.gameTimer;
+        SaveBosses();
         SaveSpawners();
         data.spawnerData = tempSpawners;
         data.bossData = tempBosses;
@@ -152,7 +153,6 @@ public class SaveManager : MonoBehaviour
         FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
 
         SaveData data = (SaveData)bf.Deserialize(file);*/
-        Debug.Log(data.playerData.hp);
         GameManager.instance.playerLevel = data.playerData.level;
         GameManager.instance.coins = data.playerData.coins;
         GameManager.instance.experience = data.playerData.xp;
@@ -291,13 +291,16 @@ public class SaveManager : MonoBehaviour
         Debug.Log("Wczytano stan skrzynek " + tempChests.Count);
     }*/
 
+    public void SaveBosses()
+    {
+        Boss[] bosses = FindObjectsOfType<Boss>();
+        foreach (var boss in bosses) boss.SaveBoss(false);
+    }
+
     public void SaveSpawners()
     {
         EnemySpawner[] spawners = FindObjectsOfType<EnemySpawner>();
-        foreach (EnemySpawner spawner in spawners)
-        {
-            spawner.SaveSpawner();
-        }
+        foreach (var spawner in spawners) spawner.SaveSpawner();
     }
 
     public void SaveGlobals()

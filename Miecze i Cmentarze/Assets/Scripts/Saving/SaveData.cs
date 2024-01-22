@@ -218,6 +218,11 @@ public class SpawnerData
 
     public float scaleX;
 
+    public bool patrolReverseDirection;
+    public int nextCheckpointIndex;
+    public float patrolTimer;
+    public float afterChasingTimer;
+
     public SpawnerData(EnemySpawner spawner)
     {
         spawnerName = spawner.name;
@@ -226,12 +231,30 @@ public class SpawnerData
         lastTimerState = GameManager.instance.gameTimer;
         if (spawner.transform.childCount > 0)
         {
-            if (spawner.transform.GetChild(0) != null) posX = spawner.transform.GetChild(0).position.x;
-            else posX = 0;
-            if (spawner.transform.GetChild(0) != null) posY = spawner.transform.GetChild(0).position.y;
-            else posY = 0;
-            if (spawner.transform.GetChild(0) != null) scaleX = spawner.transform.GetChild(0).localScale.x;
-            else scaleX = 0;
+            if (spawner.transform.GetChild(0) != null)
+            {
+                var enemy = spawner.transform.GetComponentInChildren<Enemy>();
+
+                posX = enemy.transform.position.x;
+                posY = enemy.transform.position.y;
+                scaleX = enemy.transform.localScale.x;
+
+                patrolReverseDirection = enemy.patrolReverseDirection;
+                nextCheckpointIndex = enemy.nextCheckpointIndex;
+                patrolTimer = enemy.patrolTimer;
+                afterChasingTimer = enemy.afterChasingTimer;
+            }
+            else
+            {
+                posX = 0;
+                posY = 0;
+                scaleX = 0;
+
+                patrolReverseDirection = false;
+                nextCheckpointIndex = 0;
+                patrolTimer = 0;
+                afterChasingTimer = 15f;
+            }
         }
     }
 }
@@ -241,8 +264,32 @@ public class BossData
 {
     public string bossName;
 
-    public BossData(Boss boss)
+    public bool dead;
+
+    public float posX;
+    public float posY;
+
+    public bool patrolReverseDirection;
+    public int nextCheckpointIndex;
+    public float patrolTimer;
+    public float afterChasingTimer;
+    public float scaleX;
+
+    public BossData(Boss boss, bool dead)
     {
         bossName = boss.name;
+        this.dead = dead;
+
+        if (!dead)
+        {
+            posX = boss.transform.position.x;
+            posY = boss.transform.position.y;
+            scaleX = boss.transform.localScale.x;
+
+            patrolReverseDirection = boss.patrolReverseDirection;
+            nextCheckpointIndex = boss.nextCheckpointIndex;
+            patrolTimer = boss.patrolTimer;
+            afterChasingTimer = boss.afterChasingTimer;
+        }
     }
 }
