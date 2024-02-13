@@ -32,7 +32,7 @@ public class ActivateWaterWell : Collidable
             HideInteractionText();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && waterWell.collectable && playerNearby)
+        if (inputHandler.CheckKey("Interaction") && waterWell.collectable && playerNearby)
         {
             OnActivation();
         }
@@ -40,18 +40,19 @@ public class ActivateWaterWell : Collidable
 
     protected void OnActivation()
     {
-        GameManager.instance.player.hitpoint = GameManager.instance.player.maxhitpoint;
-        GameManager.instance.player.healthBar.SetValue(GameManager.instance.player.hitpoint);
-        GameManager.instance.player.healthBar.SetText(GameManager.instance.player.hitpoint, GameManager.instance.player.maxhitpoint);
+        player.hitpoint = player.maxhitpoint;
+        player.healthBar.SetValue(player.hitpoint);
+        player.healthBar.SetText(player.hitpoint, player.maxhitpoint);
         anim.SetTrigger("Activation");
         interactionTextManager.Hide();
-        AudioManager.instance.Play("heal");
+        audioManager.Play("heal");
     }
 
     protected void ShowInteractionText()
     {
 
-        interactionTextManager.Show("[E] Wypij", 7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Wypij",
+            7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
         textShown = true;
     }
 

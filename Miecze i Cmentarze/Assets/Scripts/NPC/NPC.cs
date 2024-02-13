@@ -26,28 +26,33 @@ public class NPC : Collidable
 
     public GameObject attentionMark;
 
+    public DialogueManager dialogueManager;
+
     protected override void Start()
     {
         base.Start();
+
+        dialogueManager = DialogueManager.instance;
+
         shop = new Shop();
         shop.shopItems = shopItems;
-        LoadNPCQuests(GameManager.instance.playerQuests, GameManager.instance.completedQuests);
+        LoadNPCQuests(gameManager.playerQuests, gameManager.completedQuests);
         SetAttentionMark();
     }
     protected override void Update()
     {
         playerNearby = IsPlayerNearby();
 
-        if (playerNearby && !textShown && !DialogueManager.instance.dialogueIsPlaying)
+        if (playerNearby && !textShown && !dialogueManager.dialogueIsPlaying)
         {
             ShowInteractionText();
         }
-        if ((textShown && !playerNearby) || DialogueManager.instance.dialogueIsPlaying)
+        if ((textShown && !playerNearby) || dialogueManager.dialogueIsPlaying)
         {
             HideInteractionText();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerNearby && !DialogueManager.instance.dialogueIsPlaying)
+        if (inputHandler.CheckKey("Interaction") && playerNearby && !dialogueManager.dialogueIsPlaying)
         {
             OnActivation();
         }
@@ -56,13 +61,14 @@ public class NPC : Collidable
     {
         Debug.Log(thisNPC.name);
         HideInteractionText();
-        DialogueManager.instance.EnterDialogueMode(inkJSON, transform.name, shop, FindQuest(), thisNPC);
+        dialogueManager.EnterDialogueMode(inkJSON, transform.name, shop, FindQuest(), thisNPC);
     }
 
     protected void ShowInteractionText()
     {
 
-        interactionTextManager.Show("[E] Rozmawiaj", 7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Rozmawiaj",
+            7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
         textShown = true;
     }
 
@@ -128,7 +134,7 @@ public class NPC : Collidable
         var quest = FindQuest();
         if (quest != null)
         {
-            foreach (Quest playerQuest in GameManager.instance.playerQuests)
+            foreach (Quest playerQuest in gameManager.playerQuests)
             {
                 if (playerQuest == quest)
                 {

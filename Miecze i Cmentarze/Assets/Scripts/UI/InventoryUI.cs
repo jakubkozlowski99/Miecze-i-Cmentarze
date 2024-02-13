@@ -71,7 +71,7 @@ public class InventoryUI : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if (InputHandler.instance.CheckKey("Toggle_Inventory"))
         {
             ToggleInventory();
         }

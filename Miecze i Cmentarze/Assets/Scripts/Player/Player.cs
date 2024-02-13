@@ -48,6 +48,9 @@ public class Player : Mover
 
     private bool isRunning;
 
+    public float testX;
+    public float testY;
+
     protected override void Start()
     {
         base.Start();
@@ -77,6 +80,7 @@ public class Player : Mover
         staminaRegenTimer = 0;
         xpBar.SetXpBar();
         playerStats.UpdateStats();
+
         CameraMotor.instance.lookAt = transform;
 
         currentSpeed = playerSpeed;
@@ -85,14 +89,16 @@ public class Player : Mover
     }
     private void Update()
     {
-        x = Input.GetAxisRaw("Horizontal");
+        HandleMovementInput();
+
+        /*x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
 
         if (isAttacking || !canMove) 
         {
             x = 0;
             y = 0;
-        }
+        }*/
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName(swing_1) || anim.GetCurrentAnimatorStateInfo(0).IsName(hurt)
             || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_2) || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_3)) 
@@ -133,18 +139,7 @@ public class Player : Mover
 
             if (Time.time - lastSwing > swingReset) swingCount = 0;
 
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Swing();
-            }
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                if (Time.time - lastDodge > dodgeCooldown && ((stamina >= 20 && !playerStats.freeDodge) || playerStats.freeDodge))
-                {
-                    Dodge(x, y);
-                }
-            }
+            HandleCombatInput();
         }
 
         HpRegen();
@@ -158,6 +153,36 @@ public class Player : Mover
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
         {
             UI.instance.deathScreen.SetActive(true);
+        }
+    }
+
+    private void HandleMovementInput()
+    {
+        x = 0;
+        y = 0;
+
+        if(!isAttacking && canMove)
+        {
+            if (InputHandler.instance.CheckKey("Up")) y += 1;
+            if (InputHandler.instance.CheckKey("Down")) y -= 1;
+            if (InputHandler.instance.CheckKey("Right")) x += 1;
+            if (InputHandler.instance.CheckKey("Left")) x -= 1;
+        }
+    }
+
+    private void HandleCombatInput()
+    {
+        if (InputHandler.instance.CheckKey("Attack"))
+        {
+            Swing();
+        }
+
+        if (InputHandler.instance.CheckKey("Dodge"))
+        {
+            if (Time.time - lastDodge > dodgeCooldown && ((stamina >= 20 && !playerStats.freeDodge) || playerStats.freeDodge))
+            {
+                Dodge(x, y);
+            }
         }
     }
 

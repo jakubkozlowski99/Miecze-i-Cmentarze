@@ -21,8 +21,8 @@ public class Portal : Collidable
     private bool textShown;
     public float interactionTextOffset;
 
-    public float playerX;
-    public float playerY;
+    public float playerTargetX;
+    public float playerTargetY;
 
     public Animator anim;
     public SpriteRenderer spriteRenderer;
@@ -48,25 +48,26 @@ public class Portal : Collidable
             HideInteractionText();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerNearby && active)
+        if (inputHandler.CheckKey("Interaction") && playerNearby && active)
         {
             OnActivation();
         }
     }
     protected void OnActivation()
     {
-        AudioManager.instance.StopMusic("theme_" + SceneManager.GetActiveScene().buildIndex);
-        AudioManager.instance.Play("teleport");
-        SaveManager.instance.SaveBosses();
-        SaveManager.instance.SaveSpawners();
+        audioManager.StopMusic("theme_" + SceneManager.GetActiveScene().buildIndex);
+        audioManager.Play("teleport");
+        saveManager.SaveBosses();
+        saveManager.SaveSpawners();
         //SceneManager.LoadSceneAsync(sceneIndex);
         LevelLoader.instance.LoadLevel(sceneIndex);
-        GameManager.instance.player.transform.position = new Vector3(playerX, playerY, 0);
+        player.transform.position = new Vector3(playerTargetX, playerTargetY, 0);
     }
 
     protected void ShowInteractionText()
     {
-        if (active) interactionTextManager.Show("[E] Wejdz", 7, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
+        if (active) interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Wejdz",
+            7, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
         else interactionTextManager.Show("Pokonaj " + bossToActivateName + "\n\naby otworzyc portal", 7, Color.red, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
         textShown = true;
     }
@@ -78,7 +79,7 @@ public class Portal : Collidable
 
     public void CheckPortal()
     {
-        var unlocked = Array.Exists(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == bossToActivate);
+        var unlocked = Array.Exists(saveManager.tempBosses.ToArray(), boss => boss.bossName == bossToActivate);
 
         if (unlocked)
         {

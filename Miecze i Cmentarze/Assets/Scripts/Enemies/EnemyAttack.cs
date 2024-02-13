@@ -31,7 +31,7 @@ public class EnemyAttack : Collidable
                     critChance = critChance,
                     armorPenetration = armorPenetration
                 };
-                GameManager.instance.player.SendMessage("ReceiveDamage", dmg);
+                player.SendMessage("ReceiveDamage", dmg);
             }
             else return;
         }

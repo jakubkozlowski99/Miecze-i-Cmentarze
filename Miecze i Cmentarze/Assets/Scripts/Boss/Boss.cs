@@ -20,7 +20,6 @@ public class Boss : Enemy
         base.Start();
 
         //setting player and boss positions to measure distance between them
-        playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
 
         //hiding boss health bar
@@ -61,12 +60,12 @@ public class Boss : Enemy
                 if (rand <= critChance)
                 {
                     hitpoint -= (damageDealt * 2);
-                    GameManager.instance.ShowText((damageDealt * 2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
+                    gameManager.ShowText((damageDealt * 2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
                 }
                 else
                 {
                     hitpoint -= damageDealt;
-                    GameManager.instance.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
+                    gameManager.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
                 }
 
                 AudioManager.instance.Play("hit");
@@ -229,20 +228,20 @@ public class Boss : Enemy
     }
     protected override void KillReward()
     {
-        GameManager.instance.coins += coinsValue;
-        GameManager.instance.experience += xpValue;
-        if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
+        gameManager.coins += coinsValue;
+        gameManager.experience += xpValue;
+        if (gameManager.experience >= gameManager.xpTable[gameManager.playerLevel - 1])
         {
-            GameManager.instance.player.LevelUp();
+            gameManager.player.LevelUp();
         }
         if (unlockedMapName != "none") 
         {
-            GameManager.instance.mapsUnlocked.Add(unlockedMapName);
+            gameManager.mapsUnlocked.Add(unlockedMapName);
         }
-        GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f, false);
-        GameManager.instance.player.xpBar.SetXpBar();
+        gameManager.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f, false);
+        gameManager.player.xpBar.SetXpBar();
         SaveBoss(true);
-        GameManager.instance.CheckQuestBosses();
+        gameManager.CheckQuestBosses();
         CheckPortals();
         Destroy(gameObject);
     }
@@ -281,29 +280,32 @@ public class Boss : Enemy
 
     public void SaveBoss(bool isDead)
     {
-        var boss = Array.Find(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name);
+        var boss = Array.Find(saveManager.tempBosses.ToArray(), boss => boss.bossName == name);
 
-        if (boss != null) SaveManager.instance.tempBosses.Remove(boss);
+        if (boss != null) saveManager.tempBosses.Remove(boss);
 
-        SaveManager.instance.tempBosses.Add(new BossData(this, isDead));
+        saveManager.tempBosses.Add(new BossData(this, isDead));
     }
 
     private void LoadBoss()
     {
-        var shouldDelete = Array.Exists(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name && boss.dead);
+        var shouldDelete = Array.Exists(saveManager.tempBosses.ToArray(), boss => boss.bossName == name && boss.dead);
 
         if (shouldDelete) Destroy(gameObject);
         else
         {
-            var bossData = Array.Find(SaveManager.instance.tempBosses.ToArray(), boss => boss.bossName == name);
+            var bossData = Array.Find(saveManager.tempBosses.ToArray(), boss => boss.bossName == name);
 
-            transform.position = new Vector3(bossData.posX, bossData.posY, 0);
-            transform.localScale = new Vector3(bossData.scaleX, transform.localScale.y, transform.localScale.z);
+            if (bossData != null)
+            {
+                transform.position = new Vector3(bossData.posX, bossData.posY, 0);
+                transform.localScale = new Vector3(bossData.scaleX, transform.localScale.y, transform.localScale.z);
 
-            patrolReverseDirection = bossData.patrolReverseDirection;
-            nextCheckpointIndex = bossData.nextCheckpointIndex;
-            patrolTimer = bossData.patrolTimer;
-            afterChasingTimer = bossData.afterChasingTimer;
+                patrolReverseDirection = bossData.patrolReverseDirection;
+                nextCheckpointIndex = bossData.nextCheckpointIndex;
+                patrolTimer = bossData.patrolTimer;
+                afterChasingTimer = bossData.afterChasingTimer;
+            }
         }
         /*foreach (BossData boss in SaveManager.instance.tempBosses)
         {

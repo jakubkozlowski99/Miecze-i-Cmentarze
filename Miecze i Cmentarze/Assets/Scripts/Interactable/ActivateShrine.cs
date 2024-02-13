@@ -33,7 +33,7 @@ public class ActivateShrine : Collidable
             HideInteractionText();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && !shrine.collected && playerNearby)
+        if (inputHandler.CheckKey("Interaction") && !shrine.collected && playerNearby)
         {
             OnActivation();
         }
@@ -45,16 +45,17 @@ public class ActivateShrine : Collidable
         anim.SetTrigger("Activation");
         shrine.collected = true;
         interactionTextManager.Hide();
-        GameManager.instance.ShowText("+Punkt talentu", 7, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset, GameManager.instance.player.transform.position.z), Vector3.up * 25, 0.5f, true);
-        GameManager.instance.availablePoints++;
+        gameManager.ShowText("+Punkt talentu", 7, Color.yellow, new Vector3(gameManager.player.transform.position.x,
+            gameManager.player.transform.position.y + gameManager.player.textOffset, gameManager.player.transform.position.z), Vector3.up * 25, 0.5f, true);
+        gameManager.availablePoints++;
         shrine.LoadTempShrines(false);
-        AudioManager.instance.Play("shrine");
+        audioManager.Play("shrine");
     }
 
     protected void ShowInteractionText()
     {
-        interactionTextManager.Show("[E] Aktywuj", 7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Aktywuj",
+            7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
         textShown = true;
     }
     protected void HideInteractionText()

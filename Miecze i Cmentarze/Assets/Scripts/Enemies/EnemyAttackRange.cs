@@ -32,7 +32,7 @@ public class EnemyAttackRange : Collidable
 
     protected override void OnCollide(Collider2D coll)
     {
-        if (!isHurt && Time.time - lastAttack > attackCooldown && GameManager.instance.player.alive)
+        if (!isHurt && Time.time - lastAttack > attackCooldown && player.alive)
         {
             if (coll.tag == "Fighter" && coll.name == "PlayerHitbox")
             {
@@ -46,7 +46,7 @@ public class EnemyAttackRange : Collidable
     private void SetAttackAnim()
     {
         anim.SetTrigger("Attack" + attackAnimIndex);
-        AudioManager.instance.Play(attackSoundName);
+        audioManager.Play(attackSoundName);
         if (attackAnimIndex >= animationsAmount)
         {
             attackAnimIndex = 1;

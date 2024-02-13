@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 
@@ -39,6 +38,10 @@ public class DialogueManager : MonoBehaviour
 
     public QuestsUI questsUI;
 
+    private GameManager gameManager;
+    private Player player;
+    private Inventory inventory;
+
     private void Awake()
     {
         if (instance != null)
@@ -54,6 +57,10 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        gameManager = GameManager.instance;
+        player = GameManager.instance.player;
+        inventory = Inventory.instance;
+
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -83,7 +90,7 @@ public class DialogueManager : MonoBehaviour
     {
         quest = newQuest;
         npc = newNPC;
-        Inventory.instance.canToggle = false;
+        inventory.canToggle = false;
         currentStory = new Story(inkJSON.text);
         currentStory.variablesState["questState"] = SetQuestState();
         dialogueIsPlaying = true;
@@ -91,18 +98,18 @@ public class DialogueManager : MonoBehaviour
         portraitAnim.SetTrigger(newPortrait);
         Debug.Log(newShop.shopItems.Count);
         shop = newShop;
-        GameManager.instance.player.canMove = false;
+        player.canMove = false;
         ContinueStory();
     }
 
     private void ExitDialogueMode()
     {
-        Inventory.instance.canToggle = true;
+        inventory.canToggle = true;
         portraitAnim.SetTrigger("Exit");
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
-        GameManager.instance.player.canMove = true;
+        player.canMove = true;
     }
 
     private void ContinueStory()
@@ -191,7 +198,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (quest == null) return 1;
 
-        foreach (Quest playerQuest in GameManager.instance.playerQuests)
+        foreach (Quest playerQuest in gameManager.playerQuests)
         {
             if (playerQuest == quest)
             {
@@ -207,13 +214,13 @@ public class DialogueManager : MonoBehaviour
 
     private void GiveQuest()
     {
-        GameManager.instance.playerQuests.Add(quest);
+        gameManager.playerQuests.Add(quest);
         //quest.SetGoal();
-        Inventory.instance.CheckQuestItems();
-        GameManager.instance.CheckQuestBosses();
+        inventory.CheckQuestItems();
+        gameManager.CheckQuestBosses();
         questsUI.AddQuest(quest);
-        GameManager.instance.ShowText("Dodano zadanie", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f, true) ;
+        gameManager.ShowText("Dodano zadanie", 10, Color.yellow, new Vector3(player.transform.position.x,
+            player.transform.position.y + 0.5f, transform.position.z), Vector3.up * 25, 0.5f, true) ;
         npc.SetAttentionMark();
     }
 
@@ -221,8 +228,8 @@ public class DialogueManager : MonoBehaviour
     {
         quest.rewardClaimed = true;
 
-        GameManager.instance.completedQuests.Add(quest);
-        GameManager.instance.playerQuests.Remove(quest);
+        gameManager.completedQuests.Add(quest);
+        gameManager.playerQuests.Remove(quest);
 
         foreach (QuestGoal questGoal in quest.goals)
         {
@@ -234,17 +241,17 @@ public class DialogueManager : MonoBehaviour
 
         questsUI.RemoveQuest(quest);
 
-        GameManager.instance.coins += quest.reward.coins;
-        GameManager.instance.experience += quest.reward.xp;
-        if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
+        gameManager.coins += quest.reward.coins;
+        gameManager.experience += quest.reward.xp;
+        if (gameManager.experience >= gameManager.xpTable[gameManager.playerLevel - 1])
         {
-            GameManager.instance.player.LevelUp();
+            player.LevelUp();
         }
-        GameManager.instance.player.xpBar.SetXpBar();
-        GameManager.instance.ShowText("+" + quest.reward.coins+ " monet", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset, transform.position.z), Vector3.up * 25, 0.5f, true);
-        GameManager.instance.ShowText("+" + quest.reward.xp + "XP", 10, Color.yellow, new Vector3(GameManager.instance.player.transform.position.x,
-            GameManager.instance.player.transform.position.y + GameManager.instance.player.textOffset, transform.position.z), Vector3.up * 25, 0.5f, true);
+        player.xpBar.SetXpBar();
+        gameManager.ShowText("+" + quest.reward.coins+ " monet", 10, Color.yellow, new Vector3(player.transform.position.x,
+            player.transform.position.y + player.textOffset, transform.position.z), Vector3.up * 25, 0.5f, true);
+        gameManager.ShowText("+" + quest.reward.xp + "XP", 10, Color.yellow, new Vector3(player.transform.position.x,
+            player.transform.position.y + player.textOffset, transform.position.z), Vector3.up * 25, 0.5f, true);
 
         npc.SetAttentionMark();
     }

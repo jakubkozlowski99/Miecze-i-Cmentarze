@@ -30,7 +30,7 @@ public class SaveSpot : Collidable
             HideInteractionText();
         }
 
-        if (Input.GetKeyDown(KeyCode.E) && playerNearby)
+        if (InputHandler.instance.CheckKey("Interaction") && playerNearby)
         {
             OnActivation();
         }
@@ -51,7 +51,8 @@ public class SaveSpot : Collidable
 
     protected void ShowInteractionText()
     {
-        interactionTextManager.Show("[E] Zapisz", 10, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
+        interactionTextManager.Show("[" + InputHandler.instance.keyBinds.binds["Interaction"].ToString() + "] " + "Zapisz",
+            10, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
         textShown = true;
     }
     protected void HideInteractionText()

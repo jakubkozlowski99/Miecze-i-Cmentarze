@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collidable : MonoBehaviour
+public class Collidable : MonoBehaviourExtension
 {
     public int hitsSize = 10;
 
@@ -10,8 +10,9 @@ public class Collidable : MonoBehaviour
     protected BoxCollider2D boxCollider;
     protected Collider2D[] hits;
 
-    protected virtual void Start()
+    protected override void Start()
     {
+        base.Start();
         boxCollider = GetComponent<BoxCollider2D>();
         hits = new Collider2D[hitsSize];
 }

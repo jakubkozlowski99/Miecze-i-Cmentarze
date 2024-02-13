@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEditorInternal;
 using UnityEngine;
 
-public class EnemySpawner : MonoBehaviour
+public class EnemySpawner : MonoBehaviourExtension
 {
     public GameObject enemy;
 
@@ -18,15 +18,17 @@ public class EnemySpawner : MonoBehaviour
 
     public bool flipped = false; //false = right, true = left
 
-    protected virtual void Start()
+    protected override void Start()
     {
+        base.Start();
+
         LoadSpawner();
         SaveSpawner();
     }
 
     protected virtual void Update()
     {
-        if (dead && !PauseMenu.instance.gameIsPaused)
+        if (dead && !pauseMenu.gameIsPaused)
         {
             timer += Time.deltaTime;
         }
@@ -46,20 +48,20 @@ public class EnemySpawner : MonoBehaviour
 
     public void SaveSpawner()
     {
-        var spawner = Array.Find(SaveManager.instance.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
+        var spawner = Array.Find(saveManager.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
 
-        if (spawner != null) SaveManager.instance.tempSpawners.Remove(spawner);
+        if (spawner != null) saveManager.tempSpawners.Remove(spawner);
 
-        SaveManager.instance.tempSpawners.Add(new SpawnerData(this));
+        saveManager.tempSpawners.Add(new SpawnerData(this));
     }
 
     public void LoadSpawner()
     {
-        bool shouldLoad = Array.Exists(SaveManager.instance.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
+        bool shouldLoad = Array.Exists(saveManager.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
 
         if (shouldLoad)
         {
-            SpawnerData spawner = Array.Find(SaveManager.instance.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
+            SpawnerData spawner = Array.Find(saveManager.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
 
             dead = spawner.dead;
 

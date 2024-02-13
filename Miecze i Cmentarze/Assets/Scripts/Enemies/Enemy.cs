@@ -23,7 +23,6 @@ public class Enemy : Mover
     public float movementSpeed = 2f;
     public bool chasing;
     protected bool collidingWithPlayer;
-    protected Transform playerTransform;
     protected Vector3 startingPosition;
     protected string hurtTrigger = "Hurt";
     protected string deathTrigger = "Death";
@@ -49,13 +48,15 @@ public class Enemy : Mover
     protected override void Start()
     {
         base.Start();
+
         spawner = GetComponentInParent<EnemySpawner>();
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         agent.isStopped = true;
+
         healthBar = GetComponentInChildren<EnemyHealthBarBehaviour>();
-        playerTransform = GameManager.instance.player.transform;
         startingPosition = transform.position;
         transform.rotation = new Quaternion(0, 0, 0, 0);
         anim = GetComponent<Animator>();
@@ -68,9 +69,9 @@ public class Enemy : Mover
         {
             CheckAnimations();
 
-            if ((Vector3.Distance(playerTransform.position, transform.position) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
+            if ((gameManager.MeasureDistance(gameManager.player.gameObject, gameObject) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
             {
-                if (Vector3.Distance(playerTransform.position, transform.position) < triggerLength)
+                if (Vector3.Distance(player.transform.position, transform.position) < triggerLength)
                 {
                     SetChasing(true);
                 }
@@ -80,7 +81,7 @@ public class Enemy : Mover
                     if (!collidingWithPlayer)
                     {
                         agent.isStopped = false;
-                        agent.SetDestination(playerTransform.position);
+                        agent.SetDestination(player.transform.position);
 
                         if (agent.path.corners.Length > 1)
                         {
@@ -90,7 +91,7 @@ public class Enemy : Mover
                     }
                 }
             }
-            else if ((!enemyIsAttacking && !enemyIsHurt) || !GameManager.instance.player.alive)
+            else if ((!enemyIsAttacking && !enemyIsHurt) || !gameManager.player.alive)
             {
                 SetChasing(false);
             }
@@ -265,20 +266,20 @@ public class Enemy : Mover
     protected virtual void KillReward()
     {
         CheckQuestGoals();
-        GameManager.instance.coins += coinsValue;
-        GameManager.instance.experience += xpValue;
-        if (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
+        gameManager.coins += coinsValue;
+        gameManager.experience += xpValue;
+        if (gameManager.experience >= gameManager.xpTable[gameManager.playerLevel - 1])
         {
-            GameManager.instance.player.LevelUp();
+            gameManager.player.LevelUp();
         }
-        GameManager.instance.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f, false);
-        GameManager.instance.player.xpBar.SetXpBar();
+        gameManager.ShowText("+" + xpValue + "xp", 10, Color.magenta, transform.position, Vector3.up * 40, 0.5f, false);
+        gameManager.player.xpBar.SetXpBar();
         Destroy(gameObject);
     }
 
     protected virtual void CheckQuestGoals()
     {
-        foreach (Quest quest in GameManager.instance.playerQuests)
+        foreach (Quest quest in gameManager.playerQuests)
         {
             if (quest.completed == false)
             {

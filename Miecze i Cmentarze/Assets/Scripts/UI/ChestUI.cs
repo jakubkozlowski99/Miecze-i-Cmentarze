@@ -22,7 +22,7 @@ public class ChestUI : MonoBehaviour
     {
         if (chest != null) 
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (InputHandler.instance.CheckKey("Interaction"))
             {
                 CloseChest();
             }

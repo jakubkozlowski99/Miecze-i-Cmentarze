@@ -205,4 +205,6 @@ public class GameManager : MonoBehaviour
     {
         return new Vector3(player.transform.position.x, player.transform.position.y, player.transform.position.z);
     }
+
+    public float MeasureDistance(GameObject object1, GameObject object2) => Vector3.Distance(object1.transform.position, object2.transform.position);
 }

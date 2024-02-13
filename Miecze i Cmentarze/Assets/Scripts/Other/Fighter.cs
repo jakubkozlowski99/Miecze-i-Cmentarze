@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fighter : MonoBehaviour
+public class Fighter : MonoBehaviourExtension
 {
     public float hitpoint;
     public float maxhitpoint;
@@ -11,6 +11,11 @@ public class Fighter : MonoBehaviour
 
     protected float lastImmune;
     protected float immuneTime = 0.1f;
+
+    protected override void Start()
+    {
+        base.Start();
+    }
 
     protected virtual void ReceiveDamage(Damage dmg)
     {
@@ -32,15 +37,15 @@ public class Fighter : MonoBehaviour
             if (rand <= critChance)
             {
                 hitpoint -= (damageDealt * 2);
-                GameManager.instance.ShowText((damageDealt *2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
+                gameManager.ShowText((damageDealt *2).ToString(), 12, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
             }
             else
             {
                 hitpoint -= damageDealt;
-                GameManager.instance.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
+                gameManager.ShowText(damageDealt.ToString(), 10, Color.red, new Vector3(transform.position.x, transform.position.y + textOffset, transform.position.z), Vector3.up * 25, 0.5f, false);
             }
 
-            AudioManager.instance.Play("hit");
+            audioManager.Play("hit");
 
             if (hitpoint <= 0)
             {

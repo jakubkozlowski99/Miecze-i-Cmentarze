@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shrine : MonoBehaviour
+public class Shrine : MonoBehaviourExtension
 {
     public Animator anim;
     public bool collected;
@@ -20,28 +20,28 @@ public class Shrine : MonoBehaviour
     {
         if (loadData)
         {
-            foreach (ShrineData shrine in SaveManager.instance.tempShrines)
+            foreach (ShrineData shrine in saveManager.tempShrines)
             {
                 if (name == shrine.shrineName)
                 {
                     collected = shrine.collected;
-                    SaveManager.instance.tempShrines.Remove(shrine);
+                    saveManager.tempShrines.Remove(shrine);
                     break;
                 }
             }
         }
         else
         {
-            foreach (ShrineData shrine in SaveManager.instance.tempShrines)
+            foreach (ShrineData shrine in saveManager.tempShrines)
             {
                 if (name == shrine.shrineName)
                 {
-                    SaveManager.instance.tempShrines.Remove(shrine);
-                    SaveManager.instance.tempShrines.Add(new ShrineData(this));
+                    saveManager.tempShrines.Remove(shrine);
+                    saveManager.tempShrines.Add(new ShrineData(this));
                     return;
                 }
             }
         }
-        SaveManager.instance.tempShrines.Add(new ShrineData(this));
+        saveManager.tempShrines.Add(new ShrineData(this));
     }
 }

@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Menu : MonoBehaviour
+public class Menu : MonoBehaviourExtension
 {
     public GameObject menu;
     public GameObject continueButton;
     public GameObject settings;
     public GameObject help;
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+
         if (UI.instance != null) Destroy(UI.instance.gameObject);
 
-        if (!SaveManager.instance.FileExists(Application.persistentDataPath + "/" + "SaveTest.dat")) continueButton.SetActive(false);
+        if (!saveManager.FileExists(Application.persistentDataPath + "/" + "SaveTest.dat")) continueButton.SetActive(false);
 
-        AudioManager.instance.PlayMusic("menu");
+        audioManager.PlayMusic("menu");
 
         if (FindObjectOfType<Player>() != null) Destroy(FindObjectOfType<Player>().gameObject);
     }
@@ -24,21 +26,23 @@ public class Menu : MonoBehaviour
     {
         menu.SetActive(false);
         //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
-        LevelLoader.instance.LoadLevel(SaveManager.instance.tempSceneIndex);
-        SaveManager.instance.isLoading = true;
-        AudioManager.instance.StopMusic("menu");
-        AudioManager.instance.Play("confirm");
+        LevelLoader.instance.LoadLevel(saveManager.tempSceneIndex);
+        saveManager.isLoading = true;
+        audioManager.StopMusic("menu");
+        audioManager.Play("confirm");
     }
 
     public void NewGame()
     {
+        CameraMotor.instance.lookAt = null;
+
         menu.SetActive(false);
-        SaveManager.instance.ResetTemps();
+        saveManager.ResetTemps();
         //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         LevelLoader.instance.LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
-        SaveManager.instance.isLoading = false;
-        AudioManager.instance.StopMusic("menu");
-        AudioManager.instance.Play("confirm");
+        saveManager.isLoading = false;
+        audioManager.StopMusic("menu");
+        audioManager.Play("confirm");
     }
 
     public void Options()
