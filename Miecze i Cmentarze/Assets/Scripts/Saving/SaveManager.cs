@@ -38,6 +38,8 @@ public class SaveManager : MonoBehaviour
     public float tempMusicVolume;
     public float tempSoundsVolume;
 
+    public List<int> tempKeyIntValues;
+
     private void Awake()
     {
         if (instance != null)
@@ -75,7 +77,7 @@ public class SaveManager : MonoBehaviour
 
     public void Save()
     {
-        Debug.Log("Zapisano stan rozgrywki");
+        Debug.Log("Game saved");
 
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.OpenOrCreate);
@@ -108,12 +110,12 @@ public class SaveManager : MonoBehaviour
             GameManager.instance.player.playerStats.vitality, GameManager.instance.player.playerStats.defense,
             GameManager.instance.player.playerStats.addedAttackPoints, GameManager.instance.player.playerStats.addedSpeedPoints,
             GameManager.instance.player.playerStats.addedVitalityPoints, GameManager.instance.player.playerStats.addedDefensePoints);
-        Debug.Log(data.playerData.hp);
+        Debug.Log("Player saved");
     }
 
     public void Load()
     {
-        Debug.Log("Wczytano stan rozgrywki");
+        Debug.Log("Game loaded");
 
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
@@ -128,7 +130,7 @@ public class SaveManager : MonoBehaviour
 
     }
 
-    public void LoadTempData()
+    private void LoadTempData()
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
@@ -147,7 +149,7 @@ public class SaveManager : MonoBehaviour
         file.Close();
     }
 
-    public void LoadPlayer(SaveData data)
+    private void LoadPlayer(SaveData data)
     {
         /*BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Open(Application.persistentDataPath + "/" + "SaveTest.dat", FileMode.Open);
@@ -183,7 +185,7 @@ public class SaveManager : MonoBehaviour
 
     private void SaveInventory(SaveData data)
     {
-        //do zmiany
+        //do zmiany //nie pamietam dlaczego
         List<Item> equippedItems = new List<Item>();
         foreach (var equippedItemSlot in InventoryUI.instance.equippedItemSlots)
         {
@@ -316,6 +318,10 @@ public class SaveManager : MonoBehaviour
         data.musicVolume = tempMusicVolume;
         data.soundsVolume = tempSoundsVolume;
 
+        data.keyIntValues = new List<int>();
+
+        foreach (var keyBind in InputHandler.instance.keyBinds.binds) data.keyIntValues.Add((int)InputHandler.instance.keyBinds.binds[keyBind.Key]);
+
         bf.Serialize(file, data);
 
         file.Close();
@@ -323,6 +329,7 @@ public class SaveManager : MonoBehaviour
 
     public void LoadGlobals()
     {
+        Debug.Log(Application.persistentDataPath);
         if (FileExists(Application.persistentDataPath + "/" + "GlobalSettings.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
@@ -331,6 +338,13 @@ public class SaveManager : MonoBehaviour
             GlobalData data = (GlobalData)bf.Deserialize(file);
             tempMusicVolume = data.musicVolume;
             tempSoundsVolume = data.soundsVolume;
+
+            tempKeyIntValues = new List<int>();
+
+            foreach (var keyIntValue in data.keyIntValues)
+            {
+                tempKeyIntValues.Add(keyIntValue);
+            }
 
             file.Close();
         }

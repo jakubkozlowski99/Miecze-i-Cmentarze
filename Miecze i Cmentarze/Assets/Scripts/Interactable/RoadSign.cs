@@ -29,7 +29,7 @@ public class RoadSign : Collidable
             HideInteractionText();
         }
 
-        if (inputHandler.CheckKey("Interaction") && playerNearby)
+        if (inputHandler.CheckKey(KeyActions.Interaction) && playerNearby)
         {
             OnActivation();
         }
@@ -43,7 +43,7 @@ public class RoadSign : Collidable
 
     protected void ShowInteractionText()
     {
-        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Zobacz",
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds[KeyActions.Interaction].ToString() + "] " + "Zobacz",
             7, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
         textShown = true;
     }

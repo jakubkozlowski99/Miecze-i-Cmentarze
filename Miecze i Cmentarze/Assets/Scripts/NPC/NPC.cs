@@ -52,7 +52,7 @@ public class NPC : Collidable
             HideInteractionText();
         }
 
-        if (inputHandler.CheckKey("Interaction") && playerNearby && !dialogueManager.dialogueIsPlaying)
+        if (inputHandler.CheckKey(KeyActions.Interaction) && playerNearby && !dialogueManager.dialogueIsPlaying)
         {
             OnActivation();
         }
@@ -67,7 +67,7 @@ public class NPC : Collidable
     protected void ShowInteractionText()
     {
 
-        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Rozmawiaj",
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds[KeyActions.Interaction].ToString() + "] " + "Rozmawiaj",
             7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
         textShown = true;
     }

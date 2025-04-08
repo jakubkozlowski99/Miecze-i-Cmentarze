@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,18 +22,19 @@ public class InputHandler : MonoBehaviour
 
         // configure key binds
         keyBinds = new KeyBinds();
-        keyBinds.ConfigureKeys(); // TO DO: zapisywanie i wczytywanie przyciskow
+        keyBinds.ConfigureKeys();
     }
 
-    public bool CheckKey(string function)
+    public bool CheckKey(KeyActions action)
     {
-        if (function == "Up" || function == "Down" || function == "Left" || function == "Right")
+        if ((int)action < 4)
+        //if (function == "Up" || function == "Down" || function == "Left" || function == "Right")
         {
-            if (Input.GetKey(keyBinds.binds[function])) return true;
+            if (Input.GetKey(keyBinds.binds[action])) return true;
             else return false;
         }
 
-        if (Input.GetKeyDown(keyBinds.binds[function])) return true;
+        if (Input.GetKeyDown(keyBinds.binds[action])) return true;
         else return false;
     }
 }

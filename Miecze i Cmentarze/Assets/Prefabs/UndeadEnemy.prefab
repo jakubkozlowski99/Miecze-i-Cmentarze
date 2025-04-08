@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -294,6 +294,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitpoint: 300
   maxhitpoint: 300
+  textOffset: 0.5
   xpValue: 40
   coinsValue: 25
   damageReduction: 0
@@ -302,6 +303,12 @@ MonoBehaviour:
   chaseLength: 5
   attackCooldown: 3.5
   movementSpeed: 1
+  isChasing: 0
+  spawner: {fileID: 0}
+  isPatrolReverseDirection: 0
+  patrolTimer: 0
+  nextCheckpointIndex: 0
+  afterChasingTimer: 15
   filter:
     useTriggers: 0
     useLayerMask: 0
@@ -578,8 +585,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 869337769787255535}
-  low: {r: 0.990566, g: 0.013082896, b: 0.013082896, a: 1}
-  high: {r: 0.99215686, g: 0.015686275, b: 0.015686275, a: 1}
+  lowStateColor: {r: 1, g: 0, b: 0, a: 1}
+  highStateColor: {r: 1, g: 0, b: 0, a: 1}
   offset: {x: 0, y: 0.75, z: 0}
   isBoss: 0
 --- !u!1 &869337769611005962

@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public Enums enums;
+
     private void Awake()
     {
         if (instance != null)
@@ -23,6 +25,8 @@ public class GameManager : MonoBehaviour
         else gameTimer = 0;
         instance = this;
         DontDestroyOnLoad(gameObject);
+
+        enums = new Enums();
     }
 
     private void FixedUpdate()
@@ -58,7 +62,7 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if (!PauseMenu.instance.gameIsPaused) gameTimer += Time.deltaTime;
-        playerInCombat = Array.Exists(FindObjectsOfType<Enemy>().ToArray(), e => e.chasing);
+        playerInCombat = Array.Exists(FindObjectsOfType<Enemy>().ToArray(), e => e.isChasing);
     }
 
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration, bool onPlayer)
@@ -172,7 +176,7 @@ public class GameManager : MonoBehaviour
                     if (questGoal != null)
                     {
                         questGoal.currentAmount = 0;
-                        var bossData = Array.FindAll(SaveManager.instance.tempBosses.ToArray(), bd => bd.bossName == questGoal.killGoal.name && bd.dead);
+                        var bossData = Array.FindAll(SaveManager.instance.tempBosses.ToArray(), bd => bd.bossName == questGoal.killGoal.name && bd.isDead);
 
                         questGoal.currentAmount = bossData.Length;
                         if (questGoal.currentAmount >= questGoal.requiredAmount) questGoal.completed = true;

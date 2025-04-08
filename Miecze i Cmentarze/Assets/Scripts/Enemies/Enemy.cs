@@ -21,17 +21,17 @@ public class Enemy : Mover
     public float chaseLength = 5;
     public float attackCooldown = 1.5f;
     public float movementSpeed = 2f;
-    public bool chasing;
-    protected bool collidingWithPlayer;
+    public bool isChasing;
+    protected bool isCollidingWithPlayer;
     protected Vector3 startingPosition;
     protected string hurtTrigger = "Hurt";
     protected string deathTrigger = "Death";
-    protected bool enemyIsAttacking;
-    protected bool enemyIsHurt;
-    protected bool alive = true;
+    protected bool isAttacking;
+    protected bool isHurt;
+    protected bool isAlive = true;
 
     public EnemySpawner spawner;
-    public bool patrolReverseDirection = false;
+    public bool isPatrolReverseDirection = false;
     public float patrolTimer = 0;
     public int nextCheckpointIndex;
     public float afterChasingTimer = 15f;
@@ -65,20 +65,17 @@ public class Enemy : Mover
 
     protected virtual void FixedUpdate()
     {
-        if (alive)
+        if (isAlive)
         {
             CheckAnimations();
 
-            if ((gameManager.MeasureDistance(gameManager.player.gameObject, gameObject) < chaseLength) && !enemyIsAttacking && !enemyIsHurt)
+            if ((gameManager.MeasureDistance(gameManager.player.gameObject, gameObject) < chaseLength) && !isAttacking && !isHurt)
             {
-                if (Vector3.Distance(player.transform.position, transform.position) < triggerLength)
-                {
-                    SetChasing(true);
-                }
+                if (Vector3.Distance(player.transform.position, transform.position) < triggerLength) SetChasing(true);
 
-                if (chasing)
+                if (isChasing)
                 {
-                    if (!collidingWithPlayer)
+                    if (!isCollidingWithPlayer)
                     {
                         agent.isStopped = false;
                         agent.SetDestination(player.transform.position);
@@ -91,22 +88,21 @@ public class Enemy : Mover
                     }
                 }
             }
-            else if ((!enemyIsAttacking && !enemyIsHurt) || !gameManager.player.alive)
+            else if ((!isAttacking && !isHurt) || !gameManager.player.alive)
             {
                 SetChasing(false);
             }
 
-            if (!chasing)
+            if (!isChasing)
             {
                 if (afterChasingTimer >= 15f) Patrol();
                 else afterChasingTimer += Time.deltaTime;
             }
 
-            collidingWithPlayer = false;
+            isCollidingWithPlayer = false;
             boxCollider.OverlapCollider(filter, hits);
             for (int i = 0; i < hits.Length; i++)
             {
-
                 if (hits[i] == null)
                 {
                     continue;
@@ -114,7 +110,7 @@ public class Enemy : Mover
 
                 if (hits[i].tag == "Fighter" && hits[i].name == "PlayerHitbox")
                 {
-                    collidingWithPlayer = true;
+                    isCollidingWithPlayer = true;
                 }
 
                 hits[i] = null;
@@ -159,14 +155,14 @@ public class Enemy : Mover
                 if (nextCheckpointIndex == spawner.patrolCheckpoints.Count - 1)
                 {
                     nextCheckpointIndex -= 1;
-                    patrolReverseDirection = true;
+                    isPatrolReverseDirection = true;
                 }
                 else if (nextCheckpointIndex == 0)
                 {
                     nextCheckpointIndex += 1;
-                    patrolReverseDirection = false;
+                    isPatrolReverseDirection = false;
                 }
-                else if (!patrolReverseDirection) nextCheckpointIndex += 1;
+                else if (!isPatrolReverseDirection) nextCheckpointIndex += 1;
                 else nextCheckpointIndex -= 1;
             }
             else patrolTimer += Time.deltaTime;
@@ -187,7 +183,7 @@ public class Enemy : Mover
     {
         if (!shouldChase)
         {
-            chasing = false;
+            isChasing = false;
             //startingPosition = transform.position;
             agent.isStopped = true;
             agent.SetDestination(transform.position);
@@ -195,8 +191,8 @@ public class Enemy : Mover
         }
         else
         {
-            chasing = true;
-            if (!collidingWithPlayer) anim.SetBool("EnemyRun", true);
+            isChasing = true;
+            if (!isCollidingWithPlayer) anim.SetBool("EnemyRun", true);
             afterChasingTimer = 0;
         }
     }
@@ -217,19 +213,19 @@ public class Enemy : Mover
     {
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
-            enemyIsAttacking = true;
+            isAttacking = true;
             agent.isStopped = false;
             agent.SetDestination(transform.position);
         }
-        else enemyIsAttacking = false;
+        else isAttacking = false;
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Death") || anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
         {
-            enemyIsHurt = true;
-            agent.isStopped = true;
+            isHurt = true;
+            agent.isStopped = false;
             agent.SetDestination(transform.position);
         }
-        else enemyIsHurt = false;
+        else isHurt = false;
     }
 
     protected override float CalculateSpeed()
@@ -248,7 +244,7 @@ public class Enemy : Mover
 
     protected override void ReceiveDamage(Damage dmg)
     {
-        if (alive)
+        if (isAlive)
         {
             dmg.damageReduction = damageReduction;
             base.ReceiveDamage(dmg);
@@ -259,7 +255,7 @@ public class Enemy : Mover
 
     protected override void Death()
     {
-        alive = false;
+        isAlive = false;
         anim.SetTrigger(deathTrigger);
     }
 

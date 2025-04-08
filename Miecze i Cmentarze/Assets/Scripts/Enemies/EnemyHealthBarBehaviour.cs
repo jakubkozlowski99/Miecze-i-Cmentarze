@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class EnemyHealthBarBehaviour : MonoBehaviour
 {
     public Slider slider;
-    public Color low;
-    public Color high;
+    public Color lowStateColor;
+    public Color highStateColor;
     public Vector3 offset;
     public bool isBoss;
 
@@ -16,7 +16,7 @@ public class EnemyHealthBarBehaviour : MonoBehaviour
         slider.gameObject.SetActive(health < maxHealth);
         slider.value = health;
         slider.maxValue = maxHealth;
-        slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(low, high, slider.normalizedValue);
+        slider.fillRect.GetComponentInChildren<Image>().color = Color.Lerp(lowStateColor, highStateColor, slider.normalizedValue);
     }
     protected virtual void Update()
     {

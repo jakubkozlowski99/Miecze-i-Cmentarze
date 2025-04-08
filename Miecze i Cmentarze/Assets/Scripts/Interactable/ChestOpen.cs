@@ -32,7 +32,7 @@ public class ChestOpen : Collidable
             HideInteractionText();
         }
 
-        if (inputHandler.CheckKey("Interaction") && playerNearby && chest.collectable)
+        if (inputHandler.CheckKey(KeyActions.Interaction) && playerNearby && chest.collectable)
         {
             player.canMove = false;
             inventory.canToggle = false;
@@ -61,7 +61,7 @@ public class ChestOpen : Collidable
 
     protected void ShowInteractionText()
     {
-        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Otwórz"
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds[KeyActions.Interaction].ToString() + "] " + "Otwórz"
             , 7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
         chest.textShown = true;
     }

@@ -8,7 +8,7 @@ public class EnemySpawner : MonoBehaviourExtension
 {
     public GameObject enemy;
 
-    public bool dead;
+    public bool isDead;
     public float timer;
     public int childCount;
     public float respawnCooldown = 5;
@@ -16,7 +16,7 @@ public class EnemySpawner : MonoBehaviourExtension
     [SerializeField]
     public List<PatrolCheckpoint> patrolCheckpoints = new();
 
-    public bool flipped = false; //false = right, true = left
+    public bool isFlipped = false; //false = right, true = left
 
     protected override void Start()
     {
@@ -28,20 +28,20 @@ public class EnemySpawner : MonoBehaviourExtension
 
     protected virtual void Update()
     {
-        if (dead && !pauseMenu.gameIsPaused)
+        if (isDead && !pauseMenu.gameIsPaused)
         {
             timer += Time.deltaTime;
         }
         childCount = transform.childCount;
         if (childCount == 0)
         {
-            dead = true;
+            isDead = true;
         }
         if (timer >= respawnCooldown) 
         {
             Instantiate(enemy, transform.position, transform.rotation, transform);
-            if (flipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
-            dead = false;
+            if (isFlipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
+            isDead = false;
             timer = 0;
         }
     }
@@ -63,16 +63,16 @@ public class EnemySpawner : MonoBehaviourExtension
         {
             SpawnerData spawner = Array.Find(saveManager.tempSpawners.ToArray(), spawner => spawner.spawnerName == name);
 
-            dead = spawner.dead;
+            isDead = spawner.dead;
 
-            if (!dead)
+            if (!isDead)
             {
                 Instantiate(enemy, new Vector2(spawner.posX, spawner.posY), new Quaternion(0, 0, 0, 0), transform);
                 timer = 0;
 
                 var spawnerEnemy = transform.GetComponentInChildren<Enemy>();
 
-                spawnerEnemy.patrolReverseDirection = spawner.patrolReverseDirection;
+                spawnerEnemy.isPatrolReverseDirection = spawner.patrolReverseDirection;
                 spawnerEnemy.patrolTimer = spawner.patrolTimer;
                 spawnerEnemy.nextCheckpointIndex = spawner.nextCheckpointIndex;
                 spawnerEnemy.afterChasingTimer = spawner.afterChasingTimer;
@@ -85,8 +85,8 @@ public class EnemySpawner : MonoBehaviourExtension
         else
         {
             Instantiate(enemy, transform.position, transform.rotation, transform);
-            if (flipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
-            dead = false;
+            if (isFlipped) transform.GetChild(0).localScale = new Vector3(-enemy.transform.localScale.x, enemy.transform.localScale.y, enemy.transform.localScale.z);
+            isDead = false;
         }
     }
 

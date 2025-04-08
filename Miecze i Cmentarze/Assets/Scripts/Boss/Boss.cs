@@ -34,7 +34,7 @@ public class Boss : Enemy
     protected override void ReceiveDamage(Damage dmg)
     {
         //do if boss is alive
-        if (alive)
+        if (isAlive)
         {
             //do if immune time is finished
             if (Time.time - lastImmune > immuneTime)
@@ -179,14 +179,14 @@ public class Boss : Enemy
                 if (nextCheckpointIndex == patrolCheckpoints.Count - 1)
                 {
                     nextCheckpointIndex -= 1;
-                    patrolReverseDirection = true;
+                    isPatrolReverseDirection = true;
                 }
                 else if (nextCheckpointIndex == 0)
                 {
                     nextCheckpointIndex += 1;
-                    patrolReverseDirection = false;
+                    isPatrolReverseDirection = false;
                 }
-                else if (!patrolReverseDirection) nextCheckpointIndex += 1;
+                else if (!isPatrolReverseDirection) nextCheckpointIndex += 1;
                 else nextCheckpointIndex -= 1;
             }
             else patrolTimer += Time.deltaTime;
@@ -208,13 +208,13 @@ public class Boss : Enemy
 
     private void SetHealthBar()
     {
-        if (chasing && !healthBarShown)
+        if (isChasing && !healthBarShown)
         {
             healthBarShown = true;
             bossHealthBar.gameObject.SetActive(true);
             bossHealthBar.bossName.text = bossName;
         }
-        else if (!chasing && healthBarShown)
+        else if (!isChasing && healthBarShown)
         {
             healthBarShown = false;
             bossHealthBar.gameObject.SetActive(false);
@@ -223,7 +223,7 @@ public class Boss : Enemy
 
     protected override void Death()
     {
-        alive = false;
+        isAlive = false;
         anim.SetTrigger(deathTrigger);
     }
     protected override void KillReward()
@@ -289,7 +289,7 @@ public class Boss : Enemy
 
     private void LoadBoss()
     {
-        var shouldDelete = Array.Exists(saveManager.tempBosses.ToArray(), boss => boss.bossName == name && boss.dead);
+        var shouldDelete = Array.Exists(saveManager.tempBosses.ToArray(), boss => boss.bossName == name && boss.isDead);
 
         if (shouldDelete) Destroy(gameObject);
         else
@@ -301,7 +301,7 @@ public class Boss : Enemy
                 transform.position = new Vector3(bossData.posX, bossData.posY, 0);
                 transform.localScale = new Vector3(bossData.scaleX, transform.localScale.y, transform.localScale.z);
 
-                patrolReverseDirection = bossData.patrolReverseDirection;
+                isPatrolReverseDirection = bossData.patrolReverseDirection;
                 nextCheckpointIndex = bossData.nextCheckpointIndex;
                 patrolTimer = bossData.patrolTimer;
                 afterChasingTimer = bossData.afterChasingTimer;

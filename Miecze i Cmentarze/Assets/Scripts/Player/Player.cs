@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 
 public class Player : Mover
@@ -16,18 +18,18 @@ public class Player : Mover
     private float x;
     private float y;
 
-    private readonly string swing_1 = "adventurer_swing_1";
-    private readonly string swing_2 = "adventurer_swing_2";
-    private readonly string swing_3 = "adventurer_swing_3";
-    private readonly string hurt = "adventurer_hurt";
-    private readonly string dodge = "adventurer_dodge";
+    /*private readonly string swing_1 = "PlayerSwing_1";
+    private readonly string swing_2 = "PlayerSwing_3";
+    private readonly string swing_3 = "PlayerSwing_2";
+    private readonly string hurt = "PlayerHurt";
+    private readonly string dodge = "PlayerDodge";*/
 
     public float playerSpeed = 2;
     public float currentSpeed;
 
     private int swingCount = 0;
     private float lastSwing;
-    private float swingReset = 0.75f;
+    private float swingResetTimer = 0.75f;
     private float dodgeX;
     private float dodgeY;
     private float dodgeCooldown = 0.3f;
@@ -48,9 +50,6 @@ public class Player : Mover
 
     private bool isRunning;
 
-    public float testX;
-    public float testY;
-
     protected override void Start()
     {
         base.Start();
@@ -60,22 +59,22 @@ public class Player : Mover
             Destroy(gameObject);
             return;
         }
-        GameManager.instance.player = this;
-        GameManager.instance.floatingTextManager = FindObjectOfType<FloatingTextManager>();
-        Inventory.instance.items.Clear();
+        gameManager.player = this;
+        gameManager.floatingTextManager = FindObjectOfType<FloatingTextManager>();
+        inventory.items.Clear();
         canMove = true;
         canAttack = true;
         anim = GetComponent<Animator>();
         anim.SetFloat("AttackSpeed", 1 + playerStats.bonusAttackSpeed / 100);
-        if (SaveManager.instance.isLoading == false)
+        if (saveManager.isLoading == false)
         {
             maxhitpoint = 60 + (playerStats.vitality * 40);
             hitpoint = maxhitpoint;
             healthBar.SetAllBars("hp");
             staminaBar.SetAllBars("stamina");
         }
-        else SaveManager.instance.Load();
-        SaveManager.instance.isLoading = false;
+        else saveManager.Load();
+        saveManager.isLoading = false;
         hpRegenTimer = 0;
         staminaRegenTimer = 0;
         xpBar.SetXpBar();
@@ -100,30 +99,22 @@ public class Player : Mover
             y = 0;
         }*/
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName(swing_1) || anim.GetCurrentAnimatorStateInfo(0).IsName(hurt)
-            || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_2) || anim.GetCurrentAnimatorStateInfo(0).IsName(swing_3)) 
-        { 
-            isAttacking = true; 
-        }
-        else isAttacking = false;
+        CheckPlayerAnimations();
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName(dodge)) isDodging = true;
-        else isDodging = false;
-
-        if (!anim.GetCurrentAnimatorStateInfo(0).IsName("adventurer_run") || PauseMenu.instance.gameIsPaused)
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("PlayerRun") || pauseMenu.gameIsPaused)
         {
-            AudioManager.instance.Stop("run_grass");
+            audioManager.Stop("run_grass");
             isRunning = false;
         }
 
-        if (!PauseMenu.instance.gameIsPaused)
+        if (!pauseMenu.gameIsPaused)
         {
             if (x != 0 || y != 0 && !isAttacking && !isDodging)
             {
                 anim.SetBool("Run", true);
-                if (!isRunning && anim.GetCurrentAnimatorStateInfo(0).IsName("adventurer_run") && !PauseMenu.instance.gameIsPaused)
+                if (!isRunning && anim.GetCurrentAnimatorStateInfo(0).IsTag("PlayerRun") && pauseMenu.gameIsPaused)
                 {
-                    AudioManager.instance.Play("run_grass");
+                    audioManager.Play("run_grass");
                     isRunning = true;
                 }
             }
@@ -132,12 +123,12 @@ public class Player : Mover
                 anim.SetBool("Run", false);
                 if (isRunning)
                 {
-                    AudioManager.instance.Stop("run_grass");
+                    audioManager.Stop("run_grass");
                     isRunning = false;
                 }
             }
 
-            if (Time.time - lastSwing > swingReset) swingCount = 0;
+            if (Time.time - lastSwing > swingResetTimer) swingCount = 0;
 
             HandleCombatInput();
         }
@@ -150,34 +141,71 @@ public class Player : Mover
         if (isDodging) UpdateMotor(new Vector3(dodgeX, dodgeY, 0), currentSpeed * 2);
         else UpdateMotor(new Vector3(x, y, 0), currentSpeed);
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Dead"))
+        if (anim.GetCurrentAnimatorStateInfo(0).IsTag("PlayerDead"))
         {
             UI.instance.deathScreen.SetActive(true);
         }
     }
+    private void CheckPlayerAnimations()
+    {
+        AnimatorStateInfo currentAnimationState = anim.GetCurrentAnimatorStateInfo(0);
 
+        var movementAnimationTags = gameManager.enums.EnumToList<AnimationTags>(4);
+
+        /*foreach(var tag in  movementAnimationTags)
+        {
+            if (currentAnimationState.tagHash == gameManager.enums.EnumStringToHash(tag.StringValue()))
+            {
+                isAttacking = true;
+                isDodging = false;
+                return;
+            }
+            isAttacking = false;
+        }*/
+
+        if (Array.Exists(movementAnimationTags.ToArray(), t => gameManager.enums.EnumStringToHash(t.StringValue()) == currentAnimationState.tagHash)) 
+        {
+            isAttacking = true;
+            isDodging = false;
+            return;
+        }
+        else isAttacking = false;
+
+        /*if (anim.GetCurrentAnimatorStateInfo(0).IsTag(swing_1) || anim.GetCurrentAnimatorStateInfo(0).IsTag(hurt)
+            || anim.GetCurrentAnimatorStateInfo(0).IsTag(swing_2) || anim.GetCurrentAnimatorStateInfo(0).IsTag(swing_3))
+        {
+            isAttacking = true;
+        }
+        else isAttacking = false;*/
+
+        /*if (anim.GetCurrentAnimatorStateInfo(0).IsTag(dodge)) isDodging = true;
+        else isDodging = false;*/
+
+        if (currentAnimationState.tagHash == gameManager.enums.EnumStringToHash(AnimationTags.PlayerDodge.StringValue())) isDodging = true;
+        else isDodging = false;
+    }
     private void HandleMovementInput()
     {
         x = 0;
         y = 0;
 
-        if(!isAttacking && canMove)
+        if (!isAttacking && canMove) 
         {
-            if (InputHandler.instance.CheckKey("Up")) y += 1;
-            if (InputHandler.instance.CheckKey("Down")) y -= 1;
-            if (InputHandler.instance.CheckKey("Right")) x += 1;
-            if (InputHandler.instance.CheckKey("Left")) x -= 1;
+            if (inputHandler.CheckKey(KeyActions.Up)) y += 1;
+            if (inputHandler.CheckKey(KeyActions.Down)) y -= 1;
+            if (inputHandler.CheckKey(KeyActions.Right)) x += 1;
+            if (inputHandler.CheckKey(KeyActions.Left)) x -= 1;
         }
     }
 
     private void HandleCombatInput()
     {
-        if (InputHandler.instance.CheckKey("Attack"))
+        if (inputHandler.CheckKey(KeyActions.Attack))
         {
             Swing();
         }
 
-        if (InputHandler.instance.CheckKey("Dodge"))
+        if (inputHandler.CheckKey(KeyActions.Dodge))
         {
             if (Time.time - lastDodge > dodgeCooldown && ((stamina >= 20 && !playerStats.freeDodge) || playerStats.freeDodge))
             {
@@ -222,7 +250,7 @@ public class Player : Mover
                 lastSwing = Time.time;
                 stamina -= 10;
                 staminaBar.SetValue(stamina);
-                AudioManager.instance.Play("player_slash");
+                audioManager.Play("player_slash");
             }
         }
     }
@@ -237,13 +265,13 @@ public class Player : Mover
             anim.SetTrigger("Dodge");
             if (!playerStats.freeDodge) stamina -= 20;
             staminaBar.SetValue(stamina);
-            AudioManager.instance.Play("player_dodge");
+            audioManager.Play("player_dodge");
         }
     }
 
     protected override void ReceiveDamage(Damage dmg)
     {
-        dmg.damageReduction = GameManager.instance.player.playerStats.damageReduction;
+        dmg.damageReduction = gameManager.player.playerStats.damageReduction;
         base.ReceiveDamage(dmg);
         healthBar.SetValue(hitpoint);
         healthBar.SetText(hitpoint, maxhitpoint);
@@ -283,11 +311,11 @@ public class Player : Mover
     }
     public void LevelUp()
     {  
-        GameManager.instance.ShowText("Level up", 15, Color.yellow, new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f, true);
-        while (GameManager.instance.experience >= GameManager.instance.xpTable[GameManager.instance.playerLevel - 1])
+        gameManager.ShowText("Level up", 15, Color.yellow, new Vector3(transform.position.x, transform.position.y + 0.3f, transform.position.z), Vector3.up * 25, 0.5f, true);
+        while (gameManager.experience >= gameManager.xpTable[gameManager.playerLevel - 1])
         {
-            GameManager.instance.availablePoints++;
-            GameManager.instance.playerLevel++;
+            gameManager.availablePoints++;
+            gameManager.playerLevel++;
         }
         xpBar.SetXpBar();
     }

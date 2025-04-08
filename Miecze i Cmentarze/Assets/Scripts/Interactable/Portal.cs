@@ -48,7 +48,7 @@ public class Portal : Collidable
             HideInteractionText();
         }
 
-        if (inputHandler.CheckKey("Interaction") && playerNearby && active)
+        if (inputHandler.CheckKey(KeyActions.Interaction) && playerNearby && active)
         {
             OnActivation();
         }
@@ -66,7 +66,7 @@ public class Portal : Collidable
 
     protected void ShowInteractionText()
     {
-        if (active) interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Wejdz",
+        if (active) interactionTextManager.Show("[" + inputHandler.keyBinds.binds[KeyActions.Interaction].ToString() + "] " + "Wejdz",
             7, Color.yellow, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
         else interactionTextManager.Show("Pokonaj " + bossToActivateName + "\n\naby otworzyc portal", 7, Color.red, new Vector3(transform.position.x, transform.position.y, transform.position.z), interactionTextOffset);
         textShown = true;

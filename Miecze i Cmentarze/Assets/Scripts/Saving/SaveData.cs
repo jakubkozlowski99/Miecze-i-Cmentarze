@@ -227,7 +227,7 @@ public class SpawnerData
     {
         spawnerName = spawner.name;
         timer = spawner.timer;
-        dead = spawner.dead;
+        dead = spawner.isDead;
         lastTimerState = GameManager.instance.gameTimer;
         if (spawner.transform.childCount > 0)
         {
@@ -239,7 +239,7 @@ public class SpawnerData
                 posY = enemy.transform.position.y;
                 scaleX = enemy.transform.localScale.x;
 
-                patrolReverseDirection = enemy.patrolReverseDirection;
+                patrolReverseDirection = enemy.isPatrolReverseDirection;
                 nextCheckpointIndex = enemy.nextCheckpointIndex;
                 patrolTimer = enemy.patrolTimer;
                 afterChasingTimer = enemy.afterChasingTimer;
@@ -264,7 +264,7 @@ public class BossData
 {
     public string bossName;
 
-    public bool dead;
+    public bool isDead;
 
     public float posX;
     public float posY;
@@ -275,18 +275,18 @@ public class BossData
     public float afterChasingTimer;
     public float scaleX;
 
-    public BossData(Boss boss, bool dead)
+    public BossData(Boss boss, bool isDead)
     {
         bossName = boss.name;
-        this.dead = dead;
+        this.isDead = isDead;
 
-        if (!dead)
+        if (!isDead)
         {
             posX = boss.transform.position.x;
             posY = boss.transform.position.y;
             scaleX = boss.transform.localScale.x;
 
-            patrolReverseDirection = boss.patrolReverseDirection;
+            patrolReverseDirection = boss.isPatrolReverseDirection;
             nextCheckpointIndex = boss.nextCheckpointIndex;
             patrolTimer = boss.patrolTimer;
             afterChasingTimer = boss.afterChasingTimer;

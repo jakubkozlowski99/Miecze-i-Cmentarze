@@ -32,7 +32,7 @@ public class ActivateWaterWell : Collidable
             HideInteractionText();
         }
 
-        if (inputHandler.CheckKey("Interaction") && waterWell.collectable && playerNearby)
+        if (inputHandler.CheckKey(KeyActions.Interaction) && waterWell.collectable && playerNearby)
         {
             OnActivation();
         }
@@ -51,7 +51,7 @@ public class ActivateWaterWell : Collidable
     protected void ShowInteractionText()
     {
 
-        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Wypij",
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds[KeyActions.Interaction].ToString() + "] " + "Wypij",
             7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
         textShown = true;
     }

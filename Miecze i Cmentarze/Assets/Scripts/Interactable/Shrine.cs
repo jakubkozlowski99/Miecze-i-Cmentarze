@@ -9,8 +9,9 @@ public class Shrine : MonoBehaviourExtension
 
     public Sprite collectedShrine;
 
-    protected virtual void Start()
+    protected override void Start()
     {
+        base.Start();
         LoadTempShrines(true);
         anim = GetComponent<Animator>();
         if (collected) anim.SetTrigger("ActivationOnStart");

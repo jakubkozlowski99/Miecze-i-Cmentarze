@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SceneTransitionManager : MonoBehaviourExtension
+public class SceneTransitionManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
-        gameManager.floatingTextManager = FindObjectOfType<FloatingTextManager>();
-        audioManager.PlayMusic("theme_" + SceneManager.GetActiveScene().buildIndex);
+        GameManager.instance.floatingTextManager = FindObjectOfType<FloatingTextManager>();
+        AudioManager.instance.PlayMusic("theme_" + SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -33,7 +33,7 @@ public class ActivateShrine : Collidable
             HideInteractionText();
         }
 
-        if (inputHandler.CheckKey("Interaction") && !shrine.collected && playerNearby)
+        if (inputHandler.CheckKey(KeyActions.Interaction) && !shrine.collected && playerNearby)
         {
             OnActivation();
         }
@@ -54,7 +54,7 @@ public class ActivateShrine : Collidable
 
     protected void ShowInteractionText()
     {
-        interactionTextManager.Show("[" + inputHandler.keyBinds.binds["Interaction"].ToString() + "] " + "Aktywuj",
+        interactionTextManager.Show("[" + inputHandler.keyBinds.binds[KeyActions.Interaction].ToString() + "] " + "Aktywuj",
             7, Color.yellow, new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z), interactionTextOffset);
         textShown = true;
     }
